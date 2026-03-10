@@ -1,0 +1,76 @@
+import { RES_EIC }      from '../../data/electricalData';
+import ServiceHero       from '../../components/ui/ServiceHero';
+import IntroSection      from '../../components/ui/IntroSection';
+import BenefitCards      from '../../components/ui/BenefitCards';
+import PricingBox        from '../../components/ui/PricingBox';
+import RelatedServices   from '../../components/ui/RelatedServices';
+import FaqAccordion      from '../../components/ui/FaqAccordion';
+import PageReviews       from '../../components/ui/PageReviews';
+import CtaBanner         from '../../components/ui/CtaBanner';
+import SectionLabel      from '../../components/ui/SectionLabel';
+import { Link }          from 'react-router-dom';
+
+const { hero, intro, benefits, whenRequired, pricing, related, faqs, cta } = RES_EIC;
+
+export default function ResidentialEICPage() {
+  return (
+    <>
+      {/* Hero */}
+      <ServiceHero {...hero} />
+
+      {/* What is EIC */}
+      <IntroSection {...intro} />
+
+      {/* Benefits */}
+      <BenefitCards {...benefits} />
+
+      {/* When is EIC Required */}
+      <section className="intro-section" style={{ background: '#f4f6f8' }}>
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <h2 className="fw-bold mb-4">{whenRequired.title}</h2>
+              <ul className="intro-checklist">
+                {whenRequired.items.map((item, i) => (
+                  <li key={i}>
+                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>{item.label}:</strong> {item.text}
+                  </li>
+                ))}
+              </ul>
+              <Link to="/book-now" className="btn-green mt-3 d-inline-block">{whenRequired.ctaText}</Link>
+            </div>
+            <div className="col-lg-6">
+              <img src={whenRequired.imgSrc} alt="When is EIC required" className="intro-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <PricingBox {...pricing} />
+
+      {/* FAQ */}
+      <section className="faq-section">
+        <div className="container">
+          <SectionLabel center>FAQS</SectionLabel>
+          <h2 className="fw-bold text-center mb-5">Frequently Asked Questions</h2>
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <FaqAccordion items={faqs} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <PageReviews title="See Why Clients Choose Us:" />
+
+      {/* Additional Services */}
+      <RelatedServices title="Additional Services We Offer" services={related} />
+
+      {/* CTA */}
+      <CtaBanner title={cta} />
+    </>
+  );
+}

@@ -1,0 +1,43 @@
+// ── Floating Widgets ──────────────────────────────────────────
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  @include flex-center;
+  font-size: 1.6rem;
+  z-index: 9999;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: $transition-base;
+
+  &:hover {
+    background: #1ebe59;
+    color: #fff;
+    transform: scale(1.08);
+  }
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 92px;
+  right: 28px;
+  background: $green;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  @include flex-center;
+  font-size: 1rem;
+  z-index: 9998;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: none;
+  transition: $transition-base;
+
+  &:hover { background: $green-dark; }
+}

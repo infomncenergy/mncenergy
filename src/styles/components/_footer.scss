@@ -1,0 +1,92 @@
+// ── Footer ────────────────────────────────────────────────────
+.site-footer {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 60px 0 30px;
+
+  .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+
+    span { color: $green; }
+
+    .footer-logo__sub {
+      font-size: 0.58rem;
+      letter-spacing: 4px;
+      color: #888;
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  .footer-desc {
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .footer-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid $green;
+    display: inline-block;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li { margin-bottom: 10px; }
+
+    a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s;
+
+      &:hover { color: $green; }
+    }
+  }
+
+  .cert-badge {
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    display: inline-block;
+    margin: 0 6px 6px 0;
+    font-weight: 800;
+  }
+
+  .footer-social {
+    a {
+      color: #aaa;
+      margin-right: 14px;
+      font-size: 1.2rem;
+      transition: color 0.15s;
+
+      &:hover { color: $green; }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.82rem;
+    color: #777;
+
+    a {
+      color: #777;
+      margin-right: 14px;
+      text-decoration: none;
+
+      &:hover { color: $green; }
+    }
+  }
+}

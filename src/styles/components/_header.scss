@@ -1,0 +1,49 @@
+// ── Site Header ──────────────────────────────────────────────
+.site-header {
+  background: #fff;
+  padding: 14px 0;
+  border-bottom: 1px solid #ececec;
+
+  .logo {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+
+    &__main { color: $green; }
+    &__secondary { color: $black; }
+    &__sub {
+      font-size: 0.58rem;
+      letter-spacing: 4px;
+      color: #777;
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+  }
+
+  .phone-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .phone-icon {
+      @include icon-box(48px, 50%, $green, #fff);
+      font-size: 1.3rem;
+    }
+
+    .phone-label {
+      font-size: 0.75rem;
+      color: $text-muted-custom;
+    }
+
+    .phone-number {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $green;
+      text-decoration: none;
+
+      &:hover { color: $green-dark; }
+    }
+  }
+}

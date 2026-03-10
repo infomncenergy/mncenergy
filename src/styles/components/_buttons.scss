@@ -1,0 +1,62 @@
+// ── Custom Buttons ────────────────────────────────────────────
+.btn-green {
+  background: $green;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: $transition-base;
+
+  &:hover {
+    background: $green-dark;
+    color: #fff;
+  }
+
+  &--sm {
+    font-size: 0.82rem;
+    padding: 8px 18px;
+  }
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: $transition-base;
+
+  &:hover {
+    background: #fff;
+    color: $green;
+  }
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: $black;
+  border: 2px solid #ccc;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: $green;
+    color: $green;
+  }
+}

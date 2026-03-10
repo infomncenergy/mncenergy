@@ -1,0 +1,35 @@
+// ============================================================
+// Main SCSS Entry — order matters!
+// ============================================================
+
+// 1. Our variables (override Bootstrap defaults)
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// 2. Bootstrap
+@use 'bootstrap/scss/bootstrap';
+
+// 3. Bootstrap Icons
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// 4. Component partials
+@use 'components/topbar'   as *;
+@use 'components/header'   as *;
+@use 'components/navbar'   as *;
+@use 'components/hero'     as *;
+@use 'components/buttons'  as *;
+@use 'components/sections' as *;
+@use 'components/footer'   as *;
+@use 'components/floating' as *;
+
+// 5. Global base
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: $font-family-base;
+  color: $body-color;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }

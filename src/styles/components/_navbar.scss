@@ -1,0 +1,91 @@
+// ── Main Navigation ───────────────────────────────────────────
+.main-nav {
+  background: $dark-nav;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+
+  .nav-link {
+    color: #fff !important;
+    font-size: 0.9rem;
+    padding: 14px 14px !important;
+    transition: color 0.15s;
+
+    &:hover,
+    &.active { color: $green !important; }
+  }
+
+  // Mega dropdown
+  .dropdown-menu {
+    background: #2c2c2c;
+    border: none;
+    border-radius: 0;
+    min-width: 220px;
+    padding: 10px 0;
+    margin-top: 0;
+
+    .dropdown-item {
+      color: #ddd;
+      font-size: 0.85rem;
+      padding: 7px 20px;
+      transition: background 0.15s;
+
+      &:hover {
+        background: $green;
+        color: #fff;
+      }
+    }
+
+    .dropdown-header {
+      color: #aaa;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 16px 4px;
+    }
+  }
+
+  .mega-menu {
+    width: 600px !important;
+    display: flex;
+
+    .mega-col {
+      flex: 1;
+      padding: 10px 0;
+      border-right: 1px solid #3a3a3a;
+
+      &:last-child { border-right: none; }
+    }
+  }
+
+  // Book Now CTA in nav
+  .book-btn {
+    background: $green !important;
+    color: #fff !important;
+    border-radius: 4px;
+    padding: 8px 22px !important;
+    font-weight: 700;
+    margin-left: 10px;
+    transition: background 0.15s;
+
+    &:hover { background: $green-dark !important; }
+  }
+
+  // Mobile
+  .mobile-menu {
+    width: 100%;
+    padding-bottom: 16px;
+
+    .mobile-cat-title {
+      color: $green;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 8px 14px;
+    }
+
+    .mobile-sub-link {
+      padding: 5px 24px;
+      font-size: 0.85rem;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// ============================================================
+// Bootstrap 5 variable overrides — must come BEFORE bootstrap
+// ============================================================
+
+// Brand colours
+$green:          #28a745;
+$green-dark:     #1e7e34;
+$green-light:    #e8f5e9;
+$black:          #1a1a1a;
+$dark-nav:       #1c1c1c;
+$gray-bg:        #f4f6f8;
+$text-muted-custom: #6c757d;
+
+// Override Bootstrap primary
+$primary:        $green;
+$dark:           $black;
+
+// Typography
+$font-family-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+$body-color:     #333;
+
+// Border radius
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+// Spacing
+$section-y: 80px;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;

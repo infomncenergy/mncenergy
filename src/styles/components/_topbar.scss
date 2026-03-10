@@ -1,0 +1,16 @@
+// ── Top Bar ──────────────────────────────────────────────────
+.top-bar {
+  background: $green;
+  color: #fff;
+  font-size: 0.82rem;
+  padding: 6px 0;
+
+  a {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: $transition-base;
+
+    &:hover { opacity: 0.75; }
+  }
+}

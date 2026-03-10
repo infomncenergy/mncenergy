@@ -1,0 +1,217 @@
+// ── Shared section styles ─────────────────────────────────────
+.section-label {
+  @include section-label;
+}
+
+// ── Why Choose ────────────────────────────────────────────────
+.why-section {
+  @include section-padding;
+  background: $gray-bg;
+
+  .why-img {
+    border-radius: $border-radius-lg;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 380px;
+
+    @media (max-width: 768px) { min-height: 220px; }
+  }
+
+  .why-card {
+    background: $green;
+    color: #fff;
+    border-radius: $border-radius-lg;
+    padding: 40px 36px;
+    height: 100%;
+
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      .why-icon {
+        font-size: 1.6rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      h5 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0 0 4px;
+      }
+
+      p {
+        font-size: 0.88rem;
+        margin: 0;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+// ── Services ──────────────────────────────────────────────────
+.services-section {
+  @include section-padding;
+
+  .service-card {
+    @include card-base($gray-bg);
+    border: 1px solid #e0e0e0;
+    padding: 36px 28px;
+    text-align: center;
+    height: 100%;
+
+    &:hover { box-shadow: 0 8px 32px rgba(40,167,69,0.15); }
+
+    .service-icon {
+      @include icon-box(64px, 12px);
+      font-size: 1.8rem;
+      margin: 0 auto 18px;
+    }
+
+    h4 { font-weight: 700; margin-bottom: 12px; }
+
+    p {
+      font-size: 0.9rem;
+      color: $text-muted-custom;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// ── Packages ──────────────────────────────────────────────────
+.packages-section {
+  @include section-padding;
+  background: $gray-bg;
+
+  .package-card {
+    @include card-base;
+    border: 2px solid #e0e0e0;
+    padding: 28px;
+    height: 100%;
+
+    &:hover {
+      border-color: $green;
+      box-shadow: 0 6px 24px rgba(40,167,69,0.12);
+    }
+
+    .save-badge {
+      background: $green;
+      color: #fff;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      padding: 3px 12px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .pack-price {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: $green;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 4px 0;
+        font-size: 0.88rem;
+
+        &::before {
+          content: "✓ ";
+          color: $green;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+// ── Reviews ───────────────────────────────────────────────────
+.reviews-section {
+  @include section-padding;
+  background: $gray-bg;
+
+  .rating-badge {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .stars { color: #f4b400; font-size: 1.4rem; }
+
+  .review-card {
+    @include card-base;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 24px;
+    height: 100%;
+
+    .reviewer-avatar {
+      @include icon-box(44px, 50%);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .reviewer-name { font-weight: 700; font-size: 0.95rem; }
+    .reviewer-date { font-size: 0.75rem; color: $text-muted-custom; }
+    .review-text   { font-size: 0.88rem; color: #555; margin: 0; }
+  }
+}
+
+// ── FAQ ───────────────────────────────────────────────────────
+.faq-section {
+  @include section-padding;
+
+  .accordion-button {
+    font-weight: 600;
+
+    &:not(.collapsed) {
+      color: $green;
+      background: $green-light;
+      box-shadow: none;
+    }
+  }
+}
+
+// ── About ─────────────────────────────────────────────────────
+.about-section {
+  @include section-padding;
+  background: $gray-bg;
+
+  .about-img {
+    border-radius: $border-radius-lg;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  ul {
+    padding-left: 18px;
+    line-height: 2.1;
+    color: #444;
+  }
+}
+
+// ── CTA Banner ────────────────────────────────────────────────
+.cta-banner {
+  @include overlay-bg('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1400&q=80', 0.70);
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+}

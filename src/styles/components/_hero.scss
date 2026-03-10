@@ -1,0 +1,46 @@
+// ── Hero Section ──────────────────────────────────────────────
+.hero-section {
+  @include overlay-bg('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80', 0.62);
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 90px 20px;
+
+  h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 34px;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.9rem; }
+    p  { font-size: 1rem; }
+  }
+}
+
+// ── Page Hero (inner pages) ────────────────────────────────────
+.page-hero {
+  @include overlay-bg('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80', 0.65);
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+}
