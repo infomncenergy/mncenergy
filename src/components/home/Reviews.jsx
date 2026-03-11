@@ -3,41 +3,52 @@ import { REVIEWS } from '../../data/homeData';
 
 function ReviewCard({ name, date, color, text }) {
   return (
-    <div className="review-card">
-      <div className="d-flex align-items-center gap-3 mb-3">
-        <div className="reviewer-avatar" style={{ background: color }}>
+    <div className="review-v2">
+      <div className="review-v2__quote">"</div>
+      <p className="review-v2__text">{text}</p>
+      <div className="review-v2__footer">
+        <div className="review-v2__avatar" style={{ background: color }}>
           {name[0]}
         </div>
         <div>
-          <div className="reviewer-name">{name}</div>
-          <div className="reviewer-date">{date}</div>
+          <div className="review-v2__name">{name}</div>
+          <div className="review-v2__meta">
+            <span className="review-v2__stars">★★★★★</span>
+            <span className="review-v2__date"> · {date}</span>
+          </div>
         </div>
-        <div className="ms-auto stars" style={{ fontSize: '0.85rem' }}>★★★★★</div>
+        <div className="review-v2__google ms-auto">
+          <span style={{ color: '#4285F4', fontWeight: 700 }}>G</span>
+          <span style={{ color: '#EA4335', fontWeight: 700 }}>o</span>
+          <span style={{ color: '#FBBC05', fontWeight: 700 }}>o</span>
+          <span style={{ color: '#4285F4', fontWeight: 700 }}>g</span>
+          <span style={{ color: '#34A853', fontWeight: 700 }}>l</span>
+          <span style={{ color: '#EA4335', fontWeight: 700 }}>e</span>
+        </div>
       </div>
-      <p className="review-text">{text}</p>
     </div>
   );
 }
 
 export default function Reviews() {
   return (
-    <section className="reviews-section">
+    <section className="reviews-v2">
       <div className="container">
-        <SectionLabel center>WHAT OUR CLIENTS SAY</SectionLabel>
-        <h2 className="fw-bold text-center mb-3">Customer Reviews</h2>
-
-        {/* Rating summary */}
-        <div className="text-center mb-5">
-          <div className="rating-badge">GOOD</div>
-          <div className="stars">★★★★½</div>
-          <div style={{ fontSize: '0.9rem', color: '#777' }}>
-            Based on <strong>79 reviews</strong> on&nbsp;
-            <span style={{ color: '#4285F4', fontWeight: 700 }}>G</span>
-            <span style={{ color: '#EA4335', fontWeight: 700 }}>o</span>
-            <span style={{ color: '#FBBC05', fontWeight: 700 }}>o</span>
-            <span style={{ color: '#4285F4', fontWeight: 700 }}>g</span>
-            <span style={{ color: '#34A853', fontWeight: 700 }}>l</span>
-            <span style={{ color: '#EA4335', fontWeight: 700 }}>e</span>
+        {/* Header */}
+        <div className="row align-items-end mb-5">
+          <div className="col-lg-7">
+            <SectionLabel>CUSTOMER REVIEWS</SectionLabel>
+            <h2 className="fw-bold mb-2">What Our Clients Say</h2>
+            <p className="text-muted">Trusted by thousands of landlords across London &amp; M25</p>
+          </div>
+          <div className="col-lg-5 text-lg-end">
+            <div className="reviews-v2__rating-block">
+              <div className="reviews-v2__score">4.9</div>
+              <div>
+                <div className="reviews-v2__stars">★★★★★</div>
+                <div style={{ fontSize: '0.82rem', color: '#777' }}>Based on <strong>79 reviews</strong></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -50,23 +61,21 @@ export default function Reviews() {
           ))}
         </div>
 
-        {/* CTA links */}
-        <div className="text-center mt-4 d-flex gap-3 justify-content-center flex-wrap">
+        {/* CTA */}
+        <div className="text-center mt-5 d-flex gap-3 justify-content-center flex-wrap">
           <a
             href="https://www.google.com/maps"
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noreferrer"
             className="btn-green btn-green--sm"
           >
-            Read More Reviews on Google
+            <i className="bi bi-google me-2"></i>Read More on Google
           </a>
           <a
             href="https://www.trustpilot.com"
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noreferrer"
             className="btn-outline-dark"
           >
-            Read More Reviews on Trustpilot
+            Read More on Trustpilot
           </a>
         </div>
       </div>

@@ -2,28 +2,40 @@ import { Link } from 'react-router-dom';
 import SectionLabel from '../ui/SectionLabel';
 import { PACKAGES } from '../../data/homeData';
 
+const POPULAR_IDX = 1; // Mark "HMO Safety Check" as most popular
+
 export default function Packages() {
   return (
-    <section className="packages-section">
+    <section className="packages-v2">
       <div className="container">
-        <SectionLabel center>LANDLORD SAFETY PACKAGES</SectionLabel>
-        <h2 className="fw-bold text-center mb-2">Book Multiple Safety Checks Together &amp; Save</h2>
-        <p className="text-center mb-5" style={{ color: '#777' }}>
-          Fast, Simple, And Everything You Need As A Landlord — All Sorted In One Go
-        </p>
+        <div className="text-center mb-5">
+          <SectionLabel center>BUNDLE &amp; SAVE</SectionLabel>
+          <h2 className="fw-bold">Safety Packages for Landlords</h2>
+          <p className="text-muted mt-2">Book multiple certificates together and save money</p>
+        </div>
 
-        <div className="row g-4">
+        <div className="row g-4 justify-content-center">
           {PACKAGES.map((pkg, i) => (
             <div className="col-lg-3 col-md-6" key={i}>
-              <div className="package-card">
-                <div className="save-badge">{pkg.save}</div>
-                <h5 className="fw-bold mt-1">{pkg.name}</h5>
-                <div className="pack-price">{pkg.price}</div>
-                <small style={{ color: '#777' }}>({pkg.vat})</small>
-                <ul className="mt-3">
-                  {pkg.items.map((it, j) => <li key={j}>{it}</li>)}
+              <div className={`pkg-card${i === POPULAR_IDX ? ' pkg-card--popular' : ''}`}>
+                {i === POPULAR_IDX && (
+                  <div className="pkg-card__popular-badge">Most Popular</div>
+                )}
+                <div className="pkg-card__save">{pkg.save}</div>
+                <h5 className="pkg-card__name">{pkg.name}</h5>
+                <div className="pkg-card__price">{pkg.price}</div>
+                <div className="pkg-card__vat">{pkg.vat}</div>
+                <ul className="pkg-card__list">
+                  {pkg.items.map((it, j) => (
+                    <li key={j}>
+                      <i className="bi bi-check-circle-fill me-2"></i>{it}
+                    </li>
+                  ))}
                 </ul>
-                <Link to="/book-now" className="btn-green btn-green--sm d-block text-center mt-3">
+                <Link
+                  to="/book-now"
+                  className={`pkg-card__cta${i === POPULAR_IDX ? ' pkg-card__cta--featured' : ''}`}
+                >
                   Book This Package
                 </Link>
               </div>
@@ -32,8 +44,8 @@ export default function Packages() {
         </div>
 
         <p className="text-center mt-4" style={{ color: '#888', fontSize: '0.82rem' }}>
-          • Parking Is Not Included. If Required, It Will Be Added At The Local Rate.<br />
-          • If The Property Is Inside The London Congestion Zone, A £15 Charge Will Apply.
+          Parking is not included. If required, it will be added at the local rate.
+          If the property is inside the London Congestion Zone, a £15 charge will apply.
         </p>
       </div>
     </section>

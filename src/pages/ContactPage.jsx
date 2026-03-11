@@ -20,7 +20,7 @@ const CONTACT_CARDS = [
     lines: [PHONE, 'Mon–Sat: 8am – 6pm'],
     href:  PHONE_HREF,
     cta:   'Call Now',
-    color: 'green',
+    color: 'purple',
   },
   {
     icon: 'bi-whatsapp',
@@ -88,7 +88,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="service-hero" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #e8f5ee 100%)' }}>
+      <section className="service-hero" style={{ background: 'linear-gradient(135deg, var(--purple-light) 0%, var(--teal-light) 100%)' }}>
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-7">
@@ -218,7 +218,7 @@ export default function ContactPage() {
                     <div className="form-check">
                       <input className="form-check-input" type="checkbox" id="contact-privacy" required />
                       <label className="form-check-label text-muted" htmlFor="contact-privacy">
-                        I agree to the <Link to="/" className="text-success">Privacy Policy</Link> and consent to being contacted.
+                        I agree to the <Link to="/" className="text-purple">Privacy Policy</Link> and consent to being contacted.
                       </label>
                     </div>
                   </div>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                   </div>
                 ))}
               </div>
-              <div className="mt-4 p-4 rounded-3" style={{ background: '#f0fdf4', border: '1px solid #c6e6d5' }}>
+              <div className="mt-4 p-4 rounded-3" style={{ background: 'var(--purple-light)', border: '1px solid #d4b8f0' }}>
                 <h6 className="fw-bold mb-2">Want to book directly?</h6>
                 <p className="text-muted small mb-3">Skip the form and book your service online in under 2 minutes.</p>
                 <Link to="/book-now" className="btn-green d-inline-block">

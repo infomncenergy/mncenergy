@@ -50,7 +50,7 @@ export default function Navbar() {
                       <div className="dropdown-header">{col.title}</div>
                       {col.items.map((sub, si) => (
                         <Link key={si} to={sub.path} className="dropdown-item" onClick={closeAll}>
-                          <i className="bi bi-chevron-right me-2" style={{ fontSize: '0.6rem', color: '#28a745' }}></i>
+                          <i className="bi bi-chevron-right me-2" style={{ fontSize: '0.6rem', color: 'var(--teal)' }}></i>
                           {sub.label}
                         </Link>
                       ))}
