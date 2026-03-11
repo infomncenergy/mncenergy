@@ -1,30 +1,34 @@
 // ── Brand constants ──────────────────────────────────────────
-export const PHONE      = "0800 048 7030";
-export const PHONE_HREF = "tel:08000487030";
-export const WHATSAPP   = "https://wa.me/441234567890";
-export const COMPANY_NUM = "16255515";
-export const ADDRESS    = "Lynx House, Ferndown, Northwood, England, HA6 1PQ";
+export const COMPANY_NAME = "MNC Energy";
+export const PHONE        = "+44 7345 158783";
+export const PHONE_HREF   = "tel:+447345158783";
+export const EMAIL        = "Info@mncenergy.co.uk";
+export const EMAIL_HREF   = "mailto:Info@mncenergy.co.uk";
+export const WHATSAPP     = "447345158783";
+export const COMPANY_NUM  = "16255515";
+export const ADDRESS      = "London & M25 Area, United Kingdom";
+export const WEBSITE      = "mncenergyltd.com";
 
 // ── Navigation structure ──────────────────────────────────────
 export const NAV_ITEMS = [
   {
-    label: "Electrical Certificates",
+    label: "Electrical",
     path: "/electrical",
     columns: [
       {
         title: "Residential",
         items: [
-          { label: "EICR",               path: "/electrical/residential-eicr" },
-          { label: "EIC",                path: "/electrical/residential-eic" },
-          { label: "Fuse Box Replacement",path: "/electrical/residential-fuse-box" },
+          { label: "EICR Certificate",      path: "/electrical/residential-eicr" },
+          { label: "EIC Certificate",       path: "/electrical/residential-eic" },
+          { label: "Fuse Box Replacement",  path: "/electrical/residential-fuse-box" },
         ],
       },
       {
         title: "Commercial",
         items: [
-          { label: "EICR",               path: "/electrical/commercial-eicr" },
-          { label: "EIC",                path: "/electrical/commercial-eic" },
-          { label: "Fuse Box Replacement",path: "/electrical/commercial-fuse-box" },
+          { label: "EICR Certificate",      path: "/electrical/commercial-eicr" },
+          { label: "EIC Certificate",       path: "/electrical/commercial-eic" },
+          { label: "Fuse Box Replacement",  path: "/electrical/commercial-fuse-box" },
         ],
       },
     ],
@@ -34,20 +38,20 @@ export const NAV_ITEMS = [
     path: "/gas",
     columns: [
       {
-        title: "Residential Certificates",
+        title: "Residential",
         items: [
-          { label: "Landlord Gas Safety Certificate (CP12)", path: "/gas/landlord-gas-safety" },
-          { label: "Homeowner Gas Safety Certificate",       path: "/gas/homeowner-gas-safety" },
-          { label: "Boiler Service",                         path: "/gas/boiler-service" },
+          { label: "Landlord Gas Safety (CP12)", path: "/gas/landlord-gas-safety" },
+          { label: "Homeowner Gas Safety",       path: "/gas/homeowner-gas-safety" },
+          { label: "Boiler Service",             path: "/gas/boiler-service" },
         ],
       },
       {
-        title: "Commercial Certificates",
+        title: "Commercial",
         items: [
-          { label: "Commercial Boiler Gas Safety (CP15)",         path: "/gas/commercial-boiler-cp15" },
-          { label: "Gas Installation Testing & Purging (CP16)",   path: "/gas/commercial-installation-cp16" },
-          { label: "Gas Installation Safety Report (CP17)",       path: "/gas/commercial-safety-report-cp17" },
-          { label: "Catering Gas Safety Certificate (CP42)",      path: "/gas/commercial-catering-cp42" },
+          { label: "Commercial Boiler (CP15)",   path: "/gas/commercial-boiler-cp15" },
+          { label: "Installation Testing (CP16)",path: "/gas/commercial-installation-cp16" },
+          { label: "Safety Report (CP17)",       path: "/gas/commercial-safety-report-cp17" },
+          { label: "Catering Gas Safety (CP42)", path: "/gas/commercial-catering-cp42" },
         ],
       },
     ],
@@ -57,21 +61,21 @@ export const NAV_ITEMS = [
     path: "/fire",
     columns: [
       {
-        title: "Residential Certificates",
+        title: "Residential",
         items: [
-          { label: "Fire Risk Assessment (FRA)",   path: "/fire/residential-fra" },
-          { label: "Emergency Lights Certificate", path: "/fire/residential-emergency-lights" },
-          { label: "Fire Alarm Certificate",       path: "/fire/residential-fire-alarm" },
-          { label: "Fire Door Certificate",        path: "/fire/residential-fire-door" },
+          { label: "Fire Risk Assessment",   path: "/fire/residential-fra" },
+          { label: "Emergency Lights",       path: "/fire/residential-emergency-lights" },
+          { label: "Fire Alarm Certificate", path: "/fire/residential-fire-alarm" },
+          { label: "Fire Door Inspection",   path: "/fire/residential-fire-door" },
         ],
       },
       {
-        title: "Commercial Certificates",
+        title: "Commercial",
         items: [
-          { label: "Fire Risk Assessment (FRA)",   path: "/fire/commercial-fra" },
-          { label: "Emergency Lights Certificate", path: "/fire/commercial-emergency-lights" },
-          { label: "Fire Alarm Certificate",       path: "/fire/commercial-fire-alarm" },
-          { label: "Fire Door Certificate",        path: "/fire/commercial-fire-door" },
+          { label: "Fire Risk Assessment",   path: "/fire/commercial-fra" },
+          { label: "Emergency Lights",       path: "/fire/commercial-emergency-lights" },
+          { label: "Fire Alarm Certificate", path: "/fire/commercial-fire-alarm" },
+          { label: "Fire Door Inspection",   path: "/fire/commercial-fire-door" },
         ],
       },
     ],
@@ -80,16 +84,16 @@ export const NAV_ITEMS = [
     label: "Asbestos",
     path: "/asbestos",
     columns: [
-      { title: "Residential", items: [{ label: "Asbestos Residential", path: "/asbestos/residential" }] },
-      { title: "Commercial",  items: [{ label: "Asbestos Commercial",  path: "/asbestos/commercial" }] },
+      { title: "Residential", items: [{ label: "Residential Asbestos Survey", path: "/asbestos/residential" }] },
+      { title: "Commercial",  items: [{ label: "Commercial Asbestos Survey",  path: "/asbestos/commercial" }] },
     ],
   },
   {
     label: "EPC",
     path: "/epc",
     columns: [
-      { title: "Residential", items: [{ label: "EPC Residential", path: "/epc/residential" }] },
-      { title: "Commercial",  items: [{ label: "EPC Commercial",  path: "/epc/commercial" }] },
+      { title: "Residential", items: [{ label: "Residential EPC", path: "/epc/residential" }] },
+      { title: "Commercial",  items: [{ label: "Commercial EPC",  path: "/epc/commercial" }] },
     ],
   },
 ];

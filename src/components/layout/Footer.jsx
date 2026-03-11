@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { COMPANY_NUM, ADDRESS } from '../../data/constants';
+import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF, ADDRESS, COMPANY_NUM } from '../../data/constants';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -11,52 +11,12 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="col-lg-4">
-            <div className="footer-logo">
-              <span>LANDLORD</span> SAFETY
-              <span className="footer-logo__sub">CERTIFICATE</span>
-            </div>
-            <p className="footer-desc">
-              Landlord Safety Certificate's team are certified, top-quality engineers ready to provide
-              you with all types of landlord safety certificates in London and the M25 area for
-              domestic and commercial purposes.
-            </p>
-          </div>
-
-          {/* Quick links */}
-          <div className="col-lg-2 col-6">
-            <div className="footer-title">Quick Links</div>
-            <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/electrical">Services</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
-              <li><Link to="/#faqs">FAQs</Link></li>
-              <li><Link to="/book-now">Book Now</Link></li>
-            </ul>
-          </div>
-
-          {/* Certifications */}
-          <div className="col-lg-3 col-6">
-            <div className="footer-title">Certifications</div>
-            <div className="d-flex gap-2 flex-wrap">
-              <div className="cert-badge" title="NAPIT Certified">
-                <span style={{ fontWeight: 800, fontSize: '1rem', color: '#003087' }}>NAPIT</span>
-              </div>
-              <div className="cert-badge" title="Gas Safe Registered">
-                <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#d4b800' }}>GAS SAFE</span>
-              </div>
-              <div className="cert-badge" title="NICEIC Approved">
-                <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#e63333' }}>NICEIC</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Company info */}
-          <div className="col-lg-3">
-            <div className="footer-title">Company Info</div>
-            <p style={{ fontSize: '0.88rem', lineHeight: 1.8 }}>
-              <strong>Company Number:</strong> {COMPANY_NUM}<br />
-              <strong>Address:</strong> {ADDRESS}
+            <Link to="/">
+              <img src="/images/mnc-energy-logo.png" alt="MNC Energy" className="footer-logo-img" />
+            </Link>
+            <p className="footer-desc mt-3">
+              MNC Energy provides fully certified safety inspections and certificates for landlords,
+              homeowners and businesses across London and the M25 area. Gas Safe, NICEIC and BAFE registered.
             </p>
             <div className="footer-social">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
@@ -70,11 +30,63 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
+          {/* Quick links */}
+          <div className="col-lg-2 col-6">
+            <div className="footer-title">Quick Links</div>
+            <ul className="footer-links">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/electrical">Electrical</Link></li>
+              <li><Link to="/gas">Gas Services</Link></li>
+              <li><Link to="/fire">Fire Services</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/book-now">Book Now</Link></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="col-lg-3 col-6">
+            <div className="footer-title">Our Services</div>
+            <ul className="footer-links">
+              <li><Link to="/gas/landlord-gas-safety">Gas Safety Certificate</Link></li>
+              <li><Link to="/electrical/residential-eicr">EICR Certificate</Link></li>
+              <li><Link to="/fire/residential-fra">Fire Risk Assessment</Link></li>
+              <li><Link to="/asbestos/residential">Asbestos Survey</Link></li>
+              <li><Link to="/epc/residential">EPC Certificate</Link></li>
+              <li><Link to="/electrical/residential-fuse-box">Fuse Box Replacement</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact info */}
+          <div className="col-lg-3">
+            <div className="footer-title">Get In Touch</div>
+            <div className="footer-contact-list">
+              <a href={PHONE_HREF} className="footer-contact-item">
+                <i className="bi bi-telephone-fill"></i>
+                <span>{PHONE}</span>
+              </a>
+              <a href={EMAIL_HREF} className="footer-contact-item">
+                <i className="bi bi-envelope-fill"></i>
+                <span>{EMAIL}</span>
+              </a>
+              <div className="footer-contact-item">
+                <i className="bi bi-geo-alt-fill"></i>
+                <span>{ADDRESS}</span>
+              </div>
+            </div>
+            <div className="footer-certs mt-3">
+              <span className="cert-badge" title="Gas Safe Registered">GAS SAFE</span>
+              <span className="cert-badge" title="NICEIC Approved">NICEIC</span>
+              <span className="cert-badge" title="NAPIT Certified">NAPIT</span>
+              <span className="cert-badge" title="BAFE Registered">BAFE</span>
+            </div>
+          </div>
         </div>
 
         {/* Bottom bar */}
         <div className="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
-          <span>© {year} TGS Homes Limited. All Rights Reserved.</span>
+          <span>© {year} MNC Energy Ltd. Company No: {COMPANY_NUM}. All Rights Reserved.</span>
           <span>
             <a href="#">Terms &amp; Conditions</a>
             <a href="#">Privacy Policy</a>

@@ -1,20 +1,31 @@
 /* ============================================================
-   Landlord Safety Certificate — Custom Styles
-   Compiled from nested SCSS architecture
-   Variables, mixins, and component partials are in /styles/
+   MNC Energy — Custom Styles
+   Brand: Purple #6B2FA0 · Teal #00B4D8 · Green #6CBF3A
    ============================================================ */
 
-/* ── CSS Custom Properties (from _variables.scss) ── */
+/* ── CSS Custom Properties ── */
 :root {
-  --green:        #28a745;
-  --green-dark:   #1e7e34;
-  --green-light:  #e8f5e9;
-  --black:        #1a1a1a;
-  --dark-nav:     #1c1c1c;
+  /* MNC Energy Brand Colors */
+  --purple:       #6B2FA0;
+  --purple-dark:  #521f80;
+  --purple-light: #f0e8fa;
+  --teal:         #00B4D8;
+  --teal-dark:    #0090ad;
+  --teal-light:   #e0f7fc;
+  --green:        #6CBF3A;
+  --green-dark:   #52a024;
+  --green-light:  #edf7e3;
+
+  /* Neutrals */
+  --black:        #1a1a2e;
+  --dark-nav:     #16213e;
   --gray-bg:      #f4f6f8;
   --muted:        #6c757d;
   --radius:       12px;
   --transition:   all 0.2s ease-in-out;
+
+  /* Gradient */
+  --brand-gradient: linear-gradient(135deg, var(--purple) 0%, var(--teal) 100%);
 }
 
 html { scroll-behavior: smooth; }
@@ -22,80 +33,136 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 *, *::before, *::after { box-sizing: border-box; }
 
 /* ══════════════════════════════════════════════════════════
-   TOP BAR  (_topbar.scss)
+   TOP BAR
 ══════════════════════════════════════════════════════════ */
 .top-bar {
-  background: var(--green);
+  background: var(--brand-gradient);
   color: #fff;
   font-size: 0.82rem;
   padding: 6px 0;
-
-  & a {
-    color: #fff;
-    margin-left: 10px;
-    font-size: 1rem;
-    transition: var(--transition);
-    &:hover { opacity: 0.75; }
-  }
 }
 
+.top-bar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-bar__item {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar__sep {
+  color: rgba(255,255,255,0.4);
+  margin: 0 4px;
+}
+
+.top-bar__link {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition);
+}
+.top-bar__link:hover { color: #fff; opacity: 0.85; }
+
+.top-bar__socials {
+  display: flex;
+  gap: 10px;
+  margin-left: 4px;
+}
+.top-bar__socials a {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.top-bar__socials a:hover { color: #fff; }
+
 /* ══════════════════════════════════════════════════════════
-   SITE HEADER  (_header.scss)
+   SITE HEADER
 ══════════════════════════════════════════════════════════ */
 .site-header {
   background: #fff;
   padding: 14px 0;
   border-bottom: 1px solid #ececec;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
 
-  & .logo {
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 800;
-    line-height: 1;
+/* Logo */
+.header-logo {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.header-logo__img {
+  height: 54px;
+  width: auto;
+  display: block;
+}
 
-    &__main      { color: var(--green); }
-    &__secondary { color: var(--black); }
-    &__sub {
-      font-size: 0.58rem;
-      letter-spacing: 4px;
-      color: #777;
-      font-weight: 400;
-      display: block;
-      margin-top: 2px;
-    }
-  }
+/* Contact strip */
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-  & .phone-box {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+.header-contact__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+.header-contact__item:hover { opacity: 0.82; }
 
-    & .phone-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--green);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
+.header-contact__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.header-contact__icon--purple { background: var(--purple-light); color: var(--purple); }
+.header-contact__icon--teal   { background: var(--teal-light);   color: var(--teal-dark); }
 
-    & .phone-label  { font-size: 0.75rem; color: var(--muted); }
-    & .phone-number {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--green);
-      text-decoration: none;
-      &:hover { color: var(--green-dark); }
-    }
-  }
+.header-contact__divider {
+  width: 1px;
+  height: 36px;
+  background: #e0e0e0;
+}
+
+.header-contact__label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.2;
+}
+.header-contact__value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+@media (max-width: 576px) {
+  .header-contact { gap: 12px; }
+  .header-contact__divider { display: none; }
+  .header-logo__img { height: 44px; }
 }
 
 /* ══════════════════════════════════════════════════════════
-   NAVIGATION  (_navbar.scss)
+   NAVIGATION
 ══════════════════════════════════════════════════════════ */
 .main-nav {
   background: var(--dark-nav);
@@ -108,7 +175,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     font-size: 0.9rem;
     padding: 14px 14px !important;
     transition: color 0.15s;
-    &:hover, &.active { color: var(--green) !important; }
+    &:hover, &.active { color: var(--teal) !important; }
   }
 
   & .dropdown-menu {
@@ -124,7 +191,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
       font-size: 0.85rem;
       padding: 7px 20px;
       transition: background 0.15s;
-      &:hover { background: var(--green); color: #fff; }
+      &:hover { background: var(--purple); color: #fff; }
     }
 
     & .dropdown-header {
@@ -149,14 +216,14 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   }
 
   & .book-btn {
-    background: var(--green) !important;
+    background: var(--purple) !important;
     color: #fff !important;
     border-radius: 4px;
     padding: 8px 22px !important;
     font-weight: 700;
     margin-left: 10px;
     transition: background 0.15s;
-    &:hover { background: var(--green-dark) !important; }
+    &:hover { background: var(--purple-dark) !important; }
   }
 
   & .mobile-menu {
@@ -164,7 +231,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     padding-bottom: 16px;
 
     & .mobile-cat-title {
-      color: var(--green);
+      color: var(--teal);
       font-weight: 700;
       cursor: pointer;
       padding: 8px 14px;
@@ -178,10 +245,11 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 }
 
 /* ══════════════════════════════════════════════════════════
-   BUTTONS  (_buttons.scss)
+   BUTTONS
 ══════════════════════════════════════════════════════════ */
-.btn-green {
-  background: var(--green);
+.btn-green,
+.btn-purple {
+  background: var(--purple);
   color: #fff;
   border: none;
   padding: 12px 32px;
@@ -192,9 +260,24 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   text-decoration: none;
   display: inline-block;
   transition: var(--transition);
-  &:hover { background: var(--green-dark); color: #fff; }
+  &:hover { background: var(--purple-dark); color: #fff; }
 
   &--sm { font-size: 0.82rem; padding: 8px 18px; }
+}
+
+.btn-teal {
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  &:hover { background: var(--teal-dark); color: #fff; }
 }
 
 .btn-outline-white {
@@ -209,7 +292,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   text-decoration: none;
   display: inline-block;
   transition: var(--transition);
-  &:hover { background: #fff; color: var(--green); }
+  &:hover { background: #fff; color: var(--purple); }
 }
 
 .btn-outline-dark {
@@ -224,14 +307,31 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   text-decoration: none;
   display: inline-block;
   transition: var(--transition);
-  &:hover { border-color: var(--green); color: var(--green); }
+  &:hover { border-color: var(--purple); color: var(--purple); }
 }
 
+.btn-outline-green,
+.btn-outline-purple {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-outline-green:hover,
+.btn-outline-purple:hover { background: var(--purple); color: #fff; }
+
 /* ══════════════════════════════════════════════════════════
-   SHARED SECTION UTILITIES  (_sections.scss)
+   SHARED SECTION UTILITIES
 ══════════════════════════════════════════════════════════ */
 .section-label {
-  color: var(--green);
+  color: var(--purple);
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -275,7 +375,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   }
 
   & .why-card {
-    background: var(--green);
+    background: var(--brand-gradient);
     color: #fff;
     border-radius: var(--radius);
     padding: 40px 36px;
@@ -307,13 +407,13 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     text-align: center;
     height: 100%;
     transition: var(--transition);
-    &:hover { box-shadow: 0 8px 32px rgba(40,167,69,0.15); }
+    &:hover { box-shadow: 0 8px 32px rgba(107,47,160,0.15); }
 
     & .service-icon {
       width: 64px;
       height: 64px;
       border-radius: 12px;
-      background: var(--green);
+      background: var(--brand-gradient);
       color: #fff;
       display: flex;
       align-items: center;
@@ -339,10 +439,10 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     padding: 28px;
     height: 100%;
     transition: var(--transition);
-    &:hover { border-color: var(--green); box-shadow: 0 6px 24px rgba(40,167,69,0.12); }
+    &:hover { border-color: var(--purple); box-shadow: 0 6px 24px rgba(107,47,160,0.12); }
 
     & .save-badge {
-      background: var(--green);
+      background: var(--purple);
       color: #fff;
       border-radius: 20px;
       font-size: 0.75rem;
@@ -351,7 +451,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
       margin-bottom: 12px;
     }
 
-    & .pack-price { font-size: 2.1rem; font-weight: 800; color: var(--green); }
+    & .pack-price { font-size: 2.1rem; font-weight: 800; color: var(--purple); }
 
     & ul {
       list-style: none;
@@ -360,7 +460,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
       & li {
         padding: 4px 0;
         font-size: 0.88rem;
-        &::before { content: "✓ "; color: var(--green); font-weight: 700; }
+        &::before { content: "✓ "; color: var(--purple); font-weight: 700; }
       }
     }
   }
@@ -407,8 +507,8 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   & .accordion-button {
     font-weight: 600;
     &:not(.collapsed) {
-      color: var(--green);
-      background: var(--green-light);
+      color: var(--purple);
+      background: var(--purple-light);
       box-shadow: none;
     }
   }
@@ -441,23 +541,22 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 }
 
 /* ══════════════════════════════════════════════════════════
-   FOOTER  (_footer.scss)
+   FOOTER
 ══════════════════════════════════════════════════════════ */
 .site-footer {
   background: #1a1a1a;
   color: #ccc;
   padding: 60px 0 30px;
 
-  & .footer-logo {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #fff;
+  /* Logo image in footer */
+  & .footer-logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
     margin-bottom: 16px;
-    line-height: 1.2;
-
-    & span { color: var(--green); }
-
-    &__sub { font-size: 0.58rem; letter-spacing: 4px; color: #888; font-weight: 400; display: block; }
+    /* Invert to show on dark background if needed — remove if logo has white variant */
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
   }
 
   & .footer-desc { font-size: 0.88rem; line-height: 1.8; }
@@ -468,7 +567,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     font-size: 1rem;
     margin-bottom: 18px;
     padding-bottom: 8px;
-    border-bottom: 3px solid var(--green);
+    border-bottom: 3px solid var(--teal);
     display: inline-block;
   }
 
@@ -477,20 +576,56 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     padding: 0;
     margin: 0;
     & li { margin-bottom: 10px; }
-    & a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.15s; &:hover { color: var(--green); } }
+    & a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.15s; &:hover { color: var(--teal); } }
+  }
+
+  /* Contact list */
+  & .footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  & .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    transition: color 0.15s;
+
+    & i {
+      color: var(--teal);
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+  }
+  & a.footer-contact-item:hover { color: #fff; }
+
+  /* Cert badges */
+  & .footer-certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   & .cert-badge {
-    background: #fff;
-    border-radius: 8px;
-    padding: 6px 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 10px;
     display: inline-block;
-    margin: 0 6px 6px 0;
     font-weight: 800;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
   }
 
   & .footer-social {
-    & a { color: #aaa; margin-right: 14px; font-size: 1.2rem; transition: color 0.15s; &:hover { color: var(--green); } }
+    & a { color: #aaa; margin-right: 14px; font-size: 1.2rem; transition: color 0.15s; &:hover { color: var(--teal); } }
   }
 
   & .footer-bottom {
@@ -499,12 +634,12 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     padding-top: 20px;
     font-size: 0.82rem;
     color: #777;
-    & a { color: #777; margin-right: 14px; text-decoration: none; &:hover { color: var(--green); } }
+    & a { color: #777; margin-right: 14px; text-decoration: none; &:hover { color: var(--teal); } }
   }
 }
 
 /* ══════════════════════════════════════════════════════════
-   FLOATING WIDGETS  (_floating.scss)
+   FLOATING WIDGETS
 ══════════════════════════════════════════════════════════ */
 .wa-float {
   position: fixed;
@@ -530,7 +665,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   position: fixed;
   bottom: 92px;
   right: 28px;
-  background: var(--green);
+  background: var(--purple);
   color: #fff;
   width: 42px;
   height: 42px;
@@ -544,11 +679,11 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   border: none;
   transition: var(--transition);
-  &:hover { background: var(--green-dark); }
+  &:hover { background: var(--purple-dark); }
 }
 
 /* ══════════════════════════════════════════════════════════
-   SERVICE PAGES — new reusable components
+   SERVICE PAGES — reusable components
 ══════════════════════════════════════════════════════════ */
 
 /* ── Service Hero ────────────────────────────────────────── */
@@ -560,7 +695,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   color: #fff;
 
   &__price-badge {
-    background: var(--green);
+    background: var(--teal);
     color: #fff;
     border-radius: 20px;
     padding: 4px 16px;
@@ -606,7 +741,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 /* ── Stats Bar ───────────────────────────────────────────── */
 .stats-bar {
   background: #fff;
-  border-bottom: 3px solid var(--green);
+  border-bottom: 3px solid var(--purple);
   padding: 20px 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 
@@ -644,14 +779,14 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   border: 1px solid #e8e8e8;
   transition: var(--transition);
 
-  &:hover { box-shadow: 0 6px 24px rgba(40,167,69,0.12); border-color: var(--green); }
+  &:hover { box-shadow: 0 6px 24px rgba(107,47,160,0.12); border-color: var(--purple); }
 
   &__icon {
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    background: var(--green-light);
-    color: var(--green);
+    background: var(--purple-light);
+    color: var(--purple);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -704,7 +839,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 
   & .pricing-card-item {
     background: #fff;
-    border: 2px solid var(--green);
+    border: 2px solid var(--purple);
     border-radius: var(--radius);
     padding: 14px 20px;
     display: flex;
@@ -713,7 +848,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 
     &__label { font-weight: 700; font-size: 0.92rem; }
     &__note  { font-size: 0.8rem; color: var(--muted); }
-    &__price { font-size: 1.3rem; font-weight: 800; color: var(--green); margin-left: auto; white-space: nowrap; }
+    &__price { font-size: 1.3rem; font-weight: 800; color: var(--purple); margin-left: auto; white-space: nowrap; }
   }
 
   & .pricing-disclaimer { font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
@@ -722,7 +857,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 /* ── Process Steps ───────────────────────────────────────── */
 .process-section {
   padding: 80px 0;
-  background: var(--green);
+  background: var(--brand-gradient);
 }
 
 .process-step {
@@ -742,7 +877,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     height: 32px;
     border-radius: 50%;
     background: #fff;
-    color: var(--green);
+    color: var(--purple);
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -770,14 +905,14 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   border: 1px solid #e8e8e8;
   transition: var(--transition);
 
-  &:hover { border-color: var(--green); box-shadow: 0 4px 16px rgba(40,167,69,0.1); }
+  &:hover { border-color: var(--purple); box-shadow: 0 4px 16px rgba(107,47,160,0.1); }
 
   &__icon {
     width: 54px;
     height: 54px;
     border-radius: 10px;
-    background: var(--green-light);
-    color: var(--green);
+    background: var(--purple-light);
+    color: var(--purple);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -795,7 +930,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   background: var(--gray-bg);
 
   &__label {
-    color: var(--green);
+    color: var(--purple);
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -820,14 +955,14 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   border: 1px solid #e8e8e8;
   transition: var(--transition);
 
-  &:hover { border-color: var(--green); }
+  &:hover { border-color: var(--purple); }
 
   &__icon {
     width: 52px;
     height: 52px;
     border-radius: 10px;
-    background: var(--green-light);
-    color: var(--green);
+    background: var(--purple-light);
+    color: var(--purple);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -857,8 +992,8 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    background: var(--green-light);
-    color: var(--green);
+    background: var(--purple-light);
+    color: var(--purple);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -932,7 +1067,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 .blog-card__category {
   position: absolute;
   top: 12px; left: 12px;
-  background: var(--green);
+  background: var(--purple);
   color: #fff;
   font-size: .7rem;
   font-weight: 700;
@@ -948,14 +1083,14 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 .blog-card__link {
   font-size: .85rem;
   font-weight: 600;
-  color: var(--green);
+  color: var(--teal);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   margin-top: auto;
 }
-.blog-card__link:hover { color: var(--green-dark); }
+.blog-card__link:hover { color: var(--teal-dark); }
 
 /* Category filter */
 .blog-filter { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -972,8 +1107,8 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 }
 .blog-filter__btn:hover,
 .blog-filter__btn.active {
-  background: var(--green);
-  border-color: var(--green);
+  background: var(--purple);
+  border-color: var(--purple);
   color: #fff;
 }
 
@@ -1020,11 +1155,11 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 }
 .booking-hero__card-icon {
   width: 56px; height: 56px;
-  background: var(--green-light);
+  background: var(--purple-light);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 1rem;
-  font-size: 1.4rem; color: var(--green);
+  font-size: 1.4rem; color: var(--purple);
 }
 
 /* Progress bar */
@@ -1035,8 +1170,8 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   font-size: .82rem; font-weight: 600; color: #aaa;
   padding: 0 20px; position: relative;
 }
-.booking-progress__step.active { color: var(--green); }
-.booking-progress__step.done { color: var(--green); cursor: pointer; }
+.booking-progress__step.active { color: var(--purple); }
+.booking-progress__step.done { color: var(--purple); cursor: pointer; }
 .booking-progress__step:not(:last-child)::after {
   content: '';
   position: absolute; right: 0;
@@ -1054,7 +1189,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 }
 .booking-progress__step.active .booking-progress__num,
 .booking-progress__step.done .booking-progress__num {
-  background: var(--green); color: #fff;
+  background: var(--purple); color: #fff;
 }
 
 /* Form section */
@@ -1079,8 +1214,8 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   background: #fafafa;
   font-weight: 500;
 }
-.booking-service-card:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
-.booking-service-card.selected { border-color: var(--green); background: var(--green-light); color: var(--green); font-weight: 600; }
+.booking-service-card:hover { border-color: var(--purple); color: var(--purple); background: var(--purple-light); }
+.booking-service-card.selected { border-color: var(--purple); background: var(--purple-light); color: var(--purple); font-weight: 600; }
 .booking-service-card .bi-check-circle-fill { margin-left: auto; }
 
 /* Booking summary */
@@ -1101,12 +1236,12 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 .booking-summary__label { font-weight: 600; color: #555; min-width: 140px; flex-shrink: 0; }
 .booking-summary__value { color: #222; }
 .booking-summary__notice {
-  background: var(--green-light);
-  border: 1px solid #c8e6c9;
+  background: var(--purple-light);
+  border: 1px solid #d4b8f0;
   border-radius: 8px;
   padding: 12px 16px;
   font-size: .85rem;
-  color: #2e7d32;
+  color: var(--purple-dark);
 }
 
 /* Sidebar */
@@ -1127,10 +1262,10 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
 .booking-sidebar__item:last-of-type { border-bottom: none; }
 .booking-sidebar__icon {
   width: 36px; height: 36px;
-  background: var(--green-light);
+  background: var(--purple-light);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1rem; color: var(--green);
+  font-size: 1rem; color: var(--purple);
   flex-shrink: 0;
 }
 .booking-sidebar__cta { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e9ecef; }
@@ -1142,16 +1277,16 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   padding: 80px 0;
 }
 .booking-success__icon {
-  font-size: 4rem; color: var(--green);
+  font-size: 4rem; color: var(--purple);
   margin-bottom: 1.5rem;
 }
 .booking-confirm-badge {
-  background: var(--green-light);
-  border: 1px solid #c8e6c9;
+  background: var(--purple-light);
+  border: 1px solid #d4b8f0;
   border-radius: 50px;
   padding: 8px 20px;
   font-size: .85rem;
-  color: #2e7d32;
+  color: var(--purple-dark);
   font-weight: 600;
 }
 
@@ -1170,32 +1305,16 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   top: -14px; left: 50%;
   transform: translateX(-50%);
   width: 28px; height: 28px;
-  background: var(--green);
+  background: var(--purple);
   color: #fff;
   border-radius: 50%;
   font-size: .8rem; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
 }
 .process-step-card__icon {
-  font-size: 2rem; color: var(--green);
+  font-size: 2rem; color: var(--purple);
   margin-top: .5rem;
 }
-
-/* btn-outline-green */
-.btn-outline-green {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 6px;
-  border: 2px solid var(--green);
-  color: var(--green);
-  font-weight: 700;
-  font-size: .9rem;
-  text-decoration: none;
-  background: transparent;
-  cursor: pointer;
-  transition: var(--transition);
-}
-.btn-outline-green:hover { background: var(--green); color: #fff; }
 
 @media (max-width: 768px) {
   .booking-progress__step span { display: none; }
@@ -1229,23 +1348,25 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #33
   justify-content: center;
   font-size: 1.4rem;
 }
-.contact-card__icon--green   { background: #e8f5ee; color: #1a7a4c; }
+.contact-card__icon--purple  { background: var(--purple-light); color: var(--purple); }
+.contact-card__icon--green   { background: var(--purple-light); color: var(--purple); }
 .contact-card__icon--whatsapp { background: #e7f8ec; color: #25d366; }
 .contact-card__icon--blue    { background: #eff6ff; color: #2563eb; }
 .contact-card__icon--amber   { background: #fff8e1; color: #d97706; }
+.contact-card__icon--teal    { background: var(--teal-light); color: var(--teal-dark); }
 
 .contact-success-msg {
   display: flex;
   align-items: flex-start;
   gap: 14px;
   padding: 16px 20px;
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  background: var(--purple-light);
+  border: 1px solid #d4b8f0;
   border-radius: 12px;
 }
 .contact-success-msg__icon {
   font-size: 1.6rem;
-  color: #16a34a;
+  color: var(--purple);
   flex-shrink: 0;
   line-height: 1;
 }

@@ -1,25 +1,39 @@
 import { Link } from 'react-router-dom';
-import { PHONE, PHONE_HREF } from '../../data/constants';
+import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF } from '../../data/constants';
 
 export default function Header() {
   return (
     <div className="site-header">
       <div className="container d-flex justify-content-between align-items-center flex-wrap gap-3">
-        <Link to="/" className="logo">
-          <span className="logo__main">LANDLORD</span>
-          <span className="logo__secondary"> SAFETY</span>
-          <span className="logo__sub">CERTIFICATE</span>
+
+        {/* Logo */}
+        <Link to="/" className="header-logo">
+          <img src="/images/mnc-energy-logo.png" alt="MNC Energy" className="header-logo__img" />
         </Link>
 
-        <div className="phone-box">
-          <div className="phone-icon">
-            <i className="bi bi-telephone-fill"></i>
-          </div>
-          <div>
-            <div className="phone-label">Call Us Free</div>
-            <a href={PHONE_HREF} className="phone-number">{PHONE}</a>
-          </div>
+        {/* Contact info */}
+        <div className="header-contact">
+          <a href={PHONE_HREF} className="header-contact__item">
+            <div className="header-contact__icon header-contact__icon--purple">
+              <i className="bi bi-telephone-fill"></i>
+            </div>
+            <div>
+              <div className="header-contact__label">Call Us Now</div>
+              <div className="header-contact__value">{PHONE}</div>
+            </div>
+          </a>
+          <div className="header-contact__divider"></div>
+          <a href={EMAIL_HREF} className="header-contact__item">
+            <div className="header-contact__icon header-contact__icon--teal">
+              <i className="bi bi-envelope-fill"></i>
+            </div>
+            <div>
+              <div className="header-contact__label">Email Us</div>
+              <div className="header-contact__value">{EMAIL}</div>
+            </div>
+          </a>
         </div>
+
       </div>
     </div>
   );
