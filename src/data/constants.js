@@ -13,88 +13,64 @@ export const WEBSITE      = "mncenergyltd.com";
 export const NAV_ITEMS = [
   {
     label: "Electrical",
-    path: "/electrical",
     columns: [
       {
-        title: "Certificates",
+        title: "",
         items: [
-          { label: "EICR Certificate (Residential)",  path: "/electrical/residential-eicr" },
-          { label: "EICR Certificate (Commercial)",   path: "/electrical/commercial-eicr" },
-          { label: "Consumer Unit / Fuse Box",        path: "/electrical/residential-fuse-box" },
-        ],
-      },
-      {
-        title: "Other Electrical",
-        items: [
-          { label: "PAT Testing",                     path: "/electrical/pat-testing" },
-          { label: "Electrical Fault Finding",        path: "/electrical/fault-finding" },
-          { label: "Commercial Fuse Box",             path: "/electrical/commercial-fuse-box" },
+          { label: "EICR Certificate",              path: "/electrical/residential-eicr" },
+          { label: "Commercial EICR",               path: "/electrical/commercial-eicr" },
+          { label: "Electrical Fault Finding",      path: "/electrical/fault-finding" },
+          { label: "Fuse Box Installation",         path: "/electrical/residential-fuse-box" },
+          { label: "PAT Testing",                   path: "/electrical/pat-testing" },
         ],
       },
     ],
   },
   {
-    label: "Gas Services",
-    path: "/gas",
+    label: "Gas",
     columns: [
       {
-        title: "Gas Certificates",
+        title: "",
         items: [
-          { label: "Landlord Gas Safety (CP12)", path: "/gas/landlord-gas-safety" },
-          { label: "Commercial Gas Safety",      path: "/gas/commercial-gas-safety" },
-        ],
-      },
-      {
-        title: "Boiler Services",
-        items: [
-          { label: "Boiler Service",             path: "/gas/boiler-service" },
-          { label: "Boiler Installation",        path: "/gas/boiler-installation" },
-          { label: "Boiler Repair",              path: "/gas/boiler-repair" },
+          { label: "Gas Safety Certificate",         path: "/gas/landlord-gas-safety" },
+          { label: "Commercial Gas Safety",          path: "/gas/commercial-gas-safety" },
+          { label: "Boiler Installation",            path: "/gas/boiler-installation" },
+          { label: "Boiler Repair",                  path: "/gas/boiler-repair" },
+          { label: "Gas Engineer",                   path: "/gas/gas-engineer" },
+          { label: "Commercial Gas Engineer",        path: "/gas/commercial-gas-engineer" },
         ],
       },
     ],
   },
   {
-    label: "Fire Services",
-    path: "/fire",
+    label: "Fire Safety",
     columns: [
       {
-        title: "Residential",
+        title: "",
         items: [
-          { label: "Fire Risk Assessment",        path: "/fire/residential-fra" },
-          { label: "Emergency Lights",            path: "/fire/residential-emergency-lights" },
-          { label: "Fire Alarm Certificate",      path: "/fire/residential-fire-alarm" },
-          { label: "Fire Door Inspection",        path: "/fire/residential-fire-door" },
-        ],
-      },
-      {
-        title: "Commercial",
-        items: [
-          { label: "Fire Risk Assessment",        path: "/fire/commercial-fra" },
-          { label: "Emergency Lights",            path: "/fire/commercial-emergency-lights" },
-          { label: "Fire Alarm Certificate",      path: "/fire/commercial-fire-alarm" },
-          { label: "Fire Door Inspection",        path: "/fire/commercial-fire-door" },
-          { label: "Fire Extinguisher Servicing", path: "/fire/fire-extinguisher" },
+          { label: "Fire Safety Check",                        path: "/fire/fire-safety-check" },
+          { label: "Fire Risk Assessment",                     path: "/fire/residential-fra" },
+          { label: "Commercial Fire Risk Assessment",          path: "/fire/commercial-fra" },
+          { label: "Fire Alarm Certificate",                   path: "/fire/residential-fire-alarm" },
+          { label: "Fire Extinguisher Inspection",             path: "/fire/fire-extinguisher" },
+          { label: "Emergency Lighting Testing",               path: "/fire/residential-emergency-lights" },
+          { label: "Fire Door Certificate",                    path: "/fire/residential-fire-door" },
+          { label: "Fire Risk Assessment & Asbestos Report",   path: "/fire/fire-risk-asbestos" },
         ],
       },
     ],
   },
   {
-    label: "Asbestos & EPC",
-    path: "/asbestos",
+    label: "More",
     columns: [
       {
-        title: "Asbestos Survey",
+        title: "",
         items: [
-          { label: "Residential Asbestos Survey", path: "/asbestos/residential" },
-          { label: "Commercial Asbestos Survey",  path: "/asbestos/commercial" },
-        ],
-      },
-      {
-        title: "EPC Certificate",
-        items: [
-          { label: "Residential EPC", path: "/epc/residential" },
-          { label: "Commercial EPC",  path: "/epc/commercial" },
+          { label: "Asbestos Survey",   path: "/asbestos/residential" },
+          { label: "EPC Certificate",   path: "/epc/residential" },
+          { label: "FAQs",              path: "/faqs" },
+          { label: "Blog",              path: "/blog" },
+          { label: "Contact Us",        path: "/contact" },
         ],
       },
     ],

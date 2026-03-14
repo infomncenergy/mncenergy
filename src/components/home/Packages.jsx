@@ -43,7 +43,7 @@ export default function Packages() {
           ))}
         </div>
 
-        <p className="text-center mt-4" className="pricing-disclaimer">
+        <p className="text-center mt-4 pricing-disclaimer">
           Parking is not included. If required, it will be added at the local rate.
           If the property is inside the London Congestion Zone, a £15 charge will apply.
         </p>

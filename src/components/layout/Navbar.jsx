@@ -46,16 +46,21 @@ export default function Navbar() {
               onMouseEnter={() => setOpenMenu(idx)}
               onMouseLeave={() => setOpenMenu(null)}
             >
-              <Link to={item.path} className="nav-link d-flex align-items-center gap-1" onClick={closeAll}>
+              {/* Main label — never navigates when it has sub-items */}
+              <span
+                className="nav-link d-flex align-items-center gap-1"
+                style={{ cursor: 'pointer', userSelect: 'none' }}
+                onClick={() => setOpenMenu(openMenu === idx ? null : idx)}
+              >
                 {item.label}
                 <i className={`bi bi-chevron-${openMenu === idx ? 'up' : 'down'}`} style={{ fontSize: '0.6rem' }}></i>
-              </Link>
+              </span>
 
               {openMenu === idx && (
                 <div className="dropdown-menu show d-flex mega-menu" style={{ top: '100%', left: 0 }}>
                   {item.columns.map((col, ci) => (
                     <div key={ci} className="mega-col px-0">
-                      <div className="dropdown-header">{col.title}</div>
+                      {col.title && <div className="dropdown-header">{col.title}</div>}
                       {col.items.map((sub, si) => (
                         <Link key={si} to={sub.path} className="dropdown-item" onClick={closeAll}>
                           <i className="bi bi-chevron-right me-2" style={{ fontSize: '0.6rem', color: 'var(--teal)' }}></i>
@@ -100,6 +105,7 @@ export default function Navbar() {
               <div key={idx}>
                 <div
                   className="mobile-cat-title nav-link"
+                  style={{ cursor: 'pointer' }}
                   onClick={() => setOpenMenu(openMenu === idx ? null : idx)}
                 >
                   {item.label}
@@ -107,9 +113,11 @@ export default function Navbar() {
                 </div>
                 {openMenu === idx && item.columns.map((col, ci) => (
                   <div key={ci} style={{ paddingLeft: 14 }}>
-                    <div style={{ color: '#aaa', fontSize: '0.72rem', padding: '4px 14px', textTransform: 'uppercase', letterSpacing: 1 }}>
-                      {col.title}
-                    </div>
+                    {col.title && (
+                      <div style={{ color: '#aaa', fontSize: '0.72rem', padding: '4px 14px', textTransform: 'uppercase', letterSpacing: 1 }}>
+                        {col.title}
+                      </div>
+                    )}
                     {col.items.map((sub, si) => (
                       <Link key={si} to={sub.path} className="d-block mobile-sub-link nav-link" onClick={closeAll}>
                         › {sub.label}

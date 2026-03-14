@@ -1,60 +1,44 @@
 /**
  * AddressAutocomplete
  * -------------------
- * Renders a text input powered by Google Places Autocomplete (UK only).
- * When the user picks a suggestion, it calls onSelect({ address, postcode })
- * so the parent can fill both the address AND postcode fields automatically.
- *
- * Requires:  VITE_GOOGLE_MAPS_API_KEY in your .env file.
+ * UK address lookup powered by OpenStreetMap Nominatim.
+ * No API key needed. Works on localhost and every domain.
+ * Debounces input → calls Nominatim → shows a styled dropdown.
  *
  * Props:
- *   value       {string}   – controlled input value
- *   onChange    {fn}       – called with raw string while the user types
- *   onSelect    {fn}       – called with { address, postcode } on place pick
+ *   value       {string}  – controlled input value
+ *   onChange    {fn}      – called with raw string while typing
+ *   onSelect    {fn}      – called with { address, postcode } on pick
  *   placeholder {string}
  *   className   {string}
  *   required    {bool}
+ *   id          {string}
  */
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
-const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+/* ── Parse Nominatim result into { address, postcode } ───────────────────── */
+function parseNominatim(item) {
+  const a = item.address || {};
 
-/* ── Singleton script loader ─────────────────────────────────────────────── */
-let _state = 'idle'; // 'idle' | 'loading' | 'ready' | 'error'
-const _queue = [];
+  const parts = [
+    a.house_number,
+    a.road,
+    a.neighbourhood || a.suburb,
+    a.town || a.city || a.village || a.county,
+  ].filter(Boolean);
 
-function loadScript(cb) {
-  if (_state === 'ready')  { cb(null); return; }
-  if (_state === 'error')  { cb(new Error('Google Maps failed to load')); return; }
-  _queue.push(cb);
-  if (_state === 'loading') return;
+  const address = parts.length
+    ? parts.join(', ')
+    : (item.display_name || '').split(',').slice(0, 3).join(',').trim();
 
-  _state = 'loading';
-  const s = document.createElement('script');
-  s.src   = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places&loading=async`;
-  s.async = true;
-  s.defer = true;
-  s.onload  = () => { _state = 'ready'; _queue.forEach(fn => fn(null));  _queue.length = 0; };
-  s.onerror = () => { _state = 'error'; _queue.forEach(fn => fn(new Error('Script failed'))); _queue.length = 0; };
-  document.head.appendChild(s);
+  const postcode = a.postcode || '';
+  return { address, postcode };
 }
 
-/* ── Helper: extract parts from Google place ─────────────────────────────── */
-function parsePlace(place) {
-  const get = (type, nameType = 'long_name') =>
-    (place.address_components || []).find(c => c.types.includes(type))?.[nameType] ?? '';
-
-  const streetNum  = get('street_number');
-  const route      = get('route');
-  const sublocal   = get('sublocality_level_1');
-  const locality   = get('locality') || get('postal_town');
-  const postcode   = get('postal_code');
-
-  // Build a clean street address (no postcode, no country)
-  const parts = [streetNum, route, sublocal, locality].filter(Boolean);
-  const address = parts.length ? parts.join(', ') : place.formatted_address.replace(/,?\s*[A-Z]{1,2}\d[\d A-Z]*\d[A-Z]{2}\s*,?\s*UK$/, '').trim();
-
-  return { address, postcode };
+/* ── Trim long display names for the dropdown ────────────────────────────── */
+function formatLabel(displayName) {
+  // Keep first 4 comma-parts only — usually enough for UK addresses
+  return displayName.split(',').slice(0, 4).join(',').trim();
 }
 
 /* ── Component ───────────────────────────────────────────────────────────── */
@@ -63,102 +47,138 @@ export default function AddressAutocomplete({
   onChange,
   onSelect,
   placeholder = 'Start typing your address or postcode…',
-  className = 'form-control form-control-lg',
-  required = false,
+  className   = 'form-control form-control-lg',
+  required    = false,
   id,
 }) {
-  const inputRef        = useRef(null);
-  const acRef           = useRef(null);   // Autocomplete instance
-  const onSelectRef     = useRef(onSelect);
-  const [ready, setReady]   = useState(_state === 'ready');
-  const [error, setError]   = useState(null);
-  const [active, setActive] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+  const [loading,     setLoading]     = useState(false);
+  const [open,        setOpen]        = useState(false);
+  const [focused,     setFocused]     = useState(false);
+  const debounceRef = useRef(null);
+  const wrapRef     = useRef(null);
 
-  // Keep onSelect ref fresh without re-running effect
-  useEffect(() => { onSelectRef.current = onSelect; }, [onSelect]);
-
-  // Load Google Maps script once
+  /* Close dropdown on outside click */
   useEffect(() => {
-    if (!API_KEY) {
-      setError('missing-key');
-      return;
-    }
-    if (_state === 'ready') { setReady(true); return; }
-    loadScript(err => {
-      if (err) { setError('load-failed'); return; }
-      setReady(true);
-    });
+    const handler = (e) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  // Attach Autocomplete to the input once script is ready
-  useEffect(() => {
-    if (!ready || !inputRef.current || acRef.current) return;
+  /* Fetch suggestions from Nominatim */
+  const fetchSuggestions = useCallback(async (query) => {
+    if (!query || query.length < 3) {
+      setSuggestions([]);
+      setOpen(false);
+      return;
+    }
+    setLoading(true);
+    try {
+      const url =
+        `https://nominatim.openstreetmap.org/search` +
+        `?format=json&addressdetails=1&countrycodes=gb&limit=6` +
+        `&q=${encodeURIComponent(query)}`;
 
-    const ac = new window.google.maps.places.Autocomplete(inputRef.current, {
-      componentRestrictions: { country: 'gb' },
-      fields: ['address_components', 'formatted_address'],
-      types: ['address'],
-    });
+      const res  = await fetch(url, {
+        headers: {
+          'Accept-Language': 'en-GB',
+          'Accept': 'application/json',
+        },
+      });
+      const data = await res.json();
 
-    ac.addListener('place_changed', () => {
-      const place = ac.getPlace();
-      if (!place?.address_components) return;
-      const parsed = parsePlace(place);
-      onSelectRef.current(parsed);
-    });
+      // Filter for sensible UK results (has a road or postcode)
+      const filtered = data.filter(
+        (d) => d.address && (d.address.road || d.address.postcode)
+      );
+      setSuggestions(filtered.length ? filtered : data.slice(0, 5));
+      setOpen(filtered.length > 0 || data.length > 0);
+    } catch {
+      setSuggestions([]);
+      setOpen(false);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
-    acRef.current = ac;
-  }, [ready]);
+  /* Handle typing with 350 ms debounce */
+  const handleChange = (e) => {
+    const val = e.target.value;
+    onChange(val);
+    clearTimeout(debounceRef.current);
+    if (val.length < 3) {
+      setSuggestions([]);
+      setOpen(false);
+      return;
+    }
+    debounceRef.current = setTimeout(() => fetchSuggestions(val), 350);
+  };
 
-  // ── No API key configured ──
-  if (error === 'missing-key') {
-    return (
-      <div className="address-autocomplete">
-        <input
-          type="text"
-          className={className}
-          placeholder={placeholder}
-          value={value}
-          onChange={e => onChange(e.target.value)}
-          required={required}
-          id={id}
-          autoComplete="off"
-        />
-        <div className="address-autocomplete__notice address-autocomplete__notice--warn">
-          <i className="bi bi-exclamation-triangle-fill me-2"></i>
-          Address autocomplete requires <code>VITE_GOOGLE_MAPS_API_KEY</code> in your <code>.env</code> file.
-        </div>
-      </div>
-    );
-  }
+  /* Handle suggestion pick */
+  const handlePick = (item) => {
+    const parsed = parseNominatim(item);
+    onChange(parsed.address);
+    onSelect(parsed);
+    setSuggestions([]);
+    setOpen(false);
+  };
 
   return (
-    <div className={`address-autocomplete${active ? ' address-autocomplete--active' : ''}`}>
+    <div
+      ref={wrapRef}
+      className={`address-autocomplete${focused ? ' address-autocomplete--active' : ''}`}
+    >
       <div className="address-autocomplete__wrap">
-        <i className="bi bi-search address-autocomplete__icon"></i>
+        <i className="bi bi-geo-alt-fill address-autocomplete__icon"></i>
         <input
-          ref={inputRef}
           type="text"
           id={id}
           className={`address-autocomplete__input ${className}`}
-          placeholder={ready ? placeholder : 'Loading address search…'}
+          placeholder={loading ? 'Searching…' : placeholder}
           value={value}
-          onChange={e => onChange(e.target.value)}
-          onFocus={() => setActive(true)}
-          onBlur={() => setActive(false)}
+          onChange={handleChange}
+          onFocus={() => { setFocused(true); if (suggestions.length) setOpen(true); }}
+          onBlur={() => setFocused(false)}
+          onKeyDown={(e) => e.key === 'Enter' && e.preventDefault()}
           required={required}
           autoComplete="off"
-          disabled={!ready && !error}
         />
-        {!ready && !error && (
-          <span className="address-autocomplete__spinner"></span>
-        )}
+        {loading && <span className="address-autocomplete__spinner" />}
       </div>
-      {ready && (
+
+      {!open && !loading && value.length === 0 && (
         <p className="address-autocomplete__hint">
-          <i className="bi bi-lightning-charge-fill me-1"></i>
-          Start typing — suggestions will appear automatically
+          <i className="bi bi-lightning-charge-fill me-1" />
+          Start typing your UK address or postcode
         </p>
+      )}
+
+      {/* Suggestions dropdown */}
+      {open && suggestions.length > 0 && (
+        <ul className="address-autocomplete__dropdown">
+          {suggestions.map((s, i) => {
+            const parsed = parseNominatim(s);
+            return (
+              <li
+                key={i}
+                className="address-autocomplete__option"
+                onMouseDown={(e) => { e.preventDefault(); handlePick(s); }}
+              >
+                <i className="bi bi-geo-alt me-2" style={{ color: 'var(--accent2)', flexShrink: 0 }} />
+                <span>
+                  <strong>{parsed.address}</strong>
+                  {parsed.postcode && (
+                    <span className="address-autocomplete__postcode">&nbsp;· {parsed.postcode}</span>
+                  )}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
       )}
     </div>
   );

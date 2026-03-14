@@ -212,9 +212,9 @@ a { text-decoration: none; }
   }
 
   & .mega-menu {
-    width: 600px !important; display: flex;
+    width: auto !important; min-width: 220px; max-width: 520px; display: flex;
     & .mega-col {
-      flex: 1; padding: 4px;
+      flex: 1; padding: 4px; min-width: 190px;
       border-right: 1px solid rgba(255,255,255,0.06);
       &:last-child { border-right: none; }
     }
@@ -1245,6 +1245,42 @@ a { text-decoration: none; }
 .address-autocomplete__hint { font-size: 0.75rem; color: var(--text-muted); margin: 5px 0 0; }
 .address-autocomplete__notice { font-size: .8rem; margin-top: 6px; padding: 8px 12px; border-radius: 8px; }
 .address-autocomplete__notice--warn { background: rgba(245,158,11,0.1); color: #fde68a; border: 1px solid rgba(245,158,11,0.2); }
+
+/* Nominatim dropdown */
+.address-autocomplete__dropdown {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+  list-style: none; margin: 0; padding: 6px 0;
+  background: rgba(10,8,28,0.97);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.65);
+  backdrop-filter: blur(16px);
+  z-index: 9999;
+  max-height: 280px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.address-autocomplete__option {
+  display: flex; align-items: flex-start; gap: 6px;
+  padding: 10px 14px;
+  font-size: .87rem;
+  color: rgba(255,255,255,0.75);
+  cursor: pointer;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  transition: background .15s;
+}
+.address-autocomplete__option:first-child { border-top: none; }
+.address-autocomplete__option:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+.address-autocomplete__option strong { color: #fff; font-weight: 600; }
+.address-autocomplete__postcode {
+  color: var(--accent2);
+  font-size: .8rem;
+  white-space: nowrap;
+}
+
 .pac-container {
   background: rgba(10,8,28,0.95) !important;
   border: 1px solid rgba(255,255,255,0.1) !important;
@@ -1599,3 +1635,90 @@ a { text-decoration: none; }
 .booking-service-card.selected i.bi-check-circle-fill {
   color: var(--accent2);
 }
+
+/* ── Google Places pac-container — styled to match dark glass UI ─────────── */
+.pac-container {
+  background: rgba(10, 8, 28, 0.96) !important;
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6) !important;
+  margin-top: 6px;
+  overflow: hidden;
+  font-family: inherit;
+  z-index: 9999 !important;
+}
+.pac-container::after { display: none !important; } /* hide Google logo */
+.pac-item {
+  background: transparent !important;
+  border-top: 1px solid rgba(255,255,255,0.05) !important;
+  color: rgba(255,255,255,0.80) !important;
+  font-size: 0.86rem;
+  padding: 10px 16px !important;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.pac-item:first-child { border-top: none !important; }
+.pac-item:hover,
+.pac-item-selected,
+.pac-item-selected:hover {
+  background: rgba(107,47,160,0.25) !important;
+  color: #fff !important;
+}
+.pac-item-query {
+  color: #fff !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.pac-icon { filter: brightness(0) invert(1); opacity: 0.5; margin-right: 8px; }
+.pac-matched { color: var(--accent2) !important; font-weight: 700; }
+
+
+/* ── Property type cards (used on EICR, FRA, EPC, Asbestos pages) ─────────── */
+.property-types-section {
+  padding: 60px 0 80px;
+}
+.property-type-card {
+  background: var(--glass);
+  backdrop-filter: var(--blur-sm); -webkit-backdrop-filter: var(--blur-sm);
+  border: 1px solid var(--glass-rim2);
+  border-radius: var(--r-md);
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  &:hover {
+    background: var(--glass-md);
+    border-color: var(--glass-rim);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+}
+.property-type-card__icon {
+  width: 56px; height: 56px;
+  background: var(--brand-gradient);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 1.4rem; color: #fff;
+  box-shadow: 0 4px 18px rgba(107,47,160,0.35);
+}
+.property-type-card h5 {
+  color: #fff; font-weight: 700; margin-bottom: 8px;
+}
+.property-type-card p {
+  color: var(--text-sub); font-size: 0.88rem; line-height: 1.6; margin-bottom: 0;
+}
+
+/* ── Generic service card ─────────────────────────────────────────────────── */
+.service-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-rim2);
+  border-radius: var(--r-md);
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition); height: 100%;
+  &:hover { background: var(--glass-md); transform: translateY(-4px); }
+}
+

@@ -716,3 +716,403 @@ export const CP42 = {
   ],
   cta: 'Book Your CP42 Catering Gas Safety Certificate Today!',
 };
+
+// ══════════════════════════════════════════════════════════════
+// COMMERCIAL GAS SAFETY (CP42)
+// ══════════════════════════════════════════════════════════════
+export const COMM_GAS_SAFETY = {
+  hero: {
+    title: 'Commercial Gas Safety Certificate (CP42) London',
+    subtitle: 'Professional gas safety inspections for business premises including restaurants, offices, and mixed-use buildings. CP42 certificates issued by Gas Safe registered engineers.',
+    price: 'From £199.99',
+    ctaText: 'Get a Quote',
+    ctaTo: '/book-now',
+    bgImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80',
+  },
+  stats: [
+    { value: '£199.99', label: 'Starting Price' },
+    { value: 'CP42', label: 'Commercial Certification' },
+    { value: '24-48 hrs', label: 'Certificate Turnaround' },
+    { value: 'Multi-Appliance', label: 'Coverage' },
+  ],
+  intro: {
+    title: 'Commercial Gas Safety Certification',
+    body: 'A CP42 commercial gas safety certificate documents that your business gas installations have been professionally inspected and are safe. Required for compliance and insurance on commercial premises, restaurants, offices, and mixed-use buildings.',
+    checklist: [
+      'Covers commercial kitchens, heating systems, and all gas appliances',
+      'Required for business insurance and regulatory compliance',
+      'Issued by Gas Safe registered engineers with commercial expertise',
+      'Minimal disruption to kitchen or business operations',
+    ],
+    imgSrc: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
+    imgAlt: 'Commercial kitchen gas safety inspection',
+    imgRight: false,
+  },
+  benefits: {
+    label: 'WHY CHOOSE US',
+    title: 'Commercial Gas Safety Compliance',
+    items: [
+      {
+        icon: 'bi-scale',
+        title: 'Legal Requirement',
+        body: 'Gas Safety Regulations require all businesses with gas appliances to have annual inspections by Gas Safe registered engineers. A valid CP42 certificate demonstrates compliance.',
+      },
+      {
+        icon: 'bi-building',
+        title: 'Business Compliance',
+        body: 'Professional certification meets requirements for commercial properties, restaurants, cafes, hotels, and office buildings. Insurance policies typically require current certificates.',
+      },
+      {
+        icon: 'bi-check-circle-fill',
+        title: 'Multi-Appliance Testing',
+        body: 'Comprehensive inspection of commercial kitchen equipment, heating systems, boilers, and all gas appliances in your premises during a single efficient visit.',
+      },
+      {
+        icon: 'bi-people-fill',
+        title: 'Staff Safety Documentation',
+        body: 'Demonstrates duty of care toward employees and customers by maintaining safe gas installations and following regulatory requirements.',
+      },
+    ],
+  },
+  pricing: {
+    title: 'Commercial Gas Safety Pricing',
+    body: 'Fixed transparent pricing for commercial CP42 gas safety inspections.',
+    prices: [
+      {
+        label: 'Commercial Gas Safety',
+        price: '£199.99',
+        features: [
+          'CP42 certificate',
+          'Multi-appliance inspection',
+          'Commercial standard testing',
+          'Digital certificate within 48 hours',
+        ],
+      },
+    ],
+  },
+  process: {
+    label: 'HOW IT WORKS',
+    title: 'Commercial Gas Safety Process',
+    steps: [
+      {
+        icon: 'bi-clipboard-check',
+        title: 'Scope Assessment',
+        body: 'We confirm the number and type of gas appliances at your premises, including kitchen equipment, heating systems, and water heaters.',
+      },
+      {
+        icon: 'bi-binoculars',
+        title: 'Visual Inspection',
+        body: 'Comprehensive visual check of all gas appliances, pipework, connections, and installation condition for safety compliance.',
+      },
+      {
+        icon: 'bi-search',
+        title: 'Safety Testing',
+        body: 'Gas leak detection, combustion analysis, and functional testing of safety features on all appliances to ensure safe operation.',
+      },
+      {
+        icon: 'bi-file-earmark-check',
+        title: 'CP42 Certificate Issue',
+        body: 'Professional commercial gas safety certificate issued documenting all appliances tested and results within 24-48 hours.',
+      },
+    ],
+  },
+  related: [
+    {
+      icon: 'bi-flame',
+      title: 'Boiler Installation',
+      body: 'Professional installation of commercial heating systems by qualified Gas Safe engineers.',
+      to: '/gas/boiler-installation',
+    },
+    {
+      icon: 'bi-wrench-adjustable',
+      title: 'Gas Equipment Repair',
+      body: 'Emergency repairs and servicing for commercial gas appliances and heating systems.',
+      to: '/book-now',
+    },
+    {
+      icon: 'bi-lightning-charge-fill',
+      title: 'Commercial EICR',
+      body: 'Complement your gas safety with commercial electrical installation condition reports.',
+      to: '/electrical/commercial-eicr',
+    },
+  ],
+  faqs: [
+    {
+      q: 'What is a CP42 certificate?',
+      a: 'A CP42 is a commercial gas safety certificate equivalent to the residential CP12. It documents that commercial gas installations have been safely inspected by a Gas Safe engineer and are operating to safety standards.',
+    },
+    {
+      q: 'Who needs a commercial gas safety certificate?',
+      a: 'Commercial properties including restaurants, cafes, offices, hotels, warehouses, and mixed-use buildings with gas appliances require annual CP42 inspections.',
+    },
+    {
+      q: 'How often is testing required?',
+      a: 'Most commercial properties require annual CP42 testing. Some high-use kitchens or specific premises may need more frequent inspections depending on risk assessment and usage levels.',
+    },
+    {
+      q: 'Can you test all types of commercial equipment?',
+      a: 'Yes, we inspect all commercial gas cooking appliances, steamers, boilers, water heaters, and heating equipment commonly found in commercial kitchens and business premises.',
+    },
+    {
+      q: 'Will testing disrupt operations?',
+      a: 'We schedule inspections to minimize disruption. Testing is non-invasive and can often be completed during off-peak hours or scheduled service windows.',
+    },
+  ],
+  cta: 'Ensure Your Commercial Gas Safety Compliance Today',
+};
+
+// ══════════════════════════════════════════════════════════════
+// DOMESTIC GAS ENGINEER SERVICES
+// ══════════════════════════════════════════════════════════════
+export const GAS_ENGINEER = {
+  hero: {
+    title: 'Domestic Gas Engineer Services London',
+    subtitle: 'Qualified gas engineers for residential properties providing installation, repair, servicing, and safety checks. Gas Safe registered professionals handling all gas appliances.',
+    price: 'Contact for Quote',
+    ctaText: 'Book Now',
+    ctaTo: '/book-now',
+    bgImage: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=80',
+  },
+  stats: [
+    { value: 'Gas Safe', label: 'All Engineers Registered' },
+    { value: 'Boilers to Fires', label: 'All Appliance Types' },
+    { value: 'Same-Day', label: 'Emergency Available' },
+    { value: '10+', label: 'Years Experience' },
+  ],
+  intro: {
+    title: 'Domestic Gas Engineering Services',
+    body: 'Qualified Gas Safe engineers providing comprehensive gas services for residential properties. From emergency repairs to installations, our certified technicians handle all types of domestic gas appliances with safety as our priority.',
+    checklist: [
+      'Full range of boiler and appliance services',
+      'Gas Safe registered and qualified technicians',
+      'Emergency response and same-day service available',
+      'Transparent pricing and professional certification',
+    ],
+    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
+    imgAlt: 'Gas engineer working on domestic heating system',
+    imgRight: true,
+  },
+  benefits: {
+    label: 'WHY CHOOSE US',
+    title: 'Expert Gas Engineering Services',
+    items: [
+      {
+        icon: 'bi-patch-check-fill',
+        title: 'Gas Safe Qualified',
+        body: 'All engineers are registered with Gas Safe and maintain current qualifications for legal and safety compliance. You can verify credentials on the official Gas Safe Register.',
+      },
+      {
+        icon: 'bi-tools',
+        title: 'Full Service Range',
+        body: 'Installation of new boilers, repair of existing equipment, annual safety checks, servicing, and maintenance for all domestic gas appliances.',
+      },
+      {
+        icon: 'bi-clock-fill',
+        title: 'Emergency Response',
+        body: 'Same-day response available for emergency situations where heating or hot water is lost. We prioritize urgent repairs and aim for rapid restoration.',
+      },
+      {
+        icon: 'bi-currency-pound',
+        title: 'Transparent Pricing',
+        body: 'Clear explanation of problems found and detailed quotations before work begins. No hidden charges or surprise costs on your repair bill.',
+      },
+    ],
+  },
+  process: {
+    label: 'HOW IT WORKS',
+    title: 'Gas Engineering Service Process',
+    steps: [
+      {
+        icon: 'bi-telephone-fill',
+        title: 'Initial Contact',
+        body: 'Call or book online to describe your gas appliance problem or servicing need. We assess urgency and can offer same-day service if needed.',
+      },
+      {
+        icon: 'bi-search',
+        title: 'Engineer Assessment',
+        body: 'Qualified Gas Safe engineer attends to assess your boiler, fire, hob, or other appliance and identify any issues.',
+      },
+      {
+        icon: 'bi-file-earmark-check',
+        title: 'Diagnosis & Quotation',
+        body: 'Clear explanation of problems found and a detailed quote for repair or service work before proceeding with any work.',
+      },
+      {
+        icon: 'bi-wrench-adjustable',
+        title: 'Professional Service',
+        body: 'Installation, repair, or servicing completed to the highest professional standards with safety as our priority.',
+      },
+    ],
+  },
+  related: [
+    {
+      icon: 'bi-flame',
+      title: 'Boiler Repair',
+      body: 'Fast emergency boiler repairs with same-day response for heating and hot water problems.',
+      to: '/gas/boiler-repair',
+    },
+    {
+      icon: 'bi-house-check',
+      title: 'Landlord Gas Safety',
+      body: 'Annual CP12 gas safety certificates required for rental properties.',
+      to: '/gas/landlord-gas-safety',
+    },
+    {
+      icon: 'bi-thermometer-half',
+      title: 'Boiler Service',
+      body: 'Annual boiler servicing to maintain efficiency and prevent breakdowns.',
+      to: '/gas/boiler-service',
+    },
+  ],
+  faqs: [
+    {
+      q: 'What services do gas engineers provide?',
+      a: 'Installation of new boilers and appliances, repair of existing equipment, annual safety checks (CP12), servicing, and maintenance of all domestic gas systems.',
+    },
+    {
+      q: 'Are you Gas Safe registered?',
+      a: 'Yes, all our engineers are Gas Safe registered and maintain current qualifications for legal compliance and safety. You can verify any engineer on the Gas Safe Register website.',
+    },
+    {
+      q: 'Do you offer emergency repairs?',
+      a: 'Yes, we offer same-day emergency response for situations where you have no heating or hot water. Call us directly for the fastest response.',
+    },
+    {
+      q: 'Should I service my boiler annually?',
+      a: 'Yes, annual boiler servicing is recommended to maintain efficiency, reliability, and ensure any issues are identified early before they become expensive problems.',
+    },
+    {
+      q: 'What if I need a new boiler?',
+      a: 'We can assess your heating needs, recommend appropriate boiler types for your property, and complete professional installation with full safety certification and warranty.',
+    },
+  ],
+  cta: 'Get Expert Gas Engineering Support Today',
+};
+
+// ══════════════════════════════════════════════════════════════
+// COMMERCIAL GAS ENGINEER SERVICES
+// ══════════════════════════════════════════════════════════════
+export const COMM_GAS_ENGINEER = {
+  hero: {
+    title: 'Commercial Gas Engineer Services London',
+    subtitle: 'Expert gas engineering for commercial properties including restaurants, offices, and mixed-use buildings. CP42 certification, kitchen equipment, and heating system expertise.',
+    price: 'Contact for Quote',
+    ctaText: 'Get a Quote',
+    ctaTo: '/book-now',
+    bgImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80',
+  },
+  stats: [
+    { value: 'CP42', label: 'Commercial Certification' },
+    { value: 'Kitchens', label: 'Equipment Specialists' },
+    { value: 'Same-Day', label: 'Emergency Response' },
+    { value: 'Contract', label: 'Maintenance Available' },
+  ],
+  intro: {
+    title: 'Commercial Gas Engineering Services',
+    body: 'Specialized gas engineering for commercial properties combining heating systems, kitchen equipment, and compliance certification. Our engineers have expert knowledge of commercial kitchen equipment and large-scale heating systems.',
+    checklist: [
+      'Commercial kitchen equipment expertise',
+      'CP42 certification and compliance documentation',
+      'Emergency response and contract maintenance',
+      'Minimal disruption to kitchen operations',
+    ],
+    imgSrc: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
+    imgAlt: 'Commercial kitchen gas equipment inspection',
+    imgRight: false,
+  },
+  benefits: {
+    label: 'COMMERCIAL EXPERTISE',
+    title: 'Professional Commercial Gas Services',
+    items: [
+      {
+        icon: 'bi-cup-hot-fill',
+        title: 'Kitchen Equipment Specialists',
+        body: 'Experience with commercial cooking appliances, steamers, grills, and all kitchen gas equipment safety and maintenance.',
+      },
+      {
+        icon: 'bi-building',
+        title: 'Commercial Expertise',
+        body: 'Specialized knowledge of commercial building heating systems, large-capacity boilers, and commercial property requirements.',
+      },
+      {
+        icon: 'bi-file-earmark-lock-fill',
+        title: 'Compliance Documentation',
+        body: 'Full CP42 certification and compliance documentation for insurance and health and safety record requirements.',
+      },
+      {
+        icon: 'bi-calendar-check',
+        title: 'Business Continuity',
+        body: 'Scheduled service and repairs to minimize kitchen downtime and maintain your business operations efficiently.',
+      },
+    ],
+  },
+  process: {
+    label: 'HOW IT WORKS',
+    title: 'Commercial Gas Engineering Process',
+    steps: [
+      {
+        icon: 'bi-list-check',
+        title: 'Scope Assessment',
+        body: 'We assess your commercial property, identify all gas appliances, and determine testing and servicing requirements.',
+      },
+      {
+        icon: 'bi-calendar2-check',
+        title: 'Service Planning',
+        body: 'Schedule regular maintenance or respond to urgent repairs, timing services to minimize impact on kitchen or business operations.',
+      },
+      {
+        icon: 'bi-wrench',
+        title: 'Professional Service',
+        body: 'Qualified engineers complete inspection, testing, repair, or servicing to commercial standards and safety regulations.',
+      },
+      {
+        icon: 'bi-file-earmark-check',
+        title: 'Certification & Documentation',
+        body: 'CP42 certificate and full compliance documentation provided for insurance and health and safety records.',
+      },
+    ],
+  },
+  related: [
+    {
+      icon: 'bi-check-circle-fill',
+      title: 'Commercial Gas Safety',
+      body: 'CP42 certificates for all commercial gas appliances and installations.',
+      to: '/gas/commercial-gas-safety',
+    },
+    {
+      icon: 'bi-lightning-charge-fill',
+      title: 'Commercial EICR',
+      body: 'Electrical safety inspections for commercial premises and businesses.',
+      to: '/electrical/commercial-eicr',
+    },
+    {
+      icon: 'bi-clipboard-pulse',
+      title: 'Fire Risk Assessment',
+      body: 'Comprehensive fire safety assessments for commercial buildings.',
+      to: '/fire/residential-fra',
+    },
+  ],
+  faqs: [
+    {
+      q: 'What commercial gas appliances do you service?',
+      a: 'Commercial kitchen equipment including cookers, grills, steamers, boilers, water heaters, and all gas heating systems for commercial buildings.',
+    },
+    {
+      q: 'Do you issue CP42 certificates?',
+      a: 'Yes, our engineers are qualified to issue CP42 (commercial gas safety) certificates after inspections and testing of all commercial gas equipment.',
+    },
+    {
+      q: 'Can you schedule service around our operations?',
+      a: 'Absolutely. We schedule maintenance during quieter service periods or scheduled breaks to minimize disruption to your kitchen operations.',
+    },
+    {
+      q: 'What if we have an emergency?',
+      a: 'We offer same-day emergency response for critical failures in kitchens or heating systems. Call immediately for urgent gas system problems.',
+    },
+    {
+      q: 'Can we have a maintenance contract?',
+      a: 'Yes, we provide maintenance contract arrangements with regular servicing at negotiated rates for ongoing compliance and system reliability.',
+    },
+  ],
+  cta: 'Arrange Your Commercial Gas Engineering Support',
+};

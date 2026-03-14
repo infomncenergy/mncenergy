@@ -7,34 +7,28 @@ import { API_URL }  from '../config/api';
 
 const SERVICES = [
   { group: 'Electrical', icon: 'bi-lightning-charge-fill', options: [
-    'EICR Certificate (Residential)',
-    'EICR Certificate (Commercial)',
-    'Consumer Unit / Fuse Box Upgrade',
-    'PAT Testing',
+    'Residential EICR',
     'Electrical Fault Finding',
+    'Fuse Box Installation',
+    'Portable Appliance Test',
   ]},
-  { group: 'Gas Services', icon: 'bi-fire', options: [
-    'Landlord Gas Safety Certificate (CP12)',
-    'Commercial Gas Safety Certificate',
-    'Boiler Service',
+  { group: 'Gas', icon: 'bi-fire', options: [
+    'Gas Safety Certificate',
     'Boiler Installation',
     'Boiler Repair',
+    'Gas Engineer',
   ]},
   { group: 'Fire Safety', icon: 'bi-shield-fill-check', options: [
-    'Fire Risk Assessment (Residential)',
-    'Fire Risk Assessment (Commercial)',
-    'Fire Alarm Certificate (Residential)',
-    'Fire Alarm Certificate (Commercial)',
-    'Emergency Lights Certificate (Residential)',
-    'Emergency Lights Certificate (Commercial)',
-    'Fire Door Inspection',
-    'Fire Extinguisher Servicing',
+    'Fire Safety Certificate',
+    'Fire Risk Assessment',
+    'Fire Alarm Installation',
+    'Fire Extinguisher Inspection',
+    'Emergency Lightning Test',
+    'Fire Door Certificate',
   ]},
   { group: 'Asbestos & EPC', icon: 'bi-clipboard-check', options: [
-    'Residential Asbestos Survey',
-    'Commercial Asbestos Survey',
-    'Residential EPC',
-    'Commercial EPC',
+    'Asbestos Management Survey',
+    'EPC Certificate',
   ]},
 ];
 
@@ -72,11 +66,11 @@ export default function BookingPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [privacyChecked, setPrivacyChecked] = useState(false);
 
   const update = (field, value) => setForm(f => ({ ...f, [field]: value }));
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setSubmitting(true);
     setSubmitError('');
 
@@ -97,6 +91,9 @@ export default function BookingPage() {
       setSubmitting(false);
     }
   };
+
+  const step2Valid = form.propertyType && form.address && form.postcode && form.date && form.timeSlot;
+  const step3Valid = form.name && form.email && form.phone && privacyChecked;
 
   if (submitted) {
     return (
@@ -140,7 +137,7 @@ export default function BookingPage() {
           <div className="row align-items-center g-5">
             <div className="col-lg-7">
               <SectionLabel>BOOK ONLINE</SectionLabel>
-              <h1 className="fw-bold mb-3">Residential Booking Service</h1>
+              <h1 className="fw-bold mb-3">Book Your Safety Certificate</h1>
               <p className="text-muted mb-4">
                 Book your safety certificate online in minutes. Choose your service, enter your property details, and select a convenient appointment. We cover all of London and the M25 area.
               </p>
@@ -194,303 +191,310 @@ export default function BookingPage() {
         </div>
       </div>
 
-      {/* Form */}
+      {/* Steps — plain div wrapper (no <form>) to prevent accidental Enter-key submission */}
       <section className="booking-form-section">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <form onSubmit={handleSubmit}>
 
-                {/* Step 1: Select Service */}
-                {step === 1 && (
-                  <div className="booking-step-panel">
-                    <h3 className="fw-bold mb-1">Select Your Service</h3>
-                    <p className="text-muted mb-4">Choose the certificate or inspection you require.</p>
-                    <div className="row g-3">
-                      {SERVICES.map((group) => (
-                        <div className="col-12" key={group.group}>
-                          <p className="fw-semibold text-uppercase small text-muted mb-2">{group.group}</p>
-                          <div className="row g-2">
-                            {group.options.map((opt) => (
-                              <div className="col-md-6" key={opt}>
-                                <div
-                                  className={`booking-service-card${form.service === opt ? ' selected' : ''}`}
-                                  onClick={() => update('service', opt)}
-                                >
-                                  <i className={`bi ${group.icon || 'bi-clipboard-check'} me-2`}></i>
-                                  {opt}
-                                  {form.service === opt && <i className="bi bi-check-circle-fill ms-auto"></i>}
-                                </div>
+              {/* Step 1: Select Service */}
+              {step === 1 && (
+                <div className="booking-step-panel">
+                  <h3 className="fw-bold mb-1">Select Your Service</h3>
+                  <p className="text-muted mb-4">Choose the certificate or inspection you require.</p>
+                  <div className="row g-3">
+                    {SERVICES.map((group) => (
+                      <div className="col-12" key={group.group}>
+                        <p className="fw-semibold text-uppercase small text-muted mb-2">{group.group}</p>
+                        <div className="row g-2">
+                          {group.options.map((opt) => (
+                            <div className="col-md-6" key={opt}>
+                              <div
+                                className={`booking-service-card${form.service === opt ? ' selected' : ''}`}
+                                onClick={() => update('service', opt)}
+                                role="button"
+                                tabIndex={0}
+                                onKeyDown={(e) => e.key === 'Enter' && update('service', opt)}
+                              >
+                                <i className={`bi ${group.icon} me-2`}></i>
+                                {opt}
+                                {form.service === opt && <i className="bi bi-check-circle-fill ms-auto"></i>}
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-4 text-end">
-                      <button
-                        type="button"
-                        className="btn-green"
-                        disabled={!form.service}
-                        onClick={() => setStep(2)}
-                      >
-                        Continue <i className="bi bi-arrow-right ms-2"></i>
-                      </button>
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 2: Property Details */}
-                {step === 2 && (
-                  <div className="booking-step-panel">
-                    <h3 className="fw-bold mb-1">Property Details</h3>
-                    <p className="text-muted mb-4">Tell us about the property and your preferred appointment.</p>
-                    <div className="row g-3">
-                      <div className="col-md-6">
-                        <label className="form-label fw-semibold">Property Type *</label>
-                        <select
-                          className="form-select form-select-lg"
-                          value={form.propertyType}
-                          onChange={e => update('propertyType', e.target.value)}
-                          required
-                        >
-                          <option value="">Select property type</option>
-                          <option>Flat / Apartment</option>
-                          <option>Terraced House</option>
-                          <option>Semi-Detached House</option>
-                          <option>Detached House</option>
-                          <option>HMO</option>
-                          <option>Bungalow</option>
-                          <option>Commercial Property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                      <div className="col-md-6">
-                        <label className="form-label fw-semibold">Number of Bedrooms *</label>
-                        <select
-                          className="form-select form-select-lg"
-                          value={form.bedrooms}
-                          onChange={e => update('bedrooms', e.target.value)}
-                          required
-                        >
-                          <option value="">Select bedrooms</option>
-                          <option>Studio</option>
-                          <option>1 Bedroom</option>
-                          <option>2 Bedrooms</option>
-                          <option>3 Bedrooms</option>
-                          <option>4 Bedrooms</option>
-                          <option>5+ Bedrooms</option>
-                        </select>
-                      </div>
-                      <div className="col-12">
-                        <label className="form-label fw-semibold">Property Address *</label>
-                        <AddressAutocomplete
-                          id="property-address"
-                          value={form.address}
-                          onChange={val => update('address', val)}
-                          onSelect={({ address, postcode }) => {
-                            update('address', address);
-                            if (postcode) update('postcode', postcode);
-                          }}
-                          required
-                        />
-                      </div>
-                      <div className="col-md-4">
-                        <label className="form-label fw-semibold">Postcode *</label>
-                        <input
-                          type="text"
-                          className="form-control form-control-lg"
-                          placeholder="e.g. SW1A 1AA"
-                          value={form.postcode}
-                          onChange={e => update('postcode', e.target.value.toUpperCase())}
-                          required
-                        />
-                      </div>
-                      <div className="col-md-4">
-                        <label className="form-label fw-semibold">Preferred Date *</label>
-                        <input
-                          type="date"
-                          className="form-control form-control-lg"
-                          value={form.date}
-                          onChange={e => update('date', e.target.value)}
-                          min={new Date().toISOString().split('T')[0]}
-                          required
-                        />
-                      </div>
-                      <div className="col-md-4">
-                        <label className="form-label fw-semibold">Preferred Time *</label>
-                        <select
-                          className="form-select form-select-lg"
-                          value={form.timeSlot}
-                          onChange={e => update('timeSlot', e.target.value)}
-                          required
-                        >
-                          <option value="">Select time</option>
-                          <option>Morning (8am – 12pm)</option>
-                          <option>Afternoon (12pm – 5pm)</option>
-                          <option>Evening (5pm – 8pm)</option>
-                          <option>Any time</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="mt-4 d-flex gap-3 justify-content-between">
-                      <button type="button" className="btn-outline-green" onClick={() => setStep(1)}>
-                        <i className="bi bi-arrow-left me-2"></i> Back
-                      </button>
-                      <button
-                        type="button"
-                        className="btn-green"
-                        disabled={!form.propertyType || !form.address || !form.postcode || !form.date || !form.timeSlot}
-                        onClick={() => setStep(3)}
-                      >
-                        Continue <i className="bi bi-arrow-right ms-2"></i>
-                      </button>
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 3: Your Details */}
-                {step === 3 && (
-                  <div className="booking-step-panel">
-                    <h3 className="fw-bold mb-1">Your Contact Details</h3>
-                    <p className="text-muted mb-4">We will use these details to confirm your booking.</p>
-                    <div className="row g-3">
-                      <div className="col-12">
-                        <label className="form-label fw-semibold">Full Name *</label>
-                        <input
-                          type="text"
-                          className="form-control form-control-lg"
-                          placeholder="Your full name"
-                          value={form.name}
-                          onChange={e => update('name', e.target.value)}
-                          required
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <label className="form-label fw-semibold">Email Address *</label>
-                        <input
-                          type="email"
-                          className="form-control form-control-lg"
-                          placeholder="your@email.com"
-                          value={form.email}
-                          onChange={e => update('email', e.target.value)}
-                          required
-                        />
-                      </div>
-                      <div className="col-md-6">
-                        <label className="form-label fw-semibold">Phone Number *</label>
-                        <input
-                          type="tel"
-                          className="form-control form-control-lg"
-                          placeholder="07700 000000"
-                          value={form.phone}
-                          onChange={e => update('phone', e.target.value)}
-                          required
-                        />
-                      </div>
-                      <div className="col-12">
-                        <label className="form-label fw-semibold">Additional Notes <span className="text-muted fw-normal">(optional)</span></label>
-                        <textarea
-                          className="form-control"
-                          rows={4}
-                          placeholder="Any access instructions, special requirements, or questions for the engineer..."
-                          value={form.notes}
-                          onChange={e => update('notes', e.target.value)}
-                        />
-                      </div>
-                      <div className="col-12">
-                        <div className="form-check">
-                          <input className="form-check-input" type="checkbox" id="privacy" required />
-                          <label className="form-check-label text-muted" htmlFor="privacy">
-                            I agree to the <Link to="/" style={{ color: 'var(--accent2)' }}>Privacy Policy</Link> and consent to being contacted regarding my booking.
-                          </label>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                    </div>
-                    <div className="mt-4 d-flex gap-3 justify-content-between">
-                      <button type="button" className="btn-outline-green" onClick={() => setStep(2)}>
-                        <i className="bi bi-arrow-left me-2"></i> Back
-                      </button>
-                      <button
-                        type="button"
-                        className="btn-green"
-                        disabled={!form.name || !form.email || !form.phone}
-                        onClick={() => setStep(4)}
+                    ))}
+                  </div>
+                  <div className="mt-4 text-end">
+                    <button
+                      type="button"
+                      className="btn-green"
+                      disabled={!form.service}
+                      onClick={() => { if (form.service) setStep(2); }}
+                    >
+                      Continue <i className="bi bi-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Step 2: Property Details */}
+              {step === 2 && (
+                <div className="booking-step-panel">
+                  <h3 className="fw-bold mb-1">Property Details</h3>
+                  <p className="text-muted mb-4">Tell us about the property and your preferred appointment.</p>
+                  <div className="row g-3">
+                    <div className="col-md-6">
+                      <label className="form-label fw-semibold">Property Type *</label>
+                      <select
+                        className="form-select form-select-lg"
+                        value={form.propertyType}
+                        onChange={e => update('propertyType', e.target.value)}
                       >
-                        Review Booking <i className="bi bi-arrow-right ms-2"></i>
-                      </button>
+                        <option value="">Select property type</option>
+                        <option>Flat / Apartment</option>
+                        <option>Terraced House</option>
+                        <option>Semi-Detached House</option>
+                        <option>Detached House</option>
+                        <option>HMO</option>
+                        <option>Bungalow</option>
+                        <option>Commercial Property</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-label fw-semibold">Number of Bedrooms *</label>
+                      <select
+                        className="form-select form-select-lg"
+                        value={form.bedrooms}
+                        onChange={e => update('bedrooms', e.target.value)}
+                      >
+                        <option value="">Select bedrooms</option>
+                        <option>Studio</option>
+                        <option>1 Bedroom</option>
+                        <option>2 Bedrooms</option>
+                        <option>3 Bedrooms</option>
+                        <option>4 Bedrooms</option>
+                        <option>5+ Bedrooms</option>
+                      </select>
+                    </div>
+                    <div className="col-12">
+                      <label className="form-label fw-semibold">Property Address *</label>
+                      <AddressAutocomplete
+                        id="property-address"
+                        value={form.address}
+                        onChange={val => update('address', val)}
+                        onSelect={({ address, postcode }) => {
+                          update('address', address);
+                          if (postcode) update('postcode', postcode);
+                        }}
+                      />
+                    </div>
+                    <div className="col-md-4">
+                      <label className="form-label fw-semibold">Postcode *</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="e.g. SW1A 1AA"
+                        value={form.postcode}
+                        onChange={e => update('postcode', e.target.value.toUpperCase())}
+                        onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                      />
+                    </div>
+                    <div className="col-md-4">
+                      <label className="form-label fw-semibold">Preferred Date *</label>
+                      <input
+                        type="date"
+                        className="form-control form-control-lg"
+                        value={form.date}
+                        onChange={e => update('date', e.target.value)}
+                        min={new Date().toISOString().split('T')[0]}
+                      />
+                    </div>
+                    <div className="col-md-4">
+                      <label className="form-label fw-semibold">Preferred Time *</label>
+                      <select
+                        className="form-select form-select-lg"
+                        value={form.timeSlot}
+                        onChange={e => update('timeSlot', e.target.value)}
+                      >
+                        <option value="">Select time</option>
+                        <option>Morning (8am – 12pm)</option>
+                        <option>Afternoon (12pm – 5pm)</option>
+                        <option>Evening (5pm – 8pm)</option>
+                        <option>Any time</option>
+                      </select>
                     </div>
                   </div>
-                )}
+                  <div className="mt-4 d-flex gap-3 justify-content-between">
+                    <button type="button" className="btn-outline-green" onClick={() => setStep(1)}>
+                      <i className="bi bi-arrow-left me-2"></i> Back
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-green"
+                      disabled={!step2Valid}
+                      onClick={() => { if (step2Valid) setStep(3); }}
+                    >
+                      Continue <i className="bi bi-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              )}
 
-                {/* Step 4: Confirm */}
-                {step === 4 && (
-                  <div className="booking-step-panel">
-                    <h3 className="fw-bold mb-1">Review &amp; Confirm</h3>
-                    <p className="text-muted mb-4">Please check your booking details before submitting.</p>
-
-                    <div className="booking-summary">
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-tools me-2"></i>Service</span>
-                        <span className="booking-summary__value">{form.service}</span>
-                      </div>
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-house me-2"></i>Property Type</span>
-                        <span className="booking-summary__value">{form.propertyType} · {form.bedrooms}</span>
-                      </div>
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-geo-alt me-2"></i>Address</span>
-                        <span className="booking-summary__value">{form.address}, {form.postcode}</span>
-                      </div>
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-calendar3 me-2"></i>Appointment</span>
-                        <span className="booking-summary__value">{form.date} · {form.timeSlot}</span>
-                      </div>
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-person me-2"></i>Name</span>
-                        <span className="booking-summary__value">{form.name}</span>
-                      </div>
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-envelope me-2"></i>Email</span>
-                        <span className="booking-summary__value">{form.email}</span>
-                      </div>
-                      <div className="booking-summary__row">
-                        <span className="booking-summary__label"><i className="bi bi-telephone me-2"></i>Phone</span>
-                        <span className="booking-summary__value">{form.phone}</span>
-                      </div>
-                      {form.notes && (
-                        <div className="booking-summary__row">
-                          <span className="booking-summary__label"><i className="bi bi-chat-text me-2"></i>Notes</span>
-                          <span className="booking-summary__value">{form.notes}</span>
-                        </div>
-                      )}
+              {/* Step 3: Your Details */}
+              {step === 3 && (
+                <div className="booking-step-panel">
+                  <h3 className="fw-bold mb-1">Your Contact Details</h3>
+                  <p className="text-muted mb-4">We will use these details to confirm your booking.</p>
+                  <div className="row g-3">
+                    <div className="col-12">
+                      <label className="form-label fw-semibold">Full Name *</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Your full name"
+                        value={form.name}
+                        onChange={e => update('name', e.target.value)}
+                        onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                      />
                     </div>
-
-                    <div className="booking-summary__notice mt-3">
-                      <i className="bi bi-info-circle-fill me-2"></i>
-                      Our team will confirm your appointment within 2 hours by email and phone call.
+                    <div className="col-md-6">
+                      <label className="form-label fw-semibold">Email Address *</label>
+                      <input
+                        type="email"
+                        className="form-control form-control-lg"
+                        placeholder="your@email.com"
+                        value={form.email}
+                        onChange={e => update('email', e.target.value)}
+                        onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                      />
                     </div>
+                    <div className="col-md-6">
+                      <label className="form-label fw-semibold">Phone Number *</label>
+                      <input
+                        type="tel"
+                        className="form-control form-control-lg"
+                        placeholder="07700 000000"
+                        value={form.phone}
+                        onChange={e => update('phone', e.target.value)}
+                        onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                      />
+                    </div>
+                    <div className="col-12">
+                      <label className="form-label fw-semibold">Additional Notes <span className="text-muted fw-normal">(optional)</span></label>
+                      <textarea
+                        className="form-control"
+                        rows={4}
+                        placeholder="Any access instructions, special requirements, or questions for the engineer..."
+                        value={form.notes}
+                        onChange={e => update('notes', e.target.value)}
+                      />
+                    </div>
+                    <div className="col-12">
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="privacy"
+                          checked={privacyChecked}
+                          onChange={e => setPrivacyChecked(e.target.checked)}
+                        />
+                        <label className="form-check-label text-muted" htmlFor="privacy">
+                          I agree to the <Link to="/" style={{ color: 'var(--accent2)' }}>Privacy Policy</Link> and consent to being contacted regarding my booking.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 d-flex gap-3 justify-content-between">
+                    <button type="button" className="btn-outline-green" onClick={() => setStep(2)}>
+                      <i className="bi bi-arrow-left me-2"></i> Back
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-green"
+                      disabled={!step3Valid}
+                      onClick={() => { if (step3Valid) setStep(4); }}
+                    >
+                      Review Booking <i className="bi bi-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              )}
 
-                    {submitError && (
-                      <div className="alert alert-danger mt-3" style={{ borderRadius: 10 }}>
-                        <i className="bi bi-exclamation-triangle-fill me-2"></i>{submitError}
+              {/* Step 4: Confirm */}
+              {step === 4 && (
+                <div className="booking-step-panel">
+                  <h3 className="fw-bold mb-1">Review &amp; Confirm</h3>
+                  <p className="text-muted mb-4">Please check your booking details before submitting.</p>
+
+                  <div className="booking-summary">
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-tools me-2"></i>Service</span>
+                      <span className="booking-summary__value">{form.service}</span>
+                    </div>
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-house me-2"></i>Property Type</span>
+                      <span className="booking-summary__value">{form.propertyType}{form.bedrooms ? ` · ${form.bedrooms}` : ''}</span>
+                    </div>
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-geo-alt me-2"></i>Address</span>
+                      <span className="booking-summary__value">{form.address}{form.postcode ? `, ${form.postcode}` : ''}</span>
+                    </div>
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-calendar3 me-2"></i>Appointment</span>
+                      <span className="booking-summary__value">{form.date} · {form.timeSlot}</span>
+                    </div>
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-person me-2"></i>Name</span>
+                      <span className="booking-summary__value">{form.name}</span>
+                    </div>
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-envelope me-2"></i>Email</span>
+                      <span className="booking-summary__value">{form.email}</span>
+                    </div>
+                    <div className="booking-summary__row">
+                      <span className="booking-summary__label"><i className="bi bi-telephone me-2"></i>Phone</span>
+                      <span className="booking-summary__value">{form.phone}</span>
+                    </div>
+                    {form.notes && (
+                      <div className="booking-summary__row">
+                        <span className="booking-summary__label"><i className="bi bi-chat-text me-2"></i>Notes</span>
+                        <span className="booking-summary__value">{form.notes}</span>
                       </div>
                     )}
-                    <div className="mt-4 d-flex gap-3 justify-content-between">
-                      <button type="button" className="btn-outline-green" onClick={() => setStep(3)}>
-                        <i className="bi bi-arrow-left me-2"></i> Back
-                      </button>
-                      <button type="submit" className="btn-green px-5" disabled={submitting}>
-                        {submitting
-                          ? <><span className="spinner-border spinner-border-sm me-2" role="status"></span>Submitting…</>
-                          : <><i className="bi bi-check-circle me-2"></i> Confirm Booking</>
-                        }
-                      </button>
-                    </div>
                   </div>
-                )}
 
-              </form>
+                  <div className="booking-summary__notice mt-3">
+                    <i className="bi bi-info-circle-fill me-2"></i>
+                    Our team will confirm your appointment within 2 hours by email and phone call.
+                  </div>
+
+                  {submitError && (
+                    <div className="alert alert-danger mt-3" style={{ borderRadius: 10 }}>
+                      <i className="bi bi-exclamation-triangle-fill me-2"></i>{submitError}
+                    </div>
+                  )}
+                  <div className="mt-4 d-flex gap-3 justify-content-between">
+                    <button type="button" className="btn-outline-green" onClick={() => setStep(3)}>
+                      <i className="bi bi-arrow-left me-2"></i> Back
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-green px-5"
+                      disabled={submitting}
+                      onClick={handleSubmit}
+                    >
+                      {submitting
+                        ? <><span className="spinner-border spinner-border-sm me-2" role="status"></span>Submitting…</>
+                        : <><i className="bi bi-check-circle me-2"></i> Confirm Booking</>
+                      }
+                    </button>
+                  </div>
+                </div>
+              )}
+
             </div>
 
             {/* Sidebar */}

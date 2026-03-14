@@ -1,0 +1,2294 @@
+{
+  "pages": [
+    {
+      "pageKey": "eicr",
+      "url": "https://londonsafetycertificate.co.uk/electrical-safety-services-london/eicr-london/",
+      "heroTitle": "Electrical Installation Condition Report (EICR) London",
+      "heroSubtitle": "Professional electrical safety inspections for residential properties that document the condition of your fixed wiring installation. Provides detailed assessment with clear codes and recommendations.",
+      "stats": [
+        "5 Years — Standard validity period for residential EICR certificates",
+        "45-90 minutes — Typical inspection time for studio/1-bed properties",
+        "£75 — Starting price for studio properties",
+        "100+ — Certificates delivered monthly"
+      ],
+      "benefits": [
+        {
+          "title": "Fast Digital Reports",
+          "body": "Receive your inspection report digitally immediately after the assessment is complete, avoiding delays in obtaining your certification."
+        },
+        {
+          "title": "Clear Observation Codes",
+          "body": "Results are presented with C1, C2, C3, and FI codes that clearly indicate the severity of any issues found during testing."
+        },
+        {
+          "title": "Comprehensive Testing",
+          "body": "Visual inspection combined with electrical testing of consumer units, earthing systems, bonding, and RCD protection to ensure safety."
+        },
+        {
+          "title": "Fixed Transparent Pricing",
+          "body": "No hidden charges. Pricing varies by property size with additional costs only for extra consumer units or applicable parking fees."
+        },
+        {
+          "title": "Qualified Inspectors",
+          "body": "All inspections performed by properly qualified electricians with current BS 7671 competence and industry recognition."
+        },
+        {
+          "title": "Insurance Ready Documentation",
+          "body": "Reports meet landlord requirements, lettings agent standards, and can be used for insurance compliance purposes."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Studio Property",
+          "price": "£75",
+          "features": [
+            "Inspection + testing + digital report",
+            "All inclusive"
+          ]
+        },
+        {
+          "label": "1-3 Bedrooms",
+          "price": "£98.99",
+          "features": [
+            "Inspection + testing + digital report",
+            "All inclusive"
+          ]
+        },
+        {
+          "label": "4 Bedrooms",
+          "price": "£109.99",
+          "features": [
+            "Inspection + testing + digital report",
+            "All inclusive"
+          ]
+        },
+        {
+          "label": "5-6 Bedrooms",
+          "price": "£149.99",
+          "features": [
+            "Inspection + testing + digital report",
+            "All inclusive"
+          ]
+        },
+        {
+          "label": "Additional Consumer Unit",
+          "price": "£89.99",
+          "features": [
+            "Each additional unit"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Book Your Inspection",
+          "body": "Select your property type and book a convenient date. We confirm the consumer unit count and access requirements before the visit."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Our qualified electrician inspects fixed wiring, consumer units, earthing systems, bonding, sockets, switches, and light fittings."
+        },
+        {
+          "num": 3,
+          "title": "Electrical Testing",
+          "body": "Where safe, we perform insulation resistance testing, earth fault loop impedance testing, and RCD testing as required."
+        },
+        {
+          "num": 4,
+          "title": "Digital Report Delivery",
+          "body": "Receive your EICR with clear observation codes (C1/C2/C3/FI) and a satisfactory or unsatisfactory result classification."
+        },
+        {
+          "num": 5,
+          "title": "Next Steps Guidance",
+          "body": "We provide clear recommendations and next inspection timing, plus guidance on any remedial work needed."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much does an EICR cost in London?",
+          "a": "Pricing starts from £75 for studios and goes up to £149.99 for 5-6 bedroom properties. Additional consumer units cost £89.99 each. Parking charges may apply depending on location."
+        },
+        {
+          "q": "How long does an EICR take?",
+          "a": "Studio/1-bed properties typically take 45-90 minutes, 2-3 bed properties take 1.5-3 hours, and 5-6 bed properties take 3-5 hours. Older installations or limited access can increase timing."
+        },
+        {
+          "q": "When will I receive my EICR report?",
+          "a": "You receive your digital report after the inspection. Delivery depends on property complexity and the number of observations that need documentation."
+        },
+        {
+          "q": "What happens if I get C1 or C2 codes?",
+          "a": "C1 indicates immediate danger requiring urgent correction. C2 indicates potentially dangerous conditions. Both classify the installation as unsatisfactory and remedial work is required."
+        },
+        {
+          "q": "Do you offer remedial works and re-testing?",
+          "a": "We can advise on what needs fixing and help arrange next steps. For unsatisfactory results, a qualified electrician must complete the remedial work before re-testing."
+        }
+      ],
+      "intro": {
+        "title": "What is an EICR Certificate?",
+        "body": "An Electrical Installation Condition Report (EICR) is a comprehensive safety assessment of your property's fixed electrical installation. It identifies potential hazards like electric shock, fire risk, or equipment failure and provides clear recommendations.",
+        "bullets": [
+          "Required for rental properties under safety regulations",
+          "Assesses condition of wiring, consumer units, and protective devices",
+          "Valid for up to 5 years for residential properties"
+        ]
+      }
+    },
+    {
+      "pageKey": "commercial-eicr",
+      "url": "https://londonsafetycertificate.co.uk/electrical-safety-services-london/eicr-commercial-property-london/",
+      "heroTitle": "Commercial EICR (CEICR) for Business Premises",
+      "heroSubtitle": "Electrical safety inspections designed for offices, shops, warehouses, and commercial units. Comprehensive testing and clear reporting for compliance and insurance requirements.",
+      "stats": [
+        "£149.99 — Fixed price for up to 10 circuits",
+        "£15 — Cost per additional circuit beyond 10",
+        "Satisfactory / Unsatisfactory — Result classification with C1/C2/C3/FI codes",
+        "Multiple building types covered — Offices, retail, restaurants, warehouses, industrial"
+      ],
+      "benefits": [
+        {
+          "title": "Fixed Package Pricing",
+          "body": "Clear pricing for up to 10 circuits at £149.99 with predictable costs for additional circuits at £15 each."
+        },
+        {
+          "title": "Business Compliance Ready",
+          "body": "Reports meet office, retail, restaurant, warehouse, and mixed-use building requirements for insurance and lease agreements."
+        },
+        {
+          "title": "Minimal Operational Disruption",
+          "body": "Brief power interruptions planned in advance to minimize impact on your business operations during testing."
+        },
+        {
+          "title": "Clear Scope Confirmation",
+          "body": "We confirm premises type, circuit count, and number of consumer units before the inspection to ensure accurate pricing."
+        },
+        {
+          "title": "Coded Observation System",
+          "body": "Results use industry-standard C1/C2/C3/FI codes with clear explanation of each finding and required actions."
+        },
+        {
+          "title": "Responsibility Guidance",
+          "body": "We clarify whether landlord, tenant, or managing agent is responsible for the installation and any remedial work."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Commercial EICR",
+          "price": "£149.99",
+          "features": [
+            "Up to 10 circuits included",
+            "Inspection + testing + digital CEICR report"
+          ]
+        },
+        {
+          "label": "Additional Circuit",
+          "price": "£15",
+          "features": [
+            "Per circuit beyond initial 10"
+          ]
+        },
+        {
+          "label": "Additional Consumer Unit",
+          "price": "£129.99",
+          "features": [
+            "Extra testing and documentation"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Scope Confirmation",
+          "body": "We confirm your premises type (office/retail/warehouse), estimated circuit count, and number of consumer units to provide accurate pricing."
+        },
+        {
+          "num": 2,
+          "title": "On-Site Inspection",
+          "body": "Visual inspection of distribution boards, circuit condition, fixed wiring, and equipment for signs of damage or deterioration."
+        },
+        {
+          "num": 3,
+          "title": "Safety Testing",
+          "body": "Electrical testing conducted as safe and appropriate, with brief planned power interruptions to maintain business operations."
+        },
+        {
+          "num": 4,
+          "title": "Digital CEICR Report",
+          "body": "Receive comprehensive report showing satisfactory or unsatisfactory classification with coded observations for each finding."
+        },
+        {
+          "num": 5,
+          "title": "Next Steps Explained",
+          "body": "We explain remedial work required (especially for C1/C2 items) and what documentation is needed for compliance."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much does a Commercial EICR cost?",
+          "a": "Our package starts at £149.99 for up to 10 circuits. Additional circuits cost £15 each. Extra consumer units are £129.99."
+        },
+        {
+          "q": "What does 'up to 10 circuits' mean?",
+          "a": "A circuit is a protected electrical line supplying parts of the premises (lighting circuits, socket outlet circuits, equipment circuits). Our package includes testing and documentation for up to 10 separate circuits."
+        },
+        {
+          "q": "What happens if the report is unsatisfactory?",
+          "a": "C1 or C2 observations classify the installation as unsatisfactory. You must hire a qualified electrician to complete remedial work before the installation is considered compliant."
+        },
+        {
+          "q": "Will power be switched off during testing?",
+          "a": "Some tests require brief power interruptions. We plan this in advance to minimize disruption to your business operations."
+        },
+        {
+          "q": "How often should a Commercial EICR be done?",
+          "a": "Intervals vary by building type, risk level, previous findings, and requirements from your insurance or lease. Your report will include recommended next inspection timing."
+        }
+      ],
+      "intro": {
+        "title": "Commercial EICR (CEICR) Overview",
+        "body": "A Commercial EICR is an Electrical Installation Condition Report tailored for business premises. It assesses fixed electrical installations and identifies safety hazards like shock, fire, or equipment failure with coded observations.",
+        "bullets": [
+          "Covers offices, shops, restaurants, warehouses, and industrial units",
+          "Often required for insurance, compliance, tenancy agreements, and health & safety",
+          "Provides clear observation codes and satisfactory/unsatisfactory classification"
+        ]
+      }
+    },
+    {
+      "pageKey": "electrical-fault-finding",
+      "url": "https://londonsafetycertificate.co.uk/electrical-safety-services-london/electrical-fault-finding-london/",
+      "heroTitle": "Electrical Fault Finding and Diagnostics London",
+      "heroSubtitle": "Expert diagnostic services to identify electrical problems in your property quickly and accurately. From intermittent faults to complete system failures, we locate and diagnose issues efficiently.",
+      "stats": [
+        "Expert diagnostics for safety faults and equipment failures",
+        "Identifies intermittent faults that may not be obvious",
+        "Thorough testing of circuits, switches, and protective devices",
+        "Clear diagnostic report with recommended repairs"
+      ],
+      "benefits": [
+        {
+          "title": "Quick Problem Identification",
+          "body": "Uses systematic diagnostic methods to locate electrical faults efficiently without unnecessary trial-and-error."
+        },
+        {
+          "title": "Intermittent Fault Detection",
+          "body": "Can identify faults that come and go, which are often difficult to diagnose but essential to fix for safety."
+        },
+        {
+          "title": "Safety-Focused Testing",
+          "body": "Comprehensive testing of circuits, protective devices, and earthing systems to identify hidden safety hazards."
+        },
+        {
+          "title": "Detailed Diagnostic Reports",
+          "body": "Clear written reports explaining what was found, why it's a problem, and what repairs are needed."
+        },
+        {
+          "title": "Equipment Failure Diagnosis",
+          "body": "Identifies whether faults are in wiring, circuits, protective devices, or connected equipment."
+        },
+        {
+          "title": "Cost-Effective Solution",
+          "body": "Accurate diagnosis prevents unnecessary repairs and helps you understand exactly what work is needed."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Electrical Fault Finding",
+          "price": "Contact for quote",
+          "features": [
+            "Initial diagnostic visit",
+            "Test circuit and protective devices",
+            "Detailed fault report"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Fault Description",
+          "body": "You describe the electrical problem, when it occurs, and what symptoms you've noticed (trips, flickering, no power, etc.)."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "We visually inspect the affected circuits, switches, protective devices, and wiring for obvious issues."
+        },
+        {
+          "num": 3,
+          "title": "Systematic Testing",
+          "body": "Using appropriate test equipment, we systematically test circuits, RCDs, switches, and protective devices."
+        },
+        {
+          "num": 4,
+          "title": "Fault Identification",
+          "body": "We pinpoint the exact cause of the fault and determine if it's in wiring, circuits, equipment, or protective devices."
+        },
+        {
+          "num": 5,
+          "title": "Diagnostic Report",
+          "body": "You receive a detailed report explaining the fault, why it's a safety concern, and what remedial work is recommended."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What types of electrical faults can you find?",
+          "a": "We diagnose circuit trips, flickering lights, no power to outlets, blown fuses, RCD failures, intermittent faults, and issues with protective devices."
+        },
+        {
+          "q": "How long does fault finding take?",
+          "a": "Simple faults may be identified quickly, but intermittent or complex problems require more thorough testing. We'll give you a time estimate after the initial inspection."
+        },
+        {
+          "q": "Will I get a report?",
+          "a": "Yes, we provide a detailed diagnostic report explaining the fault, why it occurred, and what repairs are needed."
+        },
+        {
+          "q": "Do you do the repairs?",
+          "a": "We specialize in diagnosis. Once the fault is identified, you can hire a qualified electrician to complete the remedial work using our report."
+        },
+        {
+          "q": "Is this service urgent?",
+          "a": "If you have a complete loss of power or immediate safety concern, contact us immediately. We offer responsive service for urgent electrical issues."
+        }
+      ],
+      "intro": {
+        "title": "Electrical Fault Finding Service",
+        "body": "When something goes wrong with your electrical system, pinpointing the exact cause can be challenging. Our diagnostic service uses systematic testing to identify faults quickly and accurately.",
+        "bullets": [
+          "Identifies intermittent and persistent electrical faults",
+          "Diagnoses issues in circuits, protective devices, and equipment",
+          "Prevents unnecessary repair work through accurate diagnosis"
+        ]
+      }
+    },
+    {
+      "pageKey": "consumer-unit-replacement",
+      "url": "https://londonsafetycertificate.co.uk/electrical-safety-services-london/consumer-unit-replacement-london/",
+      "heroTitle": "Consumer Unit (Fuse Box) Replacement London",
+      "heroSubtitle": "Modern consumer unit installation and replacement services for residential and commercial properties. Upgrade from outdated fuse boxes to modern switchboards with RCD protection.",
+      "stats": [
+        "Modern RCD protection — Latest safety standards",
+        "Replaces outdated fuse boxes — Improves electrical capacity",
+        "Allows additional circuits — Supports modern appliances and devices",
+        "Insurance approved — Meets current safety regulations"
+      ],
+      "benefits": [
+        {
+          "title": "Enhanced Safety Protection",
+          "body": "Modern consumer units include RCD protection that cuts power in milliseconds if an earth fault is detected, preventing shock hazards."
+        },
+        {
+          "title": "Increased Electrical Capacity",
+          "body": "Upgrade from old fuse boxes to units supporting more circuits and higher loads for modern electrical demands."
+        },
+        {
+          "title": "Professional Installation",
+          "body": "Qualified electrician installation following current Building Regulations and BS 7671 standards."
+        },
+        {
+          "title": "Compliance Documentation",
+          "body": "Complete installation certificates and EICR documentation provided for insurance and safety compliance."
+        },
+        {
+          "title": "Future-Ready System",
+          "body": "Modern switchboards accommodate future additions like EV charging points, heat pumps, or solar panels."
+        },
+        {
+          "title": "Insurance Recognition",
+          "body": "Modern consumer units are recognized by insurers and can reduce policy premiums on some policies."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Consumer Unit Replacement",
+          "price": "Contact for quote",
+          "features": [
+            "Professional installation",
+            "Modern RCD-equipped unit",
+            "Installation certificate"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Assessment",
+          "body": "We assess your current fuse box or consumer unit, review circuit configuration, and discuss your electrical needs and plans."
+        },
+        {
+          "num": 2,
+          "title": "Unit Selection",
+          "body": "We recommend an appropriate modern consumer unit based on your property size, circuit count, and future requirements."
+        },
+        {
+          "num": 3,
+          "title": "Professional Installation",
+          "body": "Safe disconnection, careful relocation of circuits, and professional installation of the new unit with RCD protection."
+        },
+        {
+          "num": 4,
+          "title": "Full Testing",
+          "body": "All circuits tested to ensure proper function, RCD trips verified, and protective devices confirmed working."
+        },
+        {
+          "num": 5,
+          "title": "Certification and Handover",
+          "body": "You receive installation certificate and full documentation meeting Building Regulations and current standards."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Why should I replace my fuse box?",
+          "a": "Old fuse boxes lack modern safety features like RCD protection. They limit electrical capacity for modern appliances and may not meet current building regulations or insurance requirements."
+        },
+        {
+          "q": "What's the difference between a fuse box and a consumer unit?",
+          "a": "Fuse boxes use replaceable fuses for protection. Consumer units use circuit breakers (MCBs) that trip automatically and can be reset, plus RCD protection for shock prevention."
+        },
+        {
+          "q": "How long does installation take?",
+          "a": "Installation typically takes one working day depending on the property size and circuit complexity. We minimize disruption to your electrical supply."
+        },
+        {
+          "q": "Will my electrics work while you're installing?",
+          "a": "We work carefully to minimize downtime. Most properties experience only brief interruptions during the actual unit changeover."
+        },
+        {
+          "q": "Do I get documentation?",
+          "a": "Yes, you receive a complete installation certificate (BS 7909) and can arrange an EICR after installation for full compliance documentation."
+        }
+      ],
+      "intro": {
+        "title": "Consumer Unit and Fuse Box Replacement",
+        "body": "A consumer unit (also called a switchboard or fuse box) is the central control point for your property's electrical system. Modern units provide better safety with RCD protection and circuit breakers instead of fuses.",
+        "bullets": [
+          "Modern units have automatic circuit breakers and RCD protection",
+          "Support more circuits and higher electrical loads",
+          "Meet current Building Regulations and safety standards"
+        ]
+      }
+    },
+    {
+      "pageKey": "pat-testing",
+      "url": "https://londonsafetycertificate.co.uk/electrical-safety-services-london/pat-testing-london/",
+      "heroTitle": "PAT Testing (Portable Appliance Testing) London",
+      "heroSubtitle": "Comprehensive portable appliance testing for offices, schools, gyms, and commercial facilities. Professional inspection and testing of electrical equipment ensures workplace safety.",
+      "stats": [
+        "£49.99 — Cost for portable appliance testing",
+        "Safety compliance — Meets workplace electrical safety regulations",
+        "Professional documentation — Test certificates for each appliance",
+        "Supports businesses — Required for many commercial properties"
+      ],
+      "benefits": [
+        {
+          "title": "Workplace Safety Compliance",
+          "body": "Testing ensures portable appliances are safe to use, reducing risk of electric shock or fire hazards in the workplace."
+        },
+        {
+          "title": "Professional Documentation",
+          "body": "Each appliance receives testing documentation that can be presented to health and safety inspectors."
+        },
+        {
+          "title": "Liability Protection",
+          "body": "Demonstrates due diligence in maintaining safe working conditions and electrical equipment for employees and visitors."
+        },
+        {
+          "title": "Defect Identification",
+          "body": "Testing identifies damaged power cords, faulty plugs, or equipment failures before they become safety hazards."
+        },
+        {
+          "title": "Record Keeping System",
+          "body": "We provide comprehensive testing records and can schedule regular retesting to maintain ongoing compliance."
+        },
+        {
+          "title": "Cost-Effective Service",
+          "body": "Competitive pricing covers thorough testing of multiple appliances with clear documentation."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Portable Appliance Testing",
+          "price": "£49.99",
+          "features": [
+            "Professional testing",
+            "Test certificates",
+            "Compliance documentation"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Appliance Inventory",
+          "body": "We identify all portable electrical equipment in your workplace that requires testing (computers, kettles, heaters, tools, etc.)."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Each appliance is visually inspected for damage, worn power cords, damaged plugs, or visible defects."
+        },
+        {
+          "num": 3,
+          "title": "Electrical Testing",
+          "body": "Professional testing equipment checks earth continuity, insulation resistance, and other electrical safety parameters."
+        },
+        {
+          "num": 4,
+          "title": "Certification and Tagging",
+          "body": "Passed appliances receive test labels/tags. Failed items are identified for repair or removal from service."
+        },
+        {
+          "num": 5,
+          "title": "Report and Records",
+          "body": "You receive comprehensive testing report and documentation for compliance, insurance, and health and safety records."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What appliances need PAT testing?",
+          "a": "Most portable electrical equipment including computers, kettles, microwaves, heaters, power tools, extension cables, and portable lighting."
+        },
+        {
+          "q": "How often should appliances be tested?",
+          "a": "Frequency depends on equipment type and usage. Commercial equipment typically requires annual testing; domestic less frequently. We recommend based on your facility."
+        },
+        {
+          "q": "What happens if equipment fails testing?",
+          "a": "Failed appliances are identified in the report. Equipment should be removed from service, repaired by a technician, or replaced."
+        },
+        {
+          "q": "Do you test all types of equipment?",
+          "a": "We test most portable appliances. Some specialized or high-risk equipment may require specialist testing. We'll advise on your specific situation."
+        },
+        {
+          "q": "Will testing disrupt our operations?",
+          "a": "Testing is non-invasive and doesn't damage equipment. We can work around your schedule to minimize disruption to business operations."
+        }
+      ],
+      "intro": {
+        "title": "Portable Appliance Testing (PAT) Service",
+        "body": "PAT testing is a systematic inspection and testing of portable electrical equipment to identify faults and safety hazards. It's a workplace safety requirement for many commercial properties.",
+        "bullets": [
+          "Identifies equipment damage and electrical safety hazards",
+          "Provides compliance documentation for health and safety",
+          "Supports workplace liability protection"
+        ]
+      }
+    },
+    {
+      "pageKey": "gas-safety",
+      "url": "https://londonsafetycertificate.co.uk/gas-safety-services-london/gas-safety-certificate-london/",
+      "heroTitle": "Gas Safety Certificate (CP12) London",
+      "heroSubtitle": "Professional gas safety inspections for residential properties. Annual CP12 certificates document the safety of your gas installations including boilers, fires, and hobs.",
+      "stats": [
+        "£57.99 — Starting price for gas safety certificates",
+        "Annual requirement — Mandatory for rental properties",
+        "Digital certification — Instant report delivery",
+        "5-year safety history — Track your gas system health"
+      ],
+      "benefits": [
+        {
+          "title": "Legal Compliance",
+          "body": "Annual gas safety certificate is mandatory for landlords of rental properties under UK gas safety regulations."
+        },
+        {
+          "title": "Safety Assessment",
+          "body": "Professional inspection identifies gas leaks, combustion issues, or equipment defects before they become hazardous."
+        },
+        {
+          "title": "Fast Digital Reporting",
+          "body": "Receive your digital CP12 certificate immediately after inspection, ready for tenants or insurance requirements."
+        },
+        {
+          "title": "Insurance Compatible",
+          "body": "Gas safety certificates are required by most rental property insurers and satisfy their annual compliance documentation."
+        },
+        {
+          "title": "Equipment Assessment",
+          "body": "Comprehensive check of boilers, gas fires, hobs, and other gas appliances for proper function and safety."
+        },
+        {
+          "title": "Landlord Peace of Mind",
+          "body": "Professional documentation proves you've fulfilled your legal duty to maintain safe gas installations."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Gas Safety Certificate",
+          "price": "£57.99",
+          "features": [
+            "Annual CP12 certificate",
+            "Boiler inspection",
+            "Gas appliance testing"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Booking Confirmation",
+          "body": "Schedule your appointment at a convenient time. We confirm the number of gas appliances and property access requirements."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Professional engineer inspects all gas appliances including boiler, fires, hobs for condition, connections, and visible safety issues."
+        },
+        {
+          "num": 3,
+          "title": "Safety Testing",
+          "body": "Gas leak testing using specialized equipment, combustion analysis, and functional checks of safety controls."
+        },
+        {
+          "num": 4,
+          "title": "Digital CP12 Issued",
+          "body": "You receive your digital gas safety certificate immediately after inspection, showing all appliances tested and results."
+        },
+        {
+          "num": 5,
+          "title": "Recommendations",
+          "body": "Any maintenance or repairs needed are clearly explained in the report along with timescales for action."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a CP12 certificate?",
+          "a": "A CP12 is a Gas Safety Certificate that documents the condition of gas installations. It's issued after a professional inspection and is valid for 12 months."
+        },
+        {
+          "q": "Is a gas safety certificate mandatory?",
+          "a": "Yes, for rental properties it's a legal requirement. Landlords must have an annual gas safety check by a registered Gas Safe engineer."
+        },
+        {
+          "q": "How long does the inspection take?",
+          "a": "A typical gas safety certificate inspection takes 30-45 minutes depending on the number of appliances and their condition."
+        },
+        {
+          "q": "What if the inspector finds a problem?",
+          "a": "Any defects are clearly documented in the CP12. Most issues can be fixed by the engineer during the visit, or you may need to contact a qualified Gas Safe engineer for repairs."
+        },
+        {
+          "q": "Can tenants be present during the inspection?",
+          "a": "Yes, tenants can be present or provide access. Access to all gas appliances and the boiler is essential for the inspection."
+        }
+      ],
+      "intro": {
+        "title": "Gas Safety Certificate (CP12) Overview",
+        "body": "A gas safety certificate (CP12) is an official record that gas installations have been inspected by a qualified Gas Safe engineer and are safe to use. Annual certification is mandatory for rental properties.",
+        "bullets": [
+          "Required annually for rental properties by law",
+          "Documents condition of boilers, fires, and hobs",
+          "Issued only by Gas Safe registered engineers"
+        ]
+      }
+    },
+    {
+      "pageKey": "commercial-gas-safety",
+      "url": "https://londonsafetycertificate.co.uk/gas-safety-services-london/commercial-gas-safety-certificate-london/",
+      "heroTitle": "Commercial Gas Safety Certificate (CP42) London",
+      "heroSubtitle": "Professional gas safety inspections for business premises. CP42 certificates for commercial properties including restaurants, offices, and mixed-use buildings.",
+      "stats": [
+        "£199.99 — Starting price for commercial gas safety",
+        "CP42 certification — Commercial gas safety standard",
+        "Regular compliance — Annual or bi-annual requirements",
+        "Multi-appliance testing — Kitchens and heating systems"
+      ],
+      "benefits": [
+        {
+          "title": "Business Compliance",
+          "body": "Professional gas safety certification meets requirements for commercial properties, restaurants, cafes, and office buildings."
+        },
+        {
+          "title": "Multi-Appliance Testing",
+          "body": "Comprehensive inspection of commercial kitchen equipment, heating systems, and all gas appliances in one visit."
+        },
+        {
+          "title": "Insurance Compliance",
+          "body": "Commercial gas safety certificates are typically required by business liability insurance policies for commercial tenancies."
+        },
+        {
+          "title": "Staff Safety Documentation",
+          "body": "Demonstrates duty of care toward employees and customers by maintaining safe gas installations."
+        },
+        {
+          "title": "Regulatory Adherence",
+          "body": "Professional documentation shows compliance with Health and Safety at Work Act and gas safety regulations."
+        },
+        {
+          "title": "Minimal Downtime",
+          "body": "Inspections scheduled to minimize disruption to kitchen operations, dining, or business activities."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Commercial Gas Safety",
+          "price": "£199.99",
+          "features": [
+            "CP42 certificate",
+            "Multi-appliance inspection",
+            "Commercial standard testing"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Scope Assessment",
+          "body": "We confirm the number and type of gas appliances at your premises (kitchen equipment, heating systems, water heaters, etc.)."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Comprehensive visual check of all gas appliances, pipework, connections, and installation condition."
+        },
+        {
+          "num": 3,
+          "title": "Safety Testing",
+          "body": "Gas leak detection, combustion analysis, and functional testing of safety features on all appliances."
+        },
+        {
+          "num": 4,
+          "title": "Digital CP42 Certificate",
+          "body": "Professional commercial gas safety certificate issued documenting all appliances tested and results."
+        },
+        {
+          "num": 5,
+          "title": "Maintenance Guidance",
+          "body": "Clear recommendations for any maintenance, repairs, or follow-up actions needed."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a CP42 certificate?",
+          "a": "A CP42 is a commercial gas safety certificate equivalent to the residential CP12. It documents that commercial gas installations have been safely inspected by a Gas Safe engineer."
+        },
+        {
+          "q": "Who needs a commercial gas safety certificate?",
+          "a": "Commercial properties including restaurants, cafes, offices, hotels, and mixed-use buildings with gas appliances."
+        },
+        {
+          "q": "How often is testing required?",
+          "a": "Requirements vary by premises and use. Many commercial properties require annual testing; some high-use kitchens may need more frequent checks."
+        },
+        {
+          "q": "Can you test commercial kitchen equipment?",
+          "a": "Yes, we test all commercial gas cooking appliances, steamers, and heating equipment commonly found in commercial kitchens."
+        },
+        {
+          "q": "Will testing disrupt our kitchen operations?",
+          "a": "We schedule inspections to minimize kitchen downtime. Testing is non-invasive and can often be completed during slower service periods."
+        }
+      ],
+      "intro": {
+        "title": "Commercial Gas Safety Certification",
+        "body": "A CP42 commercial gas safety certificate documents that your business gas installations have been professionally inspected and are safe. Required for compliance and insurance on commercial premises.",
+        "bullets": [
+          "Covers commercial kitchens, heating systems, and all gas appliances",
+          "Required for business insurance and compliance",
+          "Issued by Gas Safe registered engineers"
+        ]
+      }
+    },
+    {
+      "pageKey": "boiler-installation",
+      "url": "https://londonsafetycertificate.co.uk/gas-safety-services-london/boiler-installation-london/",
+      "heroTitle": "Boiler Installation and Replacement London",
+      "heroSubtitle": "Professional boiler installation and replacement services from qualified Gas Safe engineers. Expert guidance on modern efficient boilers and full system handover support.",
+      "stats": [
+        "£1,499+ — Starting price for boiler installation",
+        "Gas Safe certified — All work meets safety standards",
+        "Modern efficiency — Upgrade to energy-efficient models",
+        "Full documentation — Installation certificate and warranty"
+      ],
+      "benefits": [
+        {
+          "title": "Expert Selection",
+          "body": "Help choosing the right boiler size and type for your property and heating needs, considering efficiency and fuel type."
+        },
+        {
+          "title": "Professional Installation",
+          "body": "Qualified Gas Safe registered engineers complete installation following all current safety regulations and best practices."
+        },
+        {
+          "title": "Safety Compliance",
+          "body": "All installations meet Building Regulations, Gas Safety Regulations, and environmental efficiency standards."
+        },
+        {
+          "title": "Energy Efficiency Gains",
+          "body": "Modern boilers are significantly more efficient than older models, potentially reducing heating bills and carbon footprint."
+        },
+        {
+          "title": "Full Documentation",
+          "body": "Complete installation certificate (Gas Safe), commissioning documentation, and warranty paperwork provided."
+        },
+        {
+          "title": "System Handover Support",
+          "body": "Clear explanation of how to operate your new boiler and its controls, plus ongoing maintenance recommendations."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Boiler Installation",
+          "price": "From £1,499",
+          "features": [
+            "Qualified Gas Safe engineer",
+            "Professional installation",
+            "Safety certification included"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Boiler Assessment",
+          "body": "We assess your current heating system, property size, hot water requirements, and fuel type to recommend appropriate options."
+        },
+        {
+          "num": 2,
+          "title": "Model Selection",
+          "body": "Discuss boiler types (condensing, combi, system), efficiency ratings, size, and features to find the right fit for your home."
+        },
+        {
+          "num": 3,
+          "title": "Installation Planning",
+          "body": "Confirm installation date, route for pipework, positioning of the boiler, and any preparatory work needed."
+        },
+        {
+          "num": 4,
+          "title": "Professional Installation",
+          "body": "Safe removal of old boiler (if applicable), professional installation of new unit, and connection to heating system."
+        },
+        {
+          "num": 5,
+          "title": "Commissioning and Handover",
+          "body": "System tested, all controls explained, and you receive safety certification, warranty documents, and maintenance guidance."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much does boiler installation cost?",
+          "a": "Installation starts from £1,499 depending on boiler type, property access, and whether an old boiler is being removed. Request a quote for your specific situation."
+        },
+        {
+          "q": "What type of boiler should I choose?",
+          "a": "Choice depends on property size, hot water demand, fuel type, and space. Condensing boilers offer better efficiency. Combi boilers save space. We'll recommend based on your needs."
+        },
+        {
+          "q": "How long does installation take?",
+          "a": "A typical boiler installation takes one working day. If removing an old boiler and significant pipework changes are needed, it may take longer."
+        },
+        {
+          "q": "Do I get a warranty?",
+          "a": "Yes, new boilers come with manufacturer warranty (typically 5-10 years). Installation work also carries professional warranty. Full details provided at handover."
+        },
+        {
+          "q": "Will my heating be without water/heating during installation?",
+          "a": "Yes, there will be downtime during the actual changeover. We work efficiently to minimize this and schedule installations when you're available to be without heating/hot water."
+        }
+      ],
+      "intro": {
+        "title": "Boiler Installation Services",
+        "body": "Professional boiler installation by qualified Gas Safe engineers ensures your heating and hot water system is safe, efficient, and meets all regulations. Modern boilers offer significant energy savings.",
+        "bullets": [
+          "Expert guidance on selecting the right boiler for your property",
+          "Professional installation by Gas Safe qualified engineers",
+          "Full safety certification and warranty documentation"
+        ]
+      }
+    },
+    {
+      "pageKey": "boiler-repair",
+      "url": "https://londonsafetycertificate.co.uk/gas-safety-services-london/boiler-repair-london/",
+      "heroTitle": "Boiler Repair and Emergency Repairs London",
+      "heroSubtitle": "Fast boiler repair service for heating and hot water problems. Emergency same-day repairs available for complete boiler failures and no-heat situations.",
+      "stats": [
+        "Emergency response — Same-day repairs available",
+        "Qualified engineers — Gas Safe registered technicians",
+        "Common issues — Pilot light, no heat, no hot water, leaks",
+        "Transparent pricing — Clear quotations before work"
+      ],
+      "benefits": [
+        {
+          "title": "Emergency Response",
+          "body": "Same-day repair service available for emergency situations where you have no heating or hot water."
+        },
+        {
+          "title": "Qualified Technicians",
+          "body": "All repairs performed by experienced Gas Safe registered engineers with extensive boiler knowledge."
+        },
+        {
+          "title": "Rapid Diagnostics",
+          "body": "Quick identification of boiler problems using professional knowledge and test equipment to pinpoint issues."
+        },
+        {
+          "title": "Parts Availability",
+          "body": "Access to common boiler parts and components allows many repairs to be completed on the first visit."
+        },
+        {
+          "title": "Safety Assurance",
+          "body": "All repairs meet gas safety standards. Post-repair safety checks and documentation provided."
+        },
+        {
+          "title": "Transparent Quotations",
+          "body": "Clear explanation of problems found and detailed quote before work begins, so no surprises."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Boiler Repair",
+          "price": "Contact for quote",
+          "features": [
+            "Emergency same-day available",
+            "Qualified Gas Safe engineer",
+            "Safety certification included"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Emergency Call",
+          "body": "Call immediately if you have no heating or hot water. Describe the problem and we'll assess if emergency response is needed."
+        },
+        {
+          "num": 2,
+          "title": "Initial Assessment",
+          "body": "Engineer arrives to assess the boiler, asking about recent problems, sounds, or warning lights to diagnose the issue."
+        },
+        {
+          "num": 3,
+          "title": "Problem Identification",
+          "body": "Professional testing and inspection to identify whether the problem is a simple fix (pilot light) or more complex."
+        },
+        {
+          "num": 4,
+          "title": "Quotation and Approval",
+          "body": "Clear quote provided explaining the problem, required repair, and cost before any work begins."
+        },
+        {
+          "num": 5,
+          "title": "Repair and Safety Check",
+          "body": "Repair completed professionally, system tested to ensure safe operation, and safety documentation provided."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What if my boiler stops working completely?",
+          "a": "Call immediately for emergency repair assessment. We offer same-day service for complete boiler failures and no-heat emergencies."
+        },
+        {
+          "q": "What are common boiler problems you repair?",
+          "a": "Pilot light won't light, no heat, no hot water, boiler keeps shutting off, leaking water, unusual noises, and pressure issues."
+        },
+        {
+          "q": "How quickly can you repair it?",
+          "a": "Emergency calls receive same-day response where possible. Standard repairs may be scheduled for the next available slot."
+        },
+        {
+          "q": "Will repairs be expensive?",
+          "a": "Some repairs are straightforward and inexpensive (pilot light relighting). Others may be more costly. We'll quote clearly before starting work."
+        },
+        {
+          "q": "Are repairs guaranteed?",
+          "a": "Yes, repairs are guaranteed. If a problem recurs related to the work we've done, contact us immediately for follow-up."
+        }
+      ],
+      "intro": {
+        "title": "Boiler Repair and Maintenance Service",
+        "body": "Boiler problems can leave you without heating and hot water. Our emergency repair service provides quick diagnosis and expert repair by qualified Gas Safe engineers.",
+        "bullets": [
+          "Same-day emergency repair availability",
+          "Diagnosis of common boiler problems",
+          "Safety checks and certification included"
+        ]
+      }
+    },
+    {
+      "pageKey": "gas-engineer",
+      "url": "https://londonsafetycertificate.co.uk/gas-safety-services-london/gas-engineer-london/",
+      "heroTitle": "Domestic Gas Engineer Services London",
+      "heroSubtitle": "Qualified gas engineers for residential properties providing installation, repair, servicing, and safety checks. Gas Safe registered professionals handling boilers, fires, and appliances.",
+      "stats": [
+        "Gas Safe registered — All engineers fully qualified",
+        "Boilers, fires, hobs — All gas appliance types",
+        "Safety first — All work meets safety regulations",
+        "Emergency service — Available for urgent repairs"
+      ],
+      "benefits": [
+        {
+          "title": "Full Gas Service Range",
+          "body": "Installation, repair, servicing, and safety checks for boilers, gas fires, hobs, and all domestic gas appliances."
+        },
+        {
+          "title": "Gas Safe Qualified",
+          "body": "All engineers are registered with Gas Safe and maintain current qualifications for legal and safety compliance."
+        },
+        {
+          "title": "Emergency Response",
+          "body": "Same-day response available for emergency situations where heating or hot water is lost."
+        },
+        {
+          "title": "Transparent Communication",
+          "body": "Clear explanation of problems found, repair recommendations, and quotations before any work begins."
+        },
+        {
+          "title": "Safety Certification",
+          "body": "All work includes appropriate safety certification and documentation for compliance and insurance."
+        },
+        {
+          "title": "Preventive Maintenance",
+          "body": "Regular servicing and safety checks help prevent breakdowns and maintain efficiency of gas systems."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Gas Engineer Services",
+          "price": "Contact for quote",
+          "features": [
+            "Installation, repair, servicing",
+            "Safety checks and certification",
+            "Emergency response available"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Initial Contact",
+          "body": "Call or book online to describe your gas appliance problem or servicing need. We assess urgency and can offer same-day service if needed."
+        },
+        {
+          "num": 2,
+          "title": "Engineer Assessment",
+          "body": "Qualified Gas Safe engineer attends to assess your boiler, fire, hob, or other appliance and identify any issues."
+        },
+        {
+          "num": 3,
+          "title": "Diagnosis and Quotation",
+          "body": "Clear explanation of any problems found and a detailed quote for repair or service work before proceeding."
+        },
+        {
+          "num": 4,
+          "title": "Professional Service",
+          "body": "Installation, repair, or servicing completed to the highest professional standards with safety as priority."
+        },
+        {
+          "num": 5,
+          "title": "Certification and Guidance",
+          "body": "Appropriate safety certification provided and guidance given on maintenance and operation of your appliance."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What services do gas engineers provide?",
+          "a": "Installation of new boilers and appliances, repair of existing equipment, annual safety checks, servicing, and maintenance."
+        },
+        {
+          "q": "Are you Gas Safe registered?",
+          "a": "Yes, all our engineers are Gas Safe registered and maintain current qualifications for legal compliance and safety."
+        },
+        {
+          "q": "Can you do emergency repairs?",
+          "a": "Yes, we offer same-day emergency response for situations where you have no heating or hot water."
+        },
+        {
+          "q": "Should I service my boiler annually?",
+          "a": "Yes, annual boiler servicing is recommended to maintain efficiency, reliability, and to ensure any issues are identified early."
+        },
+        {
+          "q": "What if I need a new boiler?",
+          "a": "We can assess your heating needs, recommend appropriate boiler types, and complete professional installation with full safety certification."
+        }
+      ],
+      "intro": {
+        "title": "Domestic Gas Engineer Services",
+        "body": "Qualified Gas Safe engineers providing comprehensive gas services for residential properties including boilers, fires, hobs, and appliances. From emergency repairs to installations.",
+        "bullets": [
+          "Full range of boiler and appliance services",
+          "Gas Safe registered and qualified technicians",
+          "Emergency response and same-day service available"
+        ]
+      }
+    },
+    {
+      "pageKey": "commercial-gas-engineer",
+      "url": "https://londonsafetycertificate.co.uk/gas-safety-services-london/commercial-gas-engineer-london/",
+      "heroTitle": "Commercial Gas Engineer Services London",
+      "heroSubtitle": "Expert gas engineering for commercial properties including restaurants, offices, and mixed-use buildings. CP42 certification, kitchen equipment, and heating system expertise.",
+      "stats": [
+        "CP42 certification — Commercial gas safety standard",
+        "Commercial kitchens — Cooking appliances and equipment",
+        "Heating systems — Office and building heating",
+        "Qualified engineers — Gas Safe registered professionals"
+      ],
+      "benefits": [
+        {
+          "title": "Commercial Expertise",
+          "body": "Specialized knowledge of commercial kitchen equipment, large heating systems, and commercial building requirements."
+        },
+        {
+          "title": "Kitchen Equipment Specialists",
+          "body": "Experience with commercial cooking appliances, steamers, grills, and all kitchen gas equipment safety and maintenance."
+        },
+        {
+          "title": "Compliance Documentation",
+          "body": "Full CP42 certification and compliance documentation for insurance and health and safety requirements."
+        },
+        {
+          "title": "Business Continuity",
+          "body": "Scheduled service and repairs to minimize kitchen downtime and maintain business operations."
+        },
+        {
+          "title": "Emergency Response",
+          "body": "Same-day emergency service available for critical failures in commercial kitchens or heating systems."
+        },
+        {
+          "title": "Contract Maintenance",
+          "body": "Ongoing contract arrangements for regular servicing and safety checks at competitive rates."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Commercial Gas Engineering",
+          "price": "Contact for quote",
+          "features": [
+            "CP42 certification included",
+            "Kitchen and heating systems",
+            "Emergency response available"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Scope Assessment",
+          "body": "We assess your commercial property, identify all gas appliances, and determine testing and servicing requirements."
+        },
+        {
+          "num": 2,
+          "title": "Service Planning",
+          "body": "Schedule regular maintenance or respond to urgent repairs, timing services to minimize impact on kitchen or business operations."
+        },
+        {
+          "num": 3,
+          "title": "Professional Service",
+          "body": "Qualified engineers complete inspection, testing, repair, or servicing to commercial standards and safety regulations."
+        },
+        {
+          "num": 4,
+          "title": "Certification and Documentation",
+          "body": "CP42 certificate and full compliance documentation provided for insurance, health and safety records."
+        },
+        {
+          "num": 5,
+          "title": "Maintenance Guidance",
+          "body": "Recommendations for ongoing maintenance and service intervals to keep systems safe and efficient."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What commercial gas appliances do you service?",
+          "a": "Commercial kitchen equipment including cookers, grills, steamers, boilers, water heaters, and all gas heating systems."
+        },
+        {
+          "q": "Do you issue CP42 certificates?",
+          "a": "Yes, our engineers are qualified to issue CP42 (commercial gas safety) certificates after inspections and testing."
+        },
+        {
+          "q": "Can you schedule around our kitchen operations?",
+          "a": "Absolutely. We schedule maintenance during quieter service periods to minimize disruption to your kitchen operations."
+        },
+        {
+          "q": "What if we have an emergency in the kitchen?",
+          "a": "We offer same-day emergency response for critical failures. Call immediately for urgent gas system problems."
+        },
+        {
+          "q": "Can we have a maintenance contract?",
+          "a": "Yes, we provide maintenance contract arrangements with regular servicing at negotiated rates for ongoing compliance."
+        }
+      ],
+      "intro": {
+        "title": "Commercial Gas Engineering Services",
+        "body": "Specialized gas engineering for commercial properties combining heating systems, kitchen equipment, and compliance certification. Full CP42 documentation for business compliance.",
+        "bullets": [
+          "Commercial kitchen equipment expertise",
+          "CP42 certification and compliance",
+          "Emergency response and contract maintenance"
+        ]
+      }
+    },
+    {
+      "pageKey": "fire-safety-check",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/fire-safety-check-london/",
+      "heroTitle": "Fire Safety Certificate Check London",
+      "heroSubtitle": "Professional fire safety inspections and certificates for residential properties. Document that your property meets fire safety standards with expert assessment.",
+      "stats": [
+        "£69.99 — Fire safety certificate cost",
+        "Comprehensive inspection — Full property assessment",
+        "Clear recommendations — Safety improvement guidance",
+        "Insurance compatible — Meets standard requirements"
+      ],
+      "benefits": [
+        {
+          "title": "Safety Hazard Identification",
+          "body": "Professional assessment identifies fire hazards such as blocked exits, missing fire barriers, or inadequate escape routes."
+        },
+        {
+          "title": "Insurance Compliance",
+          "body": "Fire safety certificates support insurance requirements and demonstrate your commitment to safety compliance."
+        },
+        {
+          "title": "Regulatory Alignment",
+          "body": "Assessment checks alignment with fire safety regulations and building standards for residential properties."
+        },
+        {
+          "title": "Practical Recommendations",
+          "body": "Clear, actionable recommendations to improve fire safety without requiring major property modifications."
+        },
+        {
+          "title": "Documentation for Peace of Mind",
+          "body": "Professional certificate demonstrates you've taken fire safety seriously and documented your assessment."
+        },
+        {
+          "title": "Expert Guidance",
+          "body": "Professional advice on fire extinguishers, alarms, escape routes, and other fire safety measures for your property."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Fire Safety Certificate",
+          "price": "£69.99",
+          "features": [
+            "Professional assessment",
+            "Comprehensive report",
+            "Safety recommendations"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Property Assessment",
+          "body": "Professional inspector conducts thorough walkthrough of your property assessing fire hazards and safety features."
+        },
+        {
+          "num": 2,
+          "title": "Exit Routes Inspection",
+          "body": "Evaluation of escape routes, exit doors, stairwells, and accessibility to ensure occupants can evacuate safely."
+        },
+        {
+          "num": 3,
+          "title": "Fire Prevention Features",
+          "body": "Check of fire extinguishers, alarm systems, emergency lighting, smoke detection, and fire-resistant materials."
+        },
+        {
+          "num": 4,
+          "title": "Hazard Documentation",
+          "body": "Any fire hazards identified are documented with severity assessment and specific location information."
+        },
+        {
+          "num": 5,
+          "title": "Certificate and Recommendations",
+          "body": "You receive fire safety certificate with clear recommendations for improving safety compliance."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What does a fire safety check include?",
+          "a": "Assessment of fire hazards, exit routes, emergency lighting, fire extinguishers, alarms, and escape route accessibility."
+        },
+        {
+          "q": "Why do I need a fire safety certificate?",
+          "a": "Fire safety certificates document that your property has been professionally assessed. Insurance companies often require them."
+        },
+        {
+          "q": "What happens if fire safety issues are found?",
+          "a": "Issues are documented with recommendations for improvement. Simple fixes (exit blockages) can often be resolved immediately."
+        },
+        {
+          "q": "Do I need fire safety checks every year?",
+          "a": "For residential properties, periodic checks are recommended. We can advise on appropriate frequency for your property."
+        },
+        {
+          "q": "Does the inspection damage my property?",
+          "a": "No, fire safety assessments are non-invasive. We inspect without causing damage or disruption."
+        }
+      ],
+      "intro": {
+        "title": "Fire Safety Certificate Service",
+        "body": "Professional fire safety assessment documenting that your property meets fire safety standards. Identifies fire hazards and provides clear recommendations for improving safety.",
+        "bullets": [
+          "Comprehensive property fire hazard assessment",
+          "Clear recommendations for safety improvements",
+          "Insurance and compliance documentation"
+        ]
+      }
+    },
+    {
+      "pageKey": "fire-risk-assessment",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/fire-risk-assessment-london/",
+      "heroTitle": "Fire Risk Assessment London",
+      "heroSubtitle": "Professional fire risk assessment for residential and small commercial properties. Expert evaluation of fire hazards with detailed safety recommendations and action plans.",
+      "stats": [
+        "Comprehensive hazard identification — Full property evaluation",
+        "Clear risk rating — Severity classification of hazards",
+        "Action plan — Specific steps to reduce fire risk",
+        "Professional documentation — Expert assessment records"
+      ],
+      "benefits": [
+        {
+          "title": "Hazard Identification",
+          "body": "Expert identification of fire risks including fire sources, combustible materials, ignition pathways, and escape route issues."
+        },
+        {
+          "title": "Risk Prioritization",
+          "body": "Hazards are assessed and prioritized by severity so you know which issues need urgent attention."
+        },
+        {
+          "title": "Practical Action Plan",
+          "body": "Detailed recommendations including specific actions to reduce fire risk, with timescales for implementation."
+        },
+        {
+          "title": "Regulatory Compliance",
+          "body": "Assessment aligns with fire safety regulations and building standards for residential properties."
+        },
+        {
+          "title": "Staff Safety Documentation",
+          "body": "Demonstrates duty of care and commitment to occupant safety through professional assessment and action planning."
+        },
+        {
+          "title": "Insurance Support",
+          "body": "Professional assessments support insurance requirements and may help with policy terms and coverage."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Fire Risk Assessment",
+          "price": "Contact for quote",
+          "features": [
+            "Professional evaluation",
+            "Detailed hazard report",
+            "Action plan included"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Initial Walkthrough",
+          "body": "Professional evaluator conducts thorough inspection of the property to identify fire sources and hazards."
+        },
+        {
+          "num": 2,
+          "title": "Hazard Analysis",
+          "body": "Each identified hazard is analyzed for probability, consequences, and risk rating (high/medium/low)."
+        },
+        {
+          "num": 3,
+          "title": "Control Assessment",
+          "body": "Review of existing fire safety controls (alarms, extinguishers, emergency lighting) and their effectiveness."
+        },
+        {
+          "num": 4,
+          "title": "Action Plan Development",
+          "body": "Specific recommendations and actions are documented with timescales and responsibility assignment."
+        },
+        {
+          "num": 5,
+          "title": "Report Delivery",
+          "body": "Comprehensive fire risk assessment report provided with detailed findings, risk ratings, and prioritized action plan."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between a fire safety check and a fire risk assessment?",
+          "a": "A check identifies basic hazards. A risk assessment provides detailed analysis of each hazard, prioritizes risks, and develops a comprehensive action plan."
+        },
+        {
+          "q": "Who needs a fire risk assessment?",
+          "a": "Small residential properties and some small commercial premises benefit from formal risk assessment. We'll advise if your property requires one."
+        },
+        {
+          "q": "How long does an assessment take?",
+          "a": "On-site inspection typically takes 1-2 hours depending on property size. Full report preparation may take several days."
+        },
+        {
+          "q": "What if high-risk hazards are found?",
+          "a": "High-risk items are clearly flagged with urgent recommendations. We explain what needs to be done and timeline for action."
+        },
+        {
+          "q": "Can you help implement the recommendations?",
+          "a": "We can advise on implementation and can arrange installation of fire safety equipment like alarms or emergency lighting."
+        }
+      ],
+      "intro": {
+        "title": "Fire Risk Assessment Services",
+        "body": "A fire risk assessment provides detailed evaluation of fire hazards with prioritized risk ratings and specific action plans. More comprehensive than basic safety checks.",
+        "bullets": [
+          "Detailed hazard identification and analysis",
+          "Risk prioritization (high/medium/low)",
+          "Actionable recommendations with timescales"
+        ]
+      }
+    },
+    {
+      "pageKey": "commercial-fire-risk-assessment",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/commercial-fire-risk-assessment-london/",
+      "heroTitle": "Commercial Fire Risk Assessment London",
+      "heroSubtitle": "Professional fire risk assessment for commercial properties, offices, restaurants, and warehouses. Regulatory compliance and comprehensive safety documentation.",
+      "stats": [
+        "Regulatory compliance — Meets Regulatory Reform Order requirements",
+        "Large property assessment — Offices, restaurants, warehouses",
+        "Risk-based recommendations — Prioritized action planning",
+        "Professional documentation — Compliance records"
+      ],
+      "benefits": [
+        {
+          "title": "Regulatory Compliance",
+          "body": "Assessment meets the Regulatory Reform (Fire Safety) Order requirements for commercial properties."
+        },
+        {
+          "title": "Comprehensive Hazard Analysis",
+          "body": "Expert identification of fire hazards specific to commercial operations including equipment, materials, and occupancy patterns."
+        },
+        {
+          "title": "Risk-Based Prioritization",
+          "body": "Hazards evaluated and prioritized by risk level to focus efforts on most critical safety improvements."
+        },
+        {
+          "title": "Staff Safety Duty",
+          "body": "Demonstrates fulfillment of duty of care toward employees and visitors with professional assessment documentation."
+        },
+        {
+          "title": "Insurance Alignment",
+          "body": "Assessment supports commercial insurance requirements and may improve policy terms."
+        },
+        {
+          "title": "Business Continuity Planning",
+          "body": "Assessment includes evacuation procedures and emergency planning to maintain business continuity."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Commercial Fire Risk Assessment",
+          "price": "Contact for quote",
+          "features": [
+            "Regulatory compliance assessment",
+            "Detailed hazard report",
+            "Action plan and recommendations"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Scope Definition",
+          "body": "Confirm property type, size, occupancy patterns, and any specialized operations (kitchen, storage, etc.)."
+        },
+        {
+          "num": 2,
+          "title": "Comprehensive Inspection",
+          "body": "Thorough building walkthrough assessing fire hazards, escape routes, fire safety systems, and control measures."
+        },
+        {
+          "num": 3,
+          "title": "Risk Analysis",
+          "body": "Each hazard assessed for probability, consequences, and risk level. Existing controls evaluated for effectiveness."
+        },
+        {
+          "num": 4,
+          "title": "Action Plan Development",
+          "body": "Prioritized recommendations with specific actions, timescales, and responsibility assignments for remedial work."
+        },
+        {
+          "num": 5,
+          "title": "Report and Planning",
+          "body": "Detailed fire risk assessment report provided with findings, risk ratings, action plan, and evacuation procedures."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is a fire risk assessment legally required?",
+          "a": "For most commercial properties, yes. The Regulatory Reform (Fire Safety) Order requires responsible persons to carry out fire risk assessments."
+        },
+        {
+          "q": "How often should assessments be reviewed?",
+          "a": "Annual review is standard, or more frequently if building use, layout, or occupancy changes significantly."
+        },
+        {
+          "q": "What happens if the assessment identifies major problems?",
+          "a": "High-risk items are clearly documented with urgent recommendations. We provide guidance on prioritizing remedial actions."
+        },
+        {
+          "q": "Can you help with fire safety training?",
+          "a": "We focus on assessment and documentation. We can recommend fire safety training providers for staff."
+        },
+        {
+          "q": "What about emergency lighting and alarms?",
+          "a": "Assessment includes evaluation of existing systems. We can arrange installation of emergency lighting or alarm systems if needed."
+        }
+      ],
+      "intro": {
+        "title": "Commercial Fire Risk Assessment",
+        "body": "Comprehensive fire risk assessment for commercial properties meeting Regulatory Reform Order requirements. Identifies hazards, prioritizes risks, and develops actionable safety plans.",
+        "bullets": [
+          "Meets legal regulatory requirements",
+          "Large building and complex occupancy assessment",
+          "Risk-based prioritization and action planning"
+        ]
+      }
+    },
+    {
+      "pageKey": "fire-alarms",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/fire-alarms-london/",
+      "heroTitle": "Fire Alarm Installation and Servicing London",
+      "heroSubtitle": "Professional fire alarm system installation, testing, and maintenance. Reliable detection and alerting systems for residential and commercial properties.",
+      "stats": [
+        "Early detection — Smoke and heat detection",
+        "Professional installation — Proper placement and testing",
+        "Regular servicing — Ongoing functionality assurance",
+        "Compliance ready — Meets safety standards"
+      ],
+      "benefits": [
+        {
+          "title": "Early Fire Detection",
+          "body": "Modern fire alarm systems provide early smoke and heat detection to give occupants critical evacuation time."
+        },
+        {
+          "title": "Professional Installation",
+          "body": "Expert placement of detectors and alarm units ensures comprehensive coverage and reliable operation."
+        },
+        {
+          "title": "Integrated Systems",
+          "body": "Smoke detectors, heat detectors, and alarm units work together as integrated system for maximum safety coverage."
+        },
+        {
+          "title": "Regular Testing and Servicing",
+          "body": "Scheduled maintenance ensures alarm systems function properly and batteries are fresh and reliable."
+        },
+        {
+          "title": "Occupant Safety",
+          "body": "Alarm systems provide audible warning throughout the property to ensure all occupants hear alert and can evacuate."
+        },
+        {
+          "title": "Insurance Support",
+          "body": "Professional fire alarm systems often support insurance requirements and may improve coverage terms."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Fire Alarm Installation",
+          "price": "Contact for quote",
+          "features": [
+            "Professional system design",
+            "Installation and testing",
+            "Maintenance plan available"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Needs Assessment",
+          "body": "Evaluate property layout, size, and occupancy to determine appropriate alarm system type and detector placement."
+        },
+        {
+          "num": 2,
+          "title": "System Design",
+          "body": "Design layout for smoke detectors, heat detectors, and alarm units to ensure comprehensive coverage."
+        },
+        {
+          "num": 3,
+          "title": "Professional Installation",
+          "body": "Skilled installation of detectors and alarms in optimal locations with proper wiring and connections."
+        },
+        {
+          "num": 4,
+          "title": "Testing and Certification",
+          "body": "All components tested and certified for proper operation. Documentation and user guidance provided."
+        },
+        {
+          "num": 5,
+          "title": "Maintenance Planning",
+          "body": "Annual servicing and testing recommended to maintain reliability. Battery replacement and component checks."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What type of fire alarm systems do you install?",
+          "a": "Smoke detection systems, heat detection systems, and integrated multi-detector systems appropriate for residential and commercial properties."
+        },
+        {
+          "q": "Where should fire alarms be placed?",
+          "a": "Detectors should be placed in hallways, bedrooms, kitchens, and other areas. We recommend optimal placement for your property."
+        },
+        {
+          "q": "How often should alarms be tested?",
+          "a": "Monthly manual testing is recommended. Professional servicing and battery replacement should occur annually."
+        },
+        {
+          "q": "What if an alarm goes off accidentally?",
+          "a": "Most false alarms occur from cooking or steam. We provide guidance on preventing false alarms while maintaining fire safety."
+        },
+        {
+          "q": "Can you integrate alarms with other systems?",
+          "a": "Some commercial alarm systems can integrate with building management systems. We'll advise on options for your property."
+        }
+      ],
+      "intro": {
+        "title": "Fire Alarm Systems Service",
+        "body": "Professional fire alarm installation and servicing ensuring early detection of fire. Smoke and heat detectors integrated into reliable alerting systems.",
+        "bullets": [
+          "Smoke and heat detection coverage",
+          "Professional system design and installation",
+          "Annual servicing and maintenance"
+        ]
+      }
+    },
+    {
+      "pageKey": "fire-extinguisher-inspection",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/fire-extinguisher-inspection-london/",
+      "heroTitle": "Fire Extinguisher Inspection and Servicing London",
+      "heroSubtitle": "Professional fire extinguisher testing, maintenance, and servicing. Ensure equipment is functional and compliant for workplace and property safety.",
+      "stats": [
+        "Annual servicing — Regulatory requirement",
+        "Pressure checks — Functionality assurance",
+        "Professional documentation — Compliance records",
+        "Multiple types covered — Powder, foam, water, CO2"
+      ],
+      "benefits": [
+        {
+          "title": "Regulatory Compliance",
+          "body": "Annual fire extinguisher servicing is a legal requirement for workplace safety. Professional servicing ensures compliance."
+        },
+        {
+          "title": "Functionality Assurance",
+          "body": "Professional inspection and testing ensures extinguishers are pressurized and functional when needed."
+        },
+        {
+          "title": "Professional Maintenance",
+          "body": "Technician inspection of seals, pressure gauges, and discharge mechanisms to identify any issues."
+        },
+        {
+          "title": "Compliance Documentation",
+          "body": "Service tags and documentation provide proof of compliance for health and safety inspections."
+        },
+        {
+          "title": "Multiple Equipment Types",
+          "body": "Service covers powder, foam, water, and CO2 extinguishers appropriate for different fire types."
+        },
+        {
+          "title": "Emergency Readiness",
+          "body": "Properly maintained extinguishers are reliable and accessible when needed in emergency situations."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Fire Extinguisher Servicing",
+          "price": "Contact for quote",
+          "features": [
+            "Annual inspection",
+            "Pressure testing",
+            "Compliance tags"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Equipment Inventory",
+          "body": "Identify all fire extinguishers on your premises and their locations, types, and last service dates."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Each extinguisher inspected for physical damage, corrosion, proper sealing, and accessibility."
+        },
+        {
+          "num": 3,
+          "title": "Pressure Testing",
+          "body": "Pressure gauges checked to ensure proper pressure level for safe and effective discharge."
+        },
+        {
+          "num": 4,
+          "title": "Professional Servicing",
+          "body": "Seals, discharge mechanisms, and other components checked. Serviced as needed to restore full functionality."
+        },
+        {
+          "num": 5,
+          "title": "Tagging and Documentation",
+          "body": "Service tags applied to each extinguisher. Compliance documentation provided for safety records."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How often should fire extinguishers be serviced?",
+          "a": "Annual servicing is the standard regulatory requirement. Some high-risk locations may need more frequent checks."
+        },
+        {
+          "q": "What does servicing include?",
+          "a": "Pressure testing, seal inspection, discharge mechanism check, and any necessary maintenance or refilling."
+        },
+        {
+          "q": "What if an extinguisher has lost pressure?",
+          "a": "We refill or replace the extinguisher as needed. Cost depends on the type and whether refilling is possible."
+        },
+        {
+          "q": "Do all extinguishers need the same service?",
+          "a": "Different types (powder, foam, water, CO2) require similar servicing. We service all types appropriately."
+        },
+        {
+          "q": "Will you replace damaged extinguishers?",
+          "a": "If an extinguisher is damaged beyond repair, we can arrange replacement with appropriate type for your hazards."
+        }
+      ],
+      "intro": {
+        "title": "Fire Extinguisher Servicing",
+        "body": "Professional inspection, testing, and maintenance of fire extinguishers ensuring they remain functional and compliant. Annual servicing is a legal requirement.",
+        "bullets": [
+          "Regulatory compliance and safety assurance",
+          "Pressure testing and functionality checks",
+          "Multiple equipment types serviced"
+        ]
+      }
+    },
+    {
+      "pageKey": "emergency-lighting-testing",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/emergency-lighting-testing-london/",
+      "heroTitle": "Emergency Lighting Testing and Servicing London",
+      "heroSubtitle": "Professional emergency lighting installation, testing, and maintenance. Ensure safe evacuation lighting during power loss or emergencies.",
+      "stats": [
+        "Safety lighting — Evacuation route illumination",
+        "Regular testing — Compliance and functionality",
+        "Professional documentation — Maintenance records",
+        "Battery and lamp checks — Full system assurance"
+      ],
+      "benefits": [
+        {
+          "title": "Safe Evacuation Lighting",
+          "body": "Emergency lighting provides critical illumination of exit routes when main power fails, enabling safe evacuation."
+        },
+        {
+          "title": "Regulatory Requirement",
+          "body": "Emergency lighting testing and certification is required for workplace safety and building regulations compliance."
+        },
+        {
+          "title": "Battery Functionality",
+          "body": "Regular testing ensures battery backup systems are charged and functional for reliable emergency operation."
+        },
+        {
+          "title": "Professional Maintenance",
+          "body": "Technician inspection of lamps, ballasts, batteries, and connections to identify any issues."
+        },
+        {
+          "title": "Compliance Documentation",
+          "body": "Test records and maintenance tags provide documentation of compliance for safety inspections."
+        },
+        {
+          "title": "System Reliability",
+          "body": "Properly maintained emergency lighting systems provide reliable illumination when needed most."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Emergency Lighting Testing",
+          "price": "Contact for quote",
+          "features": [
+            "Annual testing",
+            "Battery checks",
+            "Compliance documentation"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Lighting Inventory",
+          "body": "Identify all emergency lights, exit signs, and backup systems throughout the property."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Check lamps, fixtures, and connections for damage, corrosion, or deterioration affecting performance."
+        },
+        {
+          "num": 3,
+          "title": "Battery Testing",
+          "body": "Emergency light batteries tested to ensure proper charge and reliable backup when main power fails."
+        },
+        {
+          "num": 4,
+          "title": "Functional Testing",
+          "body": "Simulate power failure to verify emergency lights activate and provide adequate illumination."
+        },
+        {
+          "num": 5,
+          "title": "Documentation and Maintenance",
+          "body": "Service records and compliance documentation provided. Any faulty components identified and arranged for repair."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How often should emergency lighting be tested?",
+          "a": "Monthly manual testing is recommended. Professional servicing and full functional testing should occur annually."
+        },
+        {
+          "q": "What happens during a professional test?",
+          "a": "Technicians check lamp functionality, battery charge, backup system operation, and ensure adequate illumination levels."
+        },
+        {
+          "q": "What if emergency lights fail the test?",
+          "a": "Failed components are identified and require repair or replacement. We can arrange servicing to restore functionality."
+        },
+        {
+          "q": "Do all emergency lights need servicing?",
+          "a": "Yes, all emergency lighting should be tested and serviced professionally at least annually."
+        },
+        {
+          "q": "How long should emergency light batteries last?",
+          "a": "Batteries typically need replacement every 3-5 years depending on type and usage. Professional testing identifies replacement needs."
+        }
+      ],
+      "intro": {
+        "title": "Emergency Lighting Services",
+        "body": "Professional testing and maintenance of emergency lighting systems ensuring safe illumination of evacuation routes during emergencies or power loss.",
+        "bullets": [
+          "Exit route illumination and safety",
+          "Battery backup system assurance",
+          "Regulatory compliance documentation"
+        ]
+      }
+    },
+    {
+      "pageKey": "fire-door-certificate",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/fire-door-certificate-london/",
+      "heroTitle": "Fire Door Certificate and Inspection London",
+      "heroSubtitle": "Professional fire door testing and certification ensuring doors meet safety standards. Documentation that fire doors will function in emergency situations.",
+      "stats": [
+        "Safety verification — Fire door functionality",
+        "Professional testing — Comprehensive inspection",
+        "Certification documentation — Compliance records",
+        "Maintenance recommendations — Ongoing safety"
+      ],
+      "benefits": [
+        {
+          "title": "Fire Safety Verification",
+          "body": "Professional testing ensures fire doors will function properly to contain fire and smoke, protecting occupants and property."
+        },
+        {
+          "title": "Functionality Assurance",
+          "body": "Testing verifies hinges, closers, seals, and latching mechanisms function correctly and meet fire safety standards."
+        },
+        {
+          "title": "Compliance Documentation",
+          "body": "Certificate and inspection records provide proof of compliance with fire safety regulations and building standards."
+        },
+        {
+          "title": "Damage Identification",
+          "body": "Inspection identifies damage, wear, or maintenance issues affecting fire door performance."
+        },
+        {
+          "title": "Safety Recommendations",
+          "body": "Maintenance guidance provided to keep fire doors functioning properly throughout their lifespan."
+        },
+        {
+          "title": "Insurance Support",
+          "body": "Professional fire door certification supports insurance requirements and demonstrates commitment to fire safety."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Fire Door Certificate",
+          "price": "Contact for quote",
+          "features": [
+            "Professional inspection",
+            "Functional testing",
+            "Certification document"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Door Inventory",
+          "body": "Identify all fire doors, their locations, and last certification or maintenance dates."
+        },
+        {
+          "num": 2,
+          "title": "Visual Inspection",
+          "body": "Check door frames, hinges, seals, latches, and handles for damage or wear affecting performance."
+        },
+        {
+          "num": 3,
+          "title": "Functionality Testing",
+          "body": "Test door closing mechanism, sealing, and operation to ensure proper function in emergency situations."
+        },
+        {
+          "num": 4,
+          "title": "Maintenance Assessment",
+          "body": "Identify any repairs or maintenance needed to restore fire door to proper operating condition."
+        },
+        {
+          "num": 5,
+          "title": "Certification and Report",
+          "body": "Professional fire door certification provided with test results and maintenance recommendations."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a fire door certificate?",
+          "a": "A professional inspection and testing certificate verifying that fire doors meet safety standards and function properly."
+        },
+        {
+          "q": "How often should fire doors be tested?",
+          "a": "Annual testing is recommended. More frequent inspection may be needed in high-traffic or high-risk areas."
+        },
+        {
+          "q": "What makes a door a fire door?",
+          "a": "Fire doors are specifically constructed with fire-resistant materials, proper sealing, and latching mechanisms to contain fire and smoke."
+        },
+        {
+          "q": "What if the fire door doesn't close properly?",
+          "a": "Door closer or hinge repairs may be needed. We identify issues and can arrange repair through qualified contractors."
+        },
+        {
+          "q": "Are fire doors required in all properties?",
+          "a": "Building regulations typically require fire doors in specific locations such as between residential units or protecting escape routes."
+        }
+      ],
+      "intro": {
+        "title": "Fire Door Inspection and Certification",
+        "body": "Professional testing and certification of fire doors verifying they meet safety standards and will function properly during emergencies.",
+        "bullets": [
+          "Functionality and safety verification",
+          "Professional testing and inspection",
+          "Compliance certification documentation"
+        ]
+      }
+    },
+    {
+      "pageKey": "fra-asbestos-report",
+      "url": "https://londonsafetycertificate.co.uk/fire-safety-services-london/fire-risk-assessment-and-asbestos-report-london/",
+      "heroTitle": "Fire Risk Assessment and Asbestos Report Combined Service",
+      "heroSubtitle": "Comprehensive property safety assessment combining fire risk evaluation with asbestos identification. Complete documentation for compliance and hazard management.",
+      "stats": [
+        "Dual assessment — Fire and asbestos hazards",
+        "Comprehensive documentation — Complete safety records",
+        "Expert analysis — Qualified professionals",
+        "Action plans — Remedial guidance for both hazards"
+      ],
+      "benefits": [
+        {
+          "title": "Comprehensive Safety Assessment",
+          "body": "Combined assessment covers both fire safety and asbestos hazards in single visit, reducing disruption."
+        },
+        {
+          "title": "Cost Efficiency",
+          "body": "Combined service is more cost-effective than booking separate fire risk and asbestos assessments."
+        },
+        {
+          "title": "Integrated Documentation",
+          "body": "Single comprehensive report covering both hazard types with prioritized action plan."
+        },
+        {
+          "title": "Fire and Asbestos Risk Identification",
+          "body": "Expert assessment identifies both fire safety hazards and asbestos-containing materials requiring management."
+        },
+        {
+          "title": "Compliance Support",
+          "body": "Documentation supports compliance with fire safety regulations and asbestos management requirements."
+        },
+        {
+          "title": "Remedial Guidance",
+          "body": "Clear recommendations for addressing both fire safety and asbestos issues with timelines."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Fire Risk Assessment + Asbestos Report",
+          "price": "Contact for quote",
+          "features": [
+            "Dual assessment",
+            "Comprehensive report",
+            "Action plan included"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Property Overview",
+          "body": "Initial assessment of building structure, construction period, and materials used which informs asbestos likelihood."
+        },
+        {
+          "num": 2,
+          "title": "Fire Risk Inspection",
+          "body": "Comprehensive fire hazard assessment identifying sources, escape routes, and existing safety controls."
+        },
+        {
+          "num": 3,
+          "title": "Asbestos Assessment",
+          "body": "Survey for asbestos-containing materials in insulation, pipe wrapping, flooring, and other common locations."
+        },
+        {
+          "num": 4,
+          "title": "Risk Analysis",
+          "body": "Both fire and asbestos hazards evaluated for severity and prioritized by risk level."
+        },
+        {
+          "num": 5,
+          "title": "Comprehensive Report",
+          "body": "Integrated report documenting fire risks, asbestos findings, risk ratings, and prioritized action plan."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Why combine fire risk assessment with asbestos report?",
+          "a": "Combined assessment is efficient, cost-effective, and provides comprehensive safety documentation addressing multiple hazards."
+        },
+        {
+          "q": "What if asbestos is found?",
+          "a": "Report identifies asbestos locations and condition. Further testing or management decisions depend on type and condition."
+        },
+        {
+          "q": "Can you remove asbestos?",
+          "a": "Our assessment identifies asbestos. Removal requires specialized licensed contractors. We can recommend appropriate services."
+        },
+        {
+          "q": "How do fire safety and asbestos assessments differ?",
+          "a": "Fire assessment focuses on hazard and emergency response. Asbestos assessment identifies materials and exposure risk."
+        },
+        {
+          "q": "What happens if both high-risk fire and asbestos issues are found?",
+          "a": "Both are documented with prioritized recommendations. We guide you through addressing most critical issues first."
+        }
+      ],
+      "intro": {
+        "title": "Fire Risk Assessment and Asbestos Combined Service",
+        "body": "Comprehensive property hazard assessment combining fire risk evaluation with asbestos identification. Single integrated report documenting both safety concerns.",
+        "bullets": [
+          "Combined fire and asbestos assessment",
+          "Integrated comprehensive reporting",
+          "Prioritized remedial action planning"
+        ]
+      }
+    },
+    {
+      "pageKey": "asbestos-survey",
+      "url": "https://londonsafetycertificate.co.uk/asbestos-survey-london/",
+      "heroTitle": "Asbestos Survey and Report London",
+      "heroSubtitle": "Professional asbestos assessment and testing identifying asbestos-containing materials in properties. Expert analysis with guidance on safe management or removal.",
+      "stats": [
+        "£250 — Starting price for asbestos survey",
+        "Professional testing — Certified sample analysis",
+        "Expert identification — Asbestos-containing material detection",
+        "Management guidance — Safety and compliance recommendations"
+      ],
+      "benefits": [
+        {
+          "title": "Hazard Identification",
+          "body": "Professional survey identifies asbestos-containing materials in insulation, flooring, roofing, and other common locations."
+        },
+        {
+          "title": "Laboratory Testing",
+          "body": "Samples sent to certified laboratories for professional analysis confirming presence or absence of asbestos fibers."
+        },
+        {
+          "title": "Compliance Documentation",
+          "body": "Professional report provides documentation needed for property management, sale, or regulatory compliance."
+        },
+        {
+          "title": "Risk Assessment",
+          "body": "Evaluation of identified asbestos condition and exposure risk to determine if removal or safe management is needed."
+        },
+        {
+          "title": "Management Guidance",
+          "body": "Clear recommendations on whether asbestos can be safely managed in-place or requires professional removal."
+        },
+        {
+          "title": "Safety Information",
+          "body": "Expert guidance on asbestos safety, health risks, and proper handling of any identified materials."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Asbestos Survey",
+          "price": "From £250",
+          "features": [
+            "Professional assessment",
+            "Sample testing",
+            "Detailed report"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Property Assessment",
+          "body": "Professional surveyor inspects property identifying locations where asbestos-containing materials are commonly found."
+        },
+        {
+          "num": 2,
+          "title": "Sample Collection",
+          "body": "Suspected asbestos-containing materials carefully sampled following safety protocols and industry standards."
+        },
+        {
+          "num": 3,
+          "title": "Laboratory Analysis",
+          "body": "Samples sent to certified laboratory for professional testing and analysis confirming asbestos presence."
+        },
+        {
+          "num": 4,
+          "title": "Risk Evaluation",
+          "body": "Location, condition, and accessibility of identified asbestos evaluated to determine exposure risk."
+        },
+        {
+          "num": 5,
+          "title": "Management Report",
+          "body": "Professional report documenting findings and recommending whether safe management or removal is appropriate."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much does an asbestos survey cost?",
+          "a": "Survey cost starts from £250 depending on property size and number of samples tested."
+        },
+        {
+          "q": "What's the difference between management and removal?",
+          "a": "Management means leaving asbestos in place if it's in good condition and undisturbed. Removal means hiring licensed contractors to safely extract it."
+        },
+        {
+          "q": "Is asbestos dangerous if it's not disturbed?",
+          "a": "Asbestos-containing materials in good condition pose low risk if left undisturbed. Risk increases if damaged or if materials are friable (easily crumbled)."
+        },
+        {
+          "q": "Can I remove asbestos myself?",
+          "a": "Professional licensed removal contractors must handle asbestos removal. DIY removal risks dangerous fiber exposure."
+        },
+        {
+          "q": "Will you recommend removal contractors?",
+          "a": "We focus on assessment and identification. We can provide guidance and recommend licensed professionals for any removal needed."
+        }
+      ],
+      "intro": {
+        "title": "Professional Asbestos Survey Service",
+        "body": "Expert identification and testing of asbestos-containing materials in properties. Professional analysis with guidance on safe management or removal options.",
+        "bullets": [
+          "Identification of asbestos-containing materials",
+          "Laboratory testing and analysis",
+          "Management and removal guidance"
+        ]
+      }
+    },
+    {
+      "pageKey": "epc-certificate",
+      "url": "https://londonsafetycertificate.co.uk/epc-certificate-london/",
+      "heroTitle": "Energy Performance Certificate (EPC) London",
+      "heroSubtitle": "Professional EPC assessments for property sales and lettings. Energy efficiency ratings and recommendations for improving property performance.",
+      "stats": [
+        "£59.99 — Starting price for EPC certificates",
+        "Energy rating — A to G efficiency classification",
+        "Valid 10 years — Long-term energy documentation",
+        "Legally required — Mandatory for property sales/lettings"
+      ],
+      "benefits": [
+        {
+          "title": "Legal Requirement",
+          "body": "EPC certificate is mandatory for property sales and lettings. Professional assessment ensures compliance."
+        },
+        {
+          "title": "Energy Efficiency Rating",
+          "body": "Clear A-G rating system showing property energy efficiency compared to other similar properties."
+        },
+        {
+          "title": "Cost Transparency",
+          "body": "Rating gives buyers/tenants clear indication of likely energy bills and heating/cooling costs."
+        },
+        {
+          "title": "Improvement Recommendations",
+          "body": "Practical suggestions for improving energy efficiency ranging from low-cost to major renovation measures."
+        },
+        {
+          "title": "Property Value Impact",
+          "body": "Better energy ratings can improve property appeal and value. Report identifies cost-effective improvements."
+        },
+        {
+          "title": "Fast Turnaround",
+          "body": "Professional assessment completed quickly with digital certificate ready for property transactions."
+        }
+      ],
+      "pricing": [
+        {
+          "label": "Energy Performance Certificate",
+          "price": "From £59.99",
+          "features": [
+            "Professional assessment",
+            "Energy rating report",
+            "10-year validity"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "num": 1,
+          "title": "Property Details",
+          "body": "Provide property information including type, construction, heating system, and insulation specifications."
+        },
+        {
+          "num": 2,
+          "title": "Professional Assessment",
+          "body": "Qualified assessor evaluates property construction, heating systems, insulation, and windows for energy performance."
+        },
+        {
+          "num": 3,
+          "title": "Data Analysis",
+          "body": "Assessment data analyzed using standard methodology to determine energy efficiency rating."
+        },
+        {
+          "num": 4,
+          "title": "Rating Calculation",
+          "body": "Energy performance rating calculated (A-G scale) based on assessed characteristics and efficiency."
+        },
+        {
+          "num": 5,
+          "title": "Report Delivery",
+          "body": "Digital EPC report provided with energy rating, improvement recommendations, and valid for 10 years."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is an EPC and why is it needed?",
+          "a": "EPC (Energy Performance Certificate) shows property energy efficiency rating (A-G). It's legally required for property sales and rentals."
+        },
+        {
+          "q": "How long is an EPC valid?",
+          "a": "EPC certificates are valid for 10 years from issue date. You may need a new one if selling or letting after 10 years."
+        },
+        {
+          "q": "What affects the energy rating?",
+          "a": "Construction type, insulation, heating system type, window type, ventilation, and other energy-related features."
+        },
+        {
+          "q": "Can I improve my energy rating?",
+          "a": "Yes, recommendations in the report suggest improvements from simple (sealing draughts) to major (insulation upgrades)."
+        },
+        {
+          "q": "How quickly can I get my EPC?",
+          "a": "Assessment takes 30-60 minutes depending on property size. Digital certificate usually issued same day."
+        }
+      ],
+      "intro": {
+        "title": "Energy Performance Certificate (EPC) Service",
+        "body": "Professional energy efficiency assessment providing A-G rating for property. Legally required for sales and lettings with recommendations for efficiency improvements.",
+        "bullets": [
+          "Legal requirement for property transactions",
+          "Energy efficiency rating (A-G scale)",
+          "Improvement recommendations included"
+        ]
+      }
+    }
+  ]
+}

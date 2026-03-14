@@ -851,3 +851,280 @@ export const COMM_FIRE_DOOR = {
   faqs: FIRE_DOOR_FAQS,
   cta: 'Book a Commercial Fire Door Inspection Certificate Today!',
 };
+
+// ══════════════════════════════════════════════════════════════
+// FIRE SAFETY CHECK
+// ══════════════════════════════════════════════════════════════
+export const FIRE_SAFETY_CHECK = {
+  hero: {
+    title: 'Fire Safety Certificate Check London',
+    subtitle: 'Professional fire safety inspections and certificates for residential properties. Document that your property meets fire safety standards with expert assessment.',
+    price: 'From £69.99',
+    ctaText: 'Book Now',
+    ctaTo: '/book-now',
+    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+  },
+  stats: [
+    { value: '£69.99', label: 'Starting Price' },
+    { value: 'Comprehensive', label: 'Property Assessment' },
+    { value: 'Clear', label: 'Recommendations' },
+    { value: 'Insurance', label: 'Compatible' },
+  ],
+  intro: {
+    title: 'Fire Safety Certificate Service',
+    body: 'Professional fire safety assessment documenting that your property meets fire safety standards. Our inspections identify fire hazards and provide clear recommendations for improving safety without requiring major property modifications.',
+    checklist: [
+      'Comprehensive property fire hazard assessment',
+      'Clear recommendations for safety improvements',
+      'Insurance and compliance documentation',
+      'Professional certificate issued on completion',
+    ],
+    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    imgAlt: 'Fire safety inspection',
+    imgRight: true,
+  },
+  benefits: {
+    label: 'FIRE SAFETY BENEFITS',
+    title: 'Why Professional Fire Safety Checks Matter',
+    items: [
+      {
+        icon: 'bi-exclamation-triangle-fill',
+        title: 'Hazard Identification',
+        body: 'Professional assessment identifies fire hazards such as blocked exits, missing fire barriers, or inadequate escape routes that may not be obvious.',
+      },
+      {
+        icon: 'bi-shield-fill-check',
+        title: 'Insurance Compliance',
+        body: 'Fire safety certificates support insurance requirements and demonstrate your commitment to property safety compliance.',
+      },
+      {
+        icon: 'bi-file-earmark-check',
+        title: 'Regulatory Alignment',
+        body: 'Assessment checks alignment with fire safety regulations and building standards for residential properties.',
+      },
+      {
+        icon: 'bi-lightbulb-fill',
+        title: 'Practical Recommendations',
+        body: 'Clear, actionable recommendations to improve fire safety without requiring expensive major property modifications.',
+      },
+    ],
+  },
+  pricing: {
+    title: 'Fire Safety Check Pricing',
+    body: 'Competitive transparent pricing for professional fire safety inspections.',
+    prices: [
+      {
+        label: 'Fire Safety Certificate',
+        price: '£69.99',
+        features: [
+          'Professional assessment',
+          'Comprehensive inspection',
+          'Safety recommendations',
+          'Digital certificate',
+        ],
+      },
+    ],
+  },
+  process: {
+    label: 'HOW IT WORKS',
+    title: 'Fire Safety Check Process',
+    steps: [
+      {
+        icon: 'bi-search',
+        title: 'Property Assessment',
+        body: 'Professional inspector conducts thorough walkthrough of your property assessing fire hazards and safety features.',
+      },
+      {
+        icon: 'bi-door-open',
+        title: 'Exit Routes Inspection',
+        body: 'Evaluation of escape routes, exit doors, stairwells, and accessibility to ensure occupants can evacuate safely.',
+      },
+      {
+        icon: 'bi-fire',
+        title: 'Fire Prevention Features',
+        body: 'Check of fire extinguishers, alarm systems, emergency lighting, smoke detection, and fire-resistant materials.',
+      },
+      {
+        icon: 'bi-file-earmark-check-fill',
+        title: 'Certificate & Recommendations',
+        body: 'You receive fire safety certificate with clear recommendations for improving safety compliance and risk reduction.',
+      },
+    ],
+  },
+  related: [
+    {
+      icon: 'bi-exclamation-diamond',
+      title: 'Fire Risk Assessment',
+      body: 'Comprehensive FRA with detailed hazard analysis and prioritized action plans for fire safety improvements.',
+      to: '/fire/residential-fra',
+    },
+    {
+      icon: 'bi-lightning-fill',
+      title: 'Emergency Lighting',
+      body: 'Installation and certification of emergency lighting systems for safe evacuation.',
+      to: '/fire/residential-emergency-lights',
+    },
+    {
+      icon: 'bi-bell-fill',
+      title: 'Fire Alarm Certificate',
+      body: 'Professional fire alarm system testing and certification for residential properties.',
+      to: '/fire/residential-fire-alarm',
+    },
+  ],
+  faqs: [
+    {
+      q: 'What does a fire safety check include?',
+      a: 'Assessment of fire hazards, exit routes, emergency lighting, fire extinguishers, alarms, smoke detection, and escape route accessibility.',
+    },
+    {
+      q: 'Why do I need a fire safety certificate?',
+      a: 'Fire safety certificates document that your property has been professionally assessed. Insurance companies often require them for coverage.',
+    },
+    {
+      q: 'What happens if fire safety issues are found?',
+      a: 'Issues are documented with recommendations for improvement. Simple fixes like clearing exit blockages can often be resolved immediately.',
+    },
+    {
+      q: 'Do I need fire safety checks every year?',
+      a: 'For residential properties, periodic checks are recommended. We can advise on appropriate frequency based on your property and circumstances.',
+    },
+    {
+      q: 'Is the inspection non-invasive?',
+      a: 'Yes, fire safety assessments are completely non-invasive. We inspect without causing damage or disruption to your property.',
+    },
+  ],
+  cta: 'Get Your Fire Safety Certificate Today',
+};
+
+// ══════════════════════════════════════════════════════════════
+// FIRE RISK ASSESSMENT & ASBESTOS REPORT
+// ══════════════════════════════════════════════════════════════
+export const FIRE_RISK_ASBESTOS = {
+  hero: {
+    title: 'Fire Risk Assessment and Asbestos Report Combined Service',
+    subtitle: 'Comprehensive property safety assessment combining fire risk evaluation with asbestos identification. Complete documentation for compliance and hazard management.',
+    price: 'Contact for Quote',
+    ctaText: 'Get a Quote',
+    ctaTo: '/book-now',
+    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+  },
+  stats: [
+    { value: 'Dual', label: 'Assessment Service' },
+    { value: 'Complete', label: 'Safety Documentation' },
+    { value: 'Expert', label: 'Analysis' },
+    { value: 'Action', label: 'Plans Provided' },
+  ],
+  intro: {
+    title: 'Fire Risk Assessment and Asbestos Combined Service',
+    body: 'Comprehensive property hazard assessment combining fire risk evaluation with asbestos identification. A single integrated report documenting both safety concerns provides cost-effective compliance coverage for your property.',
+    checklist: [
+      'Combined fire and asbestos assessment',
+      'Integrated comprehensive reporting',
+      'Prioritized remedial action planning',
+      'Single site visit reduces disruption',
+    ],
+    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    imgAlt: 'Property assessment and inspection',
+    imgRight: false,
+  },
+  benefits: {
+    label: 'COMBINED ASSESSMENT BENEFITS',
+    title: 'Fire Risk and Asbestos Assessment',
+    items: [
+      {
+        icon: 'bi-check-circle-fill',
+        title: 'Comprehensive Safety Assessment',
+        body: 'Combined assessment covers both fire safety and asbestos hazards in a single visit, reducing disruption and providing complete documentation.',
+      },
+      {
+        icon: 'bi-currency-pound',
+        title: 'Cost Efficiency',
+        body: 'Combined service is significantly more cost-effective than booking separate fire risk and asbestos assessments at different times.',
+      },
+      {
+        icon: 'bi-file-earmark',
+        title: 'Integrated Documentation',
+        body: 'Single comprehensive report covering both hazard types with prioritized action plan addressing fire and asbestos risks.',
+      },
+      {
+        icon: 'bi-lightbulb-fill',
+        title: 'Risk Identification',
+        body: 'Expert assessment identifies both fire safety hazards and asbestos-containing materials requiring management or remediation.',
+      },
+    ],
+  },
+  process: {
+    label: 'HOW IT WORKS',
+    title: 'Combined Assessment Process',
+    steps: [
+      {
+        icon: 'bi-building',
+        title: 'Property Overview',
+        body: 'Initial assessment of building structure, construction period, and materials which informs asbestos likelihood and fire risk profile.',
+      },
+      {
+        icon: 'bi-fire',
+        title: 'Fire Risk Inspection',
+        body: 'Comprehensive fire hazard assessment identifying sources, escape routes, and existing safety controls throughout the property.',
+      },
+      {
+        icon: 'bi-exclamation-triangle',
+        title: 'Asbestos Assessment',
+        body: 'Survey for asbestos-containing materials in insulation, pipe wrapping, flooring, and other common locations within the building.',
+      },
+      {
+        icon: 'bi-graph-up',
+        title: 'Risk Analysis',
+        body: 'Both fire and asbestos hazards evaluated for severity and prioritized by risk level for action planning.',
+      },
+      {
+        icon: 'bi-file-earmark-check',
+        title: 'Comprehensive Report',
+        body: 'Integrated report documenting fire risks, asbestos findings, risk ratings, and prioritized action plan for both hazards.',
+      },
+    ],
+  },
+  related: [
+    {
+      icon: 'bi-exclamation-diamond',
+      title: 'Fire Risk Assessment',
+      body: 'Standalone Fire Risk Assessment with detailed hazard analysis and action planning.',
+      to: '/fire/residential-fra',
+    },
+    {
+      icon: 'bi-warning',
+      title: 'Asbestos Survey',
+      body: 'Detailed asbestos identification and testing with professional guidance on management.',
+      to: '/book-now',
+    },
+    {
+      icon: 'bi-shield-fill-check',
+      title: 'Fire Safety Check',
+      body: 'Professional fire safety inspection and certification for residential properties.',
+      to: '/fire/fire-safety-check',
+    },
+  ],
+  faqs: [
+    {
+      q: 'Why combine fire risk assessment with asbestos report?',
+      a: 'Combined assessment is efficient and cost-effective, providing comprehensive safety documentation addressing multiple hazards in a single property visit.',
+    },
+    {
+      q: 'What if asbestos is found?',
+      a: 'Report identifies asbestos locations and condition. Further testing or management decisions depend on type and current condition of materials.',
+    },
+    {
+      q: 'Can you remove asbestos?',
+      a: 'Our assessment identifies asbestos locations and condition. Removal requires specialized licensed contractors. We can recommend appropriate removal services.',
+    },
+    {
+      q: 'How do fire safety and asbestos assessments differ?',
+      a: 'Fire assessment focuses on hazard identification and emergency response. Asbestos assessment identifies materials and evaluates exposure risk.',
+    },
+    {
+      q: 'What if multiple high-risk issues are found?',
+      a: 'Both hazards are documented with recommendations prioritized by risk level. We guide you through addressing critical issues first.',
+    },
+  ],
+  cta: 'Schedule Your Combined Fire Risk and Asbestos Assessment',
+};

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF, ADDRESS, COMPANY_NUM } from '../../data/constants';
+import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF, ADDRESS, COMPANY_NUM, WHATSAPP } from '../../data/constants';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="row g-5">
 
           {/* Brand */}
-          <div className="col-lg-4">
+          <div className="col-lg-3">
             <Link to="/">
               <img src="/images/mnc-energy-logo.png" alt="MNC Energy" className="footer-logo-img" />
             </Link>
@@ -28,38 +28,55 @@ export default function Footer() {
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <i className="bi bi-linkedin"></i>
               </a>
+              <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <i className="bi bi-whatsapp"></i>
+              </a>
             </div>
           </div>
 
-          {/* Quick links */}
+          {/* Electrical & Gas */}
           <div className="col-lg-2 col-6">
-            <div className="footer-title">Quick Links</div>
+            <div className="footer-title">Electrical</div>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/electrical">Electrical</Link></li>
-              <li><Link to="/gas">Gas Services</Link></li>
-              <li><Link to="/fire">Fire Services</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
-              <li><Link to="/book-now">Book Now</Link></li>
+              <li><Link to="/electrical/residential-eicr">EICR Certificate</Link></li>
+              <li><Link to="/electrical/commercial-eicr">Commercial EICR</Link></li>
+              <li><Link to="/electrical/fault-finding">Fault Finding</Link></li>
+              <li><Link to="/electrical/residential-fuse-box">Fuse Box Installation</Link></li>
+              <li><Link to="/electrical/pat-testing">PAT Testing</Link></li>
+            </ul>
+            <div className="footer-title mt-4">Gas</div>
+            <ul className="footer-links">
+              <li><Link to="/gas/landlord-gas-safety">Gas Safety Certificate</Link></li>
+              <li><Link to="/gas/commercial-gas-safety">Commercial Gas Safety</Link></li>
+              <li><Link to="/gas/boiler-installation">Boiler Installation</Link></li>
+              <li><Link to="/gas/boiler-repair">Boiler Repair</Link></li>
+              <li><Link to="/gas/gas-engineer">Gas Engineer</Link></li>
+              <li><Link to="/gas/commercial-gas-engineer">Commercial Gas Engineer</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Fire Safety */}
           <div className="col-lg-3 col-6">
-            <div className="footer-title">Our Services</div>
+            <div className="footer-title">Fire Safety</div>
             <ul className="footer-links">
-              <li><Link to="/gas/landlord-gas-safety">Gas Safety Certificate</Link></li>
-              <li><Link to="/electrical/residential-eicr">EICR Certificate</Link></li>
+              <li><Link to="/fire/fire-safety-check">Fire Safety Check</Link></li>
               <li><Link to="/fire/residential-fra">Fire Risk Assessment</Link></li>
+              <li><Link to="/fire/commercial-fra">Commercial Fire Risk Assessment</Link></li>
+              <li><Link to="/fire/residential-fire-alarm">Fire Alarm Certificate</Link></li>
+              <li><Link to="/fire/fire-extinguisher">Fire Extinguisher Inspection</Link></li>
+              <li><Link to="/fire/residential-emergency-lights">Emergency Lighting Testing</Link></li>
+              <li><Link to="/fire/residential-fire-door">Fire Door Certificate</Link></li>
+              <li><Link to="/fire/fire-risk-asbestos">Fire Risk & Asbestos Report</Link></li>
+            </ul>
+            <div className="footer-title mt-4">More Services</div>
+            <ul className="footer-links">
               <li><Link to="/asbestos/residential">Asbestos Survey</Link></li>
               <li><Link to="/epc/residential">EPC Certificate</Link></li>
-              <li><Link to="/electrical/residential-fuse-box">Fuse Box Replacement</Link></li>
             </ul>
           </div>
 
           {/* Contact info */}
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <div className="footer-title">Get In Touch</div>
             <div className="footer-contact-list">
               <a href={PHONE_HREF} className="footer-contact-item">
@@ -74,12 +91,21 @@ export default function Footer() {
                 <i className="bi bi-geo-alt-fill"></i>
                 <span>{ADDRESS}</span>
               </div>
+              <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" className="footer-contact-item">
+                <i className="bi bi-whatsapp"></i>
+                <span>WhatsApp Us</span>
+              </a>
             </div>
             <div className="footer-certs mt-3">
               <span className="cert-badge" title="Gas Safe Registered">GAS SAFE</span>
               <span className="cert-badge" title="NICEIC Approved">NICEIC</span>
               <span className="cert-badge" title="NAPIT Certified">NAPIT</span>
               <span className="cert-badge" title="BAFE Registered">BAFE</span>
+            </div>
+            <div className="mt-4">
+              <Link to="/book-now" className="btn-green d-inline-flex">
+                <i className="bi bi-calendar-check me-2"></i>Book Now
+              </Link>
             </div>
           </div>
         </div>
@@ -88,6 +114,7 @@ export default function Footer() {
         <div className="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
           <span>© {year} MNC Energy Ltd. Company No: {COMPANY_NUM}. All Rights Reserved.</span>
           <span>
+            <Link to="/faqs">FAQs</Link>
             <a href="#">Terms &amp; Conditions</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Cookie Policy</a>
