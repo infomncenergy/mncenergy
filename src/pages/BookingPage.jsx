@@ -6,34 +6,31 @@ import { PHONE, PHONE_HREF, WHATSAPP } from '../data/constants';
 import { API_URL }  from '../config/api';
 
 const SERVICES = [
-  { group: 'Electrical Certificates', options: [
-    'EICR (Residential)',
-    'EIC Certificate (Residential)',
-    'Fuse Box Replacement (Residential)',
-    'EICR (Commercial)',
-    'EIC Certificate (Commercial)',
-    'Fuse Box Replacement (Commercial)',
+  { group: 'Electrical', icon: 'bi-lightning-charge-fill', options: [
+    'EICR Certificate (Residential)',
+    'EICR Certificate (Commercial)',
+    'Consumer Unit / Fuse Box Upgrade',
+    'PAT Testing',
+    'Electrical Fault Finding',
   ]},
-  { group: 'Gas Services', options: [
+  { group: 'Gas Services', icon: 'bi-fire', options: [
     'Landlord Gas Safety Certificate (CP12)',
-    'Homeowner Gas Safety Check',
+    'Commercial Gas Safety Certificate',
     'Boiler Service',
-    'Commercial Gas Safety (CP15)',
-    'Gas Installation Testing (CP16)',
-    'Gas Safety Report (CP17)',
-    'Catering Gas Safety (CP42)',
+    'Boiler Installation',
+    'Boiler Repair',
   ]},
-  { group: 'Fire Services', options: [
+  { group: 'Fire Safety', icon: 'bi-shield-fill-check', options: [
     'Fire Risk Assessment (Residential)',
-    'Emergency Lights Certificate (Residential)',
-    'Fire Alarm Certificate (Residential)',
-    'Fire Door Inspection (Residential)',
     'Fire Risk Assessment (Commercial)',
-    'Emergency Lights Certificate (Commercial)',
+    'Fire Alarm Certificate (Residential)',
     'Fire Alarm Certificate (Commercial)',
-    'Fire Door Inspection (Commercial)',
+    'Emergency Lights Certificate (Residential)',
+    'Emergency Lights Certificate (Commercial)',
+    'Fire Door Inspection',
+    'Fire Extinguisher Servicing',
   ]},
-  { group: 'Asbestos & EPC', options: [
+  { group: 'Asbestos & EPC', icon: 'bi-clipboard-check', options: [
     'Residential Asbestos Survey',
     'Commercial Asbestos Survey',
     'Residential EPC',
@@ -220,12 +217,7 @@ export default function BookingPage() {
                                   className={`booking-service-card${form.service === opt ? ' selected' : ''}`}
                                   onClick={() => update('service', opt)}
                                 >
-                                  <i className={`bi ${
-                                    group.group === 'Electrical Certificates' ? 'bi-lightning-charge-fill' :
-                                    group.group === 'Gas Services'            ? 'bi-fire' :
-                                    group.group === 'Fire Services'           ? 'bi-bell-fill' :
-                                    'bi-clipboard-check'
-                                  } me-2`}></i>
+                                  <i className={`bi ${group.icon || 'bi-clipboard-check'} me-2`}></i>
                                   {opt}
                                   {form.service === opt && <i className="bi bi-check-circle-fill ms-auto"></i>}
                                 </div>
@@ -410,7 +402,7 @@ export default function BookingPage() {
                         <div className="form-check">
                           <input className="form-check-input" type="checkbox" id="privacy" required />
                           <label className="form-check-label text-muted" htmlFor="privacy">
-                            I agree to the <Link to="/" className="text-success">Privacy Policy</Link> and consent to being contacted regarding my booking.
+                            I agree to the <Link to="/" style={{ color: 'var(--accent2)' }}>Privacy Policy</Link> and consent to being contacted regarding my booking.
                           </label>
                         </div>
                       </div>

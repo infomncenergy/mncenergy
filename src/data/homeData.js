@@ -26,47 +26,44 @@ export const WHY_ITEMS = [
 export const SERVICES = [
   {
     icon: "bi-lightning-charge-fill",
-    title: "EICR Certificate",
-    desc: "Ensure Electrical Safety: Meet BS7671 standards with certified inspections. Identify and resolve potential electrical risks.",
+    title: "Electrical Services",
+    desc: "EICR certificates, consumer unit upgrades, PAT testing, and fault finding by NICEIC-approved engineers across London & M25.",
     links: [
-      { label: "Commercial EICR",   to: "/electrical/commercial-eicr" },
-      { label: "Residential EICR",  to: "/electrical/residential-eicr" },
+      { label: "EICR Certificate",    to: "/electrical/residential-eicr" },
+      { label: "PAT Testing",         to: "/electrical/pat-testing" },
+      { label: "Fault Finding",       to: "/electrical/fault-finding" },
+      { label: "Fuse Box Upgrade",    to: "/electrical/residential-fuse-box" },
     ],
   },
   {
     icon: "bi-fire",
-    title: "Gas Safety Certificate",
-    desc: "Landlord Compliance Simplified: Fulfil your legal safety obligations. Protect tenants with expert gas safety checks.",
+    title: "Gas Services",
+    desc: "Landlord gas safety certificates, boiler service, installation, and repair by Gas Safe registered engineers.",
     links: [
-      { label: "Commercial Gas Cert",   to: "/gas/commercial-boiler-cp15" },
-      { label: "Residential Gas Cert",  to: "/gas/landlord-gas-safety" },
+      { label: "Landlord Gas Safety (CP12)", to: "/gas/landlord-gas-safety" },
+      { label: "Commercial Gas Safety",      to: "/gas/commercial-gas-safety" },
+      { label: "Boiler Service",             to: "/gas/boiler-service" },
+      { label: "Boiler Installation",        to: "/gas/boiler-installation" },
     ],
   },
   {
-    icon: "bi-shield-fill-exclamation",
+    icon: "bi-shield-fill-check",
     title: "Fire Safety Services",
-    desc: "Comprehensive fire risk assessments, alarm testing, emergency lighting, and fire door inspections for all property types.",
+    desc: "Fire risk assessments, alarm certification, emergency lighting, fire door inspection, and extinguisher servicing.",
     links: [
-      { label: "Fire Risk Assessment", to: "/fire/residential-fra" },
-      { label: "Commercial FRA",       to: "/fire/commercial-fra" },
+      { label: "Fire Risk Assessment",    to: "/fire/residential-fra" },
+      { label: "Fire Alarm Certificate",  to: "/fire/residential-fire-alarm" },
+      { label: "Emergency Lights",        to: "/fire/residential-emergency-lights" },
+      { label: "Fire Extinguisher",       to: "/fire/fire-extinguisher" },
     ],
   },
   {
     icon: "bi-radioactive",
     title: "Asbestos Survey",
-    desc: "Protect your property and occupants with professional asbestos surveys and management plans from accredited surveyors.",
+    desc: "Professional asbestos surveys and management plans for residential and commercial properties by accredited surveyors.",
     links: [
-      { label: "Residential", to: "/asbestos/residential" },
-      { label: "Commercial",  to: "/asbestos/commercial" },
-    ],
-  },
-  {
-    icon: "bi-plug-fill",
-    title: "EIC Certificate",
-    desc: "Electrical Installation Certificates for new installations and alterations, ensuring your work meets current wiring regulations.",
-    links: [
-      { label: "Residential EIC", to: "/electrical/residential-eic" },
-      { label: "Commercial EIC",  to: "/electrical/commercial-eic" },
+      { label: "Residential Survey", to: "/asbestos/residential" },
+      { label: "Commercial Survey",  to: "/asbestos/commercial" },
     ],
   },
   {

@@ -1570,3 +1570,32 @@ a { text-decoration: none; }
 
 /* reviews-v2 rating block */
 .reviews-v2__rating-block { display: flex; align-items: center; gap: 14px; justify-content: flex-end; }
+
+/* ── Disabled button states ───────────────────────────────────────────── */
+.btn-green:disabled,
+.btn-green[disabled],
+.btn-purple:disabled,
+.btn-purple[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+  pointer-events: auto; /* keep so cursor shows */
+}
+.btn-outline-green:disabled,
+.btn-outline-green[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Booking service card — stronger selected state */
+.booking-service-card.selected {
+  background: rgba(107,47,160,0.18) !important;
+  border-color: rgba(180,138,255,0.6) !important;
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 0 0 1px rgba(107,47,160,0.3) !important;
+}
+.booking-service-card.selected i.bi-check-circle-fill {
+  color: var(--accent2);
+}

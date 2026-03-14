@@ -16,19 +16,19 @@ export const NAV_ITEMS = [
     path: "/electrical",
     columns: [
       {
-        title: "Residential",
+        title: "Certificates",
         items: [
-          { label: "EICR Certificate",      path: "/electrical/residential-eicr" },
-          { label: "EIC Certificate",       path: "/electrical/residential-eic" },
-          { label: "Fuse Box Replacement",  path: "/electrical/residential-fuse-box" },
+          { label: "EICR Certificate (Residential)",  path: "/electrical/residential-eicr" },
+          { label: "EICR Certificate (Commercial)",   path: "/electrical/commercial-eicr" },
+          { label: "Consumer Unit / Fuse Box",        path: "/electrical/residential-fuse-box" },
         ],
       },
       {
-        title: "Commercial",
+        title: "Other Electrical",
         items: [
-          { label: "EICR Certificate",      path: "/electrical/commercial-eicr" },
-          { label: "EIC Certificate",       path: "/electrical/commercial-eic" },
-          { label: "Fuse Box Replacement",  path: "/electrical/commercial-fuse-box" },
+          { label: "PAT Testing",                     path: "/electrical/pat-testing" },
+          { label: "Electrical Fault Finding",        path: "/electrical/fault-finding" },
+          { label: "Commercial Fuse Box",             path: "/electrical/commercial-fuse-box" },
         ],
       },
     ],
@@ -38,20 +38,18 @@ export const NAV_ITEMS = [
     path: "/gas",
     columns: [
       {
-        title: "Residential",
+        title: "Gas Certificates",
         items: [
           { label: "Landlord Gas Safety (CP12)", path: "/gas/landlord-gas-safety" },
-          { label: "Homeowner Gas Safety",       path: "/gas/homeowner-gas-safety" },
-          { label: "Boiler Service",             path: "/gas/boiler-service" },
+          { label: "Commercial Gas Safety",      path: "/gas/commercial-gas-safety" },
         ],
       },
       {
-        title: "Commercial",
+        title: "Boiler Services",
         items: [
-          { label: "Commercial Boiler (CP15)",   path: "/gas/commercial-boiler-cp15" },
-          { label: "Installation Testing (CP16)",path: "/gas/commercial-installation-cp16" },
-          { label: "Safety Report (CP17)",       path: "/gas/commercial-safety-report-cp17" },
-          { label: "Catering Gas Safety (CP42)", path: "/gas/commercial-catering-cp42" },
+          { label: "Boiler Service",             path: "/gas/boiler-service" },
+          { label: "Boiler Installation",        path: "/gas/boiler-installation" },
+          { label: "Boiler Repair",              path: "/gas/boiler-repair" },
         ],
       },
     ],
@@ -63,37 +61,42 @@ export const NAV_ITEMS = [
       {
         title: "Residential",
         items: [
-          { label: "Fire Risk Assessment",   path: "/fire/residential-fra" },
-          { label: "Emergency Lights",       path: "/fire/residential-emergency-lights" },
-          { label: "Fire Alarm Certificate", path: "/fire/residential-fire-alarm" },
-          { label: "Fire Door Inspection",   path: "/fire/residential-fire-door" },
+          { label: "Fire Risk Assessment",        path: "/fire/residential-fra" },
+          { label: "Emergency Lights",            path: "/fire/residential-emergency-lights" },
+          { label: "Fire Alarm Certificate",      path: "/fire/residential-fire-alarm" },
+          { label: "Fire Door Inspection",        path: "/fire/residential-fire-door" },
         ],
       },
       {
         title: "Commercial",
         items: [
-          { label: "Fire Risk Assessment",   path: "/fire/commercial-fra" },
-          { label: "Emergency Lights",       path: "/fire/commercial-emergency-lights" },
-          { label: "Fire Alarm Certificate", path: "/fire/commercial-fire-alarm" },
-          { label: "Fire Door Inspection",   path: "/fire/commercial-fire-door" },
+          { label: "Fire Risk Assessment",        path: "/fire/commercial-fra" },
+          { label: "Emergency Lights",            path: "/fire/commercial-emergency-lights" },
+          { label: "Fire Alarm Certificate",      path: "/fire/commercial-fire-alarm" },
+          { label: "Fire Door Inspection",        path: "/fire/commercial-fire-door" },
+          { label: "Fire Extinguisher Servicing", path: "/fire/fire-extinguisher" },
         ],
       },
     ],
   },
   {
-    label: "Asbestos",
+    label: "Asbestos & EPC",
     path: "/asbestos",
     columns: [
-      { title: "Residential", items: [{ label: "Residential Asbestos Survey", path: "/asbestos/residential" }] },
-      { title: "Commercial",  items: [{ label: "Commercial Asbestos Survey",  path: "/asbestos/commercial" }] },
-    ],
-  },
-  {
-    label: "EPC",
-    path: "/epc",
-    columns: [
-      { title: "Residential", items: [{ label: "Residential EPC", path: "/epc/residential" }] },
-      { title: "Commercial",  items: [{ label: "Commercial EPC",  path: "/epc/commercial" }] },
+      {
+        title: "Asbestos Survey",
+        items: [
+          { label: "Residential Asbestos Survey", path: "/asbestos/residential" },
+          { label: "Commercial Asbestos Survey",  path: "/asbestos/commercial" },
+        ],
+      },
+      {
+        title: "EPC Certificate",
+        items: [
+          { label: "Residential EPC", path: "/epc/residential" },
+          { label: "Commercial EPC",  path: "/epc/commercial" },
+        ],
+      },
     ],
   },
 ];

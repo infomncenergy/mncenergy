@@ -15,20 +15,18 @@ import ContactPage from './pages/ContactPage';
 
 // Electrical pages
 import ResidentialEICRPage   from './pages/electrical/ResidentialEICRPage';
-import ResidentialEICPage    from './pages/electrical/ResidentialEICPage';
 import ResidentialFuseBoxPage from './pages/electrical/ResidentialFuseBoxPage';
 import CommercialEICRPage    from './pages/electrical/CommercialEICRPage';
-import CommercialEICPage     from './pages/electrical/CommercialEICPage';
 import CommercialFuseBoxPage from './pages/electrical/CommercialFuseBoxPage';
+import PATTestingPage        from './pages/electrical/PATTestingPage';
+import FaultFindingPage      from './pages/electrical/FaultFindingPage';
 
 // Gas pages
 import LandlordGasSafetyPage  from './pages/gas/LandlordGasSafetyPage';
-import HomeownerGasPage       from './pages/gas/HomeownerGasPage';
 import BoilerServicePage      from './pages/gas/BoilerServicePage';
+import BoilerInstallationPage from './pages/gas/BoilerInstallationPage';
+import BoilerRepairPage       from './pages/gas/BoilerRepairPage';
 import CommercialCP15Page     from './pages/gas/CommercialCP15Page';
-import CommercialCP16Page     from './pages/gas/CommercialCP16Page';
-import CommercialCP17Page     from './pages/gas/CommercialCP17Page';
-import CommercialCP42Page     from './pages/gas/CommercialCP42Page';
 
 // Fire pages
 import ResidentialFRAPage             from './pages/fire/ResidentialFRAPage';
@@ -39,6 +37,7 @@ import CommercialFRAPage              from './pages/fire/CommercialFRAPage';
 import CommercialEmergencyLightsPage  from './pages/fire/CommercialEmergencyLightsPage';
 import CommercialFireAlarmPage        from './pages/fire/CommercialFireAlarmPage';
 import CommercialFireDoorPage         from './pages/fire/CommercialFireDoorPage';
+import FireExtinguisherPage           from './pages/fire/FireExtinguisherPage';
 
 // Asbestos pages
 import ResidentialAsbestosPage from './pages/asbestos/ResidentialAsbestosPage';
@@ -83,23 +82,26 @@ export default function App() {
           <Route path="/book-now"  element={<BookingPage />} />
           <Route path="/blog"      element={<BlogPage />} />
           <Route path="/contact"   element={<ContactPage />} />
+
           {/* Electrical */}
           <Route path="/electrical"                        element={<ComingSoon label="Electrical Certificates" />} />
           <Route path="/electrical/residential-eicr"      element={<ResidentialEICRPage />} />
-          <Route path="/electrical/residential-eic"       element={<ResidentialEICPage />} />
           <Route path="/electrical/residential-fuse-box"  element={<ResidentialFuseBoxPage />} />
           <Route path="/electrical/commercial-eicr"       element={<CommercialEICRPage />} />
-          <Route path="/electrical/commercial-eic"        element={<CommercialEICPage />} />
           <Route path="/electrical/commercial-fuse-box"   element={<CommercialFuseBoxPage />} />
+          <Route path="/electrical/pat-testing"           element={<PATTestingPage />} />
+          <Route path="/electrical/fault-finding"         element={<FaultFindingPage />} />
+
           {/* Gas */}
-          <Route path="/gas"                               element={<ComingSoon label="Gas Services" />} />
-          <Route path="/gas/landlord-gas-safety"           element={<LandlordGasSafetyPage />} />
-          <Route path="/gas/homeowner-gas-safety"          element={<HomeownerGasPage />} />
-          <Route path="/gas/boiler-service"                element={<BoilerServicePage />} />
-          <Route path="/gas/commercial-boiler-cp15"        element={<CommercialCP15Page />} />
-          <Route path="/gas/commercial-installation-cp16"  element={<CommercialCP16Page />} />
-          <Route path="/gas/commercial-safety-report-cp17" element={<CommercialCP17Page />} />
-          <Route path="/gas/commercial-catering-cp42"      element={<CommercialCP42Page />} />
+          <Route path="/gas"                            element={<ComingSoon label="Gas Services" />} />
+          <Route path="/gas/landlord-gas-safety"        element={<LandlordGasSafetyPage />} />
+          <Route path="/gas/boiler-service"             element={<BoilerServicePage />} />
+          <Route path="/gas/boiler-installation"        element={<BoilerInstallationPage />} />
+          <Route path="/gas/boiler-repair"              element={<BoilerRepairPage />} />
+          <Route path="/gas/commercial-gas-safety"      element={<CommercialCP15Page />} />
+          {/* Legacy CP routes — redirect to new paths */}
+          <Route path="/gas/commercial-boiler-cp15"     element={<CommercialCP15Page />} />
+
           {/* Fire */}
           <Route path="/fire"                              element={<ComingSoon label="Fire Services" />} />
           <Route path="/fire/residential-fra"              element={<ResidentialFRAPage />} />
@@ -110,12 +112,17 @@ export default function App() {
           <Route path="/fire/commercial-emergency-lights"  element={<CommercialEmergencyLightsPage />} />
           <Route path="/fire/commercial-fire-alarm"        element={<CommercialFireAlarmPage />} />
           <Route path="/fire/commercial-fire-door"         element={<CommercialFireDoorPage />} />
+          <Route path="/fire/fire-extinguisher"            element={<FireExtinguisherPage />} />
+
           {/* Asbestos */}
+          <Route path="/asbestos"             element={<ComingSoon label="Asbestos Surveys" />} />
           <Route path="/asbestos/residential" element={<ResidentialAsbestosPage />} />
           <Route path="/asbestos/commercial"  element={<CommercialAsbestosPage />} />
+
           {/* EPC */}
           <Route path="/epc/residential" element={<ResidentialEPCPage />} />
           <Route path="/epc/commercial"  element={<CommercialEPCPage />} />
+
           {/* 404 */}
           <Route path="*" element={<ComingSoon label="Page Not Found" />} />
         </Routes>
