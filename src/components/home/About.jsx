@@ -46,7 +46,7 @@ export default function About() {
             <h2 className="fw-bold mb-4">
               MNC Energy — Reliable, Qualified &amp; Experienced Safety Experts
             </h2>
-            <p style={{ lineHeight: 1.8, color: '#444' }}>
+            <p style={{ lineHeight: 1.8 }}>
               MNC Energy is a fully certified property safety company providing compliance
               certificates and safety inspections for landlords, businesses, and homeowners
               across London and the M25 area.
