@@ -25,7 +25,7 @@ export default function CommercialEICPage() {
       <BenefitCards {...benefits} />
 
       {/* Legal Requirements */}
-      <section className="legal-section" style={{ background: '#f4f6f8' }}>
+      <section className="intro-section">
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
@@ -34,7 +34,7 @@ export default function CommercialEICPage() {
               <ul className="intro-checklist">
                 {legalRequirements.items.map((item, i) => (
                   <li key={i}>
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <i className="bi bi-check-circle-fill me-2"></i>
                     <strong>{item.label}:</strong> {item.text}
                   </li>
                 ))}

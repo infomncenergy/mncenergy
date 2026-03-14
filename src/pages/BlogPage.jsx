@@ -47,7 +47,7 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      <section className="py-5" style={{ background: '#f4f6f8' }}>
+      <section className="py-5 blog-featured-section">
         <div className="container">
           <SectionLabel>FEATURED ARTICLE</SectionLabel>
           <div className="blog-featured">
@@ -68,7 +68,7 @@ export default function BlogPage() {
                   <p className="text-muted mb-4">{FEATURED_POST.excerpt}</p>
                   <div className="mb-4">
                     {FEATURED_POST.tags.map((tag, i) => (
-                      <span key={i} className="badge bg-light text-dark border me-2 mb-2">{tag}</span>
+                      <span key={i} className="blog-tag me-2 mb-2">{tag}</span>
                     ))}
                   </div>
                   <Link to={`/blog/${FEATURED_POST.slug}`} className="btn-green">

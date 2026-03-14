@@ -24,7 +24,7 @@ export default function BoilerServicePage() {
       <PricingBox {...pricing} />
 
       {/* What's Included */}
-      <section className="intro-section" style={{ background: '#f4f6f8' }}>
+      <section className="intro-section">
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
@@ -35,7 +35,7 @@ export default function BoilerServicePage() {
               <ul className="intro-checklist">
                 {whatsCovered.items.map((item, i) => (
                   <li key={i}>
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <i className="bi bi-check-circle-fill me-2"></i>
                     <strong>{item.label}:</strong> {item.text}
                   </li>
                 ))}
@@ -53,7 +53,7 @@ export default function BoilerServicePage() {
           <h2 className="fw-bold mb-4">All Major Boiler Brands Covered</h2>
           <div className="d-flex flex-wrap justify-content-center gap-3">
             {brands.map((brand, i) => (
-              <span key={i} className="badge bg-light text-dark border fs-6 px-3 py-2">{brand}</span>
+              <span key={i} className="brand-badge">{brand}</span>
             ))}
           </div>
         </div>

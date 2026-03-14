@@ -18,12 +18,7 @@ function ReviewCard({ name, date, color, text }) {
           </div>
         </div>
         <div className="review-v2__google ms-auto">
-          <span style={{ color: '#4285F4', fontWeight: 700 }}>G</span>
-          <span style={{ color: '#EA4335', fontWeight: 700 }}>o</span>
-          <span style={{ color: '#FBBC05', fontWeight: 700 }}>o</span>
-          <span style={{ color: '#4285F4', fontWeight: 700 }}>g</span>
-          <span style={{ color: '#34A853', fontWeight: 700 }}>l</span>
-          <span style={{ color: '#EA4335', fontWeight: 700 }}>e</span>
+          <span className="google-g">G</span><span className="google-o1">o</span><span className="google-o2">o</span><span className="google-g2">g</span><span className="google-l">l</span><span className="google-e">e</span>
         </div>
       </div>
     </div>
@@ -46,7 +41,7 @@ export default function Reviews() {
               <div className="reviews-v2__score">4.9</div>
               <div>
                 <div className="reviews-v2__stars">★★★★★</div>
-                <div style={{ fontSize: '0.82rem', color: '#777' }}>Based on <strong>79 reviews</strong></div>
+                <div className="review-v2__meta-count">Based on <strong>79 reviews</strong></div>
               </div>
             </div>
           </div>

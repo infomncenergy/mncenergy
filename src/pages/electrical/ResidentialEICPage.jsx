@@ -25,7 +25,7 @@ export default function ResidentialEICPage() {
       <BenefitCards {...benefits} />
 
       {/* When is EIC Required */}
-      <section className="intro-section" style={{ background: '#f4f6f8' }}>
+      <section className="intro-section">
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
@@ -33,7 +33,7 @@ export default function ResidentialEICPage() {
               <ul className="intro-checklist">
                 {whenRequired.items.map((item, i) => (
                   <li key={i}>
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <i className="bi bi-check-circle-fill me-2"></i>
                     <strong>{item.label}:</strong> {item.text}
                   </li>
                 ))}

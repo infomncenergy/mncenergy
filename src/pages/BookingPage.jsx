@@ -149,13 +149,13 @@ export default function BookingPage() {
               </p>
               <div className="d-flex gap-3 flex-wrap">
                 <div className="booking-hero__badge">
-                  <i className="bi bi-patch-check-fill text-success me-2"></i> Gas Safe Registered
+                  <i className="bi bi-patch-check-fill me-2"></i> Gas Safe Registered
                 </div>
                 <div className="booking-hero__badge">
-                  <i className="bi bi-patch-check-fill text-success me-2"></i> NICEIC Approved
+                  <i className="bi bi-patch-check-fill me-2"></i> NICEIC Approved
                 </div>
                 <div className="booking-hero__badge">
-                  <i className="bi bi-patch-check-fill text-success me-2"></i> BAFE Registered
+                  <i className="bi bi-patch-check-fill me-2"></i> BAFE Registered
                 </div>
               </div>
             </div>
@@ -227,7 +227,7 @@ export default function BookingPage() {
                                     'bi-clipboard-check'
                                   } me-2`}></i>
                                   {opt}
-                                  {form.service === opt && <i className="bi bi-check-circle-fill ms-auto text-success"></i>}
+                                  {form.service === opt && <i className="bi bi-check-circle-fill ms-auto"></i>}
                                 </div>
                               </div>
                             ))}
@@ -475,7 +475,7 @@ export default function BookingPage() {
                     </div>
 
                     <div className="booking-summary__notice mt-3">
-                      <i className="bi bi-info-circle-fill me-2 text-success"></i>
+                      <i className="bi bi-info-circle-fill me-2"></i>
                       Our team will confirm your appointment within 2 hours by email and phone call.
                     </div>
 
@@ -533,7 +533,7 @@ export default function BookingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-5" style={{ background: '#f4f6f8' }}>
+      <section className="py-5">
         <div className="container">
           <SectionLabel center>HOW IT WORKS</SectionLabel>
           <h2 className="fw-bold text-center mb-5">From Booking to Certificate in 4 Simple Steps</h2>

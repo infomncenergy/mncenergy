@@ -73,7 +73,7 @@ export default function CommercialEICRPage() {
               <ul className="intro-checklist">
                 {legalRequirements.items.map((item, i) => (
                   <li key={i}>
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <i className="bi bi-check-circle-fill me-2"></i>
                     <strong>{item.label}:</strong> {item.text}
                   </li>
                 ))}

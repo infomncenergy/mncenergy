@@ -23,7 +23,7 @@ export default function ResidentialAsbestosPage() {
       <BenefitCards {...benefits} />
 
       {/* Survey Types */}
-      <section className="py-5" style={{ background: '#f4f6f8' }}>
+      <section className="py-5 glass-section">
         <div className="container">
           <SectionLabel center>SURVEY TYPES</SectionLabel>
           <h2 className="fw-bold text-center mb-5">{surveyTypes.title}</h2>
@@ -32,7 +32,7 @@ export default function ResidentialAsbestosPage() {
               <div className="col-md-5" key={i}>
                 <div className="benefit-card h-100 position-relative">
                   {s.badge && (
-                    <span className="badge bg-success position-absolute top-0 end-0 m-3">{s.badge}</span>
+                    <span className="badge bg-accent position-absolute top-0 end-0 m-3">{s.badge}</span>
                   )}
                   <div className="benefit-card__icon">
                     <i className={`bi ${s.icon}`}></i>
@@ -60,7 +60,7 @@ export default function ResidentialAsbestosPage() {
               <ul className="intro-checklist">
                 {whatsCovered.items.map((item, i) => (
                   <li key={i}>
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <i className="bi bi-check-circle-fill me-2"></i>
                     <strong>{item.label}:</strong> {item.text}
                   </li>
                 ))}

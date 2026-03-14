@@ -5,7 +5,7 @@ export default function ScrollToTopBtn() {
 
   useEffect(() => {
     const handleScroll = () => setVisible(window.scrollY > 400);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -13,7 +13,7 @@ export default function ScrollToTopBtn() {
 
   return (
     <button
-      className="scroll-top-btn"
+      className="scroll-to-top"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Scroll to top"
     >

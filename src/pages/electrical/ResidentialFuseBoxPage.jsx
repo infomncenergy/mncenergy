@@ -25,7 +25,7 @@ export default function ResidentialFuseBoxPage() {
       <BenefitCards {...benefits} />
 
       {/* Do You Need Replacement */}
-      <section className="intro-section" style={{ background: '#fff' }}>
+      <section className="intro-section">
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
@@ -37,7 +37,7 @@ export default function ResidentialFuseBoxPage() {
               <ul className="intro-checklist">
                 {needsReplacement.items.map((item, i) => (
                   <li key={i}>
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>
+                    <i className="bi bi-check-circle-fill me-2"></i>
                     {item}
                   </li>
                 ))}
