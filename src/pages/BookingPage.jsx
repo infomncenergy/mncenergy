@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link }     from 'react-router-dom';
-import SectionLabel from '../components/ui/SectionLabel';
+import SectionLabel          from '../components/ui/SectionLabel';
+import AddressAutocomplete   from '../components/ui/AddressAutocomplete';
 import { PHONE, PHONE_HREF, WHATSAPP } from '../data/constants';
 import { API_URL }  from '../config/api';
 
@@ -291,12 +292,14 @@ export default function BookingPage() {
                       </div>
                       <div className="col-12">
                         <label className="form-label fw-semibold">Property Address *</label>
-                        <input
-                          type="text"
-                          className="form-control form-control-lg"
-                          placeholder="Street address"
+                        <AddressAutocomplete
+                          id="property-address"
                           value={form.address}
-                          onChange={e => update('address', e.target.value)}
+                          onChange={val => update('address', val)}
+                          onSelect={({ address, postcode }) => {
+                            update('address', address);
+                            if (postcode) update('postcode', postcode);
+                          }}
                           required
                         />
                       </div>
@@ -307,7 +310,7 @@ export default function BookingPage() {
                           className="form-control form-control-lg"
                           placeholder="e.g. SW1A 1AA"
                           value={form.postcode}
-                          onChange={e => update('postcode', e.target.value)}
+                          onChange={e => update('postcode', e.target.value.toUpperCase())}
                           required
                         />
                       </div>
