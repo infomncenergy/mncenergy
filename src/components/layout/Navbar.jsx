@@ -3,8 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { NAV_ITEMS } from '../../data/constants';
 
 export default function Navbar() {
-  const [openMenu, setOpenMenu]   = useState(null);
+  const [openMenu, setOpenMenu]     = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled]     = useState(false);
   const navRef = useRef();
 
   // Close on outside click
@@ -19,10 +20,17 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
+  // Scroll depth drives glass opacity
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const closeAll = () => { setOpenMenu(null); setMobileOpen(false); };
 
   return (
-    <nav className="main-nav" ref={navRef}>
+    <nav className={`main-nav${scrolled ? ' main-nav--scrolled' : ''}`} ref={navRef}>
       <div className="container d-flex align-items-center justify-content-between flex-wrap">
 
         {/* ── Desktop nav ── */}
