@@ -1,11 +1,11 @@
 /**
- * Reusable section eyebrow label
- * @param {boolean} center - center-align text
+ * Reusable section eyebrow label — gradient pill with animated dot.
+ * @param {boolean} center - center the pill horizontally (auto-margin)
  */
 export default function SectionLabel({ children, center = false }) {
   return (
-    <span className={`section-label${center ? ' text-center d-block' : ''}`}>
+    <div className={`section-label${center ? ' section-label--center' : ''}`}>
       {children}
-    </span>
+    </div>
   );
 }

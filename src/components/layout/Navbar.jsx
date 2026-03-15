@@ -6,7 +6,8 @@ export default function Navbar() {
   const [openMenu, setOpenMenu]     = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled]     = useState(false);
-  const navRef = useRef();
+  const navRef    = useRef();
+  const closeRef  = useRef(null);  // timeout ref for delayed close
 
   // Close on outside click
   useEffect(() => {
@@ -43,8 +44,8 @@ export default function Navbar() {
             <div
               key={idx}
               className="position-relative"
-              onMouseEnter={() => setOpenMenu(idx)}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => { clearTimeout(closeRef.current); setOpenMenu(idx); }}
+              onMouseLeave={() => { closeRef.current = setTimeout(() => setOpenMenu(null), 120); }}
             >
               {/* Main label — never navigates when it has sub-items */}
               <span

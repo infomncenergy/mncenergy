@@ -132,18 +132,13 @@ export default function FaqsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section" style={{
-        background: 'linear-gradient(135deg, rgba(25,135,84,0.95) 0%, rgba(13,110,253,0.95) 100%)',
-        padding: '80px 20px',
-        color: 'white'
-      }}>
+      <section className="booking-hero" style={{ paddingBottom: '60px' }}>
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-8 mx-auto text-center">
-              <h1 className="fw-bold mb-4" style={{ fontSize: '3.5rem' }}>
-                Frequently Asked Questions
-              </h1>
-              <p className="lead mb-0" style={{ fontSize: '1.25rem', opacity: 0.95 }}>
+          <div className="row justify-content-center text-center">
+            <div className="col-lg-8">
+              <SectionLabel center>HELP &amp; SUPPORT</SectionLabel>
+              <h1 className="fw-bold mb-3">Frequently Asked Questions</h1>
+              <p className="text-muted mb-0" style={{ fontSize: '1.1rem' }}>
                 Find answers to common questions about our electrical, gas, fire, asbestos, and energy services across London.
               </p>
             </div>
@@ -161,18 +156,18 @@ export default function FaqsPage() {
           </div>
 
           {/* Contact CTA */}
-          <div className="row justify-content-center mt-5 pt-5 border-top">
+          <div className="row justify-content-center mt-5 pt-5" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             <div className="col-lg-8 text-center">
               <h3 className="fw-bold mb-3">Didn't Find Your Answer?</h3>
               <p className="text-muted mb-4">
-                Our team is ready to help with any questions about our services. Get in touch today for a consultation or to discuss your specific requirements.
+                Our team is ready to help with any questions about our services. Get in touch today for a consultation.
               </p>
-              <div className="d-flex gap-3 justify-content-center">
-                <a href="/book-now" className="btn btn-success btn-lg">
-                  Book Now
+              <div className="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="/book-now" className="btn-green">
+                  <i className="bi bi-calendar-check me-2"></i>Book Now
                 </a>
-                <a href={PHONE_HREF} className="btn btn-outline-success btn-lg">
-                  Call: {PHONE}
+                <a href={PHONE_HREF} className="btn-outline-green">
+                  <i className="bi bi-telephone me-2"></i>Call: {PHONE}
                 </a>
               </div>
             </div>
@@ -180,46 +175,29 @@ export default function FaqsPage() {
         </div>
       </section>
 
-      {/* Service Categories Overview */}
-      <section className="py-5" style={{ background: '#f8f9fa' }}>
+      {/* Service Categories Overview — dark glass design */}
+      <section className="py-5" style={{ background: 'rgba(255,255,255,0.02)', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="container">
           <div className="text-center mb-5">
             <SectionLabel center>OUR SERVICES</SectionLabel>
-            <h2 className="fw-bold">Comprehensive Safety & Compliance Solutions</h2>
+            <h2 className="fw-bold section-heading">Comprehensive Safety &amp; Compliance Solutions</h2>
           </div>
 
           <div className="row g-4">
-            <div className="col-md-6 col-lg-3">
-              <div className="service-card p-4 h-100 text-center" style={{ background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                <i className="bi bi-lightning-charge-fill text-warning" style={{ fontSize: '3rem' }}></i>
-                <h5 className="fw-bold mt-3 mb-2">Electrical Safety</h5>
-                <p className="text-muted small">EICR inspections, fault finding, and electrical compliance certifications.</p>
+            {[
+              { icon: 'bi-lightning-charge-fill', color: 'var(--accent)', title: 'Electrical Safety', desc: 'EICR inspections, fault finding, and electrical compliance certifications.' },
+              { icon: 'bi-fire',                  color: '#ff6b6b',        title: 'Fire Safety',     desc: 'Fire risk assessments, safety checks, and emergency preparedness.' },
+              { icon: 'bi-flame',                 color: '#fd7e14',        title: 'Gas Services',    desc: 'Gas safety certificates, boiler services, and repairs for homes and businesses.' },
+              { icon: 'bi-exclamation-diamond-fill', color: 'var(--accent2)', title: 'Asbestos & EPC', desc: 'Asbestos surveys, energy performance certificates, and compliance documentation.' },
+            ].map((s, i) => (
+              <div className="col-md-6 col-lg-3" key={i}>
+                <div className="glass-card p-4 h-100 text-center">
+                  <i className={`bi ${s.icon}`} style={{ fontSize: '2.5rem', color: s.color }}></i>
+                  <h5 className="fw-bold mt-3 mb-2">{s.title}</h5>
+                  <p className="text-muted small mb-0">{s.desc}</p>
+                </div>
               </div>
-            </div>
-
-            <div className="col-md-6 col-lg-3">
-              <div className="service-card p-4 h-100 text-center" style={{ background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                <i className="bi bi-fire text-danger" style={{ fontSize: '3rem' }}></i>
-                <h5 className="fw-bold mt-3 mb-2">Fire Safety</h5>
-                <p className="text-muted small">Fire risk assessments, safety checks, and emergency preparedness.</p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-3">
-              <div className="service-card p-4 h-100 text-center" style={{ background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                <i className="bi bi-flame" style={{ fontSize: '3rem', color: '#fd7e14' }}></i>
-                <h5 className="fw-bold mt-3 mb-2">Gas Services</h5>
-                <p className="text-muted small">Gas safety certificates, boiler services, and repairs for homes and businesses.</p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-3">
-              <div className="service-card p-4 h-100 text-center" style={{ background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                <i className="bi bi-exclamation-diamond-fill" style={{ fontSize: '3rem', color: '#6c757d' }}></i>
-                <h5 className="fw-bold mt-3 mb-2">Asbestos & EPC</h5>
-                <p className="text-muted small">Asbestos surveys, energy performance certificates, and compliance documentation.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -227,31 +205,22 @@ export default function FaqsPage() {
       {/* Trust & Experience Banner */}
       <section className="py-5">
         <div className="container">
-          <div className="row text-center">
-            <div className="col-md-3 mb-4">
-              <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#198754' }}>500+</div>
-                <p className="text-muted">Properties Certified Monthly</p>
+          <div className="row text-center g-4">
+            {[
+              { value: '500+', label: 'Properties Certified Monthly' },
+              { value: '5★',   label: 'Google Rating'                },
+              { value: '10+',  label: 'Years Experience'             },
+              { value: '24/7', label: 'Emergency Response'           },
+            ].map((stat, i) => (
+              <div className="col-md-3 col-6" key={i}>
+                <div className="glass-card p-4">
+                  <div style={{ fontSize: '2.2rem', fontWeight: 800, background: 'var(--brand-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                    {stat.value}
+                  </div>
+                  <p className="text-muted small mb-0 mt-1">{stat.label}</p>
+                </div>
               </div>
-            </div>
-            <div className="col-md-3 mb-4">
-              <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#198754' }}>5★</div>
-                <p className="text-muted">Google Rating</p>
-              </div>
-            </div>
-            <div className="col-md-3 mb-4">
-              <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#198754' }}>10+</div>
-                <p className="text-muted">Years Experience</p>
-              </div>
-            </div>
-            <div className="col-md-3 mb-4">
-              <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#198754' }}>24/7</div>
-                <p className="text-muted">Emergency Response</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

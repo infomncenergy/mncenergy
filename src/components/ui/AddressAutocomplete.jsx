@@ -50,60 +50,72 @@ async function reverseGeocode(lat, lon) {
   return data.address || {};
 }
 
-// ── Build a clean address string from postcodes.io + Nominatim ───────────────
+// ── Build a list of address suggestions from postcodes.io + Nominatim ────────
+// Returns multiple street-level results so the user can pick the correct street
+// from a dropdown, then type their house/flat number in the separate field.
 async function buildPostcodeSuggestions(postcode) {
   const pc = await lookupPostcodesIO(postcode);
   if (!pc) return [];
 
-  // Try Nominatim reverse geocode for street-level detail, but don't fail if it errors
-  let a = {};
-  try {
-    a = await reverseGeocode(pc.latitude, pc.longitude);
-  } catch (err) {
-    console.warn('Nominatim reverse geocode failed, using postcodes.io data:', err.message);
-  }
-
-  const road     = a.road || a.pedestrian || a.footway || '';
-  const suburb   = a.suburb || pc.admin_ward || '';
-  const district = a.city_district?.replace('London Borough of ', '')
-                || pc.admin_district || '';
-
-  // Canonical postcode from postcodes.io (always properly formatted)
   const formattedPostcode = pc.postcode;
 
-  const addressParts = [road, suburb, district].filter(Boolean);
-  const address = addressParts.join(', ');
+  // Run reverse geocode + Nominatim search in parallel for maximum results
+  const [revResult, searchResult] = await Promise.allSettled([
+    reverseGeocode(pc.latitude, pc.longitude),
+    searchNominatim(`${formattedPostcode.replace(/\s/g, '')}, UK`),
+  ]);
 
-  // Even if Nominatim gave nothing, postcodes.io always gives us ward + district
-  // so we should ALWAYS have at least something — never return [] and fall through
-  // to the broken searchNominatim("HA27LH") fallback
-  if (!address) {
-    // Last resort: use whatever postcodes.io has
+  const revAddr    = revResult.status    === 'fulfilled' ? (revResult.value    || {}) : {};
+  const searchData = searchResult.status === 'fulfilled' ? (searchResult.value || []) : [];
+
+  // Collect unique streets — no duplicates
+  const seen    = new Set();
+  const results = [];
+
+  const addResult = (road, suburb, district, source) => {
+    const key = road.toLowerCase().trim();
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    const parts = [road, suburb, district].filter(Boolean);
+    results.push({
+      _source:      source,
+      display_name: `${parts.join(', ')}, ${formattedPostcode}`,
+      address: { road, suburb, city: district, postcode: formattedPostcode },
+    });
+  };
+
+  // 1. Reverse geocode result (most accurate for the postcode centroid)
+  const revRoad = revAddr.road || revAddr.pedestrian || revAddr.footway || '';
+  if (revRoad) {
+    const suburb   = revAddr.suburb || pc.admin_ward || '';
+    const district = (revAddr.city_district || '').replace('London Borough of ', '') || pc.admin_district || '';
+    addResult(revRoad, suburb, district, 'nominatim-reverse');
+  }
+
+  // 2. Nominatim search results — multiple streets in the same postcode area
+  for (const r of searchData) {
+    if (!r.address) continue;
+    const a    = r.address;
+    const road = a.road || a.pedestrian || a.footway || '';
+    if (!road) continue;
+    const suburb   = a.suburb || a.neighbourhood || pc.admin_ward || '';
+    const district = (a.city_district || '').replace('London Borough of ', '') || a.city || a.town || pc.admin_district || '';
+    addResult(road, suburb, district, 'nominatim-search');
+    if (results.length >= 8) break;
+  }
+
+  // Fallback to postcodes.io district data if Nominatim found nothing
+  if (!results.length) {
     const fallbackParts = [pc.admin_ward, pc.admin_district].filter(Boolean);
-    const fallbackAddress = fallbackParts.join(', ');
-    if (!fallbackAddress) return [];
+    if (!fallbackParts.length) return [];
     return [{
       _source:      'postcodes.io',
-      display_name: `${fallbackAddress}, ${formattedPostcode}`,
-      address: {
-        road:     '',
-        suburb:   pc.admin_ward || '',
-        city:     pc.admin_district || '',
-        postcode: formattedPostcode,
-      },
+      display_name: `${fallbackParts.join(', ')}, ${formattedPostcode}`,
+      address: { road: '', suburb: pc.admin_ward || '', city: pc.admin_district || '', postcode: formattedPostcode },
     }];
   }
 
-  return [{
-    _source:      'postcodes.io',
-    display_name: `${address}, ${formattedPostcode}`,
-    address: {
-      road,
-      suburb,
-      city:     district,
-      postcode: formattedPostcode,
-    },
-  }];
+  return results;
 }
 
 // ── Nominatim free-text search ────────────────────────────────────────────────
@@ -145,6 +157,10 @@ export default function AddressAutocomplete({
   className   = 'form-control form-control-lg',
   required    = false,
   id,
+  // forceQuery: when this changes to a non-empty string (e.g. a postcode typed
+  // in a separate field), the autocomplete will immediately search and open
+  // the dropdown showing the matching street list.
+  forceQuery  = '',
 }) {
   const [suggestions,  setSuggestions]  = useState([]);
   const [loading,      setLoading]      = useState(false);
@@ -201,6 +217,18 @@ export default function AddressAutocomplete({
       setLoading(false);
     }
   }, []);
+
+  // When forceQuery changes (triggered by an external postcode field), open the
+  // dropdown with a list of matching streets for that postcode.
+  // forceQuery format: "HA2 7LH_<timestamp>" — the timestamp suffix lets the
+  // same postcode re-trigger (e.g. if user clears address and re-enters same postcode).
+  useEffect(() => {
+    if (!forceQuery || !forceQuery.trim()) return;
+    const query = forceQuery.split('_')[0].trim(); // strip timestamp suffix
+    if (!query) return;
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => fetchSuggestions(query), 100);
+  }, [forceQuery, fetchSuggestions]);
 
   const handleChange = (e) => {
     const val = e.target.value;

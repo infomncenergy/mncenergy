@@ -8,6 +8,26 @@ import { API_URL }  from '../config/api';
 // UK full postcode regex
 const UK_POSTCODE_FULL = /^[A-Z]{1,2}[0-9][0-9A-Z]?\s*[0-9][A-Z]{2}$/i;
 
+const RESIDENTIAL_TYPES = [
+  'Flat / Apartment',
+  'Terraced House',
+  'Semi-Detached House',
+  'Detached House',
+  'HMO',
+  'Bungalow',
+  'Other',
+];
+
+const COMMERCIAL_TYPES = [
+  'Office',
+  'Retail Unit',
+  'Restaurant / Café',
+  'Hotel',
+  'Warehouse',
+  'Industrial Unit',
+  'Other',
+];
+
 const SERVICES = [
   { group: 'Electrical', icon: 'bi-lightning-charge-fill', options: [
     'Residential EICR',
@@ -55,8 +75,10 @@ export default function BookingPage() {
   const [step, setStep]     = useState(1);
   const [form, setForm]     = useState({
     service: '',
+    propertyCategory: '',  // 'Residential' | 'Commercial'
     propertyType: '',
     bedrooms: '',
+    houseNumber: '',
     address: '',
     postcode: '',
     date: '',
@@ -70,67 +92,40 @@ export default function BookingPage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [privacyChecked, setPrivacyChecked] = useState(false);
-  const [postcodeLoading, setPostcodeLoading] = useState(false);
+  // addressQuery: when set to a valid postcode, AddressAutocomplete opens its
+  // dropdown showing a list of streets for that postcode area.
+  const [addressQuery, setAddressQuery] = useState('');
 
   const update = (field, value) => setForm(f => ({ ...f, [field]: value }));
 
-  // When a full postcode is typed in the Postcode field, auto-fill the address.
-  // Uses postcodes.io (step 1) → lat/lon → Nominatim reverse geocode (step 2).
-  // This reliably returns the street name (e.g. "Imperial Drive") instead of
-  // the generic area ("Greater London") that Nominatim's postalcode= search returns.
-  const handlePostcodeLookup = useCallback(async (postcodeVal) => {
+  // When the user types a full postcode in the Postcode field, push it to
+  // AddressAutocomplete as a forceQuery so it shows a street list to pick from.
+  const handlePostcodeLookup = useCallback((postcodeVal) => {
     const clean = postcodeVal.trim().toUpperCase();
-    if (!UK_POSTCODE_FULL.test(clean)) return; // only fire on full postcodes
-    if (form.address) return;                   // don't overwrite existing address
-    setPostcodeLoading(true);
-    try {
-      const noSpace = clean.replace(/\s/g, '');
-
-      // ── Step 1: postcodes.io → validated postcode + lat/lon ──────────────────
-      const pcRes  = await fetch(`https://api.postcodes.io/postcodes/${noSpace}`);
-      const pcData = await pcRes.json();
-      if (pcData.status !== 200 || !pcData.result) return;
-      const { latitude, longitude, admin_ward, admin_district, postcode: formattedPostcode } = pcData.result;
-
-      // ── Step 2: Nominatim reverse geocode → street-level name ────────────────
-      let road = '', suburb = '', district = '';
-      try {
-        const nomRes  = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=json&addressdetails=1&lat=${latitude}&lon=${longitude}&zoom=17`,
-          { headers: { 'Accept-Language': 'en-GB' } }
-        );
-        const nomData = await nomRes.json();
-        const a = nomData.address || {};
-        road     = a.road || a.pedestrian || a.footway || '';
-        suburb   = a.suburb || admin_ward || '';
-        district = (a.city_district || '').replace('London Borough of ', '') || admin_district || '';
-      } catch {
-        // Nominatim failed — fall back to postcodes.io district data
-        suburb   = admin_ward || '';
-        district = admin_district || '';
-      }
-
-      const parts = [road, suburb, district].filter(Boolean);
-      const addr  = parts.join(', ');
-
-      if (addr) {
-        update('address', addr);
-        // Also normalise the postcode to the canonical spacing (e.g. "HA2 7LH")
-        update('postcode', formattedPostcode);
-      }
-    } catch { /* silently ignore network errors */ }
-    finally { setPostcodeLoading(false); }
-  }, [form.address]);
+    if (!UK_POSTCODE_FULL.test(clean)) return;
+    // Normalise spacing (e.g. "HA27LH" → "HA2 7LH") and store as postcode
+    const spaced = clean.length > 4
+      ? `${clean.slice(0, -3).trim()} ${clean.slice(-3)}`
+      : clean;
+    update('postcode', spaced);
+    // Trigger the address autocomplete to show a list of streets for this postcode
+    setAddressQuery(spaced + '_' + Date.now()); // suffix forces re-trigger on repeated same postcode
+  }, []);
 
   const handleSubmit = async () => {
     setSubmitting(true);
     setSubmitError('');
 
     try {
+      // Combine house/flat number with street address before submitting
+      const fullAddress = form.houseNumber
+        ? `${form.houseNumber.trim()}, ${form.address}`
+        : form.address;
+
       const res  = await fetch(`${API_URL}/api/bookings`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(form),
+        body:    JSON.stringify({ ...form, address: fullAddress }),
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.message || 'Submission failed');
@@ -144,7 +139,7 @@ export default function BookingPage() {
     }
   };
 
-  const step2Valid = form.propertyType && form.address && form.postcode && form.date && form.timeSlot;
+  const step2Valid = form.propertyCategory && form.propertyType && form.address && form.postcode && form.date && form.timeSlot;
   const step3Valid = form.name && form.email && form.phone && privacyChecked;
 
   if (submitted) {
@@ -297,100 +292,157 @@ export default function BookingPage() {
                   <h3 className="fw-bold mb-1">Property Details</h3>
                   <p className="text-muted mb-4">Tell us about the property and your preferred appointment.</p>
                   <div className="row g-3">
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Property Type *</label>
-                      <select
-                        className="form-select form-select-lg"
-                        value={form.propertyType}
-                        onChange={e => update('propertyType', e.target.value)}
-                      >
-                        <option value="">Select property type</option>
-                        <option>Flat / Apartment</option>
-                        <option>Terraced House</option>
-                        <option>Semi-Detached House</option>
-                        <option>Detached House</option>
-                        <option>HMO</option>
-                        <option>Bungalow</option>
-                        <option>Commercial Property</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Number of Bedrooms *</label>
-                      <select
-                        className="form-select form-select-lg"
-                        value={form.bedrooms}
-                        onChange={e => update('bedrooms', e.target.value)}
-                      >
-                        <option value="">Select bedrooms</option>
-                        <option>Studio</option>
-                        <option>1 Bedroom</option>
-                        <option>2 Bedrooms</option>
-                        <option>3 Bedrooms</option>
-                        <option>4 Bedrooms</option>
-                        <option>5+ Bedrooms</option>
-                      </select>
-                    </div>
+
+                    {/* Property Category — Residential vs Commercial */}
                     <div className="col-12">
-                      <label className="form-label fw-semibold">Property Address *</label>
-                      <AddressAutocomplete
-                        id="property-address"
-                        value={form.address}
-                        onChange={val => update('address', val)}
-                        onSelect={({ address, postcode }) => {
-                          update('address', address);
-                          if (postcode) update('postcode', postcode);
-                        }}
-                      />
+                      <label className="form-label fw-semibold">Property Category *</label>
+                      <div className="d-flex gap-3">
+                        {['Residential', 'Commercial'].map(cat => (
+                          <div
+                            key={cat}
+                            className={`booking-service-card flex-fill text-center${form.propertyCategory === cat ? ' selected' : ''}`}
+                            style={{ padding: '16px 12px' }}
+                            onClick={() => {
+                              update('propertyCategory', cat);
+                              update('propertyType', '');
+                              update('bedrooms', '');
+                            }}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={e => e.key === 'Enter' && (update('propertyCategory', cat), update('propertyType', ''), update('bedrooms', ''))}
+                          >
+                            <i className={`bi ${cat === 'Residential' ? 'bi-house-fill' : 'bi-building-fill'} me-2`}></i>
+                            {cat}
+                            {form.propertyCategory === cat && <i className="bi bi-check-circle-fill ms-2"></i>}
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="col-md-4">
-                      <label className="form-label fw-semibold">
-                        Postcode *
-                        {postcodeLoading && (
-                          <span style={{ marginLeft: 8, fontSize: '.75rem', color: 'var(--accent2)' }}>
-                            <span className="spinner-border spinner-border-sm me-1" role="status" />
-                            Looking up address…
-                          </span>
-                        )}
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-lg"
-                        placeholder="e.g. SW1A 1AA"
-                        value={form.postcode}
-                        onChange={e => {
-                          const v = e.target.value.toUpperCase();
-                          update('postcode', v);
-                          if (UK_POSTCODE_FULL.test(v.trim())) handlePostcodeLookup(v);
-                        }}
-                        onBlur={e => handlePostcodeLookup(e.target.value)}
-                        onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
-                      />
-                    </div>
-                    <div className="col-md-4">
-                      <label className="form-label fw-semibold">Preferred Date *</label>
-                      <input
-                        type="date"
-                        className="form-control form-control-lg"
-                        value={form.date}
-                        onChange={e => update('date', e.target.value)}
-                        min={new Date().toISOString().split('T')[0]}
-                      />
-                    </div>
-                    <div className="col-md-4">
-                      <label className="form-label fw-semibold">Preferred Time *</label>
-                      <select
-                        className="form-select form-select-lg"
-                        value={form.timeSlot}
-                        onChange={e => update('timeSlot', e.target.value)}
-                      >
-                        <option value="">Select time</option>
-                        <option>Morning (8am – 12pm)</option>
-                        <option>Afternoon (12pm – 5pm)</option>
-                        <option>Evening (5pm – 8pm)</option>
-                        <option>Any time</option>
-                      </select>
-                    </div>
+
+                    {/* Property Type — filtered by category */}
+                    {form.propertyCategory && (
+                      <div className={form.propertyCategory === 'Residential' ? 'col-md-6' : 'col-md-12'}>
+                        <label className="form-label fw-semibold">Property Type *</label>
+                        <select
+                          className="form-select form-select-lg"
+                          value={form.propertyType}
+                          onChange={e => update('propertyType', e.target.value)}
+                        >
+                          <option value="">Select property type</option>
+                          {(form.propertyCategory === 'Residential' ? RESIDENTIAL_TYPES : COMMERCIAL_TYPES).map(t => (
+                            <option key={t}>{t}</option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+
+                    {/* Bedrooms — only for Residential */}
+                    {form.propertyCategory === 'Residential' && (
+                      <div className="col-md-6">
+                        <label className="form-label fw-semibold">Number of Bedrooms</label>
+                        <select
+                          className="form-select form-select-lg"
+                          value={form.bedrooms}
+                          onChange={e => update('bedrooms', e.target.value)}
+                        >
+                          <option value="">Select bedrooms</option>
+                          <option>Studio</option>
+                          <option>1 Bedroom</option>
+                          <option>2 Bedrooms</option>
+                          <option>3 Bedrooms</option>
+                          <option>4 Bedrooms</option>
+                          <option>5+ Bedrooms</option>
+                        </select>
+                      </div>
+                    )}
+
+                    {/* House/Flat Number */}
+                    {form.propertyCategory && (
+                      <div className="col-md-4">
+                        <label className="form-label fw-semibold">
+                          {form.propertyCategory === 'Commercial' ? 'Unit / Floor No.' : 'House / Flat No.'} *
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control form-control-lg"
+                          placeholder={form.propertyCategory === 'Commercial' ? 'e.g. Unit 5, Floor 2' : 'e.g. 12 or Flat 3B'}
+                          value={form.houseNumber}
+                          onChange={e => update('houseNumber', e.target.value)}
+                          onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                        />
+                      </div>
+                    )}
+
+                    {/* Postcode — enter first to auto-populate the address list */}
+                    {form.propertyCategory && (
+                      <div className="col-md-4">
+                        <label className="form-label fw-semibold">Postcode *</label>
+                        <input
+                          type="text"
+                          className="form-control form-control-lg"
+                          placeholder="e.g. HA2 7LH"
+                          value={form.postcode}
+                          onChange={e => {
+                            const v = e.target.value.toUpperCase();
+                            update('postcode', v);
+                            if (UK_POSTCODE_FULL.test(v.trim())) handlePostcodeLookup(v);
+                          }}
+                          onBlur={e => handlePostcodeLookup(e.target.value)}
+                          onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                        />
+                        <small className="text-muted d-block mt-1" style={{ fontSize: '.73rem' }}>
+                          <i className="bi bi-info-circle me-1"></i>Enter postcode to see streets below
+                        </small>
+                      </div>
+                    )}
+
+                    {/* Street Address — auto-opens list when postcode is entered above */}
+                    {form.propertyCategory && (
+                      <div className="col-md-8">
+                        <label className="form-label fw-semibold">Street Address *</label>
+                        <AddressAutocomplete
+                          id="property-address"
+                          placeholder="Select street from list or type address…"
+                          value={form.address}
+                          forceQuery={addressQuery}
+                          onChange={val => update('address', val)}
+                          onSelect={({ address, postcode }) => {
+                            update('address', address);
+                            if (postcode) update('postcode', postcode);
+                          }}
+                        />
+                      </div>
+                    )}
+
+                    {/* Date & Time */}
+                    {form.propertyCategory && (
+                      <>
+                        <div className="col-md-4">
+                          <label className="form-label fw-semibold">Preferred Date *</label>
+                          <input
+                            type="date"
+                            className="form-control form-control-lg"
+                            value={form.date}
+                            onChange={e => update('date', e.target.value)}
+                            min={new Date().toISOString().split('T')[0]}
+                          />
+                        </div>
+                        <div className="col-md-4">
+                          <label className="form-label fw-semibold">Preferred Time *</label>
+                          <select
+                            className="form-select form-select-lg"
+                            value={form.timeSlot}
+                            onChange={e => update('timeSlot', e.target.value)}
+                          >
+                            <option value="">Select time</option>
+                            <option>Morning (8am – 12pm)</option>
+                            <option>Afternoon (12pm – 5pm)</option>
+                            <option>Evening (5pm – 8pm)</option>
+                            <option>Any time</option>
+                          </select>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <div className="mt-4 d-flex gap-3 justify-content-between">
                     <button type="button" className="btn-outline-green" onClick={() => setStep(1)}>
@@ -500,12 +552,16 @@ export default function BookingPage() {
                       <span className="booking-summary__value">{form.service}</span>
                     </div>
                     <div className="booking-summary__row">
-                      <span className="booking-summary__label"><i className="bi bi-house me-2"></i>Property Type</span>
-                      <span className="booking-summary__value">{form.propertyType}{form.bedrooms ? ` · ${form.bedrooms}` : ''}</span>
+                      <span className="booking-summary__label"><i className="bi bi-house me-2"></i>Property</span>
+                      <span className="booking-summary__value">
+                        {form.propertyCategory} · {form.propertyType}{form.bedrooms ? ` · ${form.bedrooms}` : ''}
+                      </span>
                     </div>
                     <div className="booking-summary__row">
                       <span className="booking-summary__label"><i className="bi bi-geo-alt me-2"></i>Address</span>
-                      <span className="booking-summary__value">{form.address}{form.postcode ? `, ${form.postcode}` : ''}</span>
+                      <span className="booking-summary__value">
+                        {form.houseNumber ? `${form.houseNumber}, ` : ''}{form.address}{form.postcode ? `, ${form.postcode}` : ''}
+                      </span>
                     </div>
                     <div className="booking-summary__row">
                       <span className="booking-summary__label"><i className="bi bi-calendar3 me-2"></i>Appointment</span>

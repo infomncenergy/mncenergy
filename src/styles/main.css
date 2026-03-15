@@ -197,7 +197,12 @@ a { text-decoration: none; }
     -webkit-backdrop-filter: blur(28px) saturate(160%);
     border: 1px solid rgba(255,255,255,0.09) !important;
     border-radius: 18px !important;
-    min-width: 220px; padding: 8px; margin-top: 6px !important;
+    min-width: 220px; padding: 8px; margin-top: 2px !important;
+    /* Bridge pseudo-element — fills the gap between nav-link and dropdown
+       so the mouse hover stays active when crossing the small gap */
+    &::before {
+      content: ''; position: absolute; top: -8px; left: 0; right: 0; height: 8px;
+    }
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.6) !important;
     & .dropdown-item {
       color: rgba(255,255,255,0.75); font-size: 0.85rem;
@@ -289,18 +294,64 @@ a { text-decoration: none; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SECTION LABEL
+   SECTION LABEL  —  gradient pill with animated dot
 ══════════════════════════════════════════════════════════════════════════ */
 .section-label {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  /* Gradient background tinted with brand colours */
+  background: linear-gradient(135deg,
+    rgba(107,47,160,0.18) 0%,
+    rgba(0,180,216,0.14) 100%);
+  /* Gradient border via box-shadow */
+  border: 1px solid rgba(107,47,160,0.40);
+  box-shadow:
+    0 0 0 1px rgba(0,180,216,0.15) inset,
+    0 2px 12px rgba(107,47,160,0.20);
   backdrop-filter: var(--blur-sm); -webkit-backdrop-filter: var(--blur-sm);
-  color: var(--accent2); font-size: 0.7rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 2px;
-  padding: 6px 14px; border-radius: 50px; margin-bottom: 16px;
+  color: var(--accent2); font-size: 0.68rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 2.5px;
+  padding: 5px 16px 5px 10px; border-radius: 50px; margin-bottom: 20px;
+  /* Animated gradient dot prefix */
+  &::before {
+    content: '';
+    width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+    background: var(--brand-gradient);
+    box-shadow: 0 0 6px rgba(0,180,216,0.7);
+    animation: label-pulse 2s ease-in-out infinite;
+  }
 }
-.section-label--center { display: flex; justify-content: center; }
+@keyframes label-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.75); }
+}
+
+/* Center variant */
+.section-label--center,
+.text-center .section-label {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Section headings — max-width so long titles don't stretch edge-to-edge ── */
+.section-heading {
+  display: block;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Global: all centred h2/h3 inside sections automatically constrained */
+section .text-center > h2,
+section .text-center > h3,
+.container .text-center > h2,
+.container .text-center > h3 {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
 /* ══════════════════════════════════════════════════════════════════════════
    HERO V2
