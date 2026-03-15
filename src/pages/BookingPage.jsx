@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Link }     from 'react-router-dom';
 import SectionLabel          from '../components/ui/SectionLabel';
 import AddressAutocomplete   from '../components/ui/AddressAutocomplete';
 import { PHONE, PHONE_HREF, WHATSAPP } from '../data/constants';
 import { API_URL }  from '../config/api';
+
+// UK full postcode regex
+const UK_POSTCODE_FULL = /^[A-Z]{1,2}[0-9][0-9A-Z]?\s*[0-9][A-Z]{2}$/i;
 
 const SERVICES = [
   { group: 'Electrical', icon: 'bi-lightning-charge-fill', options: [
@@ -67,8 +70,57 @@ export default function BookingPage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [privacyChecked, setPrivacyChecked] = useState(false);
+  const [postcodeLoading, setPostcodeLoading] = useState(false);
 
   const update = (field, value) => setForm(f => ({ ...f, [field]: value }));
+
+  // When a full postcode is typed in the Postcode field, auto-fill the address.
+  // Uses postcodes.io (step 1) → lat/lon → Nominatim reverse geocode (step 2).
+  // This reliably returns the street name (e.g. "Imperial Drive") instead of
+  // the generic area ("Greater London") that Nominatim's postalcode= search returns.
+  const handlePostcodeLookup = useCallback(async (postcodeVal) => {
+    const clean = postcodeVal.trim().toUpperCase();
+    if (!UK_POSTCODE_FULL.test(clean)) return; // only fire on full postcodes
+    if (form.address) return;                   // don't overwrite existing address
+    setPostcodeLoading(true);
+    try {
+      const noSpace = clean.replace(/\s/g, '');
+
+      // ── Step 1: postcodes.io → validated postcode + lat/lon ──────────────────
+      const pcRes  = await fetch(`https://api.postcodes.io/postcodes/${noSpace}`);
+      const pcData = await pcRes.json();
+      if (pcData.status !== 200 || !pcData.result) return;
+      const { latitude, longitude, admin_ward, admin_district, postcode: formattedPostcode } = pcData.result;
+
+      // ── Step 2: Nominatim reverse geocode → street-level name ────────────────
+      let road = '', suburb = '', district = '';
+      try {
+        const nomRes  = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&addressdetails=1&lat=${latitude}&lon=${longitude}&zoom=17`,
+          { headers: { 'Accept-Language': 'en-GB' } }
+        );
+        const nomData = await nomRes.json();
+        const a = nomData.address || {};
+        road     = a.road || a.pedestrian || a.footway || '';
+        suburb   = a.suburb || admin_ward || '';
+        district = (a.city_district || '').replace('London Borough of ', '') || admin_district || '';
+      } catch {
+        // Nominatim failed — fall back to postcodes.io district data
+        suburb   = admin_ward || '';
+        district = admin_district || '';
+      }
+
+      const parts = [road, suburb, district].filter(Boolean);
+      const addr  = parts.join(', ');
+
+      if (addr) {
+        update('address', addr);
+        // Also normalise the postcode to the canonical spacing (e.g. "HA2 7LH")
+        update('postcode', formattedPostcode);
+      }
+    } catch { /* silently ignore network errors */ }
+    finally { setPostcodeLoading(false); }
+  }, [form.address]);
 
   const handleSubmit = async () => {
     setSubmitting(true);
@@ -292,13 +344,26 @@ export default function BookingPage() {
                       />
                     </div>
                     <div className="col-md-4">
-                      <label className="form-label fw-semibold">Postcode *</label>
+                      <label className="form-label fw-semibold">
+                        Postcode *
+                        {postcodeLoading && (
+                          <span style={{ marginLeft: 8, fontSize: '.75rem', color: 'var(--accent2)' }}>
+                            <span className="spinner-border spinner-border-sm me-1" role="status" />
+                            Looking up address…
+                          </span>
+                        )}
+                      </label>
                       <input
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="e.g. SW1A 1AA"
                         value={form.postcode}
-                        onChange={e => update('postcode', e.target.value.toUpperCase())}
+                        onChange={e => {
+                          const v = e.target.value.toUpperCase();
+                          update('postcode', v);
+                          if (UK_POSTCODE_FULL.test(v.trim())) handlePostcodeLookup(v);
+                        }}
+                        onBlur={e => handlePostcodeLookup(e.target.value)}
                         onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
                       />
                     </div>

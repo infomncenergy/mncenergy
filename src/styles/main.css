@@ -1270,11 +1270,13 @@ a { text-decoration: none; }
   transition: background .15s;
 }
 .address-autocomplete__option:first-child { border-top: none; }
-.address-autocomplete__option:hover {
-  background: rgba(255,255,255,0.08);
+.address-autocomplete__option:hover,
+.address-autocomplete__option--active {
+  background: rgba(107,47,160,0.2);
   color: #fff;
 }
-.address-autocomplete__option strong { color: #fff; font-weight: 600; }
+.address-autocomplete__option strong,
+.address-autocomplete__main { color: #fff; font-weight: 500; word-break: break-word; }
 .address-autocomplete__postcode {
   color: var(--accent2);
   font-size: .8rem;
