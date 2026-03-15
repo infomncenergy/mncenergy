@@ -373,7 +373,25 @@ export default function BookingPage() {
                       </div>
                     )}
 
-                    {/* Postcode — enter first to auto-populate the address list */}
+                    {/* Street Address — auto-opens list when postcode is entered above */}
+                    {form.propertyCategory && (
+                      <div className="col-md-8">
+                        <label className="form-label fw-semibold">Street Address *</label>
+                        <AddressAutocomplete
+                          id="property-address"
+                          placeholder="Select street from list or type address…"
+                          value={form.address}
+                          forceQuery={addressQuery}
+                          onChange={val => update('address', val)}
+                          onSelect={({ address, postcode }) => {
+                            update('address', address);
+                            if (postcode) update('postcode', postcode);
+                          }}
+                        />
+                      </div>
+                    )}
+
+                     {/* Postcode — enter first to auto-populate the address list */}
                     {form.propertyCategory && (
                       <div className="col-md-4">
                         <label className="form-label fw-semibold">Postcode *</label>
@@ -393,24 +411,6 @@ export default function BookingPage() {
                         <small className="text-muted d-block mt-1" style={{ fontSize: '.73rem' }}>
                           <i className="bi bi-info-circle me-1"></i>Enter postcode to see streets below
                         </small>
-                      </div>
-                    )}
-
-                    {/* Street Address — auto-opens list when postcode is entered above */}
-                    {form.propertyCategory && (
-                      <div className="col-md-8">
-                        <label className="form-label fw-semibold">Street Address *</label>
-                        <AddressAutocomplete
-                          id="property-address"
-                          placeholder="Select street from list or type address…"
-                          value={form.address}
-                          forceQuery={addressQuery}
-                          onChange={val => update('address', val)}
-                          onSelect={({ address, postcode }) => {
-                            update('address', address);
-                            if (postcode) update('postcode', postcode);
-                          }}
-                        />
                       </div>
                     )}
 
