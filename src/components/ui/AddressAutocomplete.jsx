@@ -1,21 +1,66 @@
 /**
  * AddressAutocomplete
  * -------------------
- * UK address lookup using two free APIs:
+ * UK address lookup — two-tier strategy:
  *
- *  ① postcodes.io  — validates postcode, returns lat/lon + district
- *  ② Nominatim     — reverse geocode at lat/lon → gets road name
+ *  TIER 1 (preferred): getAddress.io
+ *    → Returns individual house-numbered addresses from Royal Mail PAF data
+ *    → e.g. "36 Imperial Drive, Harrow, HA2 7LH"
+ *    → Requires VITE_GETADDRESS_API_KEY in your .env / Vercel env vars
+ *    → Free tier: 20 lookups/day  |  Paid: from £7/month (1,000/day)
+ *    → Sign up at: https://getaddress.io
+ *
+ *  TIER 2 (fallback — no API key needed): postcodes.io + Nominatim
+ *    → Returns street-level results (no house numbers)
+ *    → e.g. "Imperial Drive, Harrow, HA2 7LH"
+ *    → Free, unlimited, works on localhost and production
  *
  * When input looks like a UK postcode (e.g. "HA2 7LH", "SW1A 1AA"):
- *   → postcodes.io validates it, Nominatim gives the street name.
- *   Result: "Imperial Drive, Rayners Lane, Harrow · HA2 7LH"
+ *   → Tier 1: getAddress.io returns full individual addresses
+ *   → Tier 2: postcodes.io validates it, Nominatim gives street names
  *
  * When input looks like an address (e.g. "22 Baker Street"):
- *   → Nominatim free-text search.
- *
- * No API keys needed. Works on localhost and production.
+ *   → Nominatim free-text search (Tier 2 always used here).
  */
 import { useEffect, useRef, useState, useCallback } from 'react';
+
+// ── getAddress.io — PAF-level individual house addresses ─────────────────────
+// Sign up free at https://getaddress.io and add VITE_GETADDRESS_API_KEY to
+// your .env.local (dev) and Vercel environment variables (production).
+const GETADDRESS_KEY = import.meta.env.VITE_GETADDRESS_API_KEY;
+
+async function fetchGetAddress(postcode) {
+  if (!GETADDRESS_KEY) return null; // no key → fall through to Nominatim
+  const clean = postcode.replace(/\s/g, '').toUpperCase();
+  try {
+    const res = await fetch(
+      `https://api.getaddress.io/find/${clean}?api-key=${GETADDRESS_KEY}&expand=true`,
+      { headers: { Accept: 'application/json' } },
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data.addresses || !data.addresses.length) return null;
+
+    const pc = (data.postcode || postcode).toUpperCase();
+
+    return data.addresses.map(addr => {
+      // formatted_address: ["36 Imperial Drive", "", "Harrow", "Harrow", "Greater London"]
+      const lines = (addr.formatted_address || []).filter(l => l && l.trim());
+      // Deduplicate adjacent identical parts (e.g. "Harrow, Harrow")
+      const unique = lines.filter((l, i) => i === 0 || l !== lines[i - 1]);
+      const display = unique.slice(0, 3).join(', '); // "36 Imperial Drive, Harrow"
+      return {
+        _source:   'getaddress',
+        _display:  display,
+        _postcode: pc,
+        display_name: `${display}, ${pc}`,
+        address:   { road: display, postcode: pc },
+      };
+    });
+  } catch {
+    return null;
+  }
+}
 
 // ── UK postcode patterns ──────────────────────────────────────────────────────
 const UK_POSTCODE_FULL    = /^[A-Z]{1,2}[0-9][0-9A-Z]?\s*[0-9][A-Z]{2}$/i;
@@ -50,10 +95,16 @@ async function reverseGeocode(lat, lon) {
   return data.address || {};
 }
 
-// ── Build a list of address suggestions from postcodes.io + Nominatim ────────
-// Returns multiple street-level results so the user can pick the correct street
-// from a dropdown, then type their house/flat number in the separate field.
+// ── Build a list of address suggestions ───────────────────────────────────────
+// Priority:
+//   1. getAddress.io (if VITE_GETADDRESS_API_KEY is set) → house-level PAF data
+//   2. postcodes.io + Nominatim → street-level fallback (no house numbers)
 async function buildPostcodeSuggestions(postcode) {
+  // ── Tier 1: getAddress.io ──────────────────────────────────────────────────
+  const gaResults = await fetchGetAddress(postcode);
+  if (gaResults && gaResults.length) return gaResults;
+
+  // ── Tier 2: postcodes.io + Nominatim fallback ──────────────────────────────
   const pc = await lookupPostcodesIO(postcode);
   if (!pc) return [];
 
@@ -128,11 +179,17 @@ async function searchNominatim(query) {
 
 // ── Parse any result into { address, postcode } ───────────────────────────────
 function parseResult(item) {
+  // getAddress.io result — already clean
+  if (item._source === 'getaddress') {
+    return { address: item._display, postcode: item._postcode };
+  }
+
+  // Nominatim / postcodes.io result
   const a = item.address || {};
 
-  const road   = a.road || a.pedestrian || a.footway || '';
+  const road    = a.road || a.pedestrian || a.footway || '';
   const houseNo = a.house_number ? `${a.house_number} ` : '';
-  const street = `${houseNo}${road}`.trim();
+  const street  = `${houseNo}${road}`.trim();
 
   const parts = [
     street,
@@ -309,7 +366,9 @@ export default function AddressAutocomplete({
           })}
           <li style={{ padding: '7px 14px', fontSize: '.73rem', color: 'rgba(255,255,255,0.35)', borderTop: '1px solid rgba(255,255,255,0.06)', pointerEvents: 'none' }}>
             <i className="bi bi-info-circle me-1" />
-            Select your street, then add your house/flat number
+            {suggestions[0]?._source === 'getaddress'
+              ? 'Select your full address from the list'
+              : 'Select your street — you can add your house/flat number in the address field'}
           </li>
         </ul>
       )}

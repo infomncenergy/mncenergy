@@ -78,7 +78,6 @@ export default function BookingPage() {
     propertyCategory: '',  // 'Residential' | 'Commercial'
     propertyType: '',
     bedrooms: '',
-    houseNumber: '',
     address: '',
     postcode: '',
     date: '',
@@ -117,15 +116,10 @@ export default function BookingPage() {
     setSubmitError('');
 
     try {
-      // Combine house/flat number with street address before submitting
-      const fullAddress = form.houseNumber
-        ? `${form.houseNumber.trim()}, ${form.address}`
-        : form.address;
-
       const res  = await fetch(`${API_URL}/api/bookings`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ ...form, address: fullAddress }),
+        body:    JSON.stringify(form),
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.message || 'Submission failed');
@@ -356,30 +350,13 @@ export default function BookingPage() {
                       </div>
                     )}
 
-                    {/* House/Flat Number */}
+                    {/* Full Address — postcode triggers a list of individual addresses */}
                     {form.propertyCategory && (
-                      <div className="col-md-4">
-                        <label className="form-label fw-semibold">
-                          {form.propertyCategory === 'Commercial' ? 'Unit / Floor No.' : 'House / Flat No.'} *
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-lg"
-                          placeholder={form.propertyCategory === 'Commercial' ? 'e.g. Unit 5, Floor 2' : 'e.g. 12 or Flat 3B'}
-                          value={form.houseNumber}
-                          onChange={e => update('houseNumber', e.target.value)}
-                          onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
-                        />
-                      </div>
-                    )}
-
-                    {/* Street Address — auto-opens list when postcode is entered above */}
-                    {form.propertyCategory && (
-                      <div className="col-md-8">
-                        <label className="form-label fw-semibold">Street Address *</label>
+                      <div className="col-12">
+                        <label className="form-label fw-semibold">Full Address *</label>
                         <AddressAutocomplete
                           id="property-address"
-                          placeholder="Select street from list or type address…"
+                          placeholder="Enter postcode above, then select your address…"
                           value={form.address}
                           forceQuery={addressQuery}
                           onChange={val => update('address', val)}
@@ -388,10 +365,14 @@ export default function BookingPage() {
                             if (postcode) update('postcode', postcode);
                           }}
                         />
+                        <small className="text-muted d-block mt-1" style={{ fontSize: '.73rem' }}>
+                          <i className="bi bi-info-circle me-1" />
+                          Enter your postcode first, then pick your address from the dropdown
+                        </small>
                       </div>
                     )}
 
-                     {/* Postcode — enter first to auto-populate the address list */}
+                    {/* Postcode — triggers the address dropdown above */}
                     {form.propertyCategory && (
                       <div className="col-md-4">
                         <label className="form-label fw-semibold">Postcode *</label>
@@ -409,7 +390,8 @@ export default function BookingPage() {
                           onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
                         />
                         <small className="text-muted d-block mt-1" style={{ fontSize: '.73rem' }}>
-                          <i className="bi bi-info-circle me-1"></i>Enter postcode to see streets below
+                          <i className="bi bi-lightbulb me-1" />
+                          Typing your postcode will show your address options above
                         </small>
                       </div>
                     )}
