@@ -78,6 +78,7 @@ export default function BookingPage() {
     propertyCategory: '',  // 'Residential' | 'Commercial'
     propertyType: '',
     bedrooms: '',
+    houseNumber: '',       // flat/house number — prepended to address on submit
     address: '',
     postcode: '',
     date: '',
@@ -116,10 +117,15 @@ export default function BookingPage() {
     setSubmitError('');
 
     try {
+      // Prepend house/flat number to street address before submitting
+      const fullAddress = form.houseNumber
+        ? `${form.houseNumber.trim()}, ${form.address}`
+        : form.address;
+
       const res  = await fetch(`${API_URL}/api/bookings`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(form),
+        body:    JSON.stringify({ ...form, address: fullAddress }),
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.message || 'Submission failed');
@@ -133,7 +139,7 @@ export default function BookingPage() {
     }
   };
 
-  const step2Valid = form.propertyCategory && form.propertyType && form.address && form.postcode && form.date && form.timeSlot;
+  const step2Valid = form.propertyCategory && form.propertyType && form.houseNumber && form.address && form.postcode && form.date && form.timeSlot;
   const step3Valid = form.name && form.email && form.phone && privacyChecked;
 
   if (submitted) {
@@ -350,26 +356,37 @@ export default function BookingPage() {
                       </div>
                     )}
 
-                    {/* Full Address — postcode triggers a list of individual addresses */}
+                    {/* House / Flat No. + Street Address */}
                     {form.propertyCategory && (
-                      <div className="col-12">
-                        <label className="form-label fw-semibold">Full Address *</label>
-                        <AddressAutocomplete
-                          id="property-address"
-                          placeholder="Enter postcode above, then select your address…"
-                          value={form.address}
-                          forceQuery={addressQuery}
-                          onChange={val => update('address', val)}
-                          onSelect={({ address, postcode }) => {
-                            update('address', address);
-                            if (postcode) update('postcode', postcode);
-                          }}
-                        />
-                        <small className="text-muted d-block mt-1" style={{ fontSize: '.73rem' }}>
-                          <i className="bi bi-info-circle me-1" />
-                          Enter your postcode first, then pick your address from the dropdown
-                        </small>
-                      </div>
+                      <>
+                        <div className="col-md-3">
+                          <label className="form-label fw-semibold">
+                            {form.propertyCategory === 'Commercial' ? 'Unit / Floor No.' : 'House / Flat No.'} *
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control form-control-lg"
+                            placeholder={form.propertyCategory === 'Commercial' ? 'e.g. Unit 5' : 'e.g. 36 or Flat 3B'}
+                            value={form.houseNumber}
+                            onChange={e => update('houseNumber', e.target.value)}
+                            onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+                          />
+                        </div>
+                        <div className="col-md-9">
+                          <label className="form-label fw-semibold">Street Address *</label>
+                          <AddressAutocomplete
+                            id="property-address"
+                            placeholder="Enter postcode below, then select your street…"
+                            value={form.address}
+                            forceQuery={addressQuery}
+                            onChange={val => update('address', val)}
+                            onSelect={({ address, postcode }) => {
+                              update('address', address);
+                              if (postcode) update('postcode', postcode);
+                            }}
+                          />
+                        </div>
+                      </>
                     )}
 
                     {/* Postcode — triggers the address dropdown above */}
@@ -391,7 +408,7 @@ export default function BookingPage() {
                         />
                         <small className="text-muted d-block mt-1" style={{ fontSize: '.73rem' }}>
                           <i className="bi bi-lightbulb me-1" />
-                          Typing your postcode will show your address options above
+                          Enter your postcode — your street will appear in the field above to select
                         </small>
                       </div>
                     )}
