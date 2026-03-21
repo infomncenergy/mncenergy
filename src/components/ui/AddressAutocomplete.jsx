@@ -3,17 +3,23 @@
  * -------------------
  * UK address lookup — two-tier strategy:
  *
- *  TIER 1 (preferred): getAddress.io
+ *  TIER 1 (optional): getAddress.io
  *    → Returns individual house-numbered addresses from Royal Mail PAF data
  *    → e.g. "36 Imperial Drive, Harrow, HA2 7LH"
  *    → Requires VITE_GETADDRESS_API_KEY in your .env / Vercel env vars
  *    → Free tier: 20 lookups/day  |  Paid: from £7/month (1,000/day)
  *    → Sign up at: https://getaddress.io
  *
- *  TIER 2 (fallback — no API key needed): postcodes.io + Nominatim
- *    → Returns street-level results (no house numbers)
+ *  TIER 2 (default — free, no signup): Overpass API (OpenStreetMap)
+ *    → Returns individual house-numbered addresses from OSM data
+ *    → e.g. "36 Imperial Drive, Harrow" then "38 Imperial Drive, Harrow"...
+ *    → Completely free, no registration, no rate limit for normal use
+ *    → Coverage: excellent in cities/towns, thinner in rural areas
+ *
+ *  TIER 3 (last resort): postcodes.io + Nominatim
+ *    → Returns street-level results only (no house numbers)
  *    → e.g. "Imperial Drive, Harrow, HA2 7LH"
- *    → Free, unlimited, works on localhost and production
+ *    → Used when Overpass returns nothing (very rural or unmapped areas)
  *
  * When input looks like a UK postcode (e.g. "HA2 7LH", "SW1A 1AA"):
  *   → Tier 1: getAddress.io returns full individual addresses
@@ -87,7 +93,73 @@ async function lookupPostcodesIO(postcode) {
   return data.result; // { latitude, longitude, postcode, admin_district, admin_ward, ... }
 }
 
-// ── Step 2: Nominatim reverse → road name ────────────────────────────────────
+// ── Tier 2: Overpass API — free, no signup, OSM house-level data ──────────────
+// Queries OpenStreetMap nodes/ways with addr:housenumber + addr:street inside
+// a ~250m bounding box centred on the postcode lat/lon.
+async function fetchOverpassAddresses(lat, lon, formattedPostcode) {
+  // ~250 m radius in degrees
+  const d    = 0.0022;
+  const bbox = `${lat - d},${lon - d},${lat + d},${lon + d}`;
+
+  // Ask for any node or way that has both addr:housenumber AND addr:street
+  const query = `[out:json][timeout:8];
+(
+  node["addr:housenumber"]["addr:street"](${bbox});
+  way["addr:housenumber"]["addr:street"](${bbox});
+);
+out center tags;`;
+
+  try {
+    const res = await fetch('https://overpass-api.de/api/interpreter', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body:    `data=${encodeURIComponent(query)}`,
+    });
+    if (!res.ok) return [];
+
+    const data = await res.json();
+    const seen    = new Set();
+    const results = [];
+
+    for (const el of (data.elements || [])) {
+      const tags   = el.tags || {};
+      const num    = (tags['addr:housenumber'] || '').trim();
+      const street = (tags['addr:street'] || '').trim();
+      if (!num || !street) continue;
+
+      // Prefer suburb/city from OSM tags, fall back to postcodes.io district
+      const suburb  = (tags['addr:suburb'] || tags['addr:district'] || '').trim();
+      const town    = (tags['addr:city'] || tags['addr:town'] || tags['addr:village'] || '').trim();
+
+      const addrKey = `${num}|${street}`.toLowerCase();
+      if (seen.has(addrKey)) continue;
+      seen.add(addrKey);
+
+      const parts   = [`${num} ${street}`, suburb, town].filter(Boolean);
+      // Deduplicate adjacent identical segments (e.g. "Harrow, Harrow")
+      const unique  = parts.filter((p, i) => i === 0 || p !== parts[i - 1]);
+      const display = unique.slice(0, 3).join(', ');
+
+      results.push({
+        _source:   'overpass',
+        _display:  display,
+        _postcode: formattedPostcode,
+        _numericHouseNo: parseInt(num, 10) || 0,
+        display_name: `${display}, ${formattedPostcode}`,
+        address: { road: display, postcode: formattedPostcode },
+      });
+    }
+
+    // Sort numerically by house number so list reads 2, 4, 6, 8…
+    results.sort((a, b) => a._numericHouseNo - b._numericHouseNo || a._display.localeCompare(b._display));
+
+    return results;
+  } catch {
+    return [];
+  }
+}
+
+// ── Tier 3: Nominatim reverse → road name ────────────────────────────────────
 async function reverseGeocode(lat, lon) {
   const url = `https://nominatim.openstreetmap.org/reverse?format=json&addressdetails=1&lat=${lat}&lon=${lon}&zoom=17`;
   const res  = await fetch(url, { headers: { 'Accept-Language': 'en-GB' } });
@@ -95,35 +167,43 @@ async function reverseGeocode(lat, lon) {
   return data.address || {};
 }
 
-// ── Build a list of address suggestions ───────────────────────────────────────
-// Priority:
-//   1. getAddress.io (if VITE_GETADDRESS_API_KEY is set) → house-level PAF data
-//   2. postcodes.io + Nominatim → street-level fallback (no house numbers)
+// ── Build address suggestions — three-tier strategy ───────────────────────────
+//   Tier 1: getAddress.io (VITE_GETADDRESS_API_KEY) → full PAF house addresses
+//   Tier 2: Overpass API (free, no signup)          → OSM house addresses
+//   Tier 3: postcodes.io + Nominatim (fallback)     → street names only
 async function buildPostcodeSuggestions(postcode) {
-  // ── Tier 1: getAddress.io ──────────────────────────────────────────────────
+  // ── Tier 1: getAddress.io (optional — skipped when no API key) ──────────────
   const gaResults = await fetchGetAddress(postcode);
   if (gaResults && gaResults.length) return gaResults;
 
-  // ── Tier 2: postcodes.io + Nominatim fallback ──────────────────────────────
+  // ── Both Tier 2 & 3 need the postcode lat/lon from postcodes.io ─────────────
   const pc = await lookupPostcodesIO(postcode);
   if (!pc) return [];
 
   const formattedPostcode = pc.postcode;
 
-  // Run reverse geocode + Nominatim search in parallel for maximum results
-  const [revResult, searchResult] = await Promise.allSettled([
+  // ── Tier 2: Overpass — house-level OSM data (free, no signup) ───────────────
+  const [overpassResult, revResult, searchResult] = await Promise.allSettled([
+    fetchOverpassAddresses(pc.latitude, pc.longitude, formattedPostcode),
     reverseGeocode(pc.latitude, pc.longitude),
     searchNominatim(`${formattedPostcode.replace(/\s/g, '')}, UK`),
   ]);
 
+  const overpassData = overpassResult.status === 'fulfilled' ? (overpassResult.value || []) : [];
+
+  if (overpassData.length > 0) {
+    // Got house-level results — return up to 30 (covers typical UK postcode ~15–25 addresses)
+    return overpassData.slice(0, 30);
+  }
+
+  // ── Tier 3: Nominatim street-level fallback ──────────────────────────────────
   const revAddr    = revResult.status    === 'fulfilled' ? (revResult.value    || {}) : {};
   const searchData = searchResult.status === 'fulfilled' ? (searchResult.value || []) : [];
 
-  // Collect unique streets — no duplicates
   const seen    = new Set();
   const results = [];
 
-  const addResult = (road, suburb, district, source) => {
+  const addStreet = (road, suburb, district, source) => {
     const key = road.toLowerCase().trim();
     if (!key || seen.has(key)) return;
     seen.add(key);
@@ -135,15 +215,15 @@ async function buildPostcodeSuggestions(postcode) {
     });
   };
 
-  // 1. Reverse geocode result (most accurate for the postcode centroid)
+  // Reverse geocode result
   const revRoad = revAddr.road || revAddr.pedestrian || revAddr.footway || '';
   if (revRoad) {
     const suburb   = revAddr.suburb || pc.admin_ward || '';
     const district = (revAddr.city_district || '').replace('London Borough of ', '') || pc.admin_district || '';
-    addResult(revRoad, suburb, district, 'nominatim-reverse');
+    addStreet(revRoad, suburb, district, 'nominatim-reverse');
   }
 
-  // 2. Nominatim search results — multiple streets in the same postcode area
+  // Nominatim search results
   for (const r of searchData) {
     if (!r.address) continue;
     const a    = r.address;
@@ -151,11 +231,11 @@ async function buildPostcodeSuggestions(postcode) {
     if (!road) continue;
     const suburb   = a.suburb || a.neighbourhood || pc.admin_ward || '';
     const district = (a.city_district || '').replace('London Borough of ', '') || a.city || a.town || pc.admin_district || '';
-    addResult(road, suburb, district, 'nominatim-search');
+    addStreet(road, suburb, district, 'nominatim-search');
     if (results.length >= 8) break;
   }
 
-  // Fallback to postcodes.io district data if Nominatim found nothing
+  // Last resort — postcodes.io district
   if (!results.length) {
     const fallbackParts = [pc.admin_ward, pc.admin_district].filter(Boolean);
     if (!fallbackParts.length) return [];
@@ -179,8 +259,8 @@ async function searchNominatim(query) {
 
 // ── Parse any result into { address, postcode } ───────────────────────────────
 function parseResult(item) {
-  // getAddress.io result — already clean
-  if (item._source === 'getaddress') {
+  // getAddress.io or Overpass result — already clean
+  if (item._source === 'getaddress' || item._source === 'overpass') {
     return { address: item._display, postcode: item._postcode };
   }
 
@@ -366,7 +446,7 @@ export default function AddressAutocomplete({
           })}
           <li style={{ padding: '7px 14px', fontSize: '.73rem', color: 'rgba(255,255,255,0.35)', borderTop: '1px solid rgba(255,255,255,0.06)', pointerEvents: 'none' }}>
             <i className="bi bi-info-circle me-1" />
-            {suggestions[0]?._source === 'getaddress'
+            {(suggestions[0]?._source === 'getaddress' || suggestions[0]?._source === 'overpass')
               ? 'Select your full address from the list'
               : 'Select your street — you can add your house/flat number in the address field'}
           </li>
