@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
  * Reusable full-width hero for service pages
  * @param {string}   title       - main heading
  * @param {string}   subtitle    - sub-heading line
- * @param {string}   price       - optional price badge text
+ * @param {string}   price       - price shown prominently in hero banner (e.g. "From £59.99")
  * @param {string[]} checklist   - optional bullet list shown below subtitle
  * @param {string}   ctaText     - primary CTA text
  * @param {string}   ctaTo       - primary CTA link
@@ -17,7 +17,7 @@ export default function ServiceHero({
   subtitle,
   price,
   checklist,
-  ctaText    = 'Get a Quote',
+  ctaText    = 'Book Now',
   ctaTo      = '/book-now',
   ctaSecText,
   ctaSecTo,
@@ -27,15 +27,31 @@ export default function ServiceHero({
     <section
       className="service-hero"
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)) , url('${bgImage}') center/cover no-repeat`,
+        background: `linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68)), url('${bgImage}') center/cover no-repeat`,
       }}
     >
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-9 text-center text-white">
-            {price && <span className="service-hero__price-badge">{price}</span>}
+
+            {/* Trust badge */}
+            <div className="service-hero__trust-badge">
+              <i className="bi bi-patch-check-fill me-2" style={{ color: '#67e8f9' }}></i>
+              Gas Safe · NICEIC · NAPIT · BAFE Registered
+            </div>
+
             <h1 className="service-hero__title">{title}</h1>
             {subtitle && <p className="service-hero__subtitle">{subtitle}</p>}
+
+            {/* Prominent price display */}
+            {price && (
+              <div className="service-hero__price-block">
+                <div className="service-hero__price-from">Starting From</div>
+                <div className="service-hero__price-amount">{price}</div>
+                <div className="service-hero__price-note">inc. VAT · Same-day available · Digital cert within 24h</div>
+              </div>
+            )}
+
             {checklist && (
               <ul className="service-hero__checklist">
                 {checklist.map((item, i) => (
@@ -43,10 +59,18 @@ export default function ServiceHero({
                 ))}
               </ul>
             )}
+
             <div className="d-flex gap-3 justify-content-center flex-wrap mt-4">
-              <Link to={ctaTo} className="btn-green">{ctaText}</Link>
-              {ctaSecText && <Link to={ctaSecTo || '/book-now'} className="btn-outline-white">{ctaSecText}</Link>}
+              <Link to={ctaTo} className="btn-green">
+                <i className="bi bi-calendar-check me-2"></i>{ctaText}
+              </Link>
+              {ctaSecText && (
+                <Link to={ctaSecTo || '/book-now'} className="btn-outline-white">
+                  {ctaSecText}
+                </Link>
+              )}
             </div>
+
           </div>
         </div>
       </div>

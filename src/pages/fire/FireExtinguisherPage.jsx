@@ -5,14 +5,13 @@ import PricingBox      from '../../components/ui/PricingBox';
 import IntroSection    from '../../components/ui/IntroSection';
 import ProcessSteps    from '../../components/ui/ProcessSteps';
 import FaqAccordion    from '../../components/ui/FaqAccordion';
-import PageReviews     from '../../components/ui/PageReviews';
 import CtaBanner       from '../../components/ui/CtaBanner';
 import SectionLabel    from '../../components/ui/SectionLabel';
 import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Fire Extinguisher Servicing London',
-  subtitle:  'BAFE-registered engineers servicing, inspecting, and supplying fire extinguishers for businesses and landlords across London & M25. Stay compliant with BS 5306-3.',
+  subtitle:  'BAFE-registered engineers servicing, inspecting, and supplying fire extinguishers for businesses and landlords across London. Stay compliant with BS 5306-3.',
   price:     'From £15 Per Extinguisher',
   checklist: ['BAFE Registered', 'BS 5306-3 Compliant', 'All Types Covered', 'Certificate Provided'],
   ctaText:   'Book Service',
@@ -101,8 +100,8 @@ export default function FireExtinguisherPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <BenefitCards {...benefits} />
       <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
       <IntroSection {...intro} />
       <ProcessSteps {...proc} />
       <RelatedServices title="Related Fire Services" services={related} />
@@ -117,7 +116,6 @@ export default function FireExtinguisherPage() {
         </div>
       </section>
 
-      <PageReviews title="What Our Clients Say" />
       <CtaBanner title="Need Your Fire Extinguishers Serviced? Book Online Today!" />
     </>
   );

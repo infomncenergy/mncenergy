@@ -12,7 +12,7 @@ const FEATURES = [
   { icon: 'bi-patch-check-fill',        text: 'Gas Safe, NICEIC, NAPIT & BAFE registered engineers' },
   { icon: 'bi-clock-fill',              text: 'Same-day and next-day appointment availability'        },
   { icon: 'bi-file-earmark-check-fill', text: 'Digital certificates delivered within 24–48 hours'    },
-  { icon: 'bi-geo-alt-fill',            text: 'Covering all of London and the wider M25 area'         },
+  { icon: 'bi-geo-alt-fill',            text: 'Covering all of London'         },
 ];
 
 export default function About() {
@@ -49,7 +49,7 @@ export default function About() {
             <p style={{ lineHeight: 1.8 }}>
               MNC Energy is a fully certified property safety company providing compliance
               certificates and safety inspections for landlords, businesses, and homeowners
-              across London and the M25 area.
+              across London.
             </p>
 
             <div className="about-v2__features">

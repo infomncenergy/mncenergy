@@ -31,7 +31,7 @@ export const EPC_FAQS = [
 export const RES_EPC = {
   hero: {
     title: 'Residential Energy Performance Certificate (EPC)',
-    subtitle: 'Fast, Accredited EPC Assessments for Homes, Rental Properties & HMOs Across London & M25. Certificates Issued Within 24 Hours.',
+    subtitle: 'Fast, Accredited EPC Assessments for Homes, Rental Properties & HMOs Across London. Certificates Issued Within 24 Hours.',
     price: 'From £59.99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
@@ -44,7 +44,7 @@ export const RES_EPC = {
   ],
   intro: {
     title: 'What is a Residential EPC?',
-    body: 'A Residential Energy Performance Certificate (EPC) is a legal requirement for any home being sold or rented in England and Wales. The certificate rates your property\'s energy efficiency from A to G and must be available to prospective buyers or tenants before marketing begins. Our accredited Domestic Energy Assessors (DEAs) carry out swift, accurate EPC assessments across London and the M25, lodging certificates directly to the official government EPC register within 24 hours.',
+    body: 'A Residential Energy Performance Certificate (EPC) is a legal requirement for any home being sold or rented in England and Wales. The certificate rates your property\'s energy efficiency from A to G and must be available to prospective buyers or tenants before marketing begins. Our accredited Domestic Energy Assessors (DEAs) carry out swift, accurate EPC assessments across London, lodging certificates directly to the official government EPC register within 24 hours.',
     imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     imgAlt: 'EPC assessor visiting residential property',
     ctaText: 'Book Now',
@@ -78,7 +78,7 @@ export const RES_EPC = {
   },
   pricing: {
     title: 'Residential EPC Pricing',
-    body: 'Fast, affordable EPC assessments for all property types across London and the M25.',
+    body: 'Fast, affordable EPC assessments for all property types across London.',
     prices: [
       { label: 'Studio / 1 Bedroom Flat',     price: 'From £59.99' },
       { label: '2–3 Bedroom Property',        price: 'From £79.99' },
@@ -86,7 +86,7 @@ export const RES_EPC = {
       { label: 'HMO / Large Property',        price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT, EPC lodgement on the government register, and PDF certificate. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT, EPC lodgement on the government register, and PDF certificate. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'What Does an EPC Assessment Cover?',
@@ -119,13 +119,13 @@ export const RES_EPC = {
     label: 'HOW IT WORKS',
     title: 'Getting Your Residential EPC',
     steps: [
-      { icon: 'bi-calendar-check', title: 'Book Your Assessment', body: 'Book online or by phone. We offer flexible appointment times including evenings and weekends across London and the M25.' },
+      { icon: 'bi-calendar-check', title: 'Book Your Assessment', body: 'Book online or by phone. We offer flexible appointment times including evenings and weekends across London.' },
       { icon: 'bi-clipboard-check', title: 'Property Assessment', body: 'Our accredited DEA visits your property, inspects all relevant features, and records the data needed to generate an accurate EPC rating.' },
       { icon: 'bi-file-earmark-check-fill', title: 'EPC Issued Within 24 Hours', body: 'Your EPC is lodged on the official government register and emailed to you as a PDF certificate within 24 hours of the assessment.' },
     ],
   },
   related: [
-    { icon: 'bi-building', title: 'Commercial EPC', body: 'Need an EPC for a commercial property or office? We carry out accredited commercial EPC assessments across London and the M25.', to: '/epc/commercial' },
+    { icon: 'bi-building', title: 'Commercial EPC', body: 'Need an EPC for a commercial property or office? We carry out accredited commercial EPC assessments across London.', to: '/epc/commercial' },
     { icon: 'bi-lightning-fill', title: 'EICR Certificate', body: 'Combine your EPC with an electrical installation condition report for landlord compliance in one visit.', to: '/electrical/residential-eicr' },
     { icon: 'bi-fire', title: 'Gas Safety Certificate (CP12)', body: 'Stay fully compliant with an annual CP12 landlord gas safety certificate alongside your EPC.', to: '/gas/landlord-gas-safety' },
   ],
@@ -139,7 +139,7 @@ export const RES_EPC = {
 export const COMM_EPC = {
   hero: {
     title: 'Commercial Energy Performance Certificate (EPC)',
-    subtitle: 'Accredited Commercial EPC Assessments for Offices, Retail, Warehouses & All Non-Domestic Premises Across London & M25.',
+    subtitle: 'Accredited Commercial EPC Assessments for Offices, Retail, Warehouses & All Non-Domestic Premises Across London.',
     price: 'From £149',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
@@ -152,7 +152,7 @@ export const COMM_EPC = {
   ],
   intro: {
     title: 'What is a Commercial EPC?',
-    body: 'A Commercial Energy Performance Certificate (EPC) is a legal requirement for all non-domestic buildings being sold, let, or constructed in England and Wales. Unlike residential EPCs, commercial assessments use Display Energy Certificates (DECs) for public buildings and Non-Domestic EPCs for offices, retail, and industrial premises. Our CIBSE-accredited Non-Domestic Energy Assessors (NDEAs) provide accurate, cost-effective commercial EPC assessments across all sectors in London and the M25, with certificates lodged directly to the government EPC register.',
+    body: 'A Commercial Energy Performance Certificate (EPC) is a legal requirement for all non-domestic buildings being sold, let, or constructed in England and Wales. Unlike residential EPCs, commercial assessments use Display Energy Certificates (DECs) for public buildings and Non-Domestic EPCs for offices, retail, and industrial premises. Our CIBSE-accredited Non-Domestic Energy Assessors (NDEAs) provide accurate, cost-effective commercial EPC assessments across all sectors in London, with certificates lodged directly to the government EPC register.',
     imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Commercial EPC assessor in office building',
     ctaText: 'Get a Quote',
@@ -197,7 +197,7 @@ export const COMM_EPC = {
   },
   propertyTypes: {
     title: 'Commercial Properties We Assess',
-    subtitle: 'We provide accredited commercial EPC assessments for all types of non-domestic premises across London and the M25.',
+    subtitle: 'We provide accredited commercial EPC assessments for all types of non-domestic premises across London.',
     items: [
       { icon: 'bi-building', title: 'Offices & Office Blocks', body: 'Commercial EPC assessments for single and multi-floor offices, business parks, and managed workspaces.' },
       { icon: 'bi-shop', title: 'Retail Units & Shops', body: 'EPC assessments for retail units, shops, showrooms, and shopping centre units.' },
@@ -231,7 +231,7 @@ export const COMM_EPC = {
     ],
   },
   related: [
-    { icon: 'bi-house-fill', title: 'Residential EPC', body: 'Need an EPC for a residential property? We carry out accredited domestic EPC assessments across London and the M25.', to: '/epc/residential' },
+    { icon: 'bi-house-fill', title: 'Residential EPC', body: 'Need an EPC for a residential property? We carry out accredited domestic EPC assessments across London.', to: '/epc/residential' },
     { icon: 'bi-lightning-fill', title: 'Commercial EICR', body: 'Combine your EPC assessment with a commercial electrical installation condition report for complete compliance.', to: '/electrical/commercial-eicr' },
     { icon: 'bi-clipboard-check', title: 'Commercial Fire Risk Assessment', body: 'Ensure your premises meets all fire safety obligations with a professionally completed FRA.', to: '/fire/commercial-fra' },
   ],

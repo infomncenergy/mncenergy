@@ -16,7 +16,7 @@ export default function Footer() {
             </Link>
             <p className="footer-desc mt-3">
               MNC Energy provides fully certified safety inspections and certificates for landlords,
-              homeowners and businesses across London and the M25 area. Gas Safe, NICEIC and BAFE registered.
+              homeowners and businesses across London. Gas Safe, NICEIC and BAFE registered.
             </p>
             <div className="footer-social">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">

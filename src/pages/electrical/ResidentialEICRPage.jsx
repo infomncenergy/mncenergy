@@ -6,7 +6,6 @@ import BenefitCards   from '../../components/ui/BenefitCards';
 import PricingBox     from '../../components/ui/PricingBox';
 import RelatedServices from '../../components/ui/RelatedServices';
 import FaqAccordion   from '../../components/ui/FaqAccordion';
-import PageReviews    from '../../components/ui/PageReviews';
 import CtaBanner      from '../../components/ui/CtaBanner';
 import SectionLabel   from '../../components/ui/SectionLabel';
 import { Link }       from 'react-router-dom';
@@ -23,10 +22,10 @@ export default function ResidentialEICRPage() {
       <StatsBar stats={stats} />
 
       {/* Benefits */}
-      <BenefitCards {...benefits} />
+      <PricingBox {...pricing} />
 
       {/* Pricing */}
-      <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
 
       {/* What is EICR */}
       <IntroSection {...intro} />
@@ -35,7 +34,7 @@ export default function ResidentialEICRPage() {
       <section className="property-types-section">
         <div className="container">
           <SectionLabel center>EICR FOR DIFFERENT PROPERTY TYPES</SectionLabel>
-          <h2 className="fw-bold text-center mb-2">We offer EICR services for all residential property types in the M25 area</h2>
+          <h2 className="fw-bold text-center mb-2">We offer EICR services for all residential property types in London</h2>
           <p className="text-center text-muted mb-5">Whether you are a landlord, homeowner or tenant, we can provide an EICR for your property.</p>
           <div className="row g-4">
             {propertyTypes.map((pt, i) => (
@@ -68,7 +67,6 @@ export default function ResidentialEICRPage() {
       </section>
 
       {/* Reviews */}
-      <PageReviews title="Customer Testimonials and Google Reviews" />
 
       {/* CTA */}
       <CtaBanner title={cta} />

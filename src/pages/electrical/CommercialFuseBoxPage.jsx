@@ -5,7 +5,6 @@ import BenefitCards       from '../../components/ui/BenefitCards';
 import ProcessSteps       from '../../components/ui/ProcessSteps';
 import RelatedServices    from '../../components/ui/RelatedServices';
 import FaqAccordion       from '../../components/ui/FaqAccordion';
-import PageReviews        from '../../components/ui/PageReviews';
 import CtaBanner          from '../../components/ui/CtaBanner';
 import SectionLabel       from '../../components/ui/SectionLabel';
 
@@ -47,7 +46,6 @@ export default function CommercialFuseBoxPage() {
       </section>
 
       {/* Reviews */}
-      <PageReviews title="What Our Commercial Clients Say" />
 
       {/* CTA */}
       <CtaBanner title={cta} />

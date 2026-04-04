@@ -5,14 +5,13 @@ import PricingBox      from '../../components/ui/PricingBox';
 import IntroSection    from '../../components/ui/IntroSection';
 import ProcessSteps    from '../../components/ui/ProcessSteps';
 import FaqAccordion    from '../../components/ui/FaqAccordion';
-import PageReviews     from '../../components/ui/PageReviews';
 import CtaBanner       from '../../components/ui/CtaBanner';
 import SectionLabel    from '../../components/ui/SectionLabel';
 import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Boiler Installation London',
-  subtitle:  'Gas Safe registered engineers installing combi, system, and heat-only boilers across London & M25. New boiler fitted in a day with 10-year warranty options.',
+  subtitle:  'Gas Safe registered engineers installing combi, system, and heat-only boilers across London. New boiler fitted in a day with 10-year warranty options.',
   price:     'From £1,499 Fully Fitted',
   checklist: ['Gas Safe Registered', 'All Major Brands', '10-Year Warranty Available', 'Same-Week Installation'],
   ctaText:   'Get a Free Quote',
@@ -101,8 +100,8 @@ export default function BoilerInstallationPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <BenefitCards {...benefits} />
       <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
       <IntroSection {...intro} />
       <ProcessSteps {...proc} />
       <RelatedServices title="Related Gas Services" services={related} />
@@ -117,7 +116,6 @@ export default function BoilerInstallationPage() {
         </div>
       </section>
 
-      <PageReviews title="What Our Clients Say" />
       <CtaBanner title="Ready for a New Boiler? Get Your Free Quote Today!" />
     </>
   );

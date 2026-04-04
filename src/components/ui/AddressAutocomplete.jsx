@@ -270,24 +270,26 @@ export default function AddressAutocomplete({
   const [open,         setOpen]         = useState(false);
   const [focused,      setFocused]      = useState(false);
   const [highlighted,  setHighlighted]  = useState(-1);
-  const [mode,         setMode]         = useState('streets'); // 'streets' | 'expanding' | 'houses'
+  const [mode,         setMode]         = useState('streets'); // 'streets' | 'expanding' | 'houses' | 'no-houses'
   const [houseList,    setHouseList]    = useState([]);
   const [expandLabel,  setExpandLabel]  = useState('');       // street name shown while expanding
+  const noHousesTimer = useRef(null);
 
   const debounceRef = useRef(null);
   const wrapRef     = useRef(null);
 
-  // Close on outside click
+  // Close on outside click/tap (pointerdown covers mouse + touch)
   useEffect(() => {
     const handler = (e) => {
       if (wrapRef.current && !wrapRef.current.contains(e.target)) {
+        clearTimeout(noHousesTimer.current);
         setOpen(false);
         setMode('streets');
         setHouseList([]);
       }
     };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
+    document.addEventListener('pointerdown', handler);
+    return () => document.removeEventListener('pointerdown', handler);
   }, []);
 
   const fetchSuggestions = useCallback(async (query) => {
@@ -374,12 +376,19 @@ export default function AddressAutocomplete({
             setHouseList(houses);
             setMode('houses');
           } else {
-            // No houses in OSM — select the street, let user type house number
+            // No individual houses in OSM for this postcode.
+            // Fill the street address and show a clear guidance message so
+            // the user knows to type their house/flat number in the field above.
             onChange(parsed.address);
             onSelect({ address: parsed.address, postcode });
             setSuggestions([]);
-            setOpen(false);
-            setMode('streets');
+            setMode('no-houses');
+            setOpen(true);
+            clearTimeout(noHousesTimer.current);
+            noHousesTimer.current = setTimeout(() => {
+              setOpen(false);
+              setMode('streets');
+            }, 3000);
           }
         });
       } else {
@@ -404,6 +413,24 @@ export default function AddressAutocomplete({
   // ── What to render in the dropdown ─────────────────────────────────────────
   const renderDropdown = () => {
     if (!open) return null;
+
+    // No houses found in OSM — show brief guidance then close
+    if (mode === 'no-houses') {
+      return (
+        <ul className="address-autocomplete__dropdown">
+          <li style={{ padding: '14px 16px', pointerEvents: 'none', display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+            <i className="bi bi-check-circle-fill" style={{ color: '#4ade80', fontSize: '1.1rem', flexShrink: 0, marginTop: 1 }} />
+            <span>
+              <span style={{ fontSize: '.88rem', fontWeight: 600, color: '#fff', display: 'block' }}>Street selected!</span>
+              <span style={{ fontSize: '.8rem', color: 'rgba(255,255,255,0.6)', marginTop: 2, display: 'block' }}>
+                Now enter your house or flat number in the{' '}
+                <strong style={{ color: 'rgba(255,255,255,0.85)' }}>House / Flat No.</strong> field above.
+              </span>
+            </span>
+          </li>
+        </ul>
+      );
+    }
 
     // Loading house list after street click
     if (mode === 'expanding') {
@@ -431,7 +458,7 @@ export default function AddressAutocomplete({
             <li
               key={i}
               className={`address-autocomplete__option${highlighted === i ? ' address-autocomplete__option--active' : ''}`}
-              onMouseDown={(e) => { e.preventDefault(); handlePick(h); }}
+              onPointerDown={(e) => { e.preventDefault(); handlePick(h); }}
               onMouseEnter={() => setHighlighted(i)}
             >
               <i className="bi bi-geo-alt me-2" style={{ color: 'var(--accent2)', flexShrink: 0, marginTop: 2 }} />
@@ -466,7 +493,7 @@ export default function AddressAutocomplete({
               <li
                 key={i}
                 className={`address-autocomplete__option${highlighted === i ? ' address-autocomplete__option--active' : ''}`}
-                onMouseDown={(e) => { e.preventDefault(); handlePick(s); }}
+                onPointerDown={(e) => { e.preventDefault(); handlePick(s); }}
                 onMouseEnter={() => setHighlighted(i)}
               >
                 <i className="bi bi-geo-alt me-2" style={{ color: 'var(--accent2)', flexShrink: 0, marginTop: 2 }} />

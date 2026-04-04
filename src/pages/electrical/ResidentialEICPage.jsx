@@ -5,7 +5,6 @@ import BenefitCards      from '../../components/ui/BenefitCards';
 import PricingBox        from '../../components/ui/PricingBox';
 import RelatedServices   from '../../components/ui/RelatedServices';
 import FaqAccordion      from '../../components/ui/FaqAccordion';
-import PageReviews       from '../../components/ui/PageReviews';
 import CtaBanner         from '../../components/ui/CtaBanner';
 import SectionLabel      from '../../components/ui/SectionLabel';
 import { Link }          from 'react-router-dom';
@@ -22,7 +21,7 @@ export default function ResidentialEICPage() {
       <IntroSection {...intro} />
 
       {/* Benefits */}
-      <BenefitCards {...benefits} />
+      <PricingBox {...pricing} />
 
       {/* When is EIC Required */}
       <section className="intro-section">
@@ -48,7 +47,7 @@ export default function ResidentialEICPage() {
       </section>
 
       {/* Pricing */}
-      <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
 
       {/* FAQ */}
       <section className="faq-section">
@@ -64,7 +63,6 @@ export default function ResidentialEICPage() {
       </section>
 
       {/* Reviews */}
-      <PageReviews title="See Why Clients Choose Us:" />
 
       {/* Additional Services */}
       <RelatedServices title="Additional Services We Offer" services={related} />

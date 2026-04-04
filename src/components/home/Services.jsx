@@ -9,7 +9,7 @@ export default function Services() {
         <div className="text-center mb-5">
           <SectionLabel center>OUR SERVICES</SectionLabel>
           <h2 className="fw-bold">Certification Services We Offer</h2>
-          <p className="text-muted mt-2">Professional, fast, and affordable safety certificates across London &amp; M25</p>
+          <p className="text-muted mt-2">Professional, fast, and affordable safety certificates across London</p>
         </div>
 
         <div className="row g-4">

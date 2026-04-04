@@ -34,7 +34,7 @@ export default function Reviews() {
           <div className="col-lg-7">
             <SectionLabel>CUSTOMER REVIEWS</SectionLabel>
             <h2 className="fw-bold mb-2">What Our Clients Say</h2>
-            <p className="text-muted">Trusted by thousands of landlords across London &amp; M25</p>
+            <p className="text-muted">Trusted by thousands of landlords across London</p>
           </div>
           <div className="col-lg-5 text-lg-end">
             <div className="reviews-v2__rating-block">

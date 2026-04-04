@@ -5,15 +5,14 @@ import PricingBox      from '../../components/ui/PricingBox';
 import IntroSection    from '../../components/ui/IntroSection';
 import ProcessSteps    from '../../components/ui/ProcessSteps';
 import FaqAccordion    from '../../components/ui/FaqAccordion';
-import PageReviews     from '../../components/ui/PageReviews';
 import CtaBanner       from '../../components/ui/CtaBanner';
 import SectionLabel    from '../../components/ui/SectionLabel';
 import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'PAT Testing London',
-  subtitle:  'Portable Appliance Testing for landlords, businesses, and letting agents. Fast turnaround, NICEIC-approved engineers across London & M25.',
-  price:     'From £1.50 per item',
+  subtitle:  'Portable Appliance Testing for landlords, businesses, and letting agents. Fast turnaround, NICEIC-approved engineers across London.',
+  price:     'From £49.99',
   checklist: ['Same-Day Available', 'Certificate Issued Within 24 hrs', 'All Appliances & Equipment Covered'],
   ctaText:   'Book PAT Testing',
   ctaTo:     '/book-now',
@@ -40,14 +39,14 @@ const benefits = {
 
 const pricing = {
   title:  'PAT Testing Prices',
-  body:   'Competitive per-item pricing with volume discounts available for large numbers of appliances. All prices include VAT and testing report.',
+  body:   'Transparent flat-rate pricing for landlords and businesses. All prices include VAT, PAT labels, and digital certificate.',
   prices: [
-    { label: '1–10 items',   price: '£3.50/item' },
-    { label: '11–50 items',  price: '£2.50/item' },
-    { label: '51–100 items', price: '£2.00/item' },
-    { label: '100+ items',   price: 'From £1.50/item', note: '(call for quote)' },
+    { label: 'Up to 10 items',  price: '£49.99' },
+    { label: '11–30 items',     price: '£89.99' },
+    { label: '31–60 items',     price: '£129.99' },
+    { label: '60+ items',       price: 'POA', note: '(call for quote)' },
   ],
-  disclaimer: '* All prices include VAT. Minimum call-out charge applies. Prices vary by location.',
+  disclaimer: '* All prices include VAT and PAT test labels. Minimum call-out charge applies. Prices may vary by location.',
 };
 
 const intro = {
@@ -99,8 +98,8 @@ export default function PATTestingPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <BenefitCards {...benefits} />
       <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
       <IntroSection {...intro} />
       <ProcessSteps {...proc} />
       <RelatedServices title="Related Electrical Services" services={related} />
@@ -115,7 +114,6 @@ export default function PATTestingPage() {
         </div>
       </section>
 
-      <PageReviews title="What Our Clients Say" />
       <CtaBanner title="Need PAT Testing? Book Your Appointment Online Today!" />
     </>
   );

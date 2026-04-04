@@ -46,7 +46,7 @@ export const GAS_FAQS = [
   },
   {
     q: 'How quickly can I get a Gas Safety Certificate after booking?',
-    a: 'We offer flexible scheduling with same-day or next-day appointments available across London and the M25 area. Certificates are issued digitally within 24–48 hours of the inspection.',
+    a: 'We offer flexible scheduling with same-day or next-day appointments available across London. Certificates are issued digitally within 24–48 hours of the inspection.',
   },
 ];
 
@@ -80,8 +80,8 @@ export const BOILER_FAQS = [
 export const CP12 = {
   hero: {
     title: 'Landlord Gas Safety Certificate (CP12)',
-    subtitle: 'Annual Gas Safety Inspections for Rental Properties – From £59.99. Certified by Gas Safe Registered Engineers Across London & M25.',
-    price: 'From £59.99',
+    subtitle: 'Annual Gas Safety Inspections for Rental Properties – From £57.99. Certified by Gas Safe Registered Engineers Across London.',
+    price: 'From £57.99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
@@ -93,7 +93,7 @@ export const CP12 = {
   ],
   intro: {
     title: 'What is a Landlord Gas Safety Certificate (CP12)?',
-    body: 'A Landlord Gas Safety Certificate, also known as a CP12, is a legal document required by all UK landlords who provide gas appliances in their rental properties. Under the Gas Safety (Installation and Use) Regulations 1998, landlords must have all gas appliances, pipework, and flues checked annually by a Gas Safe registered engineer. Our engineers cover London and the M25 with next-day appointment availability and same-day digital certificate delivery.',
+    body: 'A Landlord Gas Safety Certificate, also known as a CP12, is a legal document required by all UK landlords who provide gas appliances in their rental properties. Under the Gas Safety (Installation and Use) Regulations 1998, landlords must have all gas appliances, pipework, and flues checked annually by a Gas Safe registered engineer. Our engineers cover London with next-day appointment availability and same-day digital certificate delivery.',
     imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     imgAlt: 'Gas Safe engineer performing CP12 inspection',
     ctaText: 'Book Now',
@@ -130,7 +130,7 @@ export const CP12 = {
     label: 'HOW IT WORKS',
     title: 'Getting Your CP12 Certificate',
     steps: [
-      { icon: 'bi-calendar-check', title: 'Book Online or by Phone', body: 'Schedule your gas safety inspection online or call us. Same-day and next-day slots are available across London and the M25.' },
+      { icon: 'bi-calendar-check', title: 'Book Online or by Phone', body: 'Schedule your gas safety inspection online or call us. Same-day and next-day slots are available across London.' },
       { icon: 'bi-person-badge-fill', title: 'Engineer Visit', body: 'A Gas Safe registered engineer visits your property and inspects all gas appliances, pipework, flues, and ventilation.' },
       { icon: 'bi-file-earmark-check-fill', title: 'Receive Your CP12', body: 'Your digital CP12 certificate is emailed within 24–48 hours. Share it with your tenants and keep a copy for your records.' },
     ],
@@ -157,7 +157,7 @@ export const HOMEOWNER_GAS = {
   },
   intro: {
     title: 'Gas Safety Checks for Homeowners',
-    body: 'While not legally required for homeowners (unlike landlords), having your gas appliances regularly checked by a Gas Safe registered engineer is strongly recommended. Annual checks give you confidence that your boiler, gas hob, fires, and pipework are safe to use. Our engineers provide thorough inspections and issue a homeowner gas safety certificate following every visit across London and the M25.',
+    body: 'While not legally required for homeowners (unlike landlords), having your gas appliances regularly checked by a Gas Safe registered engineer is strongly recommended. Annual checks give you confidence that your boiler, gas hob, fires, and pipework are safe to use. Our engineers provide thorough inspections and issue a homeowner gas safety certificate following every visit across London.',
     imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Gas engineer checking home appliances',
     ctaText: 'Book Now',
@@ -190,7 +190,7 @@ export const HOMEOWNER_GAS = {
   },
   pricing: {
     title: 'Homeowner Gas Safety Certificate Pricing',
-    body: 'Affordable gas safety checks for homeowners across London and the M25. Protect your family and your home.',
+    body: 'Affordable gas safety checks for homeowners across London. Protect your family and your home.',
     prices: [
       { label: '1 Appliance',     price: '£59.99' },
       { label: '2 Appliances',    price: '£79.99' },
@@ -215,7 +215,7 @@ export const HOMEOWNER_GAS = {
     label: 'HOW IT WORKS',
     title: 'Getting Your Homeowner Gas Safety Check',
     steps: [
-      { icon: 'bi-calendar-check', title: 'Book an Appointment', body: 'Choose a convenient time online or call us. Evening and weekend slots are available across London and the M25.' },
+      { icon: 'bi-calendar-check', title: 'Book an Appointment', body: 'Choose a convenient time online or call us. Evening and weekend slots are available across London.' },
       { icon: 'bi-person-badge-fill', title: 'Engineer Visit', body: 'A Gas Safe registered engineer will inspect all gas appliances, pipework, and safety devices at your property.' },
       { icon: 'bi-envelope-check-fill', title: 'Receive Your Certificate', body: 'Your homeowner gas safety certificate is emailed digitally within 24–48 hours of the completed inspection.' },
     ],
@@ -239,7 +239,7 @@ export const HOMEOWNER_GAS = {
 // ══════════════════════════════════════════════════════════════
 export const BOILER_SERVICE = {
   hero: {
-    title: 'Boiler Service in London & M25 Area',
+    title: 'Boiler Service in London',
     subtitle: 'Annual Boiler Servicing to Keep Your Heating System Reliable, Safe and Efficient.',
     price: 'From £79.99',
     ctaText: 'Book Now',
@@ -253,7 +253,7 @@ export const BOILER_SERVICE = {
   ],
   intro: {
     title: 'Professional Boiler Servicing in London',
-    body: 'An annual boiler service is essential for maintaining the safety, efficiency, and longevity of your heating system. Our Gas Safe registered engineers carry out comprehensive boiler services across London and the M25, checking for faults, cleaning components, and ensuring your boiler operates at peak efficiency. We service all major boiler brands including Vaillant, Worcester Bosch, Baxi, Ideal, Glow-worm, and more.',
+    body: 'An annual boiler service is essential for maintaining the safety, efficiency, and longevity of your heating system. Our Gas Safe registered engineers carry out comprehensive boiler services across London, checking for faults, cleaning components, and ensuring your boiler operates at peak efficiency. We service all major boiler brands including Vaillant, Worcester Bosch, Baxi, Ideal, Glow-worm, and more.',
     imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Gas engineer servicing a boiler',
     ctaText: 'Book Now',
@@ -286,7 +286,7 @@ export const BOILER_SERVICE = {
   },
   pricing: {
     title: 'Boiler Service Pricing',
-    body: 'Affordable annual boiler servicing for homes and businesses across London and the M25. Transparent pricing with no hidden fees.',
+    body: 'Affordable annual boiler servicing for homes and businesses across London. Transparent pricing with no hidden fees.',
     prices: [
       { label: 'Boiler Service',                price: 'From £79.99' },
       { label: 'Service + Gas Safety Check (CP12)', price: 'From £119.99' },
@@ -313,7 +313,7 @@ export const BOILER_SERVICE = {
     label: 'HOW IT WORKS',
     title: 'Your Boiler Service Appointment',
     steps: [
-      { icon: 'bi-calendar-check', title: 'Book Your Service', body: 'Book online or by phone. We offer flexible morning and afternoon slots, including weekends, across London and the M25.' },
+      { icon: 'bi-calendar-check', title: 'Book Your Service', body: 'Book online or by phone. We offer flexible morning and afternoon slots, including weekends, across London.' },
       { icon: 'bi-search', title: 'Thorough Inspection', body: 'Our Gas Safe engineer inspects, cleans, and tests every component of your boiler following manufacturer guidelines.' },
       { icon: 'bi-file-earmark-check-fill', title: 'Service Report Issued', body: 'Receive a full digital service report confirming your boiler\'s condition, with any recommendations clearly noted.' },
     ],
@@ -334,7 +334,7 @@ export const BOILER_SERVICE = {
 export const CP15 = {
   hero: {
     title: 'Commercial Boiler Gas Safety Certificate (CP15)',
-    subtitle: 'Annual Gas Safety Inspections for Commercial Properties Across London & M25. Certified CP15 Certificates from Gas Safe Registered Engineers.',
+    subtitle: 'Annual Gas Safety Inspections for Commercial Properties Across London. Certified CP15 Certificates from Gas Safe Registered Engineers.',
     price: 'From £99.99',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
@@ -347,7 +347,7 @@ export const CP15 = {
   ],
   intro: {
     title: 'What is a CP15 – Commercial Boiler Gas Safety Certificate?',
-    body: 'The CP15 certificate is required for commercial properties with natural gas or LPG boilers. Our Gas Safe registered engineers carry out thorough inspections of commercial boilers, gas appliances, and associated pipework to ensure compliance with the Gas Safety (Installation and Use) Regulations 1998. We serve businesses, landlords, and property managers across London and the M25 with fast turnaround and next-day appointment availability.',
+    body: 'The CP15 certificate is required for commercial properties with natural gas or LPG boilers. Our Gas Safe registered engineers carry out thorough inspections of commercial boilers, gas appliances, and associated pipework to ensure compliance with the Gas Safety (Installation and Use) Regulations 1998. We serve businesses, landlords, and property managers across London with fast turnaround and next-day appointment availability.',
     imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Commercial gas safety inspection',
     ctaText: 'Get a Quote',
@@ -392,7 +392,7 @@ export const CP15 = {
   },
   propertyTypes: {
     title: 'Commercial Properties We Cover',
-    subtitle: 'We provide CP15 gas safety certificates for all types of commercial premises across London and the M25.',
+    subtitle: 'We provide CP15 gas safety certificates for all types of commercial premises across London.',
     items: [
       { icon: 'bi-building', title: 'Offices & Office Buildings', body: 'Ensure your office heating systems and gas appliances are legally compliant and safe for staff.' },
       { icon: 'bi-shop', title: 'Retail Units & Shops', body: 'Annual gas inspections for retail spaces with gas heating or catering equipment.' },
@@ -432,13 +432,13 @@ export const CP15 = {
 export const CP16 = {
   hero: {
     title: 'Commercial Gas Installation Testing & Purging (CP16)',
-    subtitle: 'Professional Gas Tightness Testing and Purging for New or Altered Commercial Gas Installations Across London & M25.',
+    subtitle: 'Professional Gas Tightness Testing and Purging for New or Altered Commercial Gas Installations Across London.',
     ctaText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
   },
   intro: {
     title: 'What is a CP16 Certificate?',
-    body: 'A CP16 certificate documents the testing and purging of new or altered commercial gas installations. This is an essential step in commissioning new gas supply systems or reinstating gas supplies after works or interruptions. Our Gas Safe registered engineers carry out pressure testing, purging procedures, and issue the CP16 documentation required for safety sign-off and regulatory compliance across London and the M25.',
+    body: 'A CP16 certificate documents the testing and purging of new or altered commercial gas installations. This is an essential step in commissioning new gas supply systems or reinstating gas supplies after works or interruptions. Our Gas Safe registered engineers carry out pressure testing, purging procedures, and issue the CP16 documentation required for safety sign-off and regulatory compliance across London.',
     imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
     imgAlt: 'Gas installation testing and purging',
     ctaText: 'Get a Quote',
@@ -521,13 +521,13 @@ export const CP16 = {
 export const CP17 = {
   hero: {
     title: 'Commercial Gas Installation Safety Report (CP17)',
-    subtitle: 'Comprehensive Non-Domestic Gas Installation Safety Reports for London & M25 Businesses.',
+    subtitle: 'Comprehensive Non-Domestic Gas Installation Safety Reports for London Businesses.',
     ctaText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
   },
   intro: {
     title: 'What is a CP17 Gas Installation Safety Report?',
-    body: 'The CP17 is a comprehensive safety report for non-domestic gas installations. It covers the inspection of the entire gas installation system in a commercial property, assessing pipework, meters, appliances, and safety devices. Required for insurance, compliance, and due diligence purposes, the CP17 is issued by our Gas Safe registered engineers following a thorough site survey across London and the M25.',
+    body: 'The CP17 is a comprehensive safety report for non-domestic gas installations. It covers the inspection of the entire gas installation system in a commercial property, assessing pipework, meters, appliances, and safety devices. Required for insurance, compliance, and due diligence purposes, the CP17 is issued by our Gas Safe registered engineers following a thorough site survey across London.',
     imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Gas installation safety report inspection',
     ctaText: 'Get a Quote',
@@ -612,7 +612,7 @@ export const CP17 = {
 export const CP42 = {
   hero: {
     title: 'Commercial Catering Gas Safety Certificate (CP42)',
-    subtitle: 'Gas Safety Inspections for Commercial Kitchens, Catering Appliances & Hospitality Businesses Across London & M25.',
+    subtitle: 'Gas Safety Inspections for Commercial Kitchens, Catering Appliances & Hospitality Businesses Across London.',
     price: 'From £99.99',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
@@ -625,7 +625,7 @@ export const CP42 = {
   ],
   intro: {
     title: 'What is a CP42 Catering Gas Safety Certificate?',
-    body: 'The CP42 certificate is specifically designed for commercial catering establishments, covering the inspection of gas cooking appliances, grills, fryers, ovens, ranges, and associated gas pipework. Restaurants, cafes, hotels, pubs, and food businesses are legally required to have their gas catering equipment inspected annually by a Gas Safe registered engineer with commercial catering competency. We provide fast, reliable CP42 inspections across London and the M25.',
+    body: 'The CP42 certificate is specifically designed for commercial catering establishments, covering the inspection of gas cooking appliances, grills, fryers, ovens, ranges, and associated gas pipework. Restaurants, cafes, hotels, pubs, and food businesses are legally required to have their gas catering equipment inspected annually by a Gas Safe registered engineer with commercial catering competency. We provide fast, reliable CP42 inspections across London.',
     imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
     imgAlt: 'Commercial kitchen gas safety inspection',
     ctaText: 'Get a Quote',
@@ -692,7 +692,7 @@ export const CP42 = {
   },
   propertyTypes: {
     title: 'Commercial Catering Businesses We Serve',
-    subtitle: 'We provide CP42 certificates for all types of food and hospitality businesses across London and the M25.',
+    subtitle: 'We provide CP42 certificates for all types of food and hospitality businesses across London.',
     items: [
       { icon: 'bi-cup-hot-fill', title: 'Restaurants & Cafes', body: 'Annual gas safety certificates for restaurant and cafe kitchens of all sizes.' },
       { icon: 'bi-building', title: 'Hotels & Conference Venues', body: 'CP42 inspections for hotel kitchens, banqueting facilities, and bar equipment.' },

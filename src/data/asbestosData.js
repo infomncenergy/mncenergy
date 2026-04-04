@@ -31,7 +31,7 @@ export const ASBESTOS_FAQS = [
 export const RES_ASBESTOS = {
   hero: {
     title: 'Residential Asbestos Survey',
-    subtitle: 'UKAS-Accredited Asbestos Surveys for Homes, HMOs & Residential Properties Across London & M25. Management & Refurbishment Surveys Available.',
+    subtitle: 'UKAS-Accredited Asbestos Surveys for Homes, HMOs & Residential Properties Across London. Management & Refurbishment Surveys Available.',
     price: 'From £149',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
@@ -103,7 +103,7 @@ export const RES_ASBESTOS = {
       { label: 'Refurbishment & Demolition',  price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT, laboratory analysis, and written report. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT, laboratory analysis, and written report. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'Where Asbestos is Commonly Found in Homes',
@@ -129,7 +129,7 @@ export const RES_ASBESTOS = {
     ],
   },
   related: [
-    { icon: 'bi-building', title: 'Commercial Asbestos Survey', body: 'Need an asbestos survey for a commercial property? We cover all types of non-domestic premises across London and the M25.', to: '/asbestos/commercial' },
+    { icon: 'bi-building', title: 'Commercial Asbestos Survey', body: 'Need an asbestos survey for a commercial property? We cover all types of non-domestic premises across London.', to: '/asbestos/commercial' },
     { icon: 'bi-lightning-fill', title: 'EICR Certificate', body: 'Combine your asbestos survey with an electrical installation condition report for complete pre-renovation compliance.', to: '/electrical/residential-eicr' },
     { icon: 'bi-fire', title: 'Gas Safety Certificate', body: 'Ensure your gas appliances are safe and legally compliant with a CP12 landlord gas safety certificate.', to: '/gas/landlord-gas-safety' },
   ],
@@ -143,7 +143,7 @@ export const RES_ASBESTOS = {
 export const COMM_ASBESTOS = {
   hero: {
     title: 'Commercial Asbestos Survey',
-    subtitle: 'UKAS-Accredited Asbestos Management & Refurbishment Surveys for Offices, Retail, Warehouses & All Commercial Premises Across London & M25.',
+    subtitle: 'UKAS-Accredited Asbestos Management & Refurbishment Surveys for Offices, Retail, Warehouses & All Commercial Premises Across London.',
     price: 'From £249',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
@@ -218,7 +218,7 @@ export const COMM_ASBESTOS = {
   },
   propertyTypes: {
     title: 'Commercial Properties We Survey',
-    subtitle: 'We carry out asbestos surveys for all types of non-domestic premises across London and the M25.',
+    subtitle: 'We carry out asbestos surveys for all types of non-domestic premises across London.',
     items: [
       { icon: 'bi-building', title: 'Offices & Office Blocks', body: 'Management and refurbishment surveys for single and multi-floor commercial offices and managed workspaces.' },
       { icon: 'bi-shop', title: 'Retail & Leisure', body: 'Asbestos surveys for retail units, supermarkets, gyms, and leisure facilities before fit-out or renovation.' },

@@ -58,7 +58,7 @@ const SERVICES = [
 const STEPS = [
   { icon: 'bi-calendar-check', title: 'Choose a Service', body: 'Select the certificate or inspection you need from our full range of residential and commercial services.' },
   { icon: 'bi-geo-alt-fill', title: 'Enter Property Details', body: 'Tell us your property address, type, and any relevant details so we can match you with the right engineer.' },
-  { icon: 'bi-person-check-fill', title: 'Confirm Your Booking', body: 'Choose a convenient date and time. We offer same-day, next-day, and weekend appointments across London and the M25.' },
+  { icon: 'bi-person-check-fill', title: 'Confirm Your Booking', body: 'Choose a convenient date and time. We offer same-day, next-day, and weekend appointments across London.' },
   { icon: 'bi-file-earmark-check-fill', title: 'Receive Your Certificate', body: 'Our certified engineer visits, completes the inspection, and your certificate is emailed to you within 24–48 hours.' },
 ];
 
@@ -67,14 +67,14 @@ const WHY_BOOK = [
   { icon: 'bi-clock-fill',               title: 'Same-Day Appointments Available', body: 'We understand urgency. Same-day and next-day bookings are available subject to engineer availability in your area.' },
   { icon: 'bi-envelope-check-fill',      title: 'Digital Certificates in 24 hrs',  body: 'All certificates are issued digitally and emailed to you within 24–48 hours of the completed inspection.' },
   { icon: 'bi-currency-pound',           title: 'Transparent Fixed Pricing',       body: 'No hidden fees or surprise charges. Our prices are fixed and include VAT — you always know exactly what you\'ll pay.' },
-  { icon: 'bi-geo-alt-fill',             title: 'London & M25 Coverage',           body: 'We cover all of London and the wider M25 area with a large network of local engineers available 7 days a week.' },
+  { icon: 'bi-geo-alt-fill',             title: 'London Coverage',           body: 'We cover all of London with a large network of local engineers available 7 days a week.' },
   { icon: 'bi-headset',                  title: 'Dedicated Support Team',          body: 'Our UK-based support team is available to help with bookings, queries, and follow-ups Monday to Saturday, 8am–6pm.' },
 ];
 
 export default function BookingPage() {
   const [step, setStep]     = useState(1);
   const [form, setForm]     = useState({
-    service: '',
+    services: [],          // array — supports multi-service booking
     propertyCategory: '',  // 'Residential' | 'Commercial'
     propertyType: '',
     bedrooms: '',
@@ -97,6 +97,14 @@ export default function BookingPage() {
   const [addressQuery, setAddressQuery] = useState('');
 
   const update = (field, value) => setForm(f => ({ ...f, [field]: value }));
+
+  // Toggle a service in/out of the services array
+  const toggleService = (opt) => setForm(f => ({
+    ...f,
+    services: f.services.includes(opt)
+      ? f.services.filter(s => s !== opt)
+      : [...f.services, opt],
+  }));
 
   // When the user types a full postcode in the Postcode field, push it to
   // AddressAutocomplete as a forceQuery so it shows a street list to pick from.
@@ -125,7 +133,12 @@ export default function BookingPage() {
       const res  = await fetch(`${API_URL}/api/bookings`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ ...form, address: fullAddress }),
+        body:    JSON.stringify({
+          ...form,
+          address: fullAddress,
+          services: form.services,
+          service: form.services.join(', '), // backward-compat single string
+        }),
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.message || 'Submission failed');
@@ -140,6 +153,7 @@ export default function BookingPage() {
   };
 
   const step2Valid = form.propertyCategory && form.propertyType && form.houseNumber && form.address && form.postcode && form.date && form.timeSlot;
+  const step1Valid = form.services.length > 0;
   const step3Valid = form.name && form.email && form.phone && privacyChecked;
 
   if (submitted) {
@@ -151,7 +165,7 @@ export default function BookingPage() {
           </div>
           <h1 className="fw-bold mb-3">Booking Request Received!</h1>
           <p className="text-muted mb-4" style={{ maxWidth: 520, margin: '0 auto 2rem' }}>
-            Thank you, <strong>{form.name}</strong>. We have received your booking request for <strong>{form.service}</strong> and will confirm your appointment within 2 hours by email and phone.
+            Thank you, <strong>{form.name}</strong>. We have received your booking request for <strong>{form.services.join(', ')}</strong> and will confirm your appointment within 2 hours by email and phone.
           </p>
           <div className="booking-success__details mb-5">
             <div className="row g-3 justify-content-center">
@@ -186,7 +200,7 @@ export default function BookingPage() {
               <SectionLabel>BOOK ONLINE</SectionLabel>
               <h1 className="fw-bold mb-3">Book Your Safety Certificate</h1>
               <p className="text-muted mb-4">
-                Book your safety certificate online in minutes. Choose your service, enter your property details, and select a convenient appointment. We cover all of London and the M25 area.
+                Book your safety certificate online in minutes. Choose your service, enter your property details, and select a convenient appointment. We cover all of London.
               </p>
               <div className="d-flex gap-3 flex-wrap">
                 <div className="booking-hero__badge">
@@ -244,31 +258,63 @@ export default function BookingPage() {
           <div className="row justify-content-center">
             <div className="col-lg-8">
 
-              {/* Step 1: Select Service */}
+              {/* Step 1: Select Service(s) */}
               {step === 1 && (
                 <div className="booking-step-panel">
-                  <h3 className="fw-bold mb-1">Select Your Service</h3>
-                  <p className="text-muted mb-4">Choose the certificate or inspection you require.</p>
-                  <div className="row g-3">
+                  <h3 className="fw-bold mb-1">Select Your Service(s)</h3>
+                  <p className="text-muted mb-1">You can select <strong>multiple services</strong> for the same visit — tick all that apply.</p>
+                  {form.services.length > 0 && (
+                    <div className="d-flex flex-wrap gap-2 mb-3 mt-2">
+                      <span className="badge rounded-pill px-3 py-2" style={{ background: 'var(--brand-gradient)', color: '#fff', fontSize: '0.82rem' }}>
+                        <i className="bi bi-check-circle-fill me-2"></i>
+                        {form.services.length} service{form.services.length > 1 ? 's' : ''} selected
+                      </span>
+                      {form.services.map(s => (
+                        <span key={s} className="badge rounded-pill px-3 py-2" style={{ background: 'var(--purple-light)', color: 'var(--accent)', fontSize: '0.78rem', border: '1px solid rgba(107,47,160,0.2)' }}>
+                          {s}
+                          <button type="button" className="ms-2 p-0 border-0 bg-transparent" style={{ color: 'var(--accent)', lineHeight: 1 }} onClick={() => toggleService(s)}>
+                            <i className="bi bi-x"></i>
+                          </button>
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <div className="row g-3 mt-1">
                     {SERVICES.map((group) => (
                       <div className="col-12" key={group.group}>
-                        <p className="fw-semibold text-uppercase small text-muted mb-2">{group.group}</p>
+                        <p className="fw-semibold text-uppercase small text-muted mb-2">
+                          <i className={`bi ${group.icon} me-2`} style={{ color: 'var(--accent)' }}></i>
+                          {group.group}
+                        </p>
                         <div className="row g-2">
-                          {group.options.map((opt) => (
-                            <div className="col-md-6" key={opt}>
-                              <div
-                                className={`booking-service-card${form.service === opt ? ' selected' : ''}`}
-                                onClick={() => update('service', opt)}
-                                role="button"
-                                tabIndex={0}
-                                onKeyDown={(e) => e.key === 'Enter' && update('service', opt)}
-                              >
-                                <i className={`bi ${group.icon} me-2`}></i>
-                                {opt}
-                                {form.service === opt && <i className="bi bi-check-circle-fill ms-auto"></i>}
+                          {group.options.map((opt) => {
+                            const isSelected = form.services.includes(opt);
+                            return (
+                              <div className="col-md-6" key={opt}>
+                                <div
+                                  className={`booking-service-card${isSelected ? ' selected' : ''}`}
+                                  onClick={() => toggleService(opt)}
+                                  role="checkbox"
+                                  aria-checked={isSelected}
+                                  tabIndex={0}
+                                  onKeyDown={(e) => e.key === 'Enter' && toggleService(opt)}
+                                >
+                                  <span className="flex-grow-1">{opt}</span>
+                                  <span
+                                    className="ms-auto flex-shrink-0"
+                                    style={{
+                                      width: 20, height: 20, borderRadius: 5,
+                                      border: isSelected ? 'none' : '2px solid var(--glass-rim)',
+                                      background: isSelected ? 'var(--brand-gradient)' : 'transparent',
+                                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    }}
+                                  >
+                                    {isSelected && <i className="bi bi-check text-white" style={{ fontSize: '0.75rem' }}></i>}
+                                  </span>
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     ))}
@@ -277,8 +323,8 @@ export default function BookingPage() {
                     <button
                       type="button"
                       className="btn-green"
-                      disabled={!form.service}
-                      onClick={() => { if (form.service) setStep(2); }}
+                      disabled={!step1Valid}
+                      onClick={() => { if (step1Valid) setStep(2); }}
                     >
                       Continue <i className="bi bi-arrow-right ms-2"></i>
                     </button>
@@ -547,8 +593,14 @@ export default function BookingPage() {
 
                   <div className="booking-summary">
                     <div className="booking-summary__row">
-                      <span className="booking-summary__label"><i className="bi bi-tools me-2"></i>Service</span>
-                      <span className="booking-summary__value">{form.service}</span>
+                      <span className="booking-summary__label"><i className="bi bi-tools me-2"></i>Service{form.services.length > 1 ? 's' : ''}</span>
+                      <span className="booking-summary__value">
+                        <span className="d-flex flex-wrap gap-1">
+                          {form.services.map(s => (
+                            <span key={s} className="badge rounded-pill px-2 py-1" style={{ background: 'var(--purple-light)', color: 'var(--accent)', fontSize: '0.78rem', border: '1px solid rgba(107,47,160,0.2)' }}>{s}</span>
+                          ))}
+                        </span>
+                      </span>
                     </div>
                     <div className="booking-summary__row">
                       <span className="booking-summary__label"><i className="bi bi-house me-2"></i>Property</span>

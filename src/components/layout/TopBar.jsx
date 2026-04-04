@@ -12,7 +12,7 @@ export default function TopBar() {
           <span className="top-bar__sep d-none d-md-inline">|</span>
           <span className="top-bar__item d-none d-md-inline">
             <i className="bi bi-geo-alt-fill me-1"></i>
-            London &amp; M25 Area
+            London
           </span>
         </div>
         <div className="top-bar__right d-flex align-items-center gap-3">

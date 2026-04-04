@@ -101,7 +101,7 @@ export const FIRE_DOOR_FAQS = [
 export const RES_FRA = {
   hero: {
     title: 'Residential Fire Risk Assessment (FRA)',
-    subtitle: 'Legally Compliant Fire Risk Assessments for HMOs, Blocks of Flats & Multi-Occupancy Residential Properties Across London & M25.',
+    subtitle: 'Legally Compliant Fire Risk Assessments for HMOs, Blocks of Flats & Multi-Occupancy Residential Properties Across London.',
     price: 'From £99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
@@ -114,7 +114,7 @@ export const RES_FRA = {
   ],
   intro: {
     title: 'What is a Residential Fire Risk Assessment?',
-    body: 'A Residential Fire Risk Assessment (FRA) is a legal requirement for HMOs, blocks of flats, bedsits, and any residential building where the common areas are not solely used by a single household. Under the Regulatory Reform (Fire Safety) Order 2005, landlords and managing agents must ensure a suitable and sufficient FRA is carried out by a competent person. Our assessors produce detailed, action-prioritised reports across London and the M25.',
+    body: 'A Residential Fire Risk Assessment (FRA) is a legal requirement for HMOs, blocks of flats, bedsits, and any residential building where the common areas are not solely used by a single household. Under the Regulatory Reform (Fire Safety) Order 2005, landlords and managing agents must ensure a suitable and sufficient FRA is carried out by a competent person. Our assessors produce detailed, action-prioritised reports across London.',
     imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     imgAlt: 'Fire risk assessor inspecting residential building',
     ctaText: 'Book Now',
@@ -156,7 +156,7 @@ export const RES_FRA = {
       { label: 'Larger Properties',           price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
   },
   propertyTypes: {
     title: 'Residential Properties We Cover',
@@ -194,7 +194,7 @@ export const RES_FRA = {
 export const RES_EMERGENCY_LIGHTS = {
   hero: {
     title: 'Residential Emergency Lights Certificate',
-    subtitle: 'Emergency Lighting Testing & Certification for HMOs, Blocks of Flats & Residential Properties Across London & M25.',
+    subtitle: 'Emergency Lighting Testing & Certification for HMOs, Blocks of Flats & Residential Properties Across London.',
     price: 'From £89',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
@@ -207,7 +207,7 @@ export const RES_EMERGENCY_LIGHTS = {
   ],
   intro: {
     title: 'Residential Emergency Lighting Testing & Certification',
-    body: 'Emergency lighting is a critical component of fire safety in HMOs, blocks of flats, and other residential properties. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure that emergency lighting in communal areas is regularly tested and maintained. Our engineers carry out annual full-duration discharge tests and issue BS 5266-compliant certificates across London and the M25.',
+    body: 'Emergency lighting is a critical component of fire safety in HMOs, blocks of flats, and other residential properties. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure that emergency lighting in communal areas is regularly tested and maintained. Our engineers carry out annual full-duration discharge tests and issue BS 5266-compliant certificates across London.',
     imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Emergency lighting inspection in residential building',
     ctaText: 'Book Now',
@@ -248,7 +248,7 @@ export const RES_EMERGENCY_LIGHTS = {
       { label: '16+ Units (Large Blocks)',         price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'What Does Emergency Lighting Testing Include?',
@@ -299,7 +299,7 @@ export const RES_FIRE_ALARM = {
   ],
   intro: {
     title: 'Residential Fire Alarm Servicing & Certification',
-    body: 'A functioning fire detection and alarm system is essential for the safety of occupants in HMOs, blocks of flats, and multi-occupancy residential buildings. Under BS 5839-6 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure that fire alarm systems are regularly serviced and tested. Our engineers service and certify all categories and grades of residential fire alarm systems across London and the M25.',
+    body: 'A functioning fire detection and alarm system is essential for the safety of occupants in HMOs, blocks of flats, and multi-occupancy residential buildings. Under BS 5839-6 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure that fire alarm systems are regularly serviced and tested. Our engineers service and certify all categories and grades of residential fire alarm systems across London.',
     imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Fire alarm panel inspection in residential building',
     ctaText: 'Book Now',
@@ -340,7 +340,7 @@ export const RES_FIRE_ALARM = {
       { label: 'Grade A / LD1 (Addressable)',     price: 'From £199' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: "What's Included in a Fire Alarm Service?",
@@ -392,7 +392,7 @@ export const RES_FIRE_DOOR = {
   ],
   intro: {
     title: 'Residential Fire Door Inspection & Certification',
-    body: 'Fire doors are a critical passive fire protection measure in any multi-occupancy residential building. The Fire Safety (England) Regulations 2022 require responsible persons in buildings over 11 metres to carry out quarterly checks of communal fire doors and annual inspections of individual flat entrance fire doors. Our FDIS-qualified inspectors carry out thorough fire door inspections and issue detailed compliance certificates across London and the M25.',
+    body: 'Fire doors are a critical passive fire protection measure in any multi-occupancy residential building. The Fire Safety (England) Regulations 2022 require responsible persons in buildings over 11 metres to carry out quarterly checks of communal fire doors and annual inspections of individual flat entrance fire doors. Our FDIS-qualified inspectors carry out thorough fire door inspections and issue detailed compliance certificates across London.',
     imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     imgAlt: 'Fire door inspection in residential building',
     ctaText: 'Book Now',
@@ -433,7 +433,7 @@ export const RES_FIRE_DOOR = {
       { label: '11+ Doors (Bulk / Block)',         price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'What Does a Fire Door Inspection Check?',
@@ -473,7 +473,7 @@ export const RES_FIRE_DOOR = {
 export const COMM_FRA = {
   hero: {
     title: 'Commercial Fire Risk Assessment (FRA)',
-    subtitle: 'Legally Compliant Fire Risk Assessments for Offices, Retail, Warehouses & All Commercial Premises Across London & M25.',
+    subtitle: 'Legally Compliant Fire Risk Assessments for Offices, Retail, Warehouses & All Commercial Premises Across London.',
     price: 'From £149',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
@@ -486,7 +486,7 @@ export const COMM_FRA = {
   ],
   intro: {
     title: 'Commercial Fire Risk Assessment for Your Business',
-    body: 'The Regulatory Reform (Fire Safety) Order 2005 requires all employers and building owners to carry out and maintain a suitable and sufficient fire risk assessment for their premises. Failure to comply can result in unlimited fines and prosecution. Our BAFE SP205-registered assessors carry out thorough, professionally documented fire risk assessments for all types of commercial premises across London and the M25, producing prioritised action plans that make compliance straightforward.',
+    body: 'The Regulatory Reform (Fire Safety) Order 2005 requires all employers and building owners to carry out and maintain a suitable and sufficient fire risk assessment for their premises. Failure to comply can result in unlimited fines and prosecution. Our BAFE SP205-registered assessors carry out thorough, professionally documented fire risk assessments for all types of commercial premises across London, producing prioritised action plans that make compliance straightforward.',
     imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Commercial fire risk assessment in office building',
     ctaText: 'Get a Quote',
@@ -527,11 +527,11 @@ export const COMM_FRA = {
       { label: 'Large / Complex Premises',         price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside the M25.',
+    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
   },
   propertyTypes: {
     title: 'Commercial Properties We Cover',
-    subtitle: 'We provide fire risk assessments for all types of commercial and non-domestic premises across London and the M25.',
+    subtitle: 'We provide fire risk assessments for all types of commercial and non-domestic premises across London.',
     items: [
       { icon: 'bi-building', title: 'Offices & Office Blocks', body: 'Fire risk assessments for single and multi-floor offices, business parks, and managed workspaces.' },
       { icon: 'bi-shop', title: 'Retail & Shopping', body: 'FRAs for retail units, shops, supermarkets, and shopping centre units.' },
@@ -578,7 +578,7 @@ export const COMM_EMERGENCY_LIGHTS = {
   ],
   intro: {
     title: 'Commercial Emergency Lighting Testing & Certification',
-    body: 'Emergency lighting is a fundamental fire safety requirement for all commercial premises. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure emergency lighting is installed, tested, and maintained in all commercial buildings. Our engineers carry out annual full-duration discharge tests, monthly function tests, and issue BS 5266-1 compliant certificates for offices, retail units, warehouses, hotels, and all other commercial premises across London and the M25.',
+    body: 'Emergency lighting is a fundamental fire safety requirement for all commercial premises. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure emergency lighting is installed, tested, and maintained in all commercial buildings. Our engineers carry out annual full-duration discharge tests, monthly function tests, and issue BS 5266-1 compliant certificates for offices, retail units, warehouses, hotels, and all other commercial premises across London.',
     imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
     imgAlt: 'Commercial emergency lighting inspection',
     ctaText: 'Get a Quote',
@@ -671,7 +671,7 @@ export const COMM_FIRE_ALARM = {
   ],
   intro: {
     title: 'Commercial Fire Alarm Servicing & Certification',
-    body: 'A reliable fire alarm system is the cornerstone of fire safety in any commercial premises. Under BS 5839-1 and the Regulatory Reform (Fire Safety) Order 2005, commercial fire alarm systems must be inspected and serviced by a competent engineer at least twice per year. Our engineers service, test, and certify all categories of commercial fire alarm systems — from conventional zone-based systems to full addressable and wireless systems — across London and the M25.',
+    body: 'A reliable fire alarm system is the cornerstone of fire safety in any commercial premises. Under BS 5839-1 and the Regulatory Reform (Fire Safety) Order 2005, commercial fire alarm systems must be inspected and serviced by a competent engineer at least twice per year. Our engineers service, test, and certify all categories of commercial fire alarm systems — from conventional zone-based systems to full addressable and wireless systems — across London.',
     imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     imgAlt: 'Commercial fire alarm panel service',
     ctaText: 'Get a Quote',
@@ -752,7 +752,7 @@ export const COMM_FIRE_ALARM = {
 export const COMM_FIRE_DOOR = {
   hero: {
     title: 'Commercial Fire Door Inspection Certificate',
-    subtitle: 'Fire Door Inspection & Certification for Offices, Hotels, Schools, Care Homes & All Commercial Buildings Across London & M25.',
+    subtitle: 'Fire Door Inspection & Certification for Offices, Hotels, Schools, Care Homes & All Commercial Buildings Across London.',
     price: 'From £89',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
@@ -765,7 +765,7 @@ export const COMM_FIRE_DOOR = {
   ],
   intro: {
     title: 'Commercial Fire Door Inspection & Certification',
-    body: 'Fire doors are a critical element of compartmentation in commercial buildings, containing fire and smoke and maintaining the integrity of escape routes. The Regulatory Reform (Fire Safety) Order 2005 and BS 9999 require responsible persons to ensure all fire doors in commercial premises are regularly inspected and maintained by competent inspectors. Our FDIS-qualified engineers carry out thorough inspections and issue detailed certificates for offices, hotels, schools, care homes, warehouses, and all commercial property types across London and the M25.',
+    body: 'Fire doors are a critical element of compartmentation in commercial buildings, containing fire and smoke and maintaining the integrity of escape routes. The Regulatory Reform (Fire Safety) Order 2005 and BS 9999 require responsible persons to ensure all fire doors in commercial premises are regularly inspected and maintained by competent inspectors. Our FDIS-qualified engineers carry out thorough inspections and issue detailed certificates for offices, hotels, schools, care homes, warehouses, and all commercial property types across London.',
     imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     imgAlt: 'Commercial fire door inspection',
     ctaText: 'Get a Quote',
@@ -833,7 +833,7 @@ export const COMM_FIRE_DOOR = {
   },
   propertyTypes: {
     title: 'Commercial Buildings We Inspect',
-    subtitle: 'We provide fire door inspection certificates for all types of commercial and public buildings across London and the M25.',
+    subtitle: 'We provide fire door inspection certificates for all types of commercial and public buildings across London.',
     items: [
       { icon: 'bi-building', title: 'Offices & Office Blocks', body: 'Fire door inspections for single and multi-floor commercial offices and managed workspaces.' },
       { icon: 'bi-hospital', title: 'Care Homes & Healthcare', body: 'Mandatory fire door inspections for care homes, hospitals, GP surgeries, and dental practices.' },

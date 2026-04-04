@@ -6,7 +6,7 @@ export const EMAIL        = "Info@mncenergy.co.uk";
 export const EMAIL_HREF   = "mailto:Info@mncenergy.co.uk";
 export const WHATSAPP     = "447345158783";
 export const COMPANY_NUM  = "16255515";
-export const ADDRESS      = "London & M25 Area, United Kingdom";
+export const ADDRESS      = "London, United Kingdom";
 export const WEBSITE      = "mncenergyltd.com";
 
 // ── Navigation structure ──────────────────────────────────────

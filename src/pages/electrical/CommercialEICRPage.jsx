@@ -4,7 +4,6 @@ import IntroSection     from '../../components/ui/IntroSection';
 import BenefitCards     from '../../components/ui/BenefitCards';
 import PricingBox       from '../../components/ui/PricingBox';
 import FaqAccordion     from '../../components/ui/FaqAccordion';
-import PageReviews      from '../../components/ui/PageReviews';
 import CtaBanner        from '../../components/ui/CtaBanner';
 import SectionLabel     from '../../components/ui/SectionLabel';
 import { Link }         from 'react-router-dom';
@@ -21,10 +20,10 @@ export default function CommercialEICRPage() {
       <IntroSection {...intro} />
 
       {/* Benefits */}
-      <BenefitCards {...benefits} />
+      <PricingBox {...pricing} />
 
       {/* Pricing */}
-      <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
 
       {/* Property Types (Commercial) */}
       <section className="property-types-section">
@@ -105,7 +104,6 @@ export default function CommercialEICRPage() {
       </section>
 
       {/* Reviews */}
-      <PageReviews title="Client Success Stories and Testimonials" />
 
       {/* CTA */}
       <CtaBanner title={cta} />

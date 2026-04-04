@@ -4,14 +4,13 @@ import BenefitCards    from '../../components/ui/BenefitCards';
 import IntroSection    from '../../components/ui/IntroSection';
 import ProcessSteps    from '../../components/ui/ProcessSteps';
 import FaqAccordion    from '../../components/ui/FaqAccordion';
-import PageReviews     from '../../components/ui/PageReviews';
 import CtaBanner       from '../../components/ui/CtaBanner';
 import SectionLabel    from '../../components/ui/SectionLabel';
 import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Boiler Repair London',
-  subtitle:  'Fast, reliable boiler repair by Gas Safe registered engineers. We diagnose and fix all boiler makes and models across London & M25.',
+  subtitle:  'Fast, reliable boiler repair by Gas Safe registered engineers. We diagnose and fix all boiler makes and models across London.',
   price:     'From £89 Diagnosis',
   checklist: ['Same-Day Emergency Available', 'Gas Safe Registered', 'All Boiler Makes & Models', 'Transparent Fixed Pricing'],
   ctaText:   'Book Boiler Repair',
@@ -68,7 +67,7 @@ const faqs = [
   { q: 'How much does a boiler repair cost?',
     a: 'Boiler repair costs start from £89 for a diagnostic visit. The total cost depends on the fault and parts required. We always provide a fixed-price quote before starting any repair work, so you know exactly what you\'ll pay.' },
   { q: 'How quickly can you attend an emergency boiler repair?',
-    a: 'We aim to attend emergency callouts the same day across London and the M25, subject to engineer availability. Call us directly for the fastest response — we prioritise no heating and no hot water situations.' },
+    a: 'We aim to attend emergency callouts the same day across London, subject to engineer availability. Call us directly for the fastest response — we prioritise no heating and no hot water situations.' },
   { q: 'Is it worth repairing an old boiler or should I replace it?',
     a: 'Generally, if a boiler is over 10–12 years old and the repair cost exceeds 50% of a new boiler price, replacement is more cost-effective. Our engineer will give you an honest assessment of whether repair or replacement makes more sense.' },
   { q: 'Will you need to turn off my gas?',
@@ -103,7 +102,6 @@ export default function BoilerRepairPage() {
         </div>
       </section>
 
-      <PageReviews title="What Our Clients Say" />
       <CtaBanner title="Boiler Broken Down? Get It Fixed Today!" />
     </>
   );

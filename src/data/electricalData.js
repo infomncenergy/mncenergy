@@ -86,8 +86,8 @@ export const FUSE_BOX_FAQS = [
 export const RES_EICR = {
   hero: {
     title: 'Keep Your Property Electrically Safe with an EICR Certificate',
-    subtitle: 'Get your Electrical Safety Certificate from trusted certified Engineers Across London and M25 Area. Starting at Just £69.99',
-    price: 'From £69.99',
+    subtitle: 'Get your Electrical Safety Certificate from trusted certified Engineers Across London Area. Starting at Just £75',
+    price: 'From £75',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
@@ -133,9 +133,10 @@ export const RES_EICR = {
     title: 'Residential EICR Cost & Pricing',
     body: 'A Residential EICR is a legal requirement for landlords, homeowners and tenants who want to ensure their property is safe from electrical hazards.',
     prices: [
-      { label: 'Studio',                   price: '£69.99' },
-      { label: '1–3 Bedroom',              price: '£120.00' },
-      { label: 'Each Additional Bedroom',  price: '£15.00' },
+      { label: 'Studio',          price: '£75.00' },
+      { label: '1–3 Bedrooms',    price: '£98.99' },
+      { label: '4 Bedrooms',      price: '£109.99' },
+      { label: '5–6 Bedrooms',    price: '£149.99' },
     ],
     ctaText: 'Book Now',
   },
@@ -146,10 +147,10 @@ export const RES_EICR = {
   ],
   related: [
     { icon: 'bi-clipboard-pulse', title: 'PAT Testing', body: 'Ensure all your portable appliances are safe with our professional PAT testing service.', to: '/book-now' },
-    { icon: 'bi-lightning-charge-fill', title: 'Commercial EICR', body: 'Book a commercial EICR for your business premises across London and the M25 area.', to: '/electrical/commercial-eicr' },
+    { icon: 'bi-lightning-charge-fill', title: 'Commercial EICR', body: 'Book a commercial EICR for your business premises across London.', to: '/electrical/commercial-eicr' },
   ],
   faqs: EICR_FAQS,
-  cta: 'Book Your Residential EICR in London Today – Prices Starting from £69.99!',
+  cta: 'Book Your Residential EICR in London Today – Prices Starting from £75!',
 };
 
 // ══════════════════════════════════════════════════════════════
@@ -164,7 +165,7 @@ export const RES_EIC = {
   },
   intro: {
     title: 'What is an Electrical Installation Certificate (EIC)?',
-    body: 'This mandatory safety document is issued after new installations or major upgrades, confirming compliance with UK Wiring Regulations (BS 7671) and electrical safety standards. Our NICEIC-certified electricians provide EICs for residential properties across London and the M25.',
+    body: 'This mandatory safety document is issued after new installations or major upgrades, confirming compliance with UK Wiring Regulations (BS 7671) and electrical safety standards. Our NICEIC-certified electricians provide EICs for residential properties across London.',
     imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Electrician issuing EIC certificate',
     ctaText: 'Book Now',
@@ -225,7 +226,8 @@ export const RES_EIC = {
 export const RES_FUSE_BOX = {
   hero: {
     title: 'Upgrade Your Fuse Board with Certified Experts',
-    subtitle: 'Replace outdated fuse boards for modern safety and reliability. Book today!',
+    subtitle: 'Replace outdated fuse boards for modern safety and reliability. Starting From £650.',
+    price: 'From £650',
     bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
     ctaText: 'Get a Quote',
   },
@@ -308,7 +310,7 @@ export const COMM_EICR = {
   },
   benefits: {
     label: 'COMMERCIAL EICR',
-    title: 'Why is an Electrical Safety Inspection Essential for Your Business in London and M25?',
+    title: 'Why is an Electrical Safety Inspection Essential for Your Business in London?',
     items: [
       { icon: 'bi-bank2', title: 'Stay Legally Compliant', body: 'The Electricity at Work Regulations 1989 requires businesses to maintain safe electrical installations. Non-compliance can lead to significant fines and prosecution.' },
       { icon: 'bi-file-earmark-lock-fill', title: 'Satisfy Insurance Conditions', body: 'Many commercial insurers require valid EICR documentation. Without it, you may risk invalidating your business insurance policy.' },
@@ -318,7 +320,7 @@ export const COMM_EICR = {
   },
   pricing: {
     title: 'Pricing',
-    body: 'Our commercial EICR service offers affordable, transparent pricing for businesses across London and M25.',
+    body: 'Our commercial EICR service offers affordable, transparent pricing for businesses across London.',
     prices: [
       { label: 'Small Commercial Units (up to 3 circuits and 3 fuse board)', price: '£144.99' },
       { label: 'Larger Properties', note: 'Pricing available for reasonable properties upon request', price: 'POA' },
@@ -346,7 +348,7 @@ export const COMM_EICR = {
     ],
   },
   legalRequirements: {
-    title: 'Legal Requirements for Commercial EICR in London and M25 Area',
+    title: 'Legal Requirements for Commercial EICR in London Area',
     items: [
       { label: 'The Electricity at Work Regulations 1989', text: 'Businesses must maintain electrical systems to prevent danger, conducting periodic inspections as required.' },
       { label: 'The Health and Safety at Work Act 1974', text: 'Ensures you maintain a safe working environment for your staff and clients.' },
@@ -367,7 +369,7 @@ export const COMM_EICR = {
 // ══════════════════════════════════════════════════════════════
 export const COMM_EIC = {
   hero: {
-    title: 'Commercial EIC Certificate in London & M25 Area',
+    title: 'Commercial EIC Certificate in London',
     subtitle: 'Certified Commercial EIC Services in London – Ensure Safety and Compliance Today!',
     bgImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80',
     ctaText: 'Get a Quote',
@@ -401,7 +403,7 @@ export const COMM_EIC = {
     ],
   },
   services: {
-    title: 'Our Commercial EIC Services in London and M25 Area',
+    title: 'Our Commercial EIC Services in London Area',
     subtitle: 'We provide comprehensive solutions tailored to your business\'s electrical needs.',
     items: [
       { icon: 'bi-lightning-charge-fill', title: 'Complete Installations and Major Modifications:', body: 'From new circuits to full rewiring.', to: '/book-now' },
@@ -434,7 +436,7 @@ export const COMM_EIC = {
 // ══════════════════════════════════════════════════════════════
 export const COMM_FUSE_BOX = {
   hero: {
-    title: 'Commercial Fuse Board Replacement in London & M25 Area',
+    title: 'Commercial Fuse Board Replacement in London',
     subtitle: 'Upgrade your commercial distribution board for safety, compliance, and reliability. Starting from £450.',
     bgImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80',
     ctaText: 'Get a Quote',

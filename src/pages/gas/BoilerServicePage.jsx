@@ -7,7 +7,6 @@ import PricingBox         from '../../components/ui/PricingBox';
 import ProcessSteps       from '../../components/ui/ProcessSteps';
 import RelatedServices    from '../../components/ui/RelatedServices';
 import FaqAccordion       from '../../components/ui/FaqAccordion';
-import PageReviews        from '../../components/ui/PageReviews';
 import CtaBanner          from '../../components/ui/CtaBanner';
 import SectionLabel       from '../../components/ui/SectionLabel';
 import { Link }           from 'react-router-dom';
@@ -20,8 +19,8 @@ export default function BoilerServicePage() {
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
       <IntroSection {...intro} />
-      <BenefitCards {...benefits} />
       <PricingBox {...pricing} />
+      <BenefitCards {...benefits} />
 
       {/* What's Included */}
       <section className="intro-section">
@@ -72,7 +71,6 @@ export default function BoilerServicePage() {
         </div>
       </section>
 
-      <PageReviews title="What Our Clients Say" />
       <CtaBanner title={cta} />
     </>
   );

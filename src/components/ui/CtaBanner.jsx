@@ -18,7 +18,7 @@ export default function CtaBanner({
             </div>
             <h2 className="cta-v2__title">{title}</h2>
             <p className="cta-v2__sub">
-              Book online in under 2 minutes. Same-day appointments available across London &amp; M25.
+              Book online in under 2 minutes. Same-day appointments available across London.
             </p>
             <div className="cta-v2__actions">
               <Link to={btnTo} className="cta-v2__btn-book">

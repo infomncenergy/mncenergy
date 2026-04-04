@@ -17,13 +17,13 @@ const CONTACT_CARDS = [
   { icon: 'bi-telephone-fill', title: 'Call Us',       lines: [PHONE, 'Mon–Sat: 8am – 6pm'],                         href: PHONE_HREF,                    cta: 'Call Now',    color: 'purple'   },
   { icon: 'bi-whatsapp',       title: 'WhatsApp',      lines: ['Chat with our team', 'Fast response guaranteed'],    href: `https://wa.me/${WHATSAPP}`,   cta: 'Message Us',  color: 'whatsapp' },
   { icon: 'bi-envelope-fill',  title: 'Email Us',      lines: ['info@mncenergy.co.uk', 'Reply within 24 hours'],    href: 'mailto:info@mncenergy.co.uk', cta: 'Send Email',  color: 'blue'     },
-  { icon: 'bi-geo-alt-fill',   title: 'Coverage Area', lines: ['London & the M25', 'Engineers available 7 days a week'], href: null,                      cta: null,          color: 'amber'    },
+  { icon: 'bi-geo-alt-fill',   title: 'Coverage Area', lines: ['London', 'Engineers available 7 days a week'], href: null,                      cta: null,          color: 'amber'    },
 ];
 
 const FAQS = [
   { q: 'How quickly can you respond to my enquiry?', a: 'We aim to respond to all email enquiries within 24 hours. For urgent matters, please call us directly — our team is available Mon–Sat 8am–6pm.' },
   { q: 'Can I get a quote before booking?',          a: 'Absolutely. Simply fill in the contact form with the details of your property and the service you need, and we will send you a fixed-price quote with no hidden fees.' },
-  { q: 'Do you cover my area?',                      a: 'We cover all of London and the wider M25 area. If you are unsure whether we cover your postcode, just send us a message and we will confirm.' },
+  { q: 'Do you cover my area?',                      a: 'We cover all of London. If you are unsure whether we cover your postcode, just send us a message and we will confirm.' },
   { q: 'I have a complaint — how do I raise it?',    a: 'We take all feedback seriously. Please select "Complaint" from the subject dropdown and describe the issue. Our customer service team will investigate and respond within 2 business days.' },
 ];
 
@@ -68,7 +68,7 @@ export default function ContactPage() {
               <div className="d-flex gap-3 flex-wrap">
                 <div className="booking-hero__badge"><i className="bi bi-clock-fill me-2"></i> Mon–Sat 8am–6pm</div>
                 <div className="booking-hero__badge"><i className="bi bi-patch-check-fill me-2"></i> Fast Response</div>
-                <div className="booking-hero__badge"><i className="bi bi-geo-alt-fill me-2"></i> London & M25</div>
+                <div className="booking-hero__badge"><i className="bi bi-geo-alt-fill me-2"></i> London</div>
               </div>
             </div>
             <div className="col-lg-5">

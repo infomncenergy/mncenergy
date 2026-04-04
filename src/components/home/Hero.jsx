@@ -22,7 +22,7 @@ export default function Hero() {
 
             <p className="hero-v2__sub">
               Fast, affordable safety certificates for landlords and property managers across
-              London &amp; M25. Gas, Electrical, Fire, Asbestos &amp; EPC — all under one roof.
+              London. Gas, Electrical, Fire, Asbestos &amp; EPC — all under one roof.
             </p>
 
             <div className="hero-v2__ctas">
