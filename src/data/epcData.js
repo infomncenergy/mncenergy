@@ -32,7 +32,7 @@ export const RES_EPC = {
   hero: {
     title: 'Residential Energy Performance Certificate (EPC)',
     subtitle: 'Fast, Accredited EPC Assessments for Homes, Rental Properties & HMOs Across London. Certificates Issued Within 24 Hours.',
-    price: 'From £59.99',
+    price: 'From £99.99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
@@ -80,13 +80,13 @@ export const RES_EPC = {
     title: 'Residential EPC Pricing',
     body: 'Fast, affordable EPC assessments for all property types across London.',
     prices: [
-      { label: 'Studio / 1 Bedroom Flat',     price: 'From £59.99' },
-      { label: '2–3 Bedroom Property',        price: 'From £79.99' },
-      { label: '4–5 Bedroom Property',        price: 'From £99.99' },
-      { label: 'HMO / Large Property',        price: 'POA' },
+      { label: '1–3 Bedroom Property',        price: '£99.99' },
+      { label: '4 Bedroom Property',          price: '£109.99' },
+      { label: '5 Bedroom Property',          price: '£130.00' },
+      { label: '6 Bedroom Property',          price: '£140.00' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT, EPC lodgement on the government register, and PDF certificate. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Fixed pricing includes EPC lodgement on the government register and PDF certificate. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'What Does an EPC Assessment Cover?',
@@ -193,7 +193,7 @@ export const COMM_EPC = {
       { label: 'Large / Complex Premises',         price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT, EPC lodgement on the government register, and PDF certificate. Parking and access charges may apply.',
+    disclaimer: '* Fixed pricing includes EPC lodgement on the government register and PDF certificate. Parking and access charges may apply.',
   },
   propertyTypes: {
     title: 'Commercial Properties We Assess',

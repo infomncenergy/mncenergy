@@ -39,14 +39,14 @@ const benefits = {
 
 const pricing = {
   title:  'PAT Testing Prices',
-  body:   'Transparent flat-rate pricing for landlords and businesses. All prices include VAT, PAT labels, and digital certificate.',
+  body:   'Transparent flat-rate pricing for landlords and businesses. All prices include PAT labels and digital certificate.',
   prices: [
     { label: 'Up to 10 items',  price: '£49.99' },
     { label: '11–30 items',     price: '£89.99' },
     { label: '31–60 items',     price: '£129.99' },
     { label: '60+ items',       price: 'POA', note: '(call for quote)' },
   ],
-  disclaimer: '* All prices include VAT and PAT test labels. Minimum call-out charge applies. Prices may vary by location.',
+  disclaimer: '* All prices include PAT test labels. Minimum call-out charge applies. Prices may vary by location.',
 };
 
 const intro = {

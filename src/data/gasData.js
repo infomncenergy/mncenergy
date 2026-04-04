@@ -107,12 +107,13 @@ export const CP12 = {
     title: 'Landlord Gas Safety Certificate Pricing',
     body: 'Our transparent pricing covers all gas appliances in your rental property. Additional appliances can be added at the time of booking.',
     prices: [
-      { label: '1 Appliance',     price: '£59.99' },
-      { label: '2 Appliances',    price: '£79.99' },
-      { label: '3+ Appliances',   price: 'From £99' },
+      { label: '1 Appliance',     price: '£57.99' },
+      { label: '2 Appliances',    price: '£67.99' },
+      { label: '3 Appliances',    price: '£77.99' },
+      { label: '4+ Appliances',   price: '£87.99' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Parking not included and charged at the local rate. London Congestion Zone: +£15.',
+    disclaimer: '* Fixed pricing. Parking not included and charged at the local rate. London Congestion Zone: +£15.',
   },
   whatsCovered: {
     title: 'What\'s Covered in a CP12 Gas Safety Inspection?',
@@ -197,7 +198,7 @@ export const HOMEOWNER_GAS = {
       { label: '3+ Appliances',   price: 'From £99' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Parking not included and charged at the local rate. London Congestion Zone: +£15.',
+    disclaimer: '* Fixed pricing. Parking not included and charged at the local rate. London Congestion Zone: +£15.',
   },
   whatsCovered: {
     title: 'What is Included in a Homeowner Gas Safety Check?',
@@ -293,7 +294,7 @@ export const BOILER_SERVICE = {
       { label: 'Service + CP12 + PAT Testing',  price: 'From £159.99' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Parking not included and charged at the local rate. London Congestion Zone: +£15.',
+    disclaimer: '* Fixed pricing. Parking not included and charged at the local rate. London Congestion Zone: +£15.',
   },
   whatsCovered: {
     title: 'What\'s Included in a Boiler Service?',
@@ -388,7 +389,7 @@ export const CP15 = {
       { label: 'Large / Industrial',                 price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Parking and congestion zone charges may apply. Please advise at booking.',
+    disclaimer: '* Fixed pricing. Parking and congestion zone charges may apply. Please advise at booking.',
   },
   propertyTypes: {
     title: 'Commercial Properties We Cover',
@@ -490,7 +491,7 @@ export const CP16 = {
       { label: 'Large Commercial / Industrial',       price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* All prices include VAT. Site visits may include travel and access charges for remote locations.',
+    disclaimer: '* Fixed pricing. Site visits may include travel and access charges for remote locations.',
   },
   process: {
     label: 'THE CP16 PROCESS',
@@ -581,7 +582,7 @@ export const CP17 = {
       { label: 'Large / Complex Installation', price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* All prices include VAT. Pricing may vary based on site access and installation complexity.',
+    disclaimer: '* Fixed pricing. May vary based on site access and installation complexity.',
   },
   process: {
     label: 'THE CP17 PROCESS',
@@ -666,7 +667,7 @@ export const CP42 = {
       { label: '8+ Appliances / Large Kitchen',   price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Parking and congestion zone charges may apply. Please advise at booking.',
+    disclaimer: '* Fixed pricing. Parking and congestion zone charges may apply. Please advise at booking.',
   },
   whatsCovered: {
     title: 'What Gas Catering Appliances Do We Inspect?',

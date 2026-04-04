@@ -11,7 +11,7 @@ import RelatedServices from '../../components/ui/RelatedServices';
 const hero = {
   title:     'Electrical Fault Finding London',
   subtitle:  'Expert diagnosis and repair of electrical faults. From tripping circuits to power failures — our NICEIC engineers identify and fix the problem fast.',
-  price:     'From £89 Call-Out',
+  price:     'From £98.99/hr',
   checklist: ['Same-Day Emergency Available', 'All Fault Types Covered', 'Full Written Report Provided'],
   ctaText:   'Book Fault Finding',
   ctaTo:     '/book-now',
@@ -69,7 +69,7 @@ const faqs = [
   { q: 'Why have I lost power in one area of my property?',
     a: 'Partial power loss is commonly caused by a tripped circuit breaker, a blown fuse, or a fault on a specific circuit. In older properties it can indicate wiring deterioration. Our engineers can restore power and identify the root cause.' },
   { q: 'Is there a call-out charge?',
-    a: 'Yes, we charge a call-out fee from £89 which covers the first hour of diagnostic work. Any parts or additional labour are quoted separately before work begins — no hidden charges.' },
+    a: 'Yes, we charge £98.99/hr which covers diagnostic work. Any parts or additional labour are quoted separately before work begins — no hidden charges.' },
   { q: 'How quickly can you respond to an emergency?',
     a: 'We aim to respond to emergency callouts within 2–4 hours across London, subject to engineer availability. Priority slots are available — please call us directly for emergencies.' },
   { q: 'Do I need to be present during the fault-finding visit?',

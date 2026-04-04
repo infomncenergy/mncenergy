@@ -6,7 +6,7 @@ export default function PricingBox({
   prices = [],
   ctaText    = 'Book Now',
   ctaTo      = '/book-now',
-  disclaimer = '* All prices include VAT. Parking charged at local rate. Congestion Zone: +£15.',
+  disclaimer = '* All prices are fixed. Parking charged at local rate. Congestion Zone: +£15.',
 }) {
   return (
     <section className="pricing-section">

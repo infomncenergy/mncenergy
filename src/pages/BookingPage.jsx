@@ -66,7 +66,7 @@ const WHY_BOOK = [
   { icon: 'bi-patch-check-fill',         title: 'Gas Safe & NICEIC Registered',    body: 'All our engineers are fully accredited — Gas Safe registered, NICEIC approved, and BAFE registered for fire safety.' },
   { icon: 'bi-clock-fill',               title: 'Same-Day Appointments Available', body: 'We understand urgency. Same-day and next-day bookings are available subject to engineer availability in your area.' },
   { icon: 'bi-envelope-check-fill',      title: 'Digital Certificates in 24 hrs',  body: 'All certificates are issued digitally and emailed to you within 24–48 hours of the completed inspection.' },
-  { icon: 'bi-currency-pound',           title: 'Transparent Fixed Pricing',       body: 'No hidden fees or surprise charges. Our prices are fixed and include VAT — you always know exactly what you\'ll pay.' },
+  { icon: 'bi-currency-pound',           title: 'Transparent Fixed Pricing',       body: 'No hidden charges or surprise fees. Our prices are fixed — you always know exactly what you\'ll pay.' },
   { icon: 'bi-geo-alt-fill',             title: 'London Coverage',           body: 'We cover all of London with a large network of local engineers available 7 days a week.' },
   { icon: 'bi-headset',                  title: 'Dedicated Support Team',          body: 'Our UK-based support team is available to help with bookings, queries, and follow-ups Monday to Saturday, 8am–6pm.' },
 ];

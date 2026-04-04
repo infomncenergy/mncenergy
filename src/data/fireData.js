@@ -102,7 +102,7 @@ export const RES_FRA = {
   hero: {
     title: 'Residential Fire Risk Assessment (FRA)',
     subtitle: 'Legally Compliant Fire Risk Assessments for HMOs, Blocks of Flats & Multi-Occupancy Residential Properties Across London.',
-    price: 'From £99',
+    price: 'From £84.99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
@@ -150,13 +150,13 @@ export const RES_FRA = {
     title: 'Residential FRA Pricing',
     body: 'Competitive, transparent pricing for fire risk assessments. Price is based on property size and number of units.',
     prices: [
-      { label: 'Studio / 1 Bedroom Flat',    price: 'From £99' },
-      { label: '2–4 Unit HMO / Block',        price: 'From £149' },
-      { label: '5–10 Unit HMO / Block',       price: 'From £249' },
-      { label: 'Larger Properties',           price: 'POA' },
+      { label: 'Studio',                      price: '£84.99' },
+      { label: 'Communal Area',               price: '£139.99' },
+      { label: '1–3 Bedroom',                 price: '£149.99' },
+      { label: '3–6 Bedroom',                 price: '£199.99' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Fixed pricing. Travel surcharge may apply outside Greater London.',
   },
   propertyTypes: {
     title: 'Residential Properties We Cover',
@@ -248,7 +248,7 @@ export const RES_EMERGENCY_LIGHTS = {
       { label: '16+ Units (Large Blocks)',         price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Fixed pricing. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'What Does Emergency Lighting Testing Include?',
@@ -340,7 +340,7 @@ export const RES_FIRE_ALARM = {
       { label: 'Grade A / LD1 (Addressable)',     price: 'From £199' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Fixed pricing. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: "What's Included in a Fire Alarm Service?",
@@ -433,7 +433,7 @@ export const RES_FIRE_DOOR = {
       { label: '11+ Doors (Bulk / Block)',         price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Fixed pricing. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'What Does a Fire Door Inspection Check?',
@@ -527,7 +527,7 @@ export const COMM_FRA = {
       { label: 'Large / Complex Premises',         price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Fixed pricing. Travel surcharge may apply outside Greater London.',
   },
   propertyTypes: {
     title: 'Commercial Properties We Cover',
@@ -619,7 +619,7 @@ export const COMM_EMERGENCY_LIGHTS = {
       { label: '31+ Fittings (Large Premises)',     price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Parking and congestion zone charges may apply.',
+    disclaimer: '* Fixed pricing. Parking and congestion zone charges may apply.',
   },
   whatsCovered: {
     title: "What's Included in Commercial Emergency Lighting Testing?",
@@ -712,7 +712,7 @@ export const COMM_FIRE_ALARM = {
       { label: 'Large / Complex Systems',          price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Prices per service visit. Bi-annual servicing contracts available at reduced rates.',
+    disclaimer: '* Fixed pricing per service visit. Bi-annual servicing contracts available at reduced rates.',
   },
   whatsCovered: {
     title: "What's Included in a Commercial Fire Alarm Service?",
@@ -806,7 +806,7 @@ export const COMM_FIRE_DOOR = {
       { label: '21+ Doors / Large Premises',       price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT. Parking and congestion zone charges may apply.',
+    disclaimer: '* Fixed pricing. Parking and congestion zone charges may apply.',
   },
   whatsCovered: {
     title: 'What Does a Commercial Fire Door Inspection Assess?',

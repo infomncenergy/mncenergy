@@ -46,7 +46,7 @@ const pricing = {
     { label: 'Overhaul Service (per unit)',    price: 'From £35' },
     { label: 'New Extinguisher Supply & Fit', price: 'From £45', note: '(call for quote)' },
   ],
-  disclaimer: '* All prices include VAT. Service type depends on extinguisher age and manufacturer guidelines. Call-out charge applies.',
+  disclaimer: '* Service type depends on extinguisher age and manufacturer guidelines. Call-out charge applies.',
 };
 
 const intro = {

@@ -27,16 +27,16 @@ export default function ServiceHero({
     <section
       className="service-hero"
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68)), url('${bgImage}') center/cover no-repeat`,
+        background: `linear-gradient(rgba(248,250,252,0.82), rgba(224,242,254,0.86)), url('${bgImage}') center/cover no-repeat`,
       }}
     >
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-9 text-center text-white">
+          <div className="col-lg-9 text-center">
 
             {/* Trust badge */}
             <div className="service-hero__trust-badge">
-              <i className="bi bi-patch-check-fill me-2" style={{ color: '#67e8f9' }}></i>
+              <i className="bi bi-patch-check-fill me-2" style={{ color: '#0369a1' }}></i>
               Gas Safe · NICEIC · NAPIT · BAFE Registered
             </div>
 
@@ -48,7 +48,7 @@ export default function ServiceHero({
               <div className="service-hero__price-block">
                 <div className="service-hero__price-from">Starting From</div>
                 <div className="service-hero__price-amount">{price}</div>
-                <div className="service-hero__price-note">inc. VAT · Same-day available · Digital cert within 24h</div>
+                <div className="service-hero__price-note">Same-day available · Digital cert within 24h</div>
               </div>
             )}
 

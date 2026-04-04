@@ -46,7 +46,7 @@ const pricing = {
     { label: 'System Boiler',              price: 'From £1,699' },
     { label: 'Heat-Only Boiler',           price: 'From £1,599', note: '(excludes cylinder)' },
   ],
-  disclaimer: '* All prices include VAT, labour, and boiler supply. Additional work (e.g. flue extension, system power flush) quoted separately.',
+  disclaimer: '* All prices include labour and boiler supply. Additional work (e.g. flue extension, system power flush) quoted separately.',
 };
 
 const intro = {

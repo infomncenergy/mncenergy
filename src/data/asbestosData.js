@@ -32,7 +32,7 @@ export const RES_ASBESTOS = {
   hero: {
     title: 'Residential Asbestos Survey',
     subtitle: 'UKAS-Accredited Asbestos Surveys for Homes, HMOs & Residential Properties Across London. Management & Refurbishment Surveys Available.',
-    price: 'From £149',
+    price: 'From £300',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
     bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
@@ -103,7 +103,7 @@ export const RES_ASBESTOS = {
       { label: 'Refurbishment & Demolition',  price: 'POA' },
     ],
     ctaText: 'Book Now',
-    disclaimer: '* Prices include VAT, laboratory analysis, and written report. Travel surcharge may apply outside Greater London.',
+    disclaimer: '* Prices include laboratory analysis and written report. Travel surcharge may apply outside Greater London.',
   },
   whatsCovered: {
     title: 'Where Asbestos is Commonly Found in Homes',
@@ -214,7 +214,7 @@ export const COMM_ASBESTOS = {
       { label: 'Large / Complex Sites',           price: 'POA' },
     ],
     ctaText: 'Get a Quote',
-    disclaimer: '* Prices include VAT, UKAS laboratory analysis, and full written report. Parking and access charges may apply.',
+    disclaimer: '* Prices include UKAS laboratory analysis and full written report. Parking and access charges may apply.',
   },
   propertyTypes: {
     title: 'Commercial Properties We Survey',

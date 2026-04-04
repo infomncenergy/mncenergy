@@ -22,7 +22,7 @@ const CONTACT_CARDS = [
 
 const FAQS = [
   { q: 'How quickly can you respond to my enquiry?', a: 'We aim to respond to all email enquiries within 24 hours. For urgent matters, please call us directly — our team is available Mon–Sat 8am–6pm.' },
-  { q: 'Can I get a quote before booking?',          a: 'Absolutely. Simply fill in the contact form with the details of your property and the service you need, and we will send you a fixed-price quote with no hidden fees.' },
+  { q: 'Can I get a quote before booking?',          a: 'Absolutely. Simply fill in the contact form with the details of your property and the service you need, and we will send you a fixed-price quote with no surprises.' },
   { q: 'Do you cover my area?',                      a: 'We cover all of London. If you are unsure whether we cover your postcode, just send us a message and we will confirm.' },
   { q: 'I have a complaint — how do I raise it?',    a: 'We take all feedback seriously. Please select "Complaint" from the subject dropdown and describe the issue. Our customer service team will investigate and respond within 2 business days.' },
 ];
