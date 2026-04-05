@@ -22,8 +22,9 @@ jobs:
           cache: 'npm'
 
       # 3. Install dependencies
+      # Delete the Windows-generated lockfile so npm regenerates it for Linux
       - name: Install dependencies
-        run: npm ci
+        run: rm -f package-lock.json && npm install
 
       # 4. Build the Vite app (outputs to ./dist)
       - name: Build
