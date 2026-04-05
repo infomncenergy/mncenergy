@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Node.js with npm cache
+      # 2. Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
 
       # 3. Install dependencies
-      # Delete the Windows-generated lockfile so npm regenerates it for Linux
+      # Delete Windows-generated lockfile so npm regenerates it for Linux
       - name: Install dependencies
         run: rm -f package-lock.json && npm install
 
@@ -30,21 +30,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      # 5. Deploy dist/ folder to IONOS via implicit FTPS (port 990)
-      # IONOS blocks port 21 (plain FTP + explicit FTPS) from GitHub Actions IPs
-      # Port 990 implicit FTPS bypasses that restriction
-      - name: Deploy via FTPS (implicit, port 990)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # 5. Upload dist/ to IONOS via SCP over SSH (port 22)
+      # FTP is blocked by IONOS firewall for cloud/datacenter IPs
+      - name: Deploy via SSH/SCP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps-legacy
-          port: 990
-          local-dir: ./dist/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          source: "dist/*"
+          target: ${{ secrets.SSH_TARGET_DIR }}
+          strip_components: 1
+          rm: false
