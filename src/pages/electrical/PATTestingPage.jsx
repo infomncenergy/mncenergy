@@ -11,12 +11,12 @@ import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'PAT Testing London',
-  subtitle:  'Portable Appliance Testing for landlords, businesses, and letting agents. Fast turnaround, NICEIC-approved engineers across London.',
+  subtitle:  'Portable Appliance Testing for landlords, businesses, and letting agents. Fast turnaround, certified engineers across London.',
   price:     'From £49.99',
   checklist: ['Same-Day Available', 'Certificate Issued Within 24 hrs', 'All Appliances & Equipment Covered'],
   ctaText:   'Book PAT Testing',
   ctaTo:     '/book-now',
-  bgImage:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+  bgImage:   'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
 };
 
 const stats = [
@@ -51,7 +51,7 @@ const pricing = {
 
 const intro = {
   title:    'What is PAT Testing?',
-  body:     'Portable Appliance Testing (PAT) is the process of checking electrical appliances for safety through a series of visual inspections and electronic tests. Our NICEIC-approved engineers test every appliance, label it, and provide a detailed certificate.',
+  body:     'Portable Appliance Testing (PAT) is the process of checking electrical appliances for safety through a series of visual inspections and electronic tests. Our certified engineers test every appliance, label it, and provide a detailed certificate.',
   checklist: [
     'Visual inspection of plug, cable and casing',
     'Earth continuity testing',
@@ -69,7 +69,7 @@ const proc = {
   title: 'PAT Testing in 3 Simple Steps',
   steps: [
     { icon: 'bi-calendar-check', title: 'Book Online',          body: 'Select PAT Testing from our booking form. Tell us approximately how many items need testing and provide your address.' },
-    { icon: 'bi-person-gear',    title: 'Engineer Visits',       body: 'Our NICEIC-approved engineer arrives at your property at the agreed time and tests all specified appliances quickly and efficiently.' },
+    { icon: 'bi-person-gear',    title: 'Engineer Visits',       body: 'Our certified engineer arrives at your property at the agreed time and tests all specified appliances quickly and efficiently.' },
     { icon: 'bi-file-earmark-check-fill', title: 'Get Certificate', body: 'Receive your PAT testing certificate by email within 24 hours, listing every appliance tested, pass/fail status, and retest date.' },
   ],
 };

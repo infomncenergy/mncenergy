@@ -12,11 +12,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-lg-3">
             <Link to="/">
-              <img src="/images/mnc-energy-logo.png" alt="MNC Energy" className="footer-logo-img" />
+              <img src="/images/mnc-energy-logo.png" alt="MNC Safety Certificate" className="footer-logo-img" />
             </Link>
             <p className="footer-desc mt-3">
-              MNC Energy provides fully certified safety inspections and certificates for landlords,
-              homeowners and businesses across London. Gas Safe, NICEIC and BAFE registered.
+              MNC Safety Certificate provides professional safety inspections and certificates for landlords,
+              homeowners and businesses across London. Fast, reliable, and affordable.
             </p>
             <div className="footer-social">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
@@ -97,10 +97,9 @@ export default function Footer() {
               </a>
             </div>
             <div className="footer-certs mt-3">
-              <span className="cert-badge" title="Gas Safe Registered">GAS SAFE</span>
-              <span className="cert-badge" title="NICEIC Approved">NICEIC</span>
-              <span className="cert-badge" title="NAPIT Certified">NAPIT</span>
-              <span className="cert-badge" title="BAFE Registered">BAFE</span>
+              <span className="cert-badge" title="Same-Day Service">SAME-DAY</span>
+              <span className="cert-badge" title="Digital Certificates">DIGITAL CERT</span>
+              <span className="cert-badge" title="London Wide Coverage">ALL LONDON</span>
             </div>
             <div className="mt-4">
               <Link to="/book-now" className="btn-green d-inline-flex">
@@ -112,7 +111,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
-          <span>© {year} MNC Energy Ltd. Company No: {COMPANY_NUM}. All Rights Reserved.</span>
+          <span>© {year} MNC Safety Certificate Ltd. Company No: {COMPANY_NUM}. All Rights Reserved.</span>
           <span>
             <Link to="/faqs">FAQs</Link>
             <a href="#">Terms &amp; Conditions</a>

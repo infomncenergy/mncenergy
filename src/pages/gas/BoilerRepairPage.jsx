@@ -10,12 +10,12 @@ import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Boiler Repair London',
-  subtitle:  'Fast, reliable boiler repair by Gas Safe registered engineers. We diagnose and fix all boiler makes and models across London.',
+  subtitle:  'Fast, reliable boiler repair by certified gas engineers. We diagnose and fix all boiler makes and models across London.',
   price:     'From £89 Diagnosis',
-  checklist: ['Same-Day Emergency Available', 'Gas Safe Registered', 'All Boiler Makes & Models', 'Transparent Fixed Pricing'],
+  checklist: ['Same-Day Emergency Available', 'Certified Gas Engineers', 'All Boiler Makes & Models', 'Transparent Fixed Pricing'],
   ctaText:   'Book Boiler Repair',
   ctaTo:     '/book-now',
-  bgImage:   'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=80',
+  bgImage:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
 };
 
 const stats = [
@@ -29,7 +29,7 @@ const benefits = {
   label: 'WHY CHOOSE US',
   title: 'Expert Boiler Repair Service',
   items: [
-    { icon: 'bi-patch-check-fill', title: 'Gas Safe Registered',    body: 'Every engineer is Gas Safe registered and carries their Gas Safe ID card. You can verify credentials on the official Gas Safe Register website.' },
+    { icon: 'bi-patch-check-fill', title: 'Certified Gas Engineers',    body: 'Every gas engineer we send is fully certified and experienced, ensuring your boiler is repaired safely and in compliance with all UK gas regulations.' },
     { icon: 'bi-clock-fill',       title: 'Same-Day Emergency',     body: 'Boiler broken down? We prioritise emergency callouts and aim to attend the same day. Hot water and heating restored as quickly as possible.' },
     { icon: 'bi-boxes',            title: 'Fully Stocked Vans',     body: 'Our engineers carry a wide range of spare parts enabling most boiler repairs to be completed on the first visit without a return trip.' },
     { icon: 'bi-currency-pound',   title: 'No Fix, No Fee Option',  body: 'If we diagnose the fault but you decide not to proceed with the repair, you only pay the diagnostic fee. We are transparent about costs upfront.' },
@@ -38,7 +38,7 @@ const benefits = {
 
 const intro = {
   title:    'Common Boiler Faults We Repair',
-  body:     'Our Gas Safe engineers repair all types of boiler faults across all major makes including Worcester Bosch, Vaillant, Baxi, Ideal, Alpha, Glow-worm, Potterton, and more.',
+  body:     'our certified gas engineers repair all types of boiler faults across all major makes including Worcester Bosch, Vaillant, Baxi, Ideal, Alpha, Glow-worm, Potterton, and more.',
   checklist: [
     'No hot water or heating',
     'Boiler showing error/fault codes',
@@ -49,7 +49,7 @@ const intro = {
     'Boiler cutting out or cycling on/off',
     'Frozen condensate pipe issues',
   ],
-  imgSrc:   'https://images.unsplash.com/photo-1590674899484-13da0e394dca?w=800&q=80',
+  imgSrc:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
   imgRight: false,
 };
 
@@ -58,7 +58,7 @@ const proc = {
   title: 'Boiler Repair in 3 Steps',
   steps: [
     { icon: 'bi-telephone-fill',    title: 'Call or Book Online',    body: 'Contact us to describe your boiler problem. For emergencies, call directly for fastest response. We book the earliest available slot.' },
-    { icon: 'bi-search',            title: 'Diagnose & Quote',       body: 'Our Gas Safe engineer diagnoses the fault and provides a transparent fixed-price quote for the repair before any work begins.' },
+    { icon: 'bi-search',            title: 'Diagnose & Quote',       body: 'our certified gas engineer diagnoses the fault and provides a transparent fixed-price quote for the repair before any work begins.' },
     { icon: 'bi-wrench-adjustable', title: 'Repair & Commission',    body: 'We complete the repair using genuine or high-quality equivalent parts, test the boiler fully, and ensure it is safe and operational before leaving.' },
   ],
 };

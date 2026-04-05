@@ -105,7 +105,7 @@ export const RES_FRA = {
     price: 'From £84.99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=1600&q=80',
   },
   stats: [
     { value: 'BAFE', label: 'Accredited Assessors' },
@@ -115,7 +115,7 @@ export const RES_FRA = {
   intro: {
     title: 'What is a Residential Fire Risk Assessment?',
     body: 'A Residential Fire Risk Assessment (FRA) is a legal requirement for HMOs, blocks of flats, bedsits, and any residential building where the common areas are not solely used by a single household. Under the Regulatory Reform (Fire Safety) Order 2005, landlords and managing agents must ensure a suitable and sufficient FRA is carried out by a competent person. Our assessors produce detailed, action-prioritised reports across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     imgAlt: 'Fire risk assessor inspecting residential building',
     ctaText: 'Book Now',
     imgRight: true,
@@ -198,7 +198,7 @@ export const RES_EMERGENCY_LIGHTS = {
     price: 'From £89',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1600&q=80',
   },
   stats: [
     { value: 'BS 5266', label: 'Compliant Testing' },
@@ -208,7 +208,7 @@ export const RES_EMERGENCY_LIGHTS = {
   intro: {
     title: 'Residential Emergency Lighting Testing & Certification',
     body: 'Emergency lighting is a critical component of fire safety in HMOs, blocks of flats, and other residential properties. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure that emergency lighting in communal areas is regularly tested and maintained. Our engineers carry out annual full-duration discharge tests and issue BS 5266-compliant certificates across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=700&q=80',
     imgAlt: 'Emergency lighting inspection in residential building',
     ctaText: 'Book Now',
     imgRight: true,
@@ -252,7 +252,7 @@ export const RES_EMERGENCY_LIGHTS = {
   },
   whatsCovered: {
     title: 'What Does Emergency Lighting Testing Include?',
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     items: [
       { label: 'Full Duration Discharge Test', text: 'Each emergency luminaire is tested for its full 3-hour discharge period to confirm battery performance meets BS 5266.' },
       { label: 'Visual Condition Check', text: 'All fittings are visually inspected for damage, obstruction, or incorrect positioning relative to escape routes.' },
@@ -290,7 +290,7 @@ export const RES_FIRE_ALARM = {
     price: 'From £89',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
   },
   stats: [
     { value: 'BS 5839', label: 'Compliant Servicing' },
@@ -300,7 +300,7 @@ export const RES_FIRE_ALARM = {
   intro: {
     title: 'Residential Fire Alarm Servicing & Certification',
     body: 'A functioning fire detection and alarm system is essential for the safety of occupants in HMOs, blocks of flats, and multi-occupancy residential buildings. Under BS 5839-6 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure that fire alarm systems are regularly serviced and tested. Our engineers service and certify all categories and grades of residential fire alarm systems across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     imgAlt: 'Fire alarm panel inspection in residential building',
     ctaText: 'Book Now',
     imgRight: true,
@@ -344,7 +344,7 @@ export const RES_FIRE_ALARM = {
   },
   whatsCovered: {
     title: "What's Included in a Fire Alarm Service?",
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=700&q=80',
     items: [
       { label: 'Detector Testing', text: 'All smoke, heat, and multi-sensor detectors are individually tested for correct response and sensitivity.' },
       { label: 'Control Panel Inspection', text: 'Full inspection of the fire alarm control panel, indicators, power supply, and battery backup.' },
@@ -383,7 +383,7 @@ export const RES_FIRE_DOOR = {
     price: 'From £79',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=1600&q=80',
   },
   stats: [
     { value: 'BS 9999', label: 'Compliant Inspection' },
@@ -393,7 +393,7 @@ export const RES_FIRE_DOOR = {
   intro: {
     title: 'Residential Fire Door Inspection & Certification',
     body: 'Fire doors are a critical passive fire protection measure in any multi-occupancy residential building. The Fire Safety (England) Regulations 2022 require responsible persons in buildings over 11 metres to carry out quarterly checks of communal fire doors and annual inspections of individual flat entrance fire doors. Our FDIS-qualified inspectors carry out thorough fire door inspections and issue detailed compliance certificates across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Fire door inspection in residential building',
     ctaText: 'Book Now',
     imgRight: true,
@@ -437,7 +437,7 @@ export const RES_FIRE_DOOR = {
   },
   whatsCovered: {
     title: 'What Does a Fire Door Inspection Check?',
-    imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     items: [
       { label: 'Door Leaf & Frame', text: 'Assessment of the door leaf and frame for damage, distortion, or gaps that would compromise fire resistance.' },
       { label: 'Intumescent Seals', text: 'Checking all intumescent and cold smoke seals are present, undamaged, and correctly fitted.' },
@@ -477,7 +477,7 @@ export const COMM_FRA = {
     price: 'From £149',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1600&q=80',
   },
   stats: [
     { value: 'BAFE SP205', label: 'Accredited Assessors' },
@@ -487,7 +487,7 @@ export const COMM_FRA = {
   intro: {
     title: 'Commercial Fire Risk Assessment for Your Business',
     body: 'The Regulatory Reform (Fire Safety) Order 2005 requires all employers and building owners to carry out and maintain a suitable and sufficient fire risk assessment for their premises. Failure to comply can result in unlimited fines and prosecution. Our BAFE SP205-registered assessors carry out thorough, professionally documented fire risk assessments for all types of commercial premises across London, producing prioritised action plans that make compliance straightforward.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=700&q=80',
     imgAlt: 'Commercial fire risk assessment in office building',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -579,7 +579,7 @@ export const COMM_EMERGENCY_LIGHTS = {
   intro: {
     title: 'Commercial Emergency Lighting Testing & Certification',
     body: 'Emergency lighting is a fundamental fire safety requirement for all commercial premises. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure emergency lighting is installed, tested, and maintained in all commercial buildings. Our engineers carry out annual full-duration discharge tests, monthly function tests, and issue BS 5266-1 compliant certificates for offices, retail units, warehouses, hotels, and all other commercial premises across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Commercial emergency lighting inspection',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -623,7 +623,7 @@ export const COMM_EMERGENCY_LIGHTS = {
   },
   whatsCovered: {
     title: "What's Included in Commercial Emergency Lighting Testing?",
-    imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=700&q=80',
     items: [
       { label: 'Full 3-Hour Discharge Test', text: 'Each emergency luminaire is tested for the full 3-hour discharge period required by BS 5266-1.' },
       { label: 'Fitting Condition Check', text: 'Visual inspection of all emergency fittings for damage, corrosion, or obstructions affecting performance.' },
@@ -662,7 +662,7 @@ export const COMM_FIRE_ALARM = {
     price: 'From £149',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=1600&q=80',
   },
   stats: [
     { value: 'BS 5839-1', label: 'Compliant Servicing' },
@@ -672,7 +672,7 @@ export const COMM_FIRE_ALARM = {
   intro: {
     title: 'Commercial Fire Alarm Servicing & Certification',
     body: 'A reliable fire alarm system is the cornerstone of fire safety in any commercial premises. Under BS 5839-1 and the Regulatory Reform (Fire Safety) Order 2005, commercial fire alarm systems must be inspected and serviced by a competent engineer at least twice per year. Our engineers service, test, and certify all categories of commercial fire alarm systems — from conventional zone-based systems to full addressable and wireless systems — across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     imgAlt: 'Commercial fire alarm panel service',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -716,7 +716,7 @@ export const COMM_FIRE_ALARM = {
   },
   whatsCovered: {
     title: "What's Included in a Commercial Fire Alarm Service?",
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=700&q=80',
     items: [
       { label: 'Control Panel Inspection', text: 'Full inspection of the fire alarm control panel, power supply, battery backup, and all indicators and outputs.' },
       { label: 'Detector Testing', text: 'All smoke, heat, and specialist detectors are individually tested for correct operation and sensitivity.' },
@@ -756,7 +756,7 @@ export const COMM_FIRE_DOOR = {
     price: 'From £89',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1600&q=80',
   },
   stats: [
     { value: 'FDIS', label: 'Qualified Inspectors' },
@@ -766,7 +766,7 @@ export const COMM_FIRE_DOOR = {
   intro: {
     title: 'Commercial Fire Door Inspection & Certification',
     body: 'Fire doors are a critical element of compartmentation in commercial buildings, containing fire and smoke and maintaining the integrity of escape routes. The Regulatory Reform (Fire Safety) Order 2005 and BS 9999 require responsible persons to ensure all fire doors in commercial premises are regularly inspected and maintained by competent inspectors. Our FDIS-qualified engineers carry out thorough inspections and issue detailed certificates for offices, hotels, schools, care homes, warehouses, and all commercial property types across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Commercial fire door inspection',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -810,7 +810,7 @@ export const COMM_FIRE_DOOR = {
   },
   whatsCovered: {
     title: 'What Does a Commercial Fire Door Inspection Assess?',
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     items: [
       { label: 'Door Leaf & Frame Integrity', text: 'Checking the door leaf and frame for damage, warping, gaps, or modifications that would compromise fire resistance performance.' },
       { label: 'Intumescent & Smoke Seals', text: 'Verifying all intumescent strips and cold smoke seals are present, undamaged, and correctly fitted throughout the door perimeter.' },
@@ -862,7 +862,7 @@ export const FIRE_SAFETY_CHECK = {
     price: 'From £69.99',
     ctaText: 'Book Now',
     ctaTo: '/book-now',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
   },
   stats: [
     { value: '£69.99', label: 'Starting Price' },
@@ -879,7 +879,7 @@ export const FIRE_SAFETY_CHECK = {
       'Insurance and compliance documentation',
       'Professional certificate issued on completion',
     ],
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=800&q=80',
     imgAlt: 'Fire safety inspection',
     imgRight: true,
   },
@@ -1006,7 +1006,7 @@ export const FIRE_RISK_ASBESTOS = {
     price: 'Contact for Quote',
     ctaText: 'Get a Quote',
     ctaTo: '/book-now',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=1600&q=80',
   },
   stats: [
     { value: 'Dual', label: 'Assessment Service' },
@@ -1023,7 +1023,7 @@ export const FIRE_RISK_ASBESTOS = {
       'Prioritized remedial action planning',
       'Single site visit reduces disruption',
     ],
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80',
     imgAlt: 'Property assessment and inspection',
     imgRight: false,
   },

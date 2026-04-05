@@ -1,5 +1,5 @@
 // ── Brand constants ──────────────────────────────────────────
-export const COMPANY_NAME = "MNC Energy";
+export const COMPANY_NAME = "MNC Safety Certificate";
 export const PHONE        = "+44 7345 158783";
 export const PHONE_HREF   = "tel:+447345158783";
 export const EMAIL        = "Info@mncenergy.co.uk";

@@ -11,8 +11,8 @@ export default function WhyChoose() {
           <div className="col-lg-5">
             <div className="why-v2__img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
-                alt="Certified MNC Energy engineer"
+                src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80"
+                alt="MNC Safety Certificate professional inspection engineer"
                 className="why-v2__img"
               />
               <div className="why-v2__float">
@@ -20,8 +20,8 @@ export default function WhyChoose() {
                   <i className="bi bi-award-fill"></i>
                 </div>
                 <div>
-                  <div className="why-v2__float-title">Gas Safe Registered</div>
-                  <div className="why-v2__float-sub">NICEIC · NAPIT · BAFE</div>
+                  <div className="why-v2__float-title">10+ Years Experience</div>
+                  <div className="why-v2__float-sub">London &amp; M25 Coverage</div>
                 </div>
               </div>
             </div>
@@ -32,7 +32,7 @@ export default function WhyChoose() {
             <SectionLabel>WHY CHOOSE US</SectionLabel>
             <h2 className="why-v2__heading">
               Why London's Landlords Choose{' '}
-              <span className="why-v2__heading-accent">MNC Energy</span>
+              <span className="why-v2__heading-accent">MNC Safety Certificate</span>
             </h2>
             <p className="why-v2__intro">
               We combine certified expertise, competitive pricing, and industry-leading response

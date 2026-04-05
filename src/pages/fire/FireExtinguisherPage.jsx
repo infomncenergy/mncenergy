@@ -11,9 +11,9 @@ import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Fire Extinguisher Servicing London',
-  subtitle:  'BAFE-registered engineers servicing, inspecting, and supplying fire extinguishers for businesses and landlords across London. Stay compliant with BS 5306-3.',
+  subtitle:  'Certified engineers servicing, inspecting, and supplying fire extinguishers for businesses and landlords across London. Stay compliant with BS 5306-3.',
   price:     'From £15 Per Extinguisher',
-  checklist: ['BAFE Registered', 'BS 5306-3 Compliant', 'All Types Covered', 'Certificate Provided'],
+  checklist: ['BS 5306-3 Compliant', 'Certified Engineers', 'All Types Covered', 'Certificate Provided'],
   ctaText:   'Book Service',
   ctaTo:     '/book-now',
   bgImage:   'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=1600&q=80',
@@ -21,7 +21,7 @@ const hero = {
 
 const stats = [
   { value: '500+',   label: 'Extinguishers Serviced' },
-  { value: 'BAFE',   label: 'Registered Engineers' },
+  { value: '24h', label: 'Certificate Delivery' },
   { value: '24 hrs', label: 'Certificate Turnaround' },
   { value: '5★',     label: 'Google Rating' },
 ];
@@ -31,7 +31,7 @@ const benefits = {
   title: 'Fire Extinguisher Compliance',
   items: [
     { icon: 'bi-shield-fill-check',  title: 'Legal Requirement',        body: 'The Regulatory Reform (Fire Safety) Order 2005 requires all businesses to maintain fire extinguishers in good working condition. Annual servicing is essential.' },
-    { icon: 'bi-person-check-fill',  title: 'BAFE Registered',          body: 'Our engineers hold BAFE registration, the recognised quality standard for fire protection companies in the UK. This is required by most insurers.' },
+    { icon: 'bi-person-check-fill',  title: 'Certified Engineers',          body: 'Our engineers are fully trained and certified to carry out fire extinguisher servicing to British Standards, as required by insurers and regulations.' },
     { icon: 'bi-clipboard-check',    title: 'BS 5306-3 Compliant',      body: 'All servicing is carried out in accordance with BS 5306-3, the British Standard for inspection and maintenance of portable fire extinguishers.' },
     { icon: 'bi-file-earmark-check', title: 'Service Certificate',      body: 'A full service certificate is issued for each extinguisher, listing its type, condition, and next service date — essential for audits and insurance.' },
   ],
@@ -51,7 +51,7 @@ const pricing = {
 
 const intro = {
   title:    'Extinguisher Types We Service',
-  body:     'Our BAFE-registered engineers are trained and certified to service all types of fire extinguishers to the manufacturer specification and British Standards.',
+  body:     'Our certified engineers are trained and certified to service all types of fire extinguishers to the manufacturer specification and British Standards.',
   checklist: [
     'Water and water mist extinguishers',
     'Foam extinguishers (AFFF)',

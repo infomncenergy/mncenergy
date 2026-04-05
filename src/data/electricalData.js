@@ -99,7 +99,7 @@ export const RES_EICR = {
   intro: {
     title: 'What is a Residential EICR?',
     body: 'An Electrical Installation Condition Report (EICR) is a detailed safety check of your property\'s electrical system. It assesses wiring, fuse boards, circuits, and other components to ensure they meet UK safety standards (BS 7671). Our certified electricians in London perform thorough inspections, identifying hazards and ensuring compliance. Whether you are a landlord meeting legal requirements or a homeowner seeking peace of mind, an EICR certificate ensures your property is electrically safe.',
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80',
     imgAlt: 'Electrician performing EICR inspection',
     ctaText: 'Book Now',
   },
@@ -160,7 +160,7 @@ export const RES_EIC = {
   hero: {
     title: 'Electrical Safety Reports for London Properties',
     subtitle: 'Certified Electrical Installations for Safe Properties — BS 7671-Compliant Electrical Systems by Accredited Professionals',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1600&q=80',
     ctaText: 'Book Now',
   },
   intro: {
@@ -194,7 +194,7 @@ export const RES_EIC = {
   },
   whenRequired: {
     title: 'When is an EIC Required?',
-    imgSrc: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80',
     items: [
       { label: 'New Installations', text: 'For wiring, circuits, or systems.' },
       { label: 'Major Upgrades', text: 'Including new consumer units or significant modifications.' },
@@ -228,7 +228,7 @@ export const RES_FUSE_BOX = {
     title: 'Upgrade Your Fuse Board with Certified Experts',
     subtitle: 'Replace outdated fuse boards for modern safety and reliability. Starting From £650.',
     price: 'From £650',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
     ctaText: 'Get a Quote',
   },
   intro: {
@@ -257,7 +257,7 @@ export const RES_FUSE_BOX = {
   needsReplacement: {
     title: 'Do You Need a Fuse Board Replacement?',
     subtitle: 'Signs that your fuse board needs replacing:',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80',
     items: [
       'Frequent circuit tripping.',
       'Overheating or visible burn marks.',
@@ -297,13 +297,13 @@ export const COMM_EICR = {
       'C3 (Improvement Recommended): Not immediately dangerous but should be improved',
       'FI (Further Investigation): Requires further assessment',
     ],
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1600&q=80',
     ctaText: 'Get a Quote',
   },
   intro: {
     title: 'What is a Commercial Electrical Certificate?',
     body: 'A Commercial EICR is a professional inspection and condition report issued for non-domestic properties. It assesses the safety of your electrical installation, identifies any C1 (Danger Present) or C2 (Potentially Dangerous) issues, provides C3 (Improvement Recommendations), and flags any FI (Further Investigation) requirements. Our Landlord Safety Certificate team are certified top-quality engineers ready to provide you with all types of landlord safety certificates.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80',
     imgAlt: 'Commercial EICR inspection',
     ctaText: 'Get a Quote',
     imgRight: false,
@@ -371,13 +371,13 @@ export const COMM_EIC = {
   hero: {
     title: 'Commercial EIC Certificate in London',
     subtitle: 'Certified Commercial EIC Services in London – Ensure Safety and Compliance Today!',
-    bgImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
     ctaText: 'Get a Quote',
   },
   intro: {
     title: 'Commercial Electrical Installation Certificate (EIC)',
     body: 'A Commercial Electrical Installation Certificate (EIC) is an official document issued by a certified electrician after completing new installations or significant electrical modifications in a commercial property. It confirms that the work complies with BS 7671 (British Standards) and UK safety regulations, ensuring the installation is safe and compliant for business use.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
     imgAlt: 'Commercial electrician issuing EIC',
     ctaText: 'Get a Quote',
     imgRight: false,
@@ -438,7 +438,7 @@ export const COMM_FUSE_BOX = {
   hero: {
     title: 'Commercial Fuse Board Replacement in London',
     subtitle: 'Upgrade your commercial distribution board for safety, compliance, and reliability. Starting from £450.',
-    bgImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
     ctaText: 'Get a Quote',
   },
   intro: {
@@ -450,7 +450,7 @@ export const COMM_FUSE_BOX = {
       { label: 'RCBO Protection', text: 'Combined RCD and MCB for individual circuit protection.' },
       { label: 'Surge Protection', text: 'Safeguard business-critical equipment from power surges.' },
     ],
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80',
     imgAlt: 'Commercial distribution board upgrade',
     ctaText: 'Call Now',
     imgRight: false,

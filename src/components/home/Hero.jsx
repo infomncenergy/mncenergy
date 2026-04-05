@@ -11,7 +11,7 @@ export default function Hero() {
           <div className="col-lg-7">
             <div className="hero-v2__badge">
               <i className="bi bi-patch-check-fill"></i>
-              Gas Safe · NICEIC · NAPIT · BAFE Registered
+              10+ Years · London Wide · Same Day Available
             </div>
 
             <h1 className="hero-v2__title">
@@ -36,23 +36,23 @@ export default function Hero() {
 
             <div className="hero-v2__stats">
               <div className="hero-v2__stat">
-                <strong>5,000+</strong>
-                <span>Certificates Issued</span>
+                <strong><i className="bi bi-clock-fill"></i></strong>
+                <span>Quick Response</span>
               </div>
               <div className="hero-v2__stat-div"></div>
               <div className="hero-v2__stat">
-                <strong>24h</strong>
-                <span>Cert Delivery</span>
+                <strong><i className="bi bi-patch-check-fill"></i></strong>
+                <span>Certification</span>
               </div>
               <div className="hero-v2__stat-div"></div>
               <div className="hero-v2__stat">
-                <strong>Same Day</strong>
-                <span>Appointments</span>
+                <strong><i className="bi bi-tags-fill"></i></strong>
+                <span>Affordable Prices</span>
               </div>
               <div className="hero-v2__stat-div"></div>
               <div className="hero-v2__stat">
-                <strong>★ 4.9</strong>
-                <span>Google Rating</span>
+                <strong><i className="bi bi-calendar-check-fill"></i></strong>
+                <span>Book Today</span>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Hero() {
                   <i className="bi bi-shield-exclamation"></i><span>Fire Safety</span>
                 </Link>
                 <Link to="/asbestos/residential"       className="hero-v2__item">
-                  <i className="bi bi-radioactive"></i><span>Asbestos</span>
+                  <i className="bi bi-binoculars-fill"></i><span>Asbestos</span>
                 </Link>
                 <Link to="/epc/residential"            className="hero-v2__item">
                   <i className="bi bi-house-fill"></i><span>EPC</span>

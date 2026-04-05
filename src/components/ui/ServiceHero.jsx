@@ -37,7 +37,7 @@ export default function ServiceHero({
             {/* Trust badge */}
             <div className="service-hero__trust-badge">
               <i className="bi bi-patch-check-fill me-2" style={{ color: '#0369a1' }}></i>
-              Gas Safe · NICEIC · NAPIT · BAFE Registered
+              MNC Safety Certificate
             </div>
 
             <h1 className="service-hero__title">{title}</h1>

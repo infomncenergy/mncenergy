@@ -8,7 +8,7 @@ export default function Header() {
 
         {/* Logo */}
         <Link to="/" className="header-logo">
-          <img src="/images/mnc-energy-logo.png" alt="MNC Energy" className="header-logo__img" />
+          <img src="/images/mnc-energy-logo.png" alt="MNC Safety Certificate" className="header-logo__img" />
         </Link>
 
         {/* Contact info */}

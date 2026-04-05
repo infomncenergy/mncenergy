@@ -35,7 +35,7 @@ export const RES_EPC = {
     price: 'From £99.99',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80',
   },
   stats: [
     { value: 'Accredited', label: 'DEA Assessors' },
@@ -45,7 +45,7 @@ export const RES_EPC = {
   intro: {
     title: 'What is a Residential EPC?',
     body: 'A Residential Energy Performance Certificate (EPC) is a legal requirement for any home being sold or rented in England and Wales. The certificate rates your property\'s energy efficiency from A to G and must be available to prospective buyers or tenants before marketing begins. Our accredited Domestic Energy Assessors (DEAs) carry out swift, accurate EPC assessments across London, lodging certificates directly to the official government EPC register within 24 hours.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80',
     imgAlt: 'EPC assessor visiting residential property',
     ctaText: 'Book Now',
     imgRight: true,
@@ -90,7 +90,7 @@ export const RES_EPC = {
   },
   whatsCovered: {
     title: 'What Does an EPC Assessment Cover?',
-    imgSrc: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1485809052957-5113b0ff61af?w=700&q=80',
     items: [
       { label: 'Property Construction', text: 'Assessment of wall type, floor, roof, and window construction to evaluate the building fabric\'s thermal performance.' },
       { label: 'Heating System', text: 'Inspection and recording of the main and secondary heating systems, controls, and fuel type.' },
@@ -143,7 +143,7 @@ export const COMM_EPC = {
     price: 'From £149',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1485809052957-5113b0ff61af?w=1600&q=80',
   },
   stats: [
     { value: 'CIBSE', label: 'Accredited Assessors' },
@@ -153,7 +153,7 @@ export const COMM_EPC = {
   intro: {
     title: 'What is a Commercial EPC?',
     body: 'A Commercial Energy Performance Certificate (EPC) is a legal requirement for all non-domestic buildings being sold, let, or constructed in England and Wales. Unlike residential EPCs, commercial assessments use Display Energy Certificates (DECs) for public buildings and Non-Domestic EPCs for offices, retail, and industrial premises. Our CIBSE-accredited Non-Domestic Energy Assessors (NDEAs) provide accurate, cost-effective commercial EPC assessments across all sectors in London, with certificates lodged directly to the government EPC register.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80',
     imgAlt: 'Commercial EPC assessor in office building',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -209,7 +209,7 @@ export const COMM_EPC = {
   },
   whatsCovered: {
     title: 'What Does a Commercial EPC Assessment Include?',
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1485809052957-5113b0ff61af?w=700&q=80',
     items: [
       { label: 'Building Fabric', text: 'Assessment of the construction type, wall, roof, floor, and window specifications and their thermal performance.' },
       { label: 'Heating & Cooling Systems', text: 'Inspection of all space heating, air conditioning, and mechanical ventilation systems and their energy source.' },

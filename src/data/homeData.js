@@ -4,7 +4,7 @@ export const WHY_ITEMS = [
   {
     icon: "bi-patch-check-fill",
     title: "Certified Professionals",
-    body: "Our team consists of fully qualified, NICEIC-certified, and Gas Safe registered engineers, dedicated to ensuring your property's safety.",
+    body: "Our team consists of fully qualified and experienced engineers, dedicated to ensuring your property's safety.",
   },
   {
     icon: "bi-tags-fill",
@@ -27,7 +27,7 @@ export const SERVICES = [
   {
     icon: "bi-lightning-charge-fill",
     title: "Electrical Services",
-    desc: "EICR certificates, consumer unit upgrades, PAT testing, and fault finding by NICEIC-approved engineers across London.",
+    desc: "EICR certificates, consumer unit upgrades, PAT testing, and fault finding by certified engineers across London.",
     links: [
       { label: "EICR Certificate",    to: "/electrical/residential-eicr" },
       { label: "PAT Testing",         to: "/electrical/pat-testing" },
@@ -38,7 +38,7 @@ export const SERVICES = [
   {
     icon: "bi-fire",
     title: "Gas Services",
-    desc: "Landlord gas safety certificates, boiler service, installation, and repair by Gas Safe registered engineers.",
+    desc: "Landlord gas safety certificates, boiler service, installation, and repair by certified gas engineers.",
     links: [
       { label: "Landlord Gas Safety (CP12)", to: "/gas/landlord-gas-safety" },
       { label: "Commercial Gas Safety",      to: "/gas/commercial-gas-safety" },
@@ -58,7 +58,7 @@ export const SERVICES = [
     ],
   },
   {
-    icon: "bi-radioactive",
+    icon: "bi-binoculars-fill",
     title: "Asbestos Survey",
     desc: "Professional asbestos surveys and management plans for residential and commercial properties by accredited surveyors.",
     links: [
@@ -187,7 +187,7 @@ export const HOME_FAQS = [
   },
   {
     q: "How quickly can I get a Gas Safety Certificate after booking?",
-    a: "We offer flexible scheduling with same-day or next-day appointments available across London. Our Gas Safe registered engineers carry out the inspection at your property, and your digital CP12 Gas Safety Certificate is issued within 24–48 hours of the completed inspection — sent directly to your email.",
+    a: "We offer flexible scheduling with same-day or next-day appointments available across London. Our certified gas engineers carry out the inspection at your property, and your digital CP12 Gas Safety Certificate is issued within 24–48 hours of the completed inspection — sent directly to your email.",
   },
   {
     q: "What is included in a Fire Safety Certificate?",

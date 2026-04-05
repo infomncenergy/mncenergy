@@ -9,7 +9,7 @@ const STATS = [
 ];
 
 const FEATURES = [
-  { icon: 'bi-patch-check-fill',        text: 'Gas Safe, NICEIC, NAPIT & BAFE registered engineers' },
+  { icon: 'bi-patch-check-fill',        text: 'Fully certified and experienced engineers across London' },
   { icon: 'bi-clock-fill',              text: 'Same-day and next-day appointment availability'        },
   { icon: 'bi-file-earmark-check-fill', text: 'Digital certificates delivered within 24–48 hours'    },
   { icon: 'bi-geo-alt-fill',            text: 'Covering all of London'         },
@@ -25,8 +25,8 @@ export default function About() {
           <div className="col-lg-5">
             <div className="about-v2__img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
-                alt="MNC Energy team"
+                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80"
+                alt="MNC Safety Certificate team"
                 className="about-v2__img"
               />
               <div className="about-v2__stats-grid">
@@ -44,10 +44,10 @@ export default function About() {
           <div className="col-lg-7">
             <SectionLabel>ABOUT US</SectionLabel>
             <h2 className="fw-bold mb-4">
-              MNC Energy — Reliable, Qualified &amp; Experienced Safety Experts
+              MNC Safety Certificate — Reliable, Qualified &amp; Experienced Safety Experts
             </h2>
             <p style={{ lineHeight: 1.8 }}>
-              MNC Energy is a fully certified property safety company providing compliance
+              MNC Safety Certificate is a fully certified property safety company providing compliance
               certificates and safety inspections for landlords, businesses, and homeowners
               across London.
             </p>

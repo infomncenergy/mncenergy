@@ -11,12 +11,12 @@ import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Boiler Installation London',
-  subtitle:  'Gas Safe registered engineers installing combi, system, and heat-only boilers across London. New boiler fitted in a day with 10-year warranty options.',
+  subtitle:  'Certified gas engineers installing combi, system, and heat-only boilers across London. New boiler fitted in a day with 10-year warranty options.',
   price:     'From £1,499 Fully Fitted',
-  checklist: ['Gas Safe Registered', 'All Major Brands', '10-Year Warranty Available', 'Same-Week Installation'],
+  checklist: ['Certified Gas Engineers', 'All Major Brands', '10-Year Warranty Available', 'Same-Week Installation'],
   ctaText:   'Get a Free Quote',
   ctaTo:     '/book-now',
-  bgImage:   'https://images.unsplash.com/photo-1590674899484-13da0e394dca?w=1600&q=80',
+  bgImage:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
 };
 
 const stats = [
@@ -30,7 +30,7 @@ const benefits = {
   label: 'WHY CHOOSE US',
   title: 'Professional Boiler Installation',
   items: [
-    { icon: 'bi-patch-check-fill',  title: 'Gas Safe Registered',      body: 'All our engineers are Gas Safe registered — the UK\'s official gas safety register. You can verify any engineer\'s credentials on the Gas Safe register website.' },
+    { icon: 'bi-patch-check-fill',  title: 'Certified Gas Engineers',      body: 'All our gas engineers are fully qualified and certified, ensuring your installation meets all UK safety regulations and manufacturer requirements.' },
     { icon: 'bi-award-fill',        title: 'All Major Brands',          body: 'We install Worcester Bosch, Vaillant, Baxi, Ideal, Alpha, Viessmann, and all major boiler brands. We recommend the right boiler for your property and budget.' },
     { icon: 'bi-shield-check',      title: 'Manufacturer Warranty',     body: 'New boilers come with manufacturer warranties of up to 10 years when installed by a registered engineer. We handle all warranty registration for you.' },
     { icon: 'bi-receipt-cutoff',    title: 'Fixed Price Quote',         body: 'We provide a detailed written quote before any work begins. No hidden charges — the price we quote is the price you pay, including all labour and materials.' },
@@ -62,7 +62,7 @@ const intro = {
     'Building Regulations compliance certificate',
     'Gas Safe certificate issued',
   ],
-  imgSrc:   'https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=800&q=80',
+  imgSrc:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
   imgRight: false,
 };
 
@@ -71,8 +71,8 @@ const proc = {
   title: 'New Boiler in 3 Simple Steps',
   steps: [
     { icon: 'bi-calculator',         title: 'Free Survey & Quote',    body: 'Our engineer surveys your property, assesses your heating requirements, and recommends the right boiler. We provide a detailed fixed-price quote.' },
-    { icon: 'bi-wrench-adjustable',  title: 'Installation Day',       body: 'Our Gas Safe engineer arrives early and completes the full installation in a single day in most cases, including removing the old boiler and all commissioning.' },
-    { icon: 'bi-file-earmark-check', title: 'Certificates & Warranty', body: 'You receive your Gas Safe certificate, Building Regulations documentation, and manufacturer warranty registration — all handled by us.' },
+    { icon: 'bi-wrench-adjustable',  title: 'Installation Day',       body: 'our certified gas engineer arrives early and completes the full installation in a single day in most cases, including removing the old boiler and all commissioning.' },
+    { icon: 'bi-file-earmark-check', title: 'Certificates & Warranty', body: 'You receive your gas safety certificate, Building Regulations documentation, and manufacturer warranty registration — all handled by us.' },
   ],
 };
 
@@ -82,7 +82,7 @@ const faqs = [
   { q: 'Which boiler brand do you recommend?',
     a: 'We are experienced with all major brands. Worcester Bosch and Vaillant are our top recommendations for reliability and warranty support. We discuss your budget and property requirements and recommend accordingly.' },
   { q: 'Do I need Building Regulations approval for a new boiler?',
-    a: 'Yes. All boiler installations must comply with Building Regulations Part L. As Gas Safe registered engineers, we are a Competent Person scheme member, so we self-certify the installation and notify Building Control on your behalf.' },
+    a: 'Yes. All boiler installations must comply with Building Regulations Part L. Our certified engineers ensure the installation complies with Building Regulations Part L and all applicable safety standards.' },
   { q: 'Can you finance a new boiler?',
     a: 'We can discuss payment options. Please call us to discuss your situation. We also advise checking eligibility for government grants (ECO4 scheme) if you meet certain criteria.' },
   { q: 'What warranty comes with a new boiler?',

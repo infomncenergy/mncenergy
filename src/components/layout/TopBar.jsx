@@ -7,7 +7,7 @@ export default function TopBar() {
         <div className="top-bar__left">
           <span className="top-bar__item">
             <i className="bi bi-patch-check-fill me-2"></i>
-            Gas Safe · NICEIC · NAPIT · BAFE Registered Engineers
+             Gas Safe · NICEIC · NAPIT · BAFE Registered Engineer
           </span>
           <span className="top-bar__sep d-none d-md-inline">|</span>
           <span className="top-bar__item d-none d-md-inline">

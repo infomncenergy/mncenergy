@@ -81,7 +81,7 @@ export default function CommercialEICRPage() {
             </div>
             <div className="col-lg-5">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80"
                 alt="Legal requirements for commercial EICR"
                 className="intro-img"
               />

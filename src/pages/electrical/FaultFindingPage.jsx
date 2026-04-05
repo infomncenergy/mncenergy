@@ -10,7 +10,7 @@ import RelatedServices from '../../components/ui/RelatedServices';
 
 const hero = {
   title:     'Electrical Fault Finding London',
-  subtitle:  'Expert diagnosis and repair of electrical faults. From tripping circuits to power failures — our NICEIC engineers identify and fix the problem fast.',
+  subtitle:  'Expert diagnosis and repair of electrical faults. From tripping circuits to power failures — our certified engineers identify and fix the problem fast.',
   price:     'From £98.99/hr',
   checklist: ['Same-Day Emergency Available', 'All Fault Types Covered', 'Full Written Report Provided'],
   ctaText:   'Book Fault Finding',
@@ -38,7 +38,7 @@ const benefits = {
 
 const intro = {
   title:    'Common Electrical Faults We Fix',
-  body:     'Our NICEIC-approved electricians have experience diagnosing and repairing all types of electrical faults across residential and commercial properties in London.',
+  body:     'Our certified electricians have extensive experience diagnosing and repairing all types of electrical faults across residential and commercial properties in London.',
   checklist: [
     'Tripping RCDs and circuit breakers',
     'Partial or total power loss',
@@ -49,7 +49,7 @@ const intro = {
     'Faulty sockets, switches, and light fittings',
     'Outdoor and garden electrical faults',
   ],
-  imgSrc:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+  imgSrc:   'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80',
   imgRight: true,
 };
 

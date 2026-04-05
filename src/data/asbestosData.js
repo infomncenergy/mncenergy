@@ -45,7 +45,7 @@ export const RES_ASBESTOS = {
   intro: {
     title: 'What is a Residential Asbestos Survey?',
     body: 'Any home built before 2000 may contain asbestos-containing materials (ACMs) in textured coatings, floor tiles, pipe lagging, roof felt, and many other building products. Under the Control of Asbestos Regulations 2012, a survey is legally required before any refurbishment or demolition work. Our UKAS-accredited surveyors carry out thorough inspections and laboratory analysis, issuing a detailed report that tells you exactly what is present, where it is, and what to do about it.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
     imgAlt: 'Asbestos surveyor inspecting residential property',
     ctaText: 'Book Now',
     imgRight: true,
@@ -107,7 +107,7 @@ export const RES_ASBESTOS = {
   },
   whatsCovered: {
     title: 'Where Asbestos is Commonly Found in Homes',
-    imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
     items: [
       { label: 'Artex & Textured Coatings', text: 'Textured ceiling and wall coatings applied before 1999 commonly contain chrysotile (white) asbestos.' },
       { label: 'Floor Tiles & Adhesive', text: 'Vinyl floor tiles and the black bitumen adhesive used to fix them frequently contain asbestos in pre-2000 homes.' },

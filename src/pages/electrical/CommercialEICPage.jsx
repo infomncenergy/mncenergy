@@ -42,7 +42,7 @@ export default function CommercialEICPage() {
             </div>
             <div className="col-lg-6">
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80"
+                src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80"
                 alt="Commercial EIC legal requirements"
                 className="intro-img"
               />

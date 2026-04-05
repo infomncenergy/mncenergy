@@ -63,7 +63,7 @@ const STEPS = [
 ];
 
 const WHY_BOOK = [
-  { icon: 'bi-patch-check-fill',         title: 'Gas Safe & NICEIC Registered',    body: 'All our engineers are fully accredited — Gas Safe registered, NICEIC approved, and BAFE registered for fire safety.' },
+  { icon: 'bi-patch-check-fill',         title: 'Certified & Experienced Engineers', body: 'All our engineers are fully certified and experienced, ensuring your inspection meets all legal requirements.' },
   { icon: 'bi-clock-fill',               title: 'Same-Day Appointments Available', body: 'We understand urgency. Same-day and next-day bookings are available subject to engineer availability in your area.' },
   { icon: 'bi-envelope-check-fill',      title: 'Digital Certificates in 24 hrs',  body: 'All certificates are issued digitally and emailed to you within 24–48 hours of the completed inspection.' },
   { icon: 'bi-currency-pound',           title: 'Transparent Fixed Pricing',       body: 'No hidden charges or surprise fees. Our prices are fixed — you always know exactly what you\'ll pay.' },
@@ -204,13 +204,13 @@ export default function BookingPage() {
               </p>
               <div className="d-flex gap-3 flex-wrap">
                 <div className="booking-hero__badge">
-                  <i className="bi bi-patch-check-fill me-2"></i> Gas Safe Registered
+                  <i className="bi bi-clock-fill me-2"></i> Same-Day Available
                 </div>
                 <div className="booking-hero__badge">
-                  <i className="bi bi-patch-check-fill me-2"></i> NICEIC Approved
+                  <i className="bi bi-file-earmark-check-fill me-2"></i> Digital Cert in 24h
                 </div>
                 <div className="booking-hero__badge">
-                  <i className="bi bi-patch-check-fill me-2"></i> BAFE Registered
+                  <i className="bi bi-geo-alt-fill me-2"></i> All London Covered
                 </div>
               </div>
             </div>
@@ -469,7 +469,7 @@ export default function BookingPage() {
                             className="form-control form-control-lg"
                             value={form.date}
                             onChange={e => update('date', e.target.value)}
-                            min={new Date().toISOString().split('T')[0]}
+                            min={(() => { const d = new Date(); d.setDate(d.getDate() + 1); return d.toISOString().split('T')[0]; })()}
                           />
                         </div>
                         <div className="col-md-4">
