@@ -1,65 +1,66 @@
 import SectionLabel from '../ui/SectionLabel';
 
-const BADGES = [
+const LOGOS = [
   {
-    icon: 'bi-building',
-    title: 'Companies House',
-    sub: 'Registered Company',
-    note: 'MNC Energy Ltd',
+    src: 'https://www.trustmark.org.uk/images/trustmark-logo.png',
+    alt: 'TrustMark – Government Endorsed Quality',
+    fallback: 'TRUSTMARK',
   },
   {
-    icon: 'bi-shield-lock-fill',
-    title: 'ICO Registered',
-    sub: 'Data Protection',
-    note: 'UK GDPR Compliant',
+    src: 'https://www.chas.co.uk/wp-content/uploads/2021/03/CHAS-Logo.png',
+    alt: 'CHAS – Contractors Health and Safety',
+    fallback: 'CHAS',
   },
   {
-    icon: 'bi-file-earmark-check-fill',
-    title: 'BS 7671:2018',
-    sub: 'Wiring Regulations',
-    note: 'Electrical Standard',
+    src: 'https://www.nebosh.org.uk/media/1018/nebosh-logo.png',
+    alt: 'NEBOSH',
+    fallback: 'NEBOSH',
   },
   {
-    icon: 'bi-fire',
-    title: 'Gas Safety Regs',
-    sub: 'Installation & Use',
-    note: '1998 Regulations',
+    src: 'https://www.cityandguilds.com/-/media/cityandguilds/images/logos/city-and-guilds-logo.png',
+    alt: 'City & Guilds',
+    fallback: 'City & Guilds',
   },
   {
-    icon: 'bi-house-check-fill',
-    title: 'TrustMark',
-    sub: 'Gov-Endorsed Standard',
-    note: 'Quality Assured',
+    src: 'https://www.bohs.org/media/1169/bohs-logo-2019.png',
+    alt: 'BOHS – British Occupational Hygiene Society',
+    fallback: 'BOHS',
   },
   {
-    icon: 'bi-patch-check-fill',
-    title: 'Fully Insured',
-    sub: 'Public Liability',
-    note: '£5m Coverage',
+    src: 'https://www.ifsm.org.uk/media/1001/ifsm-logo.png',
+    alt: 'IFSM – Institute of Fire Safety Managers',
+    fallback: 'IFSM',
   },
 ];
+
+function LogoItem({ src, alt, fallback }) {
+  return (
+    <div className="accred-logo-item">
+      <img
+        src={src}
+        alt={alt}
+        className="accred-logo-img"
+        onError={e => {
+          e.target.style.display = 'none';
+          e.target.nextSibling.style.display = 'flex';
+        }}
+      />
+      <span className="accred-logo-fallback" style={{ display: 'none' }}>
+        {fallback}
+      </span>
+    </div>
+  );
+}
 
 export default function Accreditation() {
   return (
     <section className="accreditation-section">
       <div className="container">
         <SectionLabel center>ACCREDITATION</SectionLabel>
-        <h2 className="fw-bold text-center mb-2">Regulated, Insured &amp; Compliant</h2>
-        <p className="text-center mb-5" style={{ color: 'var(--text-sub)', maxWidth: 560, margin: '0 auto 2.5rem' }}>
-          MNC Safety Certificate operates to the highest UK industry standards,
-          fully insured and compliant with all relevant legislation.
-        </p>
-
-        <div className="accred-grid">
-          {BADGES.map((b, i) => (
-            <div className="accred-card" key={i}>
-              <div className="accred-card__icon">
-                <i className={`bi ${b.icon}`}></i>
-              </div>
-              <div className="accred-card__title">{b.title}</div>
-              <div className="accred-card__sub">{b.sub}</div>
-              <div className="accred-card__note">{b.note}</div>
-            </div>
+        <h2 className="fw-bold text-center mb-5">Accreditation</h2>
+        <div className="accred-logo-strip">
+          {LOGOS.map((logo, i) => (
+            <LogoItem key={i} {...logo} />
           ))}
         </div>
       </div>
