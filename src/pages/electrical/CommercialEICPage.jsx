@@ -17,11 +17,11 @@ export default function CommercialEICPage() {
       {/* Hero */}
       <ServiceHero {...hero} />
 
+      {/* Pricing */}
+      <PricingBox {...pricing} />
+
       {/* What is Commercial EIC */}
       <IntroSection {...intro} />
-
-      {/* Benefits */}
-      <PricingBox {...pricing} />
 
       {/* Legal Requirements */}
       <section className="intro-section">

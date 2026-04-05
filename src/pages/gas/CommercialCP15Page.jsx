@@ -18,8 +18,8 @@ export default function CommercialCP15Page() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
+      <IntroSection {...intro} />
       <BenefitCards {...benefits} />
 
       {/* Property Types */}

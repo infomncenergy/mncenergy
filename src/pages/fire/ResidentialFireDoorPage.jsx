@@ -18,8 +18,8 @@ export default function ResidentialFireDoorPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
+      <IntroSection {...intro} />
       <BenefitCards {...benefits} />
 
       {/* What's Checked */}

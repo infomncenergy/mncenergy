@@ -16,9 +16,9 @@ export default function CommercialCP16Page() {
   return (
     <>
       <ServiceHero {...hero} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
 
+      <IntroSection {...intro} />
       {/* What's Covered */}
       <section className="intro-section">
         <div className="container">

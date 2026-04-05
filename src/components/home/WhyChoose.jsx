@@ -11,17 +11,17 @@ export default function WhyChoose() {
           <div className="col-lg-5">
             <div className="why-v2__img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
                 alt="MNC Safety Certificate professional inspection engineer"
                 className="why-v2__img"
               />
               <div className="why-v2__float">
                 <div className="why-v2__float-icon">
-                  <i className="bi bi-award-fill"></i>
+                  <i className="bi bi-patch-check-fill"></i>
                 </div>
                 <div>
-                  <div className="why-v2__float-title">10+ Years Experience</div>
-                  <div className="why-v2__float-sub">London &amp; M25 Coverage</div>
+                  <div className="why-v2__float-title">London Wide</div>
+                  <div className="why-v2__float-sub">Same-Day Available</div>
                 </div>
               </div>
             </div>

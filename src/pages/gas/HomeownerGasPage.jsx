@@ -16,8 +16,8 @@ export default function HomeownerGasPage() {
   return (
     <>
       <ServiceHero {...hero} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
+      <IntroSection {...intro} />
       <BenefitCards {...benefits} />
 
       {/* What's Covered */}

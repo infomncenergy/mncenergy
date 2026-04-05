@@ -17,8 +17,8 @@ export default function FireSafetyCheckPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
+      <IntroSection {...intro} />
       <BenefitCards {...benefits} />
       <ProcessSteps {...proc} />
       <RelatedServices title="Related Fire Safety Services" services={related} />

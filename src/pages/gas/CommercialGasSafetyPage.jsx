@@ -17,8 +17,8 @@ export default function CommercialGasSafetyPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
+      <IntroSection {...intro} />
       <BenefitCards {...benefits} />
       <ProcessSteps {...proc} />
       <RelatedServices title="Related Gas Services" services={related} />

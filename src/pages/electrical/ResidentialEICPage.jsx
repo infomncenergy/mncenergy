@@ -17,11 +17,11 @@ export default function ResidentialEICPage() {
       {/* Hero */}
       <ServiceHero {...hero} />
 
+      {/* Pricing */}
+      <PricingBox {...pricing} />
+
       {/* What is EIC */}
       <IntroSection {...intro} />
-
-      {/* Benefits */}
-      <PricingBox {...pricing} />
 
       {/* When is EIC Required */}
       <section className="intro-section">

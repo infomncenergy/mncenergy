@@ -73,6 +73,12 @@ const WHY_BOOK = [
 
 export default function BookingPage() {
   const [step, setStep]     = useState(1);
+
+  // Helper: change step AND scroll to top of page
+  const goToStep = (n) => {
+    setStep(n);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   const [form, setForm]     = useState({
     services: [],          // array — supports multi-service booking
     propertyCategory: '',  // 'Residential' | 'Commercial'
@@ -192,8 +198,8 @@ export default function BookingPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="booking-hero">
+      {/* Hero — only visible on step 1 */}
+      {step === 1 && <section className="booking-hero">
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-7">
@@ -230,7 +236,7 @@ export default function BookingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Progress Steps */}
       <div className="booking-progress">
@@ -240,7 +246,7 @@ export default function BookingPage() {
               <div
                 key={i}
                 className={`booking-progress__step${step > i + 1 ? ' done' : ''}${step === i + 1 ? ' active' : ''}`}
-                onClick={() => step > i + 1 && setStep(i + 1)}
+                onClick={() => step > i + 1 && goToStep(i + 1)}
               >
                 <div className="booking-progress__num">
                   {step > i + 1 ? <i className="bi bi-check-lg"></i> : i + 1}
@@ -324,7 +330,7 @@ export default function BookingPage() {
                       type="button"
                       className="btn-green"
                       disabled={!step1Valid}
-                      onClick={() => { if (step1Valid) setStep(2); }}
+                      onClick={() => { if (step1Valid) goToStep(2); }}
                     >
                       Continue <i className="bi bi-arrow-right ms-2"></i>
                     </button>
@@ -490,14 +496,14 @@ export default function BookingPage() {
                     )}
                   </div>
                   <div className="mt-4 d-flex gap-3 justify-content-between">
-                    <button type="button" className="btn-outline-green" onClick={() => setStep(1)}>
+                    <button type="button" className="btn-outline-green" onClick={() => goToStep(1)}>
                       <i className="bi bi-arrow-left me-2"></i> Back
                     </button>
                     <button
                       type="button"
                       className="btn-green"
                       disabled={!step2Valid}
-                      onClick={() => { if (step2Valid) setStep(3); }}
+                      onClick={() => { if (step2Valid) goToStep(3); }}
                     >
                       Continue <i className="bi bi-arrow-right ms-2"></i>
                     </button>
@@ -570,14 +576,14 @@ export default function BookingPage() {
                     </div>
                   </div>
                   <div className="mt-4 d-flex gap-3 justify-content-between">
-                    <button type="button" className="btn-outline-green" onClick={() => setStep(2)}>
+                    <button type="button" className="btn-outline-green" onClick={() => goToStep(2)}>
                       <i className="bi bi-arrow-left me-2"></i> Back
                     </button>
                     <button
                       type="button"
                       className="btn-green"
                       disabled={!step3Valid}
-                      onClick={() => { if (step3Valid) setStep(4); }}
+                      onClick={() => { if (step3Valid) goToStep(4); }}
                     >
                       Review Booking <i className="bi bi-arrow-right ms-2"></i>
                     </button>
@@ -649,7 +655,7 @@ export default function BookingPage() {
                     </div>
                   )}
                   <div className="mt-4 d-flex gap-3 justify-content-between">
-                    <button type="button" className="btn-outline-green" onClick={() => setStep(3)}>
+                    <button type="button" className="btn-outline-green" onClick={() => goToStep(3)}>
                       <i className="bi bi-arrow-left me-2"></i> Back
                     </button>
                     <button

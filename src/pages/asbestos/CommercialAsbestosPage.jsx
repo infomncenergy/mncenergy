@@ -18,9 +18,9 @@ export default function CommercialAsbestosPage() {
     <>
       <ServiceHero {...hero} />
       <StatsBar stats={stats} />
-      <IntroSection {...intro} />
       <PricingBox {...pricing} />
 
+      <IntroSection {...intro} />
       {/* Survey Types */}
       <section className="py-5 glass-section">
         <div className="container">

@@ -11,7 +11,7 @@ export default function Hero() {
           <div className="col-lg-7">
             <div className="hero-v2__badge">
               <i className="bi bi-patch-check-fill"></i>
-              10+ Years · London Wide · Same Day Available
+              London Wide · Same-Day Available · Fast Digital Certificates
             </div>
 
             <h1 className="hero-v2__title">

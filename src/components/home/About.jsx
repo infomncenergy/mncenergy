@@ -25,7 +25,7 @@ export default function About() {
           <div className="col-lg-5">
             <div className="about-v2__img-wrap">
               <img
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80"
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=700&q=80"
                 alt="MNC Safety Certificate team"
                 className="about-v2__img"
               />

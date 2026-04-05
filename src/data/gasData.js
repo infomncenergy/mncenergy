@@ -117,7 +117,7 @@ export const CP12 = {
   },
   whatsCovered: {
     title: 'What\'s Covered in a CP12 Gas Safety Inspection?',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1590674899484-d4e62f4e8b37?w=700&q=80',
     items: [
       { label: 'Gas Appliances', text: 'Boilers, gas hobs, gas fires, and any other gas-powered appliances.' },
       { label: 'Gas Pipework', text: 'Checking for leaks, corrosion, and correct installation of all supply pipes.' },
@@ -339,7 +339,7 @@ export const CP15 = {
     price: 'From £99.99',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1592198084033-aacfec9c3617?w=1600&q=80',
   },
   stats: [
     { value: '24h', label: 'Certificate Delivery' },
@@ -349,7 +349,7 @@ export const CP15 = {
   intro: {
     title: 'What is a CP15 – Commercial Boiler Gas Safety Certificate?',
     body: 'The CP15 certificate is required for commercial properties with natural gas or LPG boilers. Our certified gas engineers carry out thorough inspections of commercial boilers, gas appliances, and associated pipework to ensure compliance with the Gas Safety (Installation and Use) Regulations 1998. We serve businesses, landlords, and property managers across London with fast turnaround and next-day appointment availability.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1590674899484-d4e62f4e8b37?w=700&q=80',
     imgAlt: 'Commercial gas safety inspection',
     ctaText: 'Get a Quote',
     imgRight: false,
@@ -627,7 +627,7 @@ export const CP42 = {
   intro: {
     title: 'What is a CP42 Catering Gas Safety Certificate?',
     body: 'The CP42 certificate is specifically designed for commercial catering establishments, covering the inspection of gas cooking appliances, grills, fryers, ovens, ranges, and associated gas pipework. Restaurants, cafes, hotels, pubs, and food businesses are legally required to have their gas catering equipment inspected annually by a Gas Safe registered engineer with commercial catering competency. We provide fast, reliable CP42 inspections across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1590674899484-d4e62f4e8b37?w=700&q=80',
     imgAlt: 'Commercial kitchen gas safety inspection',
     ctaText: 'Get a Quote',
     imgRight: false,
@@ -872,7 +872,7 @@ export const GAS_ENGINEER = {
     price: 'Contact for Quote',
     ctaText: 'Book Now',
     ctaTo: '/book-now',
-    bgImage: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1592198084033-aacfec9c3617?w=1600&q=80',
   },
   stats: [
     { value: 'Gas Safe', label: 'All Engineers Registered' },

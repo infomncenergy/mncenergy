@@ -252,7 +252,7 @@ export const RES_EMERGENCY_LIGHTS = {
   },
   whatsCovered: {
     title: 'What Does Emergency Lighting Testing Include?',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     items: [
       { label: 'Full Duration Discharge Test', text: 'Each emergency luminaire is tested for its full 3-hour discharge period to confirm battery performance meets BS 5266.' },
       { label: 'Visual Condition Check', text: 'All fittings are visually inspected for damage, obstruction, or incorrect positioning relative to escape routes.' },
@@ -290,7 +290,7 @@ export const RES_FIRE_ALARM = {
     price: 'From £89',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1600&q=80',
   },
   stats: [
     { value: 'BS 5839', label: 'Compliant Servicing' },
@@ -393,7 +393,7 @@ export const RES_FIRE_DOOR = {
   intro: {
     title: 'Residential Fire Door Inspection & Certification',
     body: 'Fire doors are a critical passive fire protection measure in any multi-occupancy residential building. The Fire Safety (England) Regulations 2022 require responsible persons in buildings over 11 metres to carry out quarterly checks of communal fire doors and annual inspections of individual flat entrance fire doors. Our FDIS-qualified inspectors carry out thorough fire door inspections and issue detailed compliance certificates across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     imgAlt: 'Fire door inspection in residential building',
     ctaText: 'Book Now',
     imgRight: true,
@@ -569,7 +569,7 @@ export const COMM_EMERGENCY_LIGHTS = {
     price: 'From £99',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1600&q=80',
   },
   stats: [
     { value: 'BS 5266-1', label: 'Compliant Certification' },
@@ -579,7 +579,7 @@ export const COMM_EMERGENCY_LIGHTS = {
   intro: {
     title: 'Commercial Emergency Lighting Testing & Certification',
     body: 'Emergency lighting is a fundamental fire safety requirement for all commercial premises. Under BS 5266-1 and the Regulatory Reform (Fire Safety) Order 2005, responsible persons must ensure emergency lighting is installed, tested, and maintained in all commercial buildings. Our engineers carry out annual full-duration discharge tests, monthly function tests, and issue BS 5266-1 compliant certificates for offices, retail units, warehouses, hotels, and all other commercial premises across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     imgAlt: 'Commercial emergency lighting inspection',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -766,7 +766,7 @@ export const COMM_FIRE_DOOR = {
   intro: {
     title: 'Commercial Fire Door Inspection & Certification',
     body: 'Fire doors are a critical element of compartmentation in commercial buildings, containing fire and smoke and maintaining the integrity of escape routes. The Regulatory Reform (Fire Safety) Order 2005 and BS 9999 require responsible persons to ensure all fire doors in commercial premises are regularly inspected and maintained by competent inspectors. Our FDIS-qualified engineers carry out thorough inspections and issue detailed certificates for offices, hotels, schools, care homes, warehouses, and all commercial property types across London.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=700&q=80',
     imgAlt: 'Commercial fire door inspection',
     ctaText: 'Get a Quote',
     imgRight: true,
@@ -862,7 +862,7 @@ export const FIRE_SAFETY_CHECK = {
     price: 'From £69.99',
     ctaText: 'Book Now',
     ctaTo: '/book-now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1600&q=80',
   },
   stats: [
     { value: '£69.99', label: 'Starting Price' },
@@ -1023,7 +1023,7 @@ export const FIRE_RISK_ASBESTOS = {
       'Prioritized remedial action planning',
       'Single site visit reduces disruption',
     ],
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80',
     imgAlt: 'Property assessment and inspection',
     imgRight: false,
   },

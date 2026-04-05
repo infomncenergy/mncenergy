@@ -16,13 +16,11 @@ export default function CommercialEICRPage() {
       {/* Hero */}
       <ServiceHero {...hero} />
 
-      {/* What is Commercial EICR */}
-      <IntroSection {...intro} />
-
-      {/* Benefits */}
+      {/* Pricing */}
       <PricingBox {...pricing} />
 
-      {/* Pricing */}
+      {/* What is Commercial EICR */}
+      <IntroSection {...intro} />
       <BenefitCards {...benefits} />
 
       {/* Property Types (Commercial) */}

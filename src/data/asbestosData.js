@@ -35,7 +35,7 @@ export const RES_ASBESTOS = {
     price: 'From £300',
     ctaText: 'Book Now',
     ctaSecText: 'Get a Quote',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1600&q=80',
   },
   stats: [
     { value: 'UKAS', label: 'Accredited Surveyors' },
@@ -45,7 +45,7 @@ export const RES_ASBESTOS = {
   intro: {
     title: 'What is a Residential Asbestos Survey?',
     body: 'Any home built before 2000 may contain asbestos-containing materials (ACMs) in textured coatings, floor tiles, pipe lagging, roof felt, and many other building products. Under the Control of Asbestos Regulations 2012, a survey is legally required before any refurbishment or demolition work. Our UKAS-accredited surveyors carry out thorough inspections and laboratory analysis, issuing a detailed report that tells you exactly what is present, where it is, and what to do about it.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=700&q=80',
     imgAlt: 'Asbestos surveyor inspecting residential property',
     ctaText: 'Book Now',
     imgRight: true,
@@ -107,7 +107,7 @@ export const RES_ASBESTOS = {
   },
   whatsCovered: {
     title: 'Where Asbestos is Commonly Found in Homes',
-    imgSrc: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1590674899484-d4e62f4e8b37?w=700&q=80',
     items: [
       { label: 'Artex & Textured Coatings', text: 'Textured ceiling and wall coatings applied before 1999 commonly contain chrysotile (white) asbestos.' },
       { label: 'Floor Tiles & Adhesive', text: 'Vinyl floor tiles and the black bitumen adhesive used to fix them frequently contain asbestos in pre-2000 homes.' },
@@ -147,7 +147,7 @@ export const COMM_ASBESTOS = {
     price: 'From £249',
     ctaText: 'Get a Quote',
     ctaSecText: 'Book Now',
-    bgImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1600&q=80',
   },
   stats: [
     { value: 'UKAS', label: 'Accredited Laboratory' },
@@ -157,7 +157,7 @@ export const COMM_ASBESTOS = {
   intro: {
     title: 'Commercial Asbestos Surveys – Management & Refurbishment',
     body: 'The Control of Asbestos Regulations 2012 places a legal duty on owners and managers of non-domestic premises to manage asbestos. This begins with a professional asbestos survey to identify and assess all asbestos-containing materials (ACMs) in the building. Our UKAS-accredited surveyors carry out both Management Surveys for premises in use and Refurbishment & Demolition Surveys before any planned building works, delivering detailed, risk-rated reports that give you a clear asbestos management plan.',
-    imgSrc: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=700&q=80',
     imgAlt: 'Commercial asbestos survey in office building',
     ctaText: 'Get a Quote',
     imgRight: true,
