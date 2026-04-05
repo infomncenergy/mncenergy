@@ -1,16 +1,9 @@
 import { Link } from 'react-router-dom';
 import SectionLabel from '../ui/SectionLabel';
 
-const STATS = [
-  { value: '5,000+', label: 'Certificates Issued' },
-  { value: '10+',    label: 'Years Experience'    },
-  { value: '24h',    label: 'Cert Delivery'        },
-  { value: '★ 4.9',  label: 'Google Rating'        },
-];
-
 const FEATURES = [
   { icon: 'bi-patch-check-fill',        text: 'Fully certified and experienced engineers across London' },
-  { icon: 'bi-clock-fill',              text: 'Same-day and next-day appointment availability'        },
+  { icon: 'bi-clock-fill',              text: 'Flexible appointment availability across London'        },
   { icon: 'bi-file-earmark-check-fill', text: 'Digital certificates delivered within 24–48 hours'    },
   { icon: 'bi-geo-alt-fill',            text: 'Covering all of London'         },
 ];
@@ -21,7 +14,7 @@ export default function About() {
       <div className="container">
         <div className="row align-items-center g-5">
 
-          {/* ── Left: image + stats overlay ── */}
+          {/* ── Left: image ── */}
           <div className="col-lg-5">
             <div className="about-v2__img-wrap">
               <img
@@ -29,14 +22,6 @@ export default function About() {
                 alt="MNC Safety Certificate team"
                 className="about-v2__img"
               />
-              <div className="about-v2__stats-grid">
-                {STATS.map((s, i) => (
-                  <div className="about-v2__stat" key={i}>
-                    <div className="about-v2__stat-value">{s.value}</div>
-                    <div className="about-v2__stat-label">{s.label}</div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 

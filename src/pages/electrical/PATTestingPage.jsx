@@ -13,7 +13,7 @@ const hero = {
   title:     'PAT Testing London',
   subtitle:  'Portable Appliance Testing for landlords, businesses, and letting agents. Fast turnaround, certified engineers across London.',
   price:     'From £49.99',
-  checklist: ['Same-Day Available', 'Certificate Issued Within 24 hrs', 'All Appliances & Equipment Covered'],
+  checklist: ['Certificate Issued Within 24 hrs', 'All Appliances & Equipment Covered'],
   ctaText:   'Book PAT Testing',
   ctaTo:     '/book-now',
   bgImage:   'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',

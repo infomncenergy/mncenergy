@@ -12,7 +12,7 @@ const hero = {
   title:     'Boiler Repair London',
   subtitle:  'Fast, reliable boiler repair by certified gas engineers. We diagnose and fix all boiler makes and models across London.',
   price:     'From £89 Diagnosis',
-  checklist: ['Same-Day Emergency Available', 'Certified Gas Engineers', 'All Boiler Makes & Models', 'Transparent Fixed Pricing'],
+  checklist: ['Fast Emergency Response', 'Certified Gas Engineers', 'All Boiler Makes & Models', 'Transparent Fixed Pricing'],
   ctaText:   'Book Boiler Repair',
   ctaTo:     '/book-now',
   bgImage:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
@@ -20,7 +20,7 @@ const hero = {
 
 const stats = [
   { value: '95%',    label: 'First-Visit Fix Rate' },
-  { value: 'Same Day', label: 'Emergency Response' },
+  { value: 'Fast', label: 'Emergency Response' },
   { value: '5★',     label: 'Google Rating' },
   { value: '10+',    label: 'Years Experience' },
 ];
@@ -30,7 +30,7 @@ const benefits = {
   title: 'Expert Boiler Repair Service',
   items: [
     { icon: 'bi-patch-check-fill', title: 'Certified Gas Engineers',    body: 'Every gas engineer we send is fully certified and experienced, ensuring your boiler is repaired safely and in compliance with all UK gas regulations.' },
-    { icon: 'bi-clock-fill',       title: 'Same-Day Emergency',     body: 'Boiler broken down? We prioritise emergency callouts and aim to attend the same day. Hot water and heating restored as quickly as possible.' },
+    { icon: 'bi-clock-fill',       title: 'Fast Emergency Response',     body: 'Boiler broken down? We prioritise emergency callouts and aim to attend quickly. Hot water and heating restored as quickly as possible.' },
     { icon: 'bi-boxes',            title: 'Fully Stocked Vans',     body: 'Our engineers carry a wide range of spare parts enabling most boiler repairs to be completed on the first visit without a return trip.' },
     { icon: 'bi-currency-pound',   title: 'No Fix, No Fee Option',  body: 'If we diagnose the fault but you decide not to proceed with the repair, you only pay the diagnostic fee. We are transparent about costs upfront.' },
   ],
@@ -67,7 +67,7 @@ const faqs = [
   { q: 'How much does a boiler repair cost?',
     a: 'Boiler repair costs start from £89 for a diagnostic visit. The total cost depends on the fault and parts required. We always provide a fixed-price quote before starting any repair work, so you know exactly what you\'ll pay.' },
   { q: 'How quickly can you attend an emergency boiler repair?',
-    a: 'We aim to attend emergency callouts the same day across London, subject to engineer availability. Call us directly for the fastest response — we prioritise no heating and no hot water situations.' },
+    a: 'We aim to attend emergency callouts quickly across London, subject to engineer availability. Call us directly for the fastest response — we prioritise no heating and no hot water situations.' },
   { q: 'Is it worth repairing an old boiler or should I replace it?',
     a: 'Generally, if a boiler is over 10–12 years old and the repair cost exceeds 50% of a new boiler price, replacement is more cost-effective. Our engineer will give you an honest assessment of whether repair or replacement makes more sense.' },
   { q: 'Will you need to turn off my gas?',

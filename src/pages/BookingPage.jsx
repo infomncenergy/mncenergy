@@ -58,13 +58,13 @@ const SERVICES = [
 const STEPS = [
   { icon: 'bi-calendar-check', title: 'Choose a Service', body: 'Select the certificate or inspection you need from our full range of residential and commercial services.' },
   { icon: 'bi-geo-alt-fill', title: 'Enter Property Details', body: 'Tell us your property address, type, and any relevant details so we can match you with the right engineer.' },
-  { icon: 'bi-person-check-fill', title: 'Confirm Your Booking', body: 'Choose a convenient date and time. We offer same-day, next-day, and weekend appointments across London.' },
+  { icon: 'bi-person-check-fill', title: 'Confirm Your Booking', body: 'Choose a convenient date and time. We offer next-day and weekend appointments across London.' },
   { icon: 'bi-file-earmark-check-fill', title: 'Receive Your Certificate', body: 'Our certified engineer visits, completes the inspection, and your certificate is emailed to you within 24–48 hours.' },
 ];
 
 const WHY_BOOK = [
   { icon: 'bi-patch-check-fill',         title: 'Certified & Experienced Engineers', body: 'All our engineers are fully certified and experienced, ensuring your inspection meets all legal requirements.' },
-  { icon: 'bi-clock-fill',               title: 'Same-Day Appointments Available', body: 'We understand urgency. Same-day and next-day bookings are available subject to engineer availability in your area.' },
+  { icon: 'bi-clock-fill',               title: 'Flexible Appointment Scheduling', body: 'We offer next-day and weekend bookings available subject to engineer availability in your area.' },
   { icon: 'bi-envelope-check-fill',      title: 'Digital Certificates in 24 hrs',  body: 'All certificates are issued digitally and emailed to you within 24–48 hours of the completed inspection.' },
   { icon: 'bi-currency-pound',           title: 'Transparent Fixed Pricing',       body: 'No hidden charges or surprise fees. Our prices are fixed — you always know exactly what you\'ll pay.' },
   { icon: 'bi-geo-alt-fill',             title: 'London Coverage',           body: 'We cover all of London with a large network of local engineers available 7 days a week.' },
@@ -210,7 +210,7 @@ export default function BookingPage() {
               </p>
               <div className="d-flex gap-3 flex-wrap">
                 <div className="booking-hero__badge">
-                  <i className="bi bi-clock-fill me-2"></i> Same-Day Available
+                  <i className="bi bi-clock-fill me-2"></i> Flexible Scheduling
                 </div>
                 <div className="booking-hero__badge">
                   <i className="bi bi-file-earmark-check-fill me-2"></i> Digital Cert in 24h

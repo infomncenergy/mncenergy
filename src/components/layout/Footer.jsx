@@ -97,9 +97,9 @@ export default function Footer() {
               </a>
             </div>
             <div className="footer-certs mt-3">
-              <span className="cert-badge" title="Same-Day Service">SAME-DAY</span>
               <span className="cert-badge" title="Digital Certificates">DIGITAL CERT</span>
               <span className="cert-badge" title="London Wide Coverage">ALL LONDON</span>
+              <span className="cert-badge" title="Fast Appointments">FAST BOOKING</span>
             </div>
             <div className="mt-4">
               <Link to="/book-now" className="btn-green d-inline-flex">
@@ -111,7 +111,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
-          <span>© {year} MNC Safety Certificate Ltd. Company No: {COMPANY_NUM}. All Rights Reserved.</span>
+          <span>Copyright {year}@ MNC ENERGY Ltd T/A MNC Safety Certificate &nbsp;&nbsp;·&nbsp;&nbsp; Registered office only - no customer visit 58 Imperial Drive, London, England, HA2 7LH</span>
           <span>
             <Link to="/faqs">FAQs</Link>
             <a href="#">Terms &amp; Conditions</a>

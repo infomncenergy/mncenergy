@@ -12,7 +12,7 @@ const hero = {
   title:     'Electrical Fault Finding London',
   subtitle:  'Expert diagnosis and repair of electrical faults. From tripping circuits to power failures — our certified engineers identify and fix the problem fast.',
   price:     'From £98.99/hr',
-  checklist: ['Same-Day Emergency Available', 'All Fault Types Covered', 'Full Written Report Provided'],
+  checklist: ['Fast Emergency Response', 'All Fault Types Covered', 'Full Written Report Provided'],
   ctaText:   'Book Fault Finding',
   ctaTo:     '/book-now',
   bgImage:   'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80',
@@ -30,7 +30,7 @@ const benefits = {
   title: 'Professional Electrical Fault Diagnosis',
   items: [
     { icon: 'bi-search',            title: 'Advanced Diagnostics',      body: 'We use professional test equipment including insulation resistance testers, clamp meters, and circuit analysers to pinpoint faults quickly.' },
-    { icon: 'bi-clock-fill',        title: 'Fast Response',             body: 'Same-day and emergency callout services available. We understand electrical faults can be urgent, especially in rental properties.' },
+    { icon: 'bi-clock-fill',        title: 'Fast Response',             body: 'Emergency callout services available. We understand electrical faults can be urgent, especially in rental properties.' },
     { icon: 'bi-file-earmark-text', title: 'Full Fault Report',         body: 'Receive a written report detailing the fault found, work carried out, and any recommendations to prevent future issues.' },
     { icon: 'bi-tools',             title: 'Fix on the Spot',           body: 'Our engineers carry a comprehensive van stock of parts, enabling us to fix the majority of faults during the initial visit.' },
   ],
@@ -57,7 +57,7 @@ const proc = {
   label: 'HOW IT WORKS',
   title: 'How We Find & Fix Electrical Faults',
   steps: [
-    { icon: 'bi-telephone-fill',  title: 'Call or Book Online',  body: 'Contact us by phone or book online. Describe the problem as best you can. For emergencies, we prioritise same-day slots.' },
+    { icon: 'bi-telephone-fill',  title: 'Call or Book Online',  body: 'Contact us by phone or book online. Describe the problem as best you can. For emergencies, we prioritise urgent slots.' },
     { icon: 'bi-search',          title: 'Diagnose the Fault',   body: 'Our engineer arrives with professional test equipment, carries out a systematic inspection, and identifies the root cause of the problem.' },
     { icon: 'bi-wrench-adjustable',title: 'Repair & Report',     body: 'We repair the fault (where parts are available) and provide a full written report. Any further work required is quoted transparently.' },
   ],

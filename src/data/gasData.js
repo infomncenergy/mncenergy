@@ -46,7 +46,7 @@ export const GAS_FAQS = [
   },
   {
     q: 'How quickly can I get a Gas Safety Certificate after booking?',
-    a: 'We offer flexible scheduling with same-day or next-day appointments available across London. Certificates are issued digitally within 24–48 hours of the inspection.',
+    a: 'We offer flexible scheduling with fast appointments available across London. Certificates are issued digitally within 24–48 hours of the inspection.',
   },
 ];
 
@@ -89,11 +89,11 @@ export const CP12 = {
   stats: [
     { value: '24h', label: 'Certificate Delivery' },
     { value: 'Certificates', label: 'Issued Within 24–48 hrs' },
-    { value: 'Same Day', label: 'Appointments Available' },
+    { value: '24h', label: 'Cert Delivery' },
   ],
   intro: {
     title: 'What is a Landlord Gas Safety Certificate (CP12)?',
-    body: 'A Landlord Gas Safety Certificate, also known as a CP12, is a legal document required by all UK landlords who provide gas appliances in their rental properties. Under the Gas Safety (Installation and Use) Regulations 1998, landlords must have all gas appliances, pipework, and flues checked annually by a Gas Safe registered engineer. Our engineers cover London with next-day appointment availability and same-day digital certificate delivery.',
+    body: 'A Landlord Gas Safety Certificate, also known as a CP12, is a legal document required by all UK landlords who provide gas appliances in their rental properties. Under the Gas Safety (Installation and Use) Regulations 1998, landlords must have all gas appliances, pipework, and flues checked annually by a Gas Safe registered engineer. Our engineers cover London with next-day appointment availability and digital certificate delivery within 24h.',
     imgSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
     imgAlt: 'Gas Safe engineer performing CP12 inspection',
     ctaText: 'Book Now',
@@ -250,7 +250,7 @@ export const BOILER_SERVICE = {
   stats: [
     { value: 'All Major', label: 'Brands Serviced' },
     { value: '24h', label: 'Certificate Delivery' },
-    { value: 'Same Day', label: 'Slots Available' },
+    { value: '24h', label: 'Cert Delivery' },
   ],
   intro: {
     title: 'Professional Boiler Servicing in London',
@@ -877,7 +877,7 @@ export const GAS_ENGINEER = {
   stats: [
     { value: 'Gas Safe', label: 'All Engineers Registered' },
     { value: 'Boilers to Fires', label: 'All Appliance Types' },
-    { value: 'Same-Day', label: 'Emergency Available' },
+    { value: 'Fast', label: 'Emergency Response' },
     { value: '10+', label: 'Years Experience' },
   ],
   intro: {
@@ -886,7 +886,7 @@ export const GAS_ENGINEER = {
     checklist: [
       'Full range of boiler and appliance services',
       'Certified and experienced gas technicians',
-      'Emergency response and same-day service available',
+      'Fast emergency response available',
       'Transparent pricing and professional certification',
     ],
     imgSrc: 'https://images.unsplash.com/photo-1590674899484-13da0e394dca?w=800&q=80',
@@ -910,7 +910,7 @@ export const GAS_ENGINEER = {
       {
         icon: 'bi-clock-fill',
         title: 'Emergency Response',
-        body: 'Same-day response available for emergency situations where heating or hot water is lost. We prioritize urgent repairs and aim for rapid restoration.',
+        body: 'Fast response available for emergency situations where heating or hot water is lost. We prioritize urgent repairs and aim for rapid restoration.',
       },
       {
         icon: 'bi-currency-pound',
@@ -926,7 +926,7 @@ export const GAS_ENGINEER = {
       {
         icon: 'bi-telephone-fill',
         title: 'Initial Contact',
-        body: 'Call or book online to describe your gas appliance problem or servicing need. We assess urgency and can offer same-day service if needed.',
+        body: 'Call or book online to describe your gas appliance problem or servicing need. We assess urgency and can offer fast emergency service if needed.',
       },
       {
         icon: 'bi-search',
@@ -949,7 +949,7 @@ export const GAS_ENGINEER = {
     {
       icon: 'bi-flame',
       title: 'Boiler Repair',
-      body: 'Fast emergency boiler repairs with same-day response for heating and hot water problems.',
+      body: 'Fast emergency boiler repairs with rapid response for heating and hot water problems.',
       to: '/gas/boiler-repair',
     },
     {
@@ -976,7 +976,7 @@ export const GAS_ENGINEER = {
     },
     {
       q: 'Do you offer emergency repairs?',
-      a: 'Yes, we offer same-day emergency response for situations where you have no heating or hot water. Call us directly for the fastest response.',
+      a: 'Yes, we offer fast emergency response for situations where you have no heating or hot water. Call us directly for the fastest response.',
     },
     {
       q: 'Should I service my boiler annually?',
@@ -1005,7 +1005,7 @@ export const COMM_GAS_ENGINEER = {
   stats: [
     { value: 'CP42', label: 'Commercial Certification' },
     { value: 'Kitchens', label: 'Equipment Specialists' },
-    { value: 'Same-Day', label: 'Emergency Response' },
+    { value: 'Fast', label: 'Emergency Response' },
     { value: 'Contract', label: 'Maintenance Available' },
   ],
   intro: {
@@ -1108,7 +1108,7 @@ export const COMM_GAS_ENGINEER = {
     },
     {
       q: 'What if we have an emergency?',
-      a: 'We offer same-day emergency response for critical failures in kitchens or heating systems. Call immediately for urgent gas system problems.',
+      a: 'We offer fast emergency response for critical failures in kitchens or heating systems. Call immediately for urgent gas system problems.',
     },
     {
       q: 'Can we have a maintenance contract?',

@@ -75,7 +75,7 @@ export default function ContactPage() {
               <div className="booking-hero__card">
                 <div className="booking-hero__card-icon"><i className="bi bi-telephone-fill"></i></div>
                 <h5 className="fw-bold mb-1">Need Urgent Help?</h5>
-                <p className="mb-3" style={{ fontSize: '0.9rem' }}>Call our team directly for same-day and emergency bookings.</p>
+                <p className="mb-3" style={{ fontSize: '0.9rem' }}>Call our team directly for emergency bookings.</p>
                 <a href={PHONE_HREF} className="btn-green w-100 text-center d-block mb-2">{PHONE}</a>
                 <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener noreferrer"
                    className="btn-outline-green w-100 text-center d-block">

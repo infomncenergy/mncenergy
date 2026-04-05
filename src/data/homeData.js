@@ -14,11 +14,11 @@ export const WHY_ITEMS = [
   {
     icon: "bi-calendar-check-fill",
     title: "Fast and Flexible Scheduling",
-    body: "We accommodate your schedule with same-day and next-day availability, minimising disruption to you and your tenants.",
+    body: "We accommodate your schedule with flexible availability, minimising disruption to you and your tenants.",
   },
   {
     icon: "bi-file-earmark-check-fill",
-    title: "Same-Day Certificate Delivery",
+    title: "Fast Certificate Delivery",
     body: "Receive your digital safety certificate within 24–48 hours of inspection, keeping you fully compliant without delay.",
   },
 ];
@@ -179,7 +179,7 @@ export const HOME_FAQS = [
   },
   {
     q: "Do you offer emergency services?",
-    a: "Yes — we offer same-day and next-day emergency appointments across London for most of our services. If you have an urgent compliance requirement, a tenant moving in, or a letting agent deadline, call us directly on 0800 048 7030 and our team will do everything possible to arrange an emergency slot with a local engineer.",
+    a: "Yes — we offer fast emergency appointments across London for most of our services. If you have an urgent compliance requirement, a tenant moving in, or a letting agent deadline, call us directly on 0800 048 7030 and our team will do everything possible to arrange an emergency slot with a local engineer.",
   },
   {
     q: "What is PAT Testing, and is it required for landlords?",
@@ -187,7 +187,7 @@ export const HOME_FAQS = [
   },
   {
     q: "How quickly can I get a Gas Safety Certificate after booking?",
-    a: "We offer flexible scheduling with same-day or next-day appointments available across London. Our certified gas engineers carry out the inspection at your property, and your digital CP12 Gas Safety Certificate is issued within 24–48 hours of the completed inspection — sent directly to your email.",
+    a: "We offer flexible scheduling with fast appointments available across London. Our certified gas engineers carry out the inspection at your property, and your digital CP12 Gas Safety Certificate is issued within 24–48 hours of the completed inspection — sent directly to your email.",
   },
   {
     q: "What is included in a Fire Safety Certificate?",

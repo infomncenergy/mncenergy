@@ -109,7 +109,7 @@ export const RES_FRA = {
   },
   stats: [
     { value: 'BAFE', label: 'Accredited Assessors' },
-    { value: 'Same Day', label: 'Reports Available' },
+    { value: '24h', label: 'Cert Delivery' },
     { value: 'FRA', label: 'Compliant Reports' },
   ],
   intro: {
@@ -202,7 +202,7 @@ export const RES_EMERGENCY_LIGHTS = {
   },
   stats: [
     { value: 'BS 5266', label: 'Compliant Testing' },
-    { value: 'Same Day', label: 'Certificates Issued' },
+    { value: '24h', label: 'Cert Delivery' },
     { value: 'All Systems', label: 'Tested & Certified' },
   ],
   intro: {
@@ -295,7 +295,7 @@ export const RES_FIRE_ALARM = {
   stats: [
     { value: 'BS 5839', label: 'Compliant Servicing' },
     { value: 'All Grades', label: 'A–F Covered' },
-    { value: 'Same Day', label: 'Certificates Issued' },
+    { value: '24h', label: 'Cert Delivery' },
   ],
   intro: {
     title: 'Residential Fire Alarm Servicing & Certification',
@@ -388,7 +388,7 @@ export const RES_FIRE_DOOR = {
   stats: [
     { value: 'BS 9999', label: 'Compliant Inspection' },
     { value: 'FDIS', label: 'Qualified Inspectors' },
-    { value: 'Same Day', label: 'Certificates Issued' },
+    { value: '24h', label: 'Cert Delivery' },
   ],
   intro: {
     title: 'Residential Fire Door Inspection & Certification',
@@ -574,7 +574,7 @@ export const COMM_EMERGENCY_LIGHTS = {
   stats: [
     { value: 'BS 5266-1', label: 'Compliant Certification' },
     { value: 'All Commercial', label: 'Premises Covered' },
-    { value: 'Same Day', label: 'Certificates Issued' },
+    { value: '24h', label: 'Cert Delivery' },
   ],
   intro: {
     title: 'Commercial Emergency Lighting Testing & Certification',
@@ -667,7 +667,7 @@ export const COMM_FIRE_ALARM = {
   stats: [
     { value: 'BS 5839-1', label: 'Compliant Servicing' },
     { value: 'All Systems', label: 'Categories Covered' },
-    { value: 'Certificates', label: 'Issued Same Day' },
+    { value: '24h', label: 'Cert Delivery' },
   ],
   intro: {
     title: 'Commercial Fire Alarm Servicing & Certification',

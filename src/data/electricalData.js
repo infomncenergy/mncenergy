@@ -36,7 +36,7 @@ export const EIC_FAQS = [
   },
   {
     q: 'How quickly can I get an Electrical Installation Certificate?',
-    a: 'We typically issue EICs within 24–48 hours of completing the installation work. Same-day certificates are available for urgent requirements.',
+    a: 'We typically issue EICs within 24–48 hours of completing the installation work. Express certificates available for urgent requirements.',
   },
   {
     q: "What's the difference between an EIC and an EICR?",

@@ -39,7 +39,7 @@ export const RES_ASBESTOS = {
   },
   stats: [
     { value: 'UKAS', label: 'Accredited Surveyors' },
-    { value: 'Same Day', label: 'Reports Available' },
+    { value: '24h', label: 'Report Delivery' },
     { value: 'Full Lab', label: 'Analysis Included' },
   ],
   intro: {

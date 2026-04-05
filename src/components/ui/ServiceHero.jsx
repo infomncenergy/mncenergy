@@ -48,7 +48,7 @@ export default function ServiceHero({
               <div className="service-hero__price-block">
                 <div className="service-hero__price-from">Starting From</div>
                 <div className="service-hero__price-amount">{price}</div>
-                <div className="service-hero__price-note">Same-day available · Digital cert within 24h</div>
+                <div className="service-hero__price-note">Digital cert within 24h · London wide coverage</div>
               </div>
             )}
 

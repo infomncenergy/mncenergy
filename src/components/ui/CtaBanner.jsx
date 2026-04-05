@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { PHONE, PHONE_HREF } from '../../data/constants';
 
 const FEATURES = [
-  { icon: 'bi-clock-fill',           label: 'Same-Day',     sub: 'Appointments' },
+  { icon: 'bi-clock-fill',           label: 'Fast',         sub: 'Appointments' },
   { icon: 'bi-file-earmark-check-fill', label: 'Digital Cert', sub: 'Within 24h'  },
   { icon: 'bi-telephone-fill',        label: 'Call Anytime', sub: 'We Answer Fast' },
   { icon: 'bi-geo-alt-fill',          label: 'All London',   sub: 'M25 Covered'   },
