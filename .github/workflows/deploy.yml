@@ -7,39 +7,36 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    # Runs on YOUR Windows machine via the self-hosted runner
+    runs-on: self-hosted
 
     steps:
       # 1. Check out the code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      # 3. Install dependencies
-      # Delete Windows-generated lockfile so npm regenerates it for Linux
+      # 2. Install dependencies
       - name: Install dependencies
-        run: rm -f package-lock.json && npm install
+        run: npm install
 
-      # 4. Build the Vite app (outputs to ./dist)
+      # 3. Build the Vite app (outputs to ./dist)
       - name: Build
         run: npm run build
 
-      # 5. Upload dist/ to IONOS via SCP over SSH (port 22)
-      # FTP is blocked by IONOS firewall for cloud/datacenter IPs
-      - name: Deploy via SSH/SCP
-        uses: appleboy/scp-action@v0.1.7
+      # 4. Deploy dist/ to IONOS via FTP
+      # Runs from your Windows IP so IONOS firewall allows it
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
-          source: "dist/*"
-          target: ${{ secrets.SSH_TARGET_DIR }}
-          strip_components: 1
-          rm: false
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
