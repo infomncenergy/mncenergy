@@ -2,66 +2,61 @@ import SectionLabel from '../ui/SectionLabel';
 
 const LOGOS = [
   {
-    src: 'https://www.trustmark.org.uk/images/trustmark-logo.png',
-    alt: 'TrustMark – Government Endorsed Quality',
-    fallback: 'TRUSTMARK',
+    src: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/NICEIC_logo.svg/200px-NICEIC_logo.svg.png',
+    alt: 'NICEIC Contractors',
   },
   {
-    src: 'https://www.chas.co.uk/wp-content/uploads/2021/03/CHAS-Logo.png',
-    alt: 'CHAS – Contractors Health and Safety',
-    fallback: 'CHAS',
-  },
-  {
-    src: 'https://www.nebosh.org.uk/media/1018/nebosh-logo.png',
-    alt: 'NEBOSH',
-    fallback: 'NEBOSH',
-  },
-  {
-    src: 'https://www.cityandguilds.com/-/media/cityandguilds/images/logos/city-and-guilds-logo.png',
-    alt: 'City & Guilds',
-    fallback: 'City & Guilds',
-  },
-  {
-    src: 'https://www.bohs.org/media/1169/bohs-logo-2019.png',
+    src: 'https://www.bohs.org/media/1200/bohs-logo.png',
     alt: 'BOHS – British Occupational Hygiene Society',
-    fallback: 'BOHS',
   },
   {
-    src: 'https://www.ifsm.org.uk/media/1001/ifsm-logo.png',
+    src: 'https://www.ifsm.org.uk/wp-content/uploads/2020/01/IFSM-Logo.png',
     alt: 'IFSM – Institute of Fire Safety Managers',
-    fallback: 'IFSM',
+  },
+  {
+    src: 'https://www.nebosh.org.uk/globalassets/assets/logos/nebosh-logo.png',
+    alt: 'NEBOSH',
+  },
+  {
+    src: 'https://www.trustmark.org.uk/wp-content/uploads/2022/05/TrustMark-Logo.png',
+    alt: 'TrustMark – Government Endorsed Quality',
+  },
+  {
+    src: 'https://www.cityandguilds.com/~/media/cityandguilds-site/documents/news/2019/cityandguilds_logo_rgb_pos.ashx',
+    alt: 'City & Guilds',
+  },
+  {
+    src: 'https://www.gassaferegister.co.uk/media/2597/gas-safe-register-logo.png',
+    alt: 'Gas Safe Register',
   },
 ];
 
-function LogoItem({ src, alt, fallback }) {
-  return (
-    <div className="accred-logo-item">
-      <img
-        src={src}
-        alt={alt}
-        className="accred-logo-img"
-        onError={e => {
-          e.target.style.display = 'none';
-          e.target.nextSibling.style.display = 'flex';
-        }}
-      />
-      <span className="accred-logo-fallback" style={{ display: 'none' }}>
-        {fallback}
-      </span>
-    </div>
-  );
-}
+// Duplicate for seamless infinite loop
+const TRACK = [...LOGOS, ...LOGOS];
 
 export default function Accreditation() {
   return (
     <section className="accreditation-section">
-      <div className="container">
-        <SectionLabel center>ACCREDITATION</SectionLabel>
-        <h2 className="fw-bold text-center mb-5">Accreditation</h2>
-        <div className="accred-logo-strip">
-          {LOGOS.map((logo, i) => (
-            <LogoItem key={i} {...logo} />
-          ))}
+      <div className="container-fluid px-0">
+        <div className="text-center mb-4 px-3">
+          <SectionLabel center>ACCREDITATION</SectionLabel>
+          <h2 className="fw-bold">Accreditation</h2>
+        </div>
+
+        {/* Marquee wrapper with edge fade */}
+        <div className="accred-marquee-outer">
+          <div className="accred-marquee-track">
+            {TRACK.map((logo, i) => (
+              <div className="accred-marquee-item" key={i}>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="accred-marquee-img"
+                  onError={e => { e.target.style.opacity = '0'; }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
