@@ -1081,29 +1081,20 @@ section .text-center > h3,
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 56px;
+  padding: 0 46px;
   height: 80px;
 }
 
-/* Logo image — greyscale by default, colour on hover */
 .accred-marquee-img {
-  max-height: 60px;
-  max-width: 150px;
+  max-height: 80px;
+  max-width: 170px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.65;
-  transition: filter .3s ease, opacity .3s ease, transform .3s ease;
-  .accred-marquee-item:hover & {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.06);
-  }
 }
 
 @media (max-width: 575px) {
-  .accred-marquee-item { padding: 0 36px; height: 64px; }
-  .accred-marquee-img  { max-height: 44px; max-width: 110px; }
+  .accred-marquee-item { padding: 0 28px; height: 64px; }
+  .accred-marquee-img  { max-height: 56px; max-width: 120px; }
 }
 
 /* ── Legacy pricing card items (backward compat) ── */
